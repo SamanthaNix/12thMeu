@@ -1,0 +1,22 @@
+# ignore all build results [hemtt]
+releases/*
+build_keys/*
+keys/*
+.hemtt/local
+.hemttout/*
+/a3/
+/x/
+logs/
+
+# ignore all 'compiled files' [hemtt]
+*.pbo
+*.cache
+*.biprivatekey
+*.blend
+*.blend1
+*.ogg
+*.wss
+*.bisign
+# un-ignore all external pbos
+
+!pbo_include/*

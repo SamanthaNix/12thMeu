@@ -1,0 +1,20 @@
+name = "12th MEU Assets"
+prefix = "12thMEU"
+author = "Sammy"
+mainprefix = "x"
+
+[files]
+include = [
+    "mod.cpp",
+    "logo.paa",
+    "README.md",
+    "LICENSE",
+    "*.pbo"
+]
+
+[version]
+major = 7
+minor = 0
+patch = 9
+build = 2
+git_hash = 4
