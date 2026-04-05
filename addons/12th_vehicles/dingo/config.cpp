@@ -6,8 +6,9 @@ class CfgPatches {
   class twelfth_vehicles_warthogs {
     units[] = {
       "Twelfth_DingoCargo",
-      "twelfth_Dingo_troop",
-      "twelfth_dingo_fav_medical"
+      "Twelfth_Dingo_Troop",
+      "Twelfth_Dingo_Fav_Medical",
+      "Twelfth_Dingo_RCWS"
     };
     requiredVersion = 0.1;
   };
@@ -18,6 +19,7 @@ class CfgVehicles {
   class SMT_DingoMed;
   class SMT_DingoTroop;
   class SMT_DingoCargo;
+  class SMT_DingoRCWS;
 
 
   class Twelfth_Dingo_Cargo: SMT_DingoCargo {
@@ -25,6 +27,25 @@ class CfgVehicles {
     scopeCurator=2;
     author="Sammy";
     displayName="[12th] Dingo Cargo";
+    vehicleClass="OPTRE_UNSC_Vehicle_class";
+    faction="twelfth_MEU";
+    editorCategory="twelfth_MEU";
+    editorSubcategory="twelfth_MEU_Cars";
+    hiddenSelections[]= {"camo1","camo7","camo8"};
+    hiddenSelectionsTextures[] = {
+      "x\12thMEU\addons\dingo\data\textures\standard\Chassis_co.paa",
+      "x\12thMEU\addons\dingo\data\textures\standard\Modules_co.paa",
+      "\x\12thMEU\addons\12th_vehicles\dingo\default\decals_ca.paa"
+    };
+    DINGO_SP_INFO(0,FAV)
+    STDINV
+  };
+
+  class Twelfth_Dingo_RCWS: SMT_DingoRCWS {
+    scope=2;
+    scopeCurator=2;
+    author="Sammy";
+    displayName="[12th] Dingo RCWS";
     vehicleClass="OPTRE_UNSC_Vehicle_class";
     faction="twelfth_MEU";
     editorCategory="twelfth_MEU";

@@ -35,6 +35,12 @@ class CfgVehicles
 		class Sounds;
 	};
 
+	class Optics_Guinner_APC_02 {
+		class Medium;
+		class Narrow;
+		class Wide;
+	};
+
 	class Dingo_Base_F: Car_F
 	{
 		class VehicleTransport;
@@ -85,26 +91,29 @@ class CfgVehicles
 		//Component selection
 		class AnimationSources: AnimationSources
 		{
-			/*class hideUnitAffilSelect
+			class hideUnitAffilSelect
 			{
 				author = "Sammy";
 				displayName = "Hide Unit Affiliation";
-				source = "User";
+				source = "user";
 				useSource = 1;
-				initPhase = 0;
-				animPeriod = 0.001;
-			};*/
+				initPhase = 1;
+				animPeriod = 0.5;
+			};
 			class hideAllDecalSelect
 			{
 				author = "Sammy";
-				displayName = "Hide all Decals";
-				source = "User";
+				displayName = "Hide Decals";
+				source = "user";
 				useSource = 1;
-				initPhase = 0;
-				animPeriod = 0.001;
+				initPhase = 1;
+				animPeriod = 0.5;
 			};
 		};
-		animationList[] = {"hideAllDecalSelect",0};	
+		animationList[] = {
+			"hideUnitAffilSelect",0, // never hide by default
+			"hideAllDecalSelect",0 // never hide by default
+		};	
 		class UserActions
 		{
 			class PressXToFlipTheThing
@@ -479,16 +488,18 @@ class CfgVehicles
 	};
 	class SMT_DingoRCWS: SMT_DingoHull
 	{
-    	editorCategory="ED_SMT_Faction";
+    	editorCategory = "ED_SMT_Faction";
     	editorSubcategory="EDS_SMT_faction_Dingo";
 		side	= 1; 			/// civilian car should be on civilian side
 		faction	= "BLU_F";		/// and with civilian faction
-		forceInGarage=1;
+		forceInGarage = 1;
 		scope	= 2; 			/// makes the car visible in editor
-		scopeCurator=2;			// scope 2 means it's available in Zeus mode (0 means hidden)
-		displayName="M18-C2 IMV RCWS";
+		scopeCurator = 2;		// scope 2 means it's available in Zeus mode (0 means hidden)
+		displayName = "M18-C2 IMV RCWS";
 		crew 	= "C_man_1"; 	/// we need someone to fit into the car
+		cargoAction[] 		= {"passenger_low01", "passenger_generic01_foldhands"};
 		model = "x\12thMEU\addons\Dingo\DingoRCWS.p3d";
+		
 		textureList[]=
 		{
 			"Dingo_Camo_standard", 0.2,
@@ -497,6 +508,97 @@ class CfgVehicles
 			"Dingo_Camo_TCP",0.2,
 			"Dingo_Camo_OPTRE",0.2,
 			"Dingo_Camo_Black",0.2
+		};
+		class Turrets {
+			class MainTurret: NewTurret {
+				animationSourceBody = "MainTurret"; // entire turret animation selection (inherently including the gun through bone parenting)
+				animationSourceCamElev = ""; // our camera is stuck so we don't need this. This is useful if we have a cam independent of the weapon 
+				animationSourceGun = "MainGun"; // for handling the actual gun anims
+				animationSourceHatch = ""; // wiping because turret has no hatch
+				animationSourceElevation = ""; // anim of lowering/raising the gun
+				body = "MainTurret"; // bohemia is stupid, here we are
+				canHideGunner = "false";
+				commanding = 0;
+				forceHideGunner = "true"; // this handled if gunner may not turn out. In our case, no they fucking don't
+				gun = "mainGun"; // TODO: define section for minigun barrel, so that we can do a rotation when fired
+				gunBeg = "usti hlavne"; // gunBeg - silly bohemia, guns don't beg
+				gunEnd = "konec hlavne"; 
+				gunnerAction = ""; // no animation for gunner being turned out
+				//gunnerCompartments = "Compartment1" // units in same compartment can switch seats. Should be a separate compartment from the outside seats. Theoretically should be set, but i don't see in main DINGO so guessing everyone shares compartments
+				gunnerForceOptics = "false"; // false, we want gunner to be able to look around crew compartment 
+				gunnerGetInAction = "GetInLow"; // anim for pulling ass into turret
+				gunnerGetOutAction = "GetOutLow"; // anim for pulling ass out the turret. Never pull out ( ͡° ͜ʖ ͡°)
+				gunnerInAction = "passenger_low01"; // TODO: better animation fit for gunner console needed
+				gunnerName = "RCWS Gunner";
+				gunnerOpticsColor[] = {0,0,0,1};
+				gunnerOpticsEffect[] = {};
+				gunnerOpticsModel = "\A3\weapons_f\reticle\optics_empty";
+				//gunnerLeftHandAnimName = ""; // if can plan around with this to have more immersive animations of the gunners hand
+				//gunnerRightHandAnimName = ""; // same as above
+				InGunnerMayFire = "true"; // we want the gunner to fire while inside
+
+				maxElev = 20; // defines maximum elevation in degrees
+				maxHorizontalRotSpeed = 1.2; // how fast turret rotates. Value is amount of seconds it takes to do a full 360 rotation
+				maxTurn = 360; //degrees, maximum rotation range
+				maxVerticalRotSpeed = 1.2; // for vertical rotation. No idea what the value is. Finetune
+				memoryPointsGetInGunner = "gunnerin"; // entry point for gunner
+				// memoryPointsGetInGunnerDir = ""; // TODO: need memory, if we want gunner to look a specific direction when entering
+				memoryPointGun = "konec hlavne"; // bullets exit here
+				memoryPointGunnerOptics = "gunnerview"; // camera optics for gunner, related to a MEMPOINT
+				minElev = "-4";
+				minTurn = "-360";
+				proxyType = "CPGunner"; // proxy for gunman
+				proxyIndex = 1;
+				class HitPoints { // TBD, needs this for the gun to be damaged and shit
+					class HitTurret {};
+					class HitGun {};
+				};
+				class OpticsIn: Optics_Guinner_APC_02 {};
+				class ViewGunner { // tbd
+					continuous = 0;
+					initAngleX = -5;
+					initAngleY = 0;
+					initFov = 0.9;
+					maxAngleX = 85;
+					maxAngleY = 150;
+					maxFov = 1.25;
+					maxMoveX = 0.075;
+					maxMoveY = 0.075;
+					maxMoveZ = 0.1;
+					minAngleX = -65;
+					minAngleY = -150;
+					minFov = 0.25;
+					minMoveX = -0.075;
+					minMoveY = -0.075;
+					minMoveZ = -0.075;
+					speedZoomMaxFOV = 0;
+					speedZoomMaxSpeed = 1e+10;
+				};
+				class ViewOptics { // tbd
+					initAngleX = 0;
+					initAngleY = 0;
+					initFov = 0.3;
+					maxAngleX = 30;
+					maxAngleY = 100;
+					maxFov = 0.35;
+					maxMoveX = 0;
+					maxMoveY = 0;
+					maxMoveZ = 0;
+					minAngleX = -30;
+					minAngleY = -100;
+					minFov = 0.07;
+					minMoveX = 0;
+					minMoveY = 0;
+					minMoveZ = 0;
+					speedZoomMaxFOV = 0;
+					speedZoomMaxSpeed = 1e+10;
+				};
+				startEngine = 0;
+				turretAxis = "otocvez_axis";
+				turretFollowFreeLook = 0;
+				magazines[] = { "5000Rnd_762x51_Belt" };
+				weapons[] = { "M134_minigun" };
+			};
 		};
 		class VehicleTransport
 		{
