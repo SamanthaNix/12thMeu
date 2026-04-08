@@ -193,7 +193,7 @@ class CfgMagazines
 		model = "\TCP\Weapons\Ammo\762x51\Ball\mag_762x51mm_100rnd.p3d";
 		modelSpecial = "\TCP\Weapons\Ammo\762x51\Ball\mag_762x51mm_100rnd.p3d";
     count = 100;
-    mass = 40; // 4 lbs
+    mass = 26; 
     lastRoundsTracer = 100; 
     ACE_isBelt = 1; 
   };
@@ -218,7 +218,7 @@ class CfgMagazines
 		model = "\TCP\Weapons\Ammo\762x51\Ball\mag_762x51mm_200rnd.p3d";
 		modelSpecial = "\TCP\Weapons\Ammo\762x51\Ball\mag_762x51mm_200rnd.p3d";
     count = 200;
-    mass = 60; // 6 lbs
+    mass = 32;
     lastRoundsTracer = 200; 
     ACE_isBelt = 1; 
   };
