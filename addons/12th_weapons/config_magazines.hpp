@@ -156,22 +156,7 @@ class CfgMagazines
     author = "Waylen";        // Nerd (your mother - waylen)
     mass = 8;
   };
-  // M96 LAW rocket magazine
-  class twelfth_m96_magazine: RPG32_HE_F 
-  {
-    scope = 2;
-    allowedSlots[] = {};
-    displayName = "M96 HEAT Disposable Rockets";
-    displaynameshort = "HEAT";
-    descriptionShort = "High Explosive Anti Tank<br/>Un-guided";
-    ammo = "twelfth_m96_rocket_heat"; 
-    picture = "\DMNS\Weapons\Launchers\icons\gear_rpg32_rocket_ca.paa";
-    model = "\a3\weapons_f\ammo\rocket_01_f.p3d";
-    count = 1;
-    mass = 45;
-    initSpeed = 650;
-    
-  };
+
   // MG Belts
   class twelfth_100Rnd_762x51_Box: OPTRE_100Rnd_762x51_Box 
   {
