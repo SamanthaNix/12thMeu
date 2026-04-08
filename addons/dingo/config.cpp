@@ -17,7 +17,7 @@ class CfgPatches {
     };
     requiredVersion = 0.1;    // Minimum required version of the game
     requiredAddons[] = { 
-      "A3_Armor_F_Gamma","A3_Air_F","A3_Air_F_Beta","A3_Weapons_F","A3_Soft_F_Exp","A3_Characters_F_BLUFOR"    // List of required addons for this config to work
+      "A3_Weapons_F", "A3_Armor_F_Gamma","A3_Air_F","A3_Air_F_Beta","A3_Soft_F_Exp","A3_Characters_F_BLUFOR"    // List of required addons for this config to work
     };
   };
 };

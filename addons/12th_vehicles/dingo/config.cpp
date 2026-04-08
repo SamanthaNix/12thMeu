@@ -3,12 +3,13 @@
 #include "spawn_info.hpp"
 
 class CfgPatches {
-  class twelfth_vehicles_warthogs {
+  class twelfth_vehicles_dingos {
     units[] = {
-      "Twelfth_DingoCargo",
+      "Twelfth_Dingo_Cargo",
       "Twelfth_Dingo_Troop",
       "Twelfth_Dingo_Fav_Medical",
-      "Twelfth_Dingo_RCWS"
+      "Twelfth_Dingo_RCWS_autocannon",
+      "Twelfth_Dingo_RCWS_minigun"
     };
     requiredVersion = 0.1;
   };
@@ -19,7 +20,8 @@ class CfgVehicles {
   class SMT_DingoMed;
   class SMT_DingoTroop;
   class SMT_DingoCargo;
-  class SMT_DingoRCWS;
+  class SMT_DingoRCWS_minigun;
+  class SMT_DingoRCWS_autocannon;
 
 
   class Twelfth_Dingo_Cargo: SMT_DingoCargo {
@@ -41,11 +43,30 @@ class CfgVehicles {
     STDINV
   };
 
-  class Twelfth_Dingo_RCWS: SMT_DingoRCWS {
+  class Twelfth_Dingo_RCWS_minigun: SMT_DingoRCWS_minigun {
     scope=2;
     scopeCurator=2;
     author="Sammy";
-    displayName="[12th] Dingo RCWS";
+    displayName="[12th] Dingo RCWS (minigun)";
+    vehicleClass="OPTRE_UNSC_Vehicle_class";
+    faction="twelfth_MEU";
+    editorCategory="twelfth_MEU";
+    editorSubcategory="twelfth_MEU_Cars";
+    hiddenSelections[]= {"camo1","camo7","camo8"};
+    hiddenSelectionsTextures[] = {
+      "x\12thMEU\addons\dingo\data\textures\standard\Chassis_co.paa",
+      "x\12thMEU\addons\dingo\data\textures\standard\Modules_co.paa",
+      "\x\12thMEU\addons\12th_vehicles\dingo\default\decals_ca.paa"
+    };
+    DINGO_SP_INFO(0,FAV)
+    STDINV
+  };
+
+  class Twelfth_Dingo_RCWS_autocannon: SMT_DingoRCWS_autocannon {
+    scope=2;
+    scopeCurator=2;
+    author="Sammy";
+    displayName="[12th] Dingo RCWS (20mm)";
     vehicleClass="OPTRE_UNSC_Vehicle_class";
     faction="twelfth_MEU";
     editorCategory="twelfth_MEU";

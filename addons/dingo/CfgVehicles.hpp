@@ -3,68 +3,61 @@
 
 class CfgVehicles
 { 
-	class Car
-	{
-		class Components;
-		class NewTurret;
+	class AnimationSources;
+	class ViewOptics;
+	class Optics_Armored;
+	class RCWSOptics;
+	class Optics_Gunner_APC_01: Optics_Armored {
+		class Wide;
+		class Medium;
+		class Narrow;
 	};
 
+	class LandVehicle;
+	class Car: LandVehicle
+	{
+		class NewTurret;
+	};
 	class Car_F: Car
 	{
+		class AnimationSources;
 		class Turrets
 		{
 			class MainTurret: NewTurret
 			{
-				class ViewOptics;
+				class Components;
 				class ViewGunner;
 			};
 		};
 		class HitPoints
 		{
 			class HitLFWheel;
-			class HitLBWheel;
+			class HitLF2Wheel;
 			class HitRFWheel;
-			class HitRBWheel;
-			class HitBody;
-			class HitFuel;
-			class HitEngine;
+			class HitRF2Wheel;
 			class HitGlass1;
+			class HitGlass2;
+			class HitGlass3;
+			class HitGlass4;
+			class HitGlass5;
+			class HitGlass6;
+			class HitBody;
 		};
-		class EventHandlers;
-		class AnimationSources;
-		class Sounds;
-	};
-
-	class Optics_Guinner_APC_02 {
-		class Medium;
-		class Narrow;
-		class Wide;
+		class ViewCargo;
 	};
 
 	class Dingo_Base_F: Car_F
 	{
+		class EventHandlers;
 		class VehicleTransport;
-		class ViewPilot;
 		class ViewOptics;
 		class ViewCargo;
-		class Sounds: Sounds
+		class Sounds
 		{
 			class Engine;
 			class Movement;
 		};
 		class NewTurret;
-		class Turrets
-		{
-			class MainTurret: NewTurret
-			{
-				class ViewOptics;
-				class ViewGunner;
-				class Turrets
-				{
-					class CommanderOptics;
-				};
-			};
-		};
 		class AnimationSources;
 	};
 
@@ -109,10 +102,19 @@ class CfgVehicles
 				initPhase = 1;
 				animPeriod = 0.5;
 			};
+			class hideRollCageSelect {
+				author = "Sammy";
+				displayName = "Hide Roll Cage";
+				source = "user";
+				useSource = 1;
+				initPhase = 1;
+				animPeriod = 0.5;
+			};
 		};
 		animationList[] = {
 			"hideUnitAffilSelect",0, // never hide by default
-			"hideAllDecalSelect",0 // never hide by default
+			"hideAllDecalSelect",0, // never hide by default
+			"hideRollCageSelect",0.5
 		};	
 		class UserActions
 		{
@@ -210,10 +212,10 @@ class CfgVehicles
 		class HitPoints: HitPoints
 		{
 			class HitLFWheel: HitLFWheel	{armor=0.2; passThrough=0;}; /// it is easier to destroy wheels than hull of the vehicle
-			class HitLBWheel: HitLBWheel	{armor=0.2; passThrough=0;};
+			class HitLBWheel: HitLF2Wheel	{armor=0.2; passThrough=0;};
 
 			class HitRFWheel: HitRFWheel	{armor=0.2; passThrough=0;};
-			class HitRBWheel: HitRBWheel 	{armor=0.2; passThrough=0;};
+			class HitRBWheel: HitRF2Wheel 	{armor=0.2; passThrough=0;};
 
 			class HitFuel 			{armor=0.50; material=-1; name="FuelTank"; visual=""; passThrough=0.2;}; /// correct points for fuel tank, some of the damage is aFRLied to the whole
 			class HitEngine 		{armor=0.50; material=-1; name="Engine"; visual=""; passThrough=0.2;};
@@ -486,7 +488,7 @@ class CfgVehicles
 			};
 		};
 	};
-	class SMT_DingoRCWS: SMT_DingoHull
+	class SMT_DingoRCWS_minigun: SMT_DingoHull
 	{
     	editorCategory = "ED_SMT_Faction";
     	editorSubcategory="EDS_SMT_faction_Dingo";
@@ -498,63 +500,219 @@ class CfgVehicles
 		displayName = "M18-C2 IMV RCWS";
 		crew 	= "C_man_1"; 	/// we need someone to fit into the car
 		cargoAction[] 		= {"passenger_low01", "passenger_generic01_foldhands"};
-		model = "x\12thMEU\addons\Dingo\DingoRCWS.p3d";
-		
-		textureList[]=
+		model = "x\12thMEU\addons\Dingo\dingoRCWS_minigun.p3d";
+		ace_cargo_space = 3;
+		transportSoldier = 2;
+		driverCanFire = 0;
+
+		class AnimationSources: AnimationSources
 		{
-			"Dingo_Camo_standard", 0.2,
-			"Dingo_Camo_winter",0.2,
-			"Dingo_Camo_forest",0.2,
-			"Dingo_Camo_TCP",0.2,
-			"Dingo_Camo_OPTRE",0.2,
-			"Dingo_Camo_Black",0.2
+			class muzzle_rot
+			{
+				source="ammorandom";
+				weapon="HMG_127";
+			};
+			class muzzle_hide
+			{
+				source="reload";
+				weapon="HMG_127";
+			};
 		};
-		class Turrets {
-			class MainTurret: NewTurret {
-				animationSourceBody = "MainTurret"; // entire turret animation selection (inherently including the gun through bone parenting)
-				animationSourceCamElev = ""; // our camera is stuck so we don't need this. This is useful if we have a cam independent of the weapon 
-				animationSourceGun = "MainGun"; // for handling the actual gun anims
-				animationSourceHatch = ""; // wiping because turret has no hatch
-				animationSourceElevation = ""; // anim of lowering/raising the gun
-				body = "MainTurret"; // bohemia is stupid, here we are
-				canHideGunner = "false";
-				commanding = 0;
-				forceHideGunner = "true"; // this handled if gunner may not turn out. In our case, no they fucking don't
-				gun = "mainGun"; // TODO: define section for minigun barrel, so that we can do a rotation when fired
-				gunBeg = "usti hlavne"; // gunBeg - silly bohemia, guns don't beg
-				gunEnd = "konec hlavne"; 
-				gunnerAction = ""; // no animation for gunner being turned out
-				//gunnerCompartments = "Compartment1" // units in same compartment can switch seats. Should be a separate compartment from the outside seats. Theoretically should be set, but i don't see in main DINGO so guessing everyone shares compartments
-				gunnerForceOptics = "false"; // false, we want gunner to be able to look around crew compartment 
-				gunnerGetInAction = "GetInLow"; // anim for pulling ass into turret
-				gunnerGetOutAction = "GetOutLow"; // anim for pulling ass out the turret. Never pull out ( ͡° ͜ʖ ͡°)
-				gunnerInAction = "passenger_low01"; // TODO: better animation fit for gunner console needed
-				gunnerName = "RCWS Gunner";
+		class Turrets: Turrets {
+			class MainTurret {
+				ace_fcs_DistanceInterval = 5;
+				ace_fcs_Enabled = 0;
+				ace_fcs_MaxDistance = 5500;
+				ace_fcs_MinDistance = 200;
+				aggregateReflectors[] = {};
+				allowLauncherIn = 0;
+				allowLauncherOut = 0;
+				allowTabLock = 1;
+				animationSourceBody = "mainTurret";
+				animationSourceCamElev = "camElev";
+				animationSourceGun = "mainGun";
+				animationSourceHatch = "hatchGunner";
+				animationSourceStickX = "joystick_gunner_x";
+				animationSourceStickY = "joystick_gunner_y";
+				armorLights = 0.4;
+				body = "mainTurret";
+				canEject = 1;
+				canHideGunner = -1;
+				canUseScanners = 1;
+				castGunnerShadow = 1;
+				commanding = 1;
+				class Components {};
+				disableSoundAttenuation = 0;
+				discreteDistance[] = {100,200,300,400,500,600,700,800,900,1000,1100,1200,1300,1400,1500};
+				discreteDistanceInitIndex = 2;
+				dontCreateAI = 0;
+				ejectDeadGunner = 0;
+				enableManualFire = 0;
+				forceHideGunner = 0;
+				forceNVG = 0;
+				gun = "mainGun";
+				gunBeg = "muzzle";
+				class GunClouds: WeaponCloudsGun {
+					access = 0;
+					cloudletAccY = 0.4;
+					cloudletAlpha = 1;
+					cloudletAnimPeriod = 1;
+					cloudletColor[] = {1,1,1,0};
+					cloudletDuration = 0.3;
+					cloudletFadeIn = 0.01;
+					cloudletFadeOut = 1;
+					cloudletGrowUp = 1;
+					cloudletMaxYSpeed = 0.8;
+					cloudletMinYSpeed = 0.2;
+					cloudletShape = "cloudletClouds";
+					cloudletSize = 1;
+					deltaT = 0;
+					initT = 0;
+					interval = 0.05;
+					size = 3;
+					sourceSize = 0.5;
+					class Table {};
+					timeToLive = 0;
+				};
+				gunEnd = "chamber";
+				class GunFire: WeaponFireGun {
+					access = 0;
+					cloudletAccY = 0;
+					cloudletAlpha = 1;
+					cloudletAnimPeriod = 1;
+					cloudletColor[] = {1,1,1,0};
+					cloudletDuration = 0.2;
+					cloudletFadeIn = 0.01;
+					cloudletFadeOut = 0.5;
+					cloudletGrowUp = 0.2;
+					cloudletMaxYSpeed = 100;
+					cloudletMinYSpeed = -100;
+					cloudletShape = "cloudletFire";
+					cloudletSize = 1;
+					deltaT = -3000;
+					initT = 4500;
+					interval = 0.01;
+					size = 3;
+					sourceSize = 0.5;
+					class Table {};
+					timeToLive = 0;
+				};
+				gunnerAction = "gunner_MRAP_01";
+				gunnerCompartments = "Compartment1";
+				gunnerDoor = "";
+				gunnerFireAlsoInInternalCamera = 1;
+				gunnerForceOptics = 0;
+				gunnerGetInAction = "GetInLow";
+				gunnerGetOutAction = "GetOutLow";
+				gunnerInAction = "ManActTestDriver";
+				gunnerLeftHandAnimName = "";
+				gunnerLeftLegAnimName = "";
+				gunnerName = "$STR_POSITION_GUNNER";
 				gunnerOpticsColor[] = {0,0,0,1};
 				gunnerOpticsEffect[] = {};
-				gunnerOpticsModel = "\A3\weapons_f\reticle\optics_empty";
-				//gunnerLeftHandAnimName = ""; // if can plan around with this to have more immersive animations of the gunners hand
-				//gunnerRightHandAnimName = ""; // same as above
-				InGunnerMayFire = "true"; // we want the gunner to fire while inside
-
-				maxElev = 20; // defines maximum elevation in degrees
-				maxHorizontalRotSpeed = 1.2; // how fast turret rotates. Value is amount of seconds it takes to do a full 360 rotation
-				maxTurn = 360; //degrees, maximum rotation range
-				maxVerticalRotSpeed = 1.2; // for vertical rotation. No idea what the value is. Finetune
-				memoryPointsGetInGunner = "gunnerin"; // entry point for gunner
-				// memoryPointsGetInGunnerDir = ""; // TODO: need memory, if we want gunner to look a specific direction when entering
-				memoryPointGun = "konec hlavne"; // bullets exit here
-				memoryPointGunnerOptics = "gunnerview"; // camera optics for gunner, related to a MEMPOINT
-				minElev = "-4";
-				minTurn = "-360";
-				proxyType = "CPGunner"; // proxy for gunman
-				proxyIndex = 1;
-				class HitPoints { // TBD, needs this for the gun to be damaged and shit
-					class HitTurret {};
-					class HitGun {};
+				gunnerOpticsModel = "\A3\weapons_f\reticle\Optics_Gunner_02_F";
+				gunnerOpticsShowCursor = 0;
+				gunnerOutFireAlsoInInternalCamera = 1;
+				gunnerOutForceOptics = 0;
+				gunnerOutOpticsColor[] = {0,0,0,1};
+				gunnerOutOpticsEffect[] = {};
+				gunnerOutOpticsModel = "";
+				gunnerOutOpticsShowCursor = 0;
+				gunnerRightHandAnimName = "joystick_gunner";
+				gunnerRightLegAnimName = "";
+				gunnerType = "";
+				gunnerUsesPilotView = 0;
+				hasGunner = 1;
+				hideWeaponsGunner = 1;
+				class HitPoints: HitPoints {};
+				inGunnerMayFire = 1;
+				initCamElev = 0;
+				initElev = 0;
+				initOutElev = 0;
+				initOutTurn = 0;
+				initTurn = 0;
+				isCopilot = 0;
+				lockWhenDriverOut = 0;
+				lockWhenVehicleSpeed = -1;
+				LODTurnedIn = -1;
+				LODTurnedOut = -1;
+				magazines[] = {"5000Rnd_762x51_Yellow_Belt"};
+				maxCamElev = 90;
+				maxElev = 60;
+				maxHorizontalRotSpeed = 1.2;
+				maxOutElev = 20;
+				maxOutTurn = 60;
+				maxTurn = 360;
+				maxVerticalRotSpeed = 1.2;
+				memoryPointGun = "muzzle";
+				memoryPointGunnerOptics = "PIP0_dir";
+				memoryPointGunnerOutOptics = "";
+				memoryPointsGetInGunner = "pos gunner";
+				memoryPointsGetInGunnerDir = "pos gunner dir";
+				memoryPointsGetInGunnerPrecise = "";
+				class MGunClouds: WeaponCloudsMGun {
+					access = 0;
+					cloudletAccY = 0;
+					cloudletAlpha = 0.3;
+					cloudletAnimPeriod = 1;
+					cloudletColor[] = {1,1,1,0};
+					cloudletDuration = 0.05;
+					cloudletFadeIn = 0;
+					cloudletFadeOut = 0.1;
+					cloudletGrowUp = 0.05;
+					cloudletMaxYSpeed = 100;
+					cloudletMinYSpeed = -100;
+					cloudletShape = "cloudletClouds";
+					cloudletSize = 1;
+					deltaT = 0;
+					initT = 0;
+					interval = 0.02;
+					size = 0.3;
+					sourceSize = 0.02;
+					class Table {};
+					timeToLive = 0;
 				};
-				class OpticsIn: Optics_Guinner_APC_02 {};
-				class ViewGunner { // tbd
+				minCamElev = -90;
+				minElev = -25;
+				minOutElev = -4;
+				minOutTurn = -60;
+				minTurn = -360;
+				missileBeg = "spice rakety";
+				missileEnd = "konec rakety";
+				outGunnerMayFire = 1;
+				playerPosition = 0;
+				preciseGetInOut = 0;
+				primary = 1;
+				primaryGunner = 1;
+				primaryObserver = 0;
+				proxyIndex = 1;
+				proxyType = "CPGunner";
+				class Reflectors {};
+				selectionFireAnim = "zasleh";
+				showAllTargets = 0;
+				showCrewAim = 0;
+				showHMD = 0;
+				slingLoadOperator = 0;
+				soundElevation[] = {"",0.00316228,1};
+				soundServo[] = {"A3\Sounds_F\vehicles\soft\noises\servo_turret_MRAP01",0.177828,1,10};
+				soundServoVertical[] = {"A3\Sounds_F\vehicles\soft\noises\servo_turret_MRAP01",0.177828,1,10};
+				stabilizedInAxes = 3;
+				startEngine = 0;
+				class TurnIn {
+					turnOffset = 0;
+				};
+				class TurnOut {
+					turnOffset = 0;
+				};
+				turretCanSee = 0;
+				turretFollowFreeLook = 0;
+				turretInfoType = "RscOptics_crows";
+				class Turrets {};
+				class TurretSpec {
+					showHeadPhones = 0;
+				};
+				usePip = 1;
+				class ViewGunner {
 					continuous = 0;
 					initAngleX = -5;
 					initAngleY = 0;
@@ -562,86 +720,96 @@ class CfgVehicles
 					maxAngleX = 85;
 					maxAngleY = 150;
 					maxFov = 1.25;
-					maxMoveX = 0.075;
-					maxMoveY = 0.075;
-					maxMoveZ = 0.1;
-					minAngleX = -65;
-					minAngleY = -150;
-					minFov = 0.25;
-					minMoveX = -0.075;
-					minMoveY = -0.075;
-					minMoveZ = -0.075;
-					speedZoomMaxFOV = 0;
-					speedZoomMaxSpeed = 1e+10;
-				};
-				class ViewOptics { // tbd
-					initAngleX = 0;
-					initAngleY = 0;
-					initFov = 0.3;
-					maxAngleX = 30;
-					maxAngleY = 100;
-					maxFov = 0.35;
 					maxMoveX = 0;
 					maxMoveY = 0;
 					maxMoveZ = 0;
-					minAngleX = -30;
-					minAngleY = -100;
-					minFov = 0.07;
+					minAngleX = -75;
+					minAngleY = -150;
+					minFov = 0.25;
 					minMoveX = 0;
 					minMoveY = 0;
 					minMoveZ = 0;
 					speedZoomMaxFOV = 0;
 					speedZoomMaxSpeed = 1e+10;
 				};
-				startEngine = 0;
-				turretAxis = "otocvez_axis";
-				turretFollowFreeLook = 0;
-				magazines[] = { "5000Rnd_762x51_Belt" };
-				weapons[] = { "M134_minigun" };
+				viewGunnerInExternal = 1;
+				viewGunnerShadow = 1;
+				viewGunnerShadowAmb = 1;
+				viewGunnerShadowDiff = 1;
+				class ViewOptics {
+					initAngleX = 0;
+					initAngleY = 0;
+					initFov = 0.4375;
+					maxAngleX = 30;
+					maxAngleY = 100;
+					maxFov = 0.4375;
+					maxMoveX = 0;
+					maxMoveY = 0;
+					maxMoveZ = 0;
+					minAngleX = -30;
+					minAngleY = -100;
+					minFov = 0.03482;
+					minMoveX = 0;
+					minMoveY = 0;
+					minMoveZ = 0;
+					thermalMode[] = {0,1};
+					visionMode[] = {"Normal","NVG","Ti"};
+				};
+				weapons[] = {"M134_minigun"};
 			};
 		};
-		class VehicleTransport
+		class RenderTargets
 		{
-			class Carrier
+			class Gunner_display
 			{
-				cargoBayDimensions[]		= { "VTV_limit_1", "VTV_limit_2" };	// Memory points in model defining cargo space
-				// or
-				//cargoBayDimensions[]		= { {-1.3,2.1,0.27}, {1.41,4.1,3.9} };			// alternatively, positions in model space (since 2.08)
-
-				disableHeightLimit			= 1;								// If set to 1 disable height limit of transported vehicles
-				maxLoadMass					= 5000;							// Maximum cargo weight (in Kg) which the vehicle can transport
-				cargoAlignment[]			= { "front", "center" };				// Array of 2 elements defining alignment of vehicles in cargo space.
-																		// Possible values are left, right, center, front, back. Order is important.
-
-				cargoSpacing[]				= { 0, 0.15, 0 };					// Offset from X,Y,Z axes (in metres)
-
-				exits[]						= { "VTV_exit_1", "VTV_exit_2" };	// Memory points in model defining loading ramps, could have multiple
-				// or
-				// exits[]					= { {5,0,0}, {5,10,0} };			// alternatively, positions in model space (since 2.08)
-
-				unloadingInterval			= 2;								// Time between unloading vehicles (in seconds)
-				loadingDistance				= 10;								// Maximal distance for loading in exit point (in meters).
-				loadingAngle				= 60;								// Maximal sector where cargo vehicle must be to for loading (in degrees).
-				parachuteClassDefault		= "B_Parachute_02_F";				// Type of parachute used when dropped in air. Can be overridden by parachuteClass in Cargo.
-				parachuteHeightLimitDefault	= 50;								// Minimal height above terrain when parachute is used. Can be overridden by parachuteHeightLimit in Cargo.
-
-				class CargoTypeWhitelist										// Whitelist. If this isn't empty, only listed vehicles (isKindOf) can load into (since 2.10)
+				renderTarget="rendertarget0";
+				class CameraView1
 				{
- 			
+					pointPosition="PIP0_pos";
+					pointDirection="PIP0_dir";
+					renderVisionMode=2;
+					renderQuality=2;
+					fov=0.34999999;
+					turret[]={0};
+				};
+				BBoxes[]=
+				{
+					"PIP_0_TL",
+					"PIP_0_TR",
+					"PIP_0_BL",
+					"PIP_0_BR"
 				};
 			};
-			class Cargo
-			{
-				parachuteClass			= "B_Parachute_02_F";	// Type of parachute used when dropped in air. When empty then parachute is not used.
-				parachuteHeightLimit	= 40;				// Minimal height above terrain when parachute is used.
-				canBeTransported		= 1;				// 0 (false) / 1 (true)
-
-				dimensions[]			= { "BBox_1_1_pos", "BBox_1_2_pos" };	// Memory-point-based override of automatic bounding box
-				// or
-				// dimensions[]			= { { 0,0,0 }, { 3,2,1.5 } };			// alternatively, positions in model space (since 2.08)
-
-				rotation = -90;								// (optional) Defines in which direction the vehicle gets rotated when its loaded into ViV cargo and will only fit when rotated
-													// Only -90 and 90 are supported. Since v2.08
+		};
+	};
+	class SMT_DingoRCWS_20mm: SMT_DingoRCWS_minigun {
+		class Turrets: Turrets {
+			class MainTurret {
+				body = "mainTurret";
+				gun = "mainGun";
+				gunBeg = "muzzle";
+				gunEnd = "chamber";
+				gunnerName = "$STR_POSITION_GUNNER";
+				class HitPoints: HitPoints {};
+				inGunnerMayFire = 1;
+				initCamElev = 0;
+				initElev = 0;
+				initOutElev = 0;
+				initOutTurn = 0;
+				initTurn = 0;
+				magazines[] = {"200Rnd_127x99_mag_Tracer_Red","200Rnd_127x99_mag_Tracer_Red"};
+				maxCamElev = 90;
+				maxElev = 60;
+				maxHorizontalRotSpeed = 1.2;
+				maxOutElev = 20;
+				maxOutTurn = 60;
+				maxTurn = 360;
+				minCamElev = -90;
+				minElev = -25;
+				minOutElev = -4;
+				minOutTurn = -60;
+				minTurn = -360;
+				weapons[] = {"HMG_127"};
 			};
 		};
 	};
