@@ -140,155 +140,7 @@ class CfgWeapons
 		dzn_MG_Tripod_CarryItem="12th_MG_Tripod_Carry";
 		dzn_MG_Tripod_CarryItemUniversal="12th_MG_Tripod_Carry";
   };
-  /*
-    =============================================================================
-    M96 LAW (Disposable Launcher) Definition
-    =============================================================================
-    We define multiple states: normal backpack state, ready-to-fire, and used.
-  */
-    class Launcher_Base_F: Launcher {
-        class WeaponSlotsInfo;
-    };
 
-    class twelfth_m96: Launcher_Base_F { // launcher when on back
-      author = "DemonicOnPC; Waylen";
-      scope = 2;
-      scopeArsenal = 2;
-      baseWeapon = "twelfth_m96";
-      displayName = "[12th] M96 LAW - Mk VI"; // usual displayName
-      //displayName = "[12th] M96 LAW - Mk VI (B)"; // debug displayname
-
-      magazines[] = { "CBA_FakeLauncherMagazine" }; // When stowed/backpacked, it does not carry a real rocket.
-
-      model = "\Foundries\Weapons\Launchers\DMNS_M96_LAW_loaded.p3d";
-      picture = "\Foundries\Weapons\Launchers\Data\Law_Icon.paa";
-      UiPicture = "\Foundries\Weapons\Launchers\Data\Law_Icon.paa";
-      handAnim[] = {
-          "OFP2_ManSkeleton",
-          "\A3\Weapons_F_Exp\Launchers\RPG7\Data\Anim\RPG7V.rtm"
-      };
-      hiddenSelections[] = { "camo1", "camo2" };
-      hiddenSelectionsTextures[] = {
-          "\Foundries\Weapons\Launchers\Data\M96_Tube_co.paa",
-          "\Foundries\Weapons\Launchers\Data\M96_body_co.paa"
-      };
-
-      reloadAction = "GestureReloadRPG7";
-      recoil = "recoil_nlaw";
-      maxZeroing = 500;
-      shotPos = "muzzlePos2";
-      shotEnd = "muzzleEnd2";
-      modes[] = { "Single" };
-
-      class Single: Mode_SemiAuto {
-        sounds[] = { "StandardSound" };
-
-        class BaseSoundModeType {};
-        class StandardSound: BaseSoundModeType {
-            begin1[] = { "\A3\Sounds_F\arsenal\weapons\Launchers\NLAW\nlaw", 1.99526, 1, 1800 };
-            soundBegin[] = { "begin1", 1 };
-        };
-
-        reloadSpeed = 10;
-        recoil = "recoil_single_nlaw";
-        aiRateOfFire = 7;
-        aiRateOfFireDistance = 500;
-        minRange = 25;
-        minRangeProbab = 0.8;
-        midRange = 50;
-        midRangeProbab = 0.8;
-        maxRange = 790;
-        maxRangeProbab = 0.8;
-      };
-
-      class GunParticles {
-          class effect1 {
-              positionName = "muzzleEnd2";
-              directionName = "muzzlePos2";
-              effectName = "RocketBackEffectsNLAWNT";
-          };
-      };
-
-      drySound[] = { "\A3\Sounds_F\arsenal\weapons\Launchers\NLAW\Dry_NLAW", 0.177828, 1, 15 };
-      changeFiremodeSound[] = { "\A3\sounds_f\dummysound", 0.562341, 1, 20 };
-      modelOptics = "-";
-
-      class OpticsModes {
-        class irons {
-          opticsID = 1;
-          useModelOptics = 0;
-          opticsPPEffects[] = {};
-          opticsZoomMin = 0.375;
-          opticsZoomMax = 1.25;
-          opticsZoomInit = 0.75;
-          visionMode[] = {};
-          opticsFlare = 0;
-          opticsDisablePeripherialVision = 0;
-          distanceZoomMin = 300;
-          distanceZoomMax = 300;
-          cameraDir = "look";
-          discreteDistance[] = { 300 };
-          discreteDistanceInitIndex = 0;
-          discreteDistanceCameraPoint[] = { "eye_300" };
-        };
-      };
-
-      canLock = 0;
-      ballisticsComputer = 0;
-      inertia = 1;
-      aimTransitionSpeed = 0.5;
-      dexterity = 1;
-
-      class WeaponSlotsInfo: WeaponSlotsInfo {
-          class CowsSlot: CowsSlot {
-            linkProxy = "\A3\data_f\proxies\weapon_slots\TOP";
-            displayName = "$STR_A3_CowsSlot0";
-            compatibleItems[] = COMMON_SIGHTS;
-            iconPosition[] = { 0.5, 0.3 };
-          };
-          mass = 125; // launcher + rocket (100 + 45)
-      };
-
-      class ItemInfo {
-          priority = 3;
-      };
-      descriptionShort = "A 66mm single-use RPG, effective against medium armor";
-    };
-  // Ready state: actual loaded launcher in hands
-    class twelfth_m96_READY: twelfth_m96{
-        displayName = "[12th] M96 LAW - Mk VI";
-        //displayName = "[12th] M96 LAW - Mk VI (R)"; // debug displayName
-        scope = 1;
-        scopeArsenal = 1;
-        baseWeapon = "twelfth_m96";
-        magazines[] = { "twelfth_m96_magazine" };
-        magazineReloadTime = 0.1;
-        reloadMagazineSound[] = {"",1,1};
-
-        class EventHandlers {
-          fired = "_this call CBA_fnc_firedDisposable";
-        };
-
-        class WeaponSlotsInfo: WeaponSlotsInfo {
-            mass = 125; // launcher mass + rocket (100 + 45)
-        };
-    };
-
-    class twelfth_m96_USED: twelfth_m96{ // fired launcher
-        displayName = "[12th] M96 LAW - Mk VI (Used)";
-        scope = 1;
-        scopeArsenal = 1;
-        baseWeapon = "twelfth_m96_USED";
-
-        magazines[] = { "CBA_FakeLauncherMagazine" };
-        weaponPoolAvailable = 0;
-
-        model = "\Foundries\Weapons\Launchers\DMNS_M96_LAW_Used.p3d";
-
-        class WeaponSlotsInfo: WeaponSlotsInfo{
-            mass = 80; // launcher mass (100)
-        };
-    };
   /*
     =============================================================================
     MAAWS Config
@@ -569,7 +421,7 @@ class CfgWeapons
     class WeaponSlotsInfo: WeaponSlotsInfo {
       mass = 30;
       class MuzzleSlot: MuzzleSlot {
-          compatibleitems[] = { "OPTRE_MA5Suppressor" };
+          compatibleitems[] = {};
       };
       class CowsSlot: CowsSlot {
         compatibleitems[] = COMMON_SIGHTS;
@@ -1253,6 +1105,14 @@ class CfgWeapons
           compatibleitems[] = COMMON_MEDIUM_BIPOD;
         };
       };
+      class LinkedItems
+		{
+			class LinkedItemsMuzzle
+			{
+				item = "TCP_muzzle_flash_762_01";
+				slot = "MuzzleSlot";
+			};
+		};
     };
 
 	class twelfth_M739B: OPTRE_M739_SAW_Foregrip_Black_F
@@ -1476,6 +1336,14 @@ class CfgWeapons
           compatibleitems[] = COMMON_HEAVY_BIPOD;
         };
       };
+        class LinkedItems
+		{
+			class LinkedItemsMuzzle
+			{
+				item = "TCP_muzzle_brake_762_02";
+				slot = "MuzzleSlot";
+			};
+		};
     };
 
     // M247 GPMG configuration

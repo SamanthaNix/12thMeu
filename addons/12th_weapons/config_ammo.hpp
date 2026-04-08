@@ -80,12 +80,7 @@ class CfgAmmo
     indirectHitRange = 0.1; // Very small radial damage
     hit = 470; // Direct hit damage
   };
-  // Custom rocket for M96 LAW
-  class twelfth_m96_rocket_heat: R_PG32V_F {
-    hit = 300; // Adjust for desired armor penetration; depends on your game balance.
-    thrust=250;
-    thrustTime = 1.00000;
-  };
+
    //Modify standard 40mm grenade ammo to remove bounce
   	class G_40mm_Smoke: SmokeShell {
 		simulation = "shotSmoke";
