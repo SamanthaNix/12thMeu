@@ -507,15 +507,15 @@ class CfgVehicles
 
 		class AnimationSources: AnimationSources
 		{
-			class muzzle_rot
+			class flash_rot
 			{
-				source="ammorandom";
-				weapon="HMG_127";
+				source = "ammoRandom.0";
+				weapon = "M134_minigun";
 			};
-			class muzzle_hide
+			class flash_hide
 			{
-				source="reload";
-				weapon="HMG_127";
+				source = "reload";
+				weapon = "M134_minigun";
 			};
 		};
 		class Turrets: Turrets {
@@ -607,7 +607,7 @@ class CfgVehicles
 				gunnerInAction = "ManActTestDriver";
 				gunnerLeftHandAnimName = "";
 				gunnerLeftLegAnimName = "";
-				gunnerName = "$STR_POSITION_GUNNER";
+				gunnerName = "RCWS Gunner";
 				gunnerOpticsColor[] = {0,0,0,1};
 				gunnerOpticsEffect[] = {};
 				gunnerOpticsModel = "\A3\weapons_f\reticle\Optics_Gunner_02_F";
@@ -673,8 +673,8 @@ class CfgVehicles
 					timeToLive = 0;
 				};
 				minCamElev = -90;
-				minElev = -25;
-				minOutElev = -4;
+				minElev = -50;
+				minOutElev = -50;
 				minOutTurn = -60;
 				minTurn = -360;
 				missileBeg = "spice rakety";
@@ -782,7 +782,7 @@ class CfgVehicles
 			};
 		};
 	};
-	class SMT_DingoRCWS_20mm: SMT_DingoRCWS_minigun {
+	class SMT_DingoRCWS_autocannon: SMT_DingoRCWS_minigun {
 		class Turrets: Turrets {
 			class MainTurret {
 				body = "mainTurret";
