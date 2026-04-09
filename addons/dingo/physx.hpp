@@ -3,7 +3,7 @@
 
 		thrustDelay            	= 0.2; 		/// initial delay to cause lesser slip when on 1st gear - thrust goes from zero to full in this time
 		brakeIdleSpeed         	= 3; 	/// under what speed (in m/s) does the brake apply for a vehicle without thrust
-		maxSpeed               	= 180; 		/// vehicle can go a bit over, but dramatically decreases thrust
+		maxSpeed               	= 130; 		/// vehicle can go a bit over, but dramatically decreases thrust
 		fuelCapacity           	= 80;
 		wheelCircumference     	= 4.52; 	/// diameter of 1440
 
