@@ -44,7 +44,6 @@ class CfgWeapons
   class OPTRE_M319N;
   class OPTRE_M301UGL; // Base class for our UGLs
   class OPTRE_M73;
-  class DMNS_M96_LAW;
   class GL_3GL_F;                   // Base class for grenade launchers
   class UGL_F;
   class InventoryOpticsItem_Base_F; // Base class for optics
@@ -66,9 +65,11 @@ class CfgWeapons
   class Dmns_M33_T;
   class OPTRE_M250;
   class OPTRE_BR55HB;
-  class OPTRE_BR45_black;
+  class OPTRE_BR55;
   class OPTRE_BR45GL_black;
   class OPTRE_M392_DMR;
+  class TCP_optic_M43RCO;
+  class TCP_OpticsMode_Base_Irons;
 
   //TCP Class definitions
   //Pistols
@@ -421,7 +422,7 @@ class CfgWeapons
     class WeaponSlotsInfo: WeaponSlotsInfo {
       mass = 30;
       class MuzzleSlot: MuzzleSlot {
-          compatibleitems[] = {};
+          compatibleitems[] = {"TCP_muzzle_brake_762_01","TCP_muzzle_brake_762_03","TCP_muzzle_snds_762_01","TCP_muzzle_snds_95_01"};
       };
       class CowsSlot: CowsSlot {
         compatibleitems[] = COMMON_SIGHTS;
@@ -470,20 +471,27 @@ class CfgWeapons
     =============================================================================
   */
 
-    class twelfth_br55 : OPTRE_BR45_black
+    class twelfth_br55 : OPTRE_BR55
     {
       author = "Weber";
       scope = 2;
       scopeArsenal = 2;
       canShootInWater = 1;
-      displayName = "[12th] BR45";
+      displayName = "[12th] BR55";
       baseWeapon = "twelfth_BR55";
       magazines[] = COMMON_BR_MAGAZINES;
-      ace_overheating_barrelMass = 10;
+      ace_overheating_barrelMass = 5;
+	  model = "\TCP\Weapons_Ins\Rifles\BR55\BR55.p3d";
+	  picture = "\TCP\Weapons_Ins\Rifles\BR55\data\ui\icon_arifle_BR55_X_ca.paa";
+	  pictureWire = "\TCP\Weapons_Ins\Rifles\BR55\data\ui\icon_arifle_BR55_W_ca.paa";
+	  hiddenSelections[] = {"camo","camo1"};
+	  hiddenSelectionsTextures[] = {"\TCP\Weapons_Ins\Rifles\BR55\data\camo\default\BR55_01_CO.paa","\TCP\Weapons_Ins\Rifles\BR55\data\camo\default\BR55_02_CO.paa"};
+	  handAnim[] = {"OFP2_ManSkeleton","\TCP\Weapons_Ins\Rifles\BR55\data\anim\BR55_handAnim.rtm"};
       class WeaponSlotsInfo : WeaponSlotsInfo
       {
         class MuzzleSlot : MuzzleSlot
         {
+			compatibleitems[] = {"TCP_muzzle_comp_95_01","TCP_muzzle_flash_95_01","TCP_muzzle_flash_95_02","TCP_muzzle_flash_95_03","TCP_muzzle_brake_95_01","TCP_muzzle_comp_95_01","TCP_muzzle_snds_95_01","TCP_muzzle_snds_95_02","TCP_muzzle_snds_523_01","TCP_muzzle_snds_523_02"};
         };
         class CowsSlot : CowsSlot
         {
@@ -497,11 +505,19 @@ class CfgWeapons
         {
         };
       };
+	 class LinkedItems
+		{
+			class LinkedItemsMuzzle
+			{
+				item = "TCP_muzzle_flash_95_02";
+				slot = "MuzzleSlot";
+			};
+		};
     };
 
     // Additional BR55 variants with grenade launchers
 
-    class twelfth_br55_gl : OPTRE_BR45GL_black
+   /* class twelfth_br55_gl : OPTRE_BR45GL_black
     {
       author = "Weber";
       scope = 2;
@@ -528,11 +544,11 @@ class CfgWeapons
         {
         };
       };
-    };
+    }; */
 
     class twelfth_BR55_HB : OPTRE_BR55HB
     {
-      author = "Weber";
+      author = "Rex";
       scope = 2;
       scopeArsenal = 2;
       canShootInWater = 1;
@@ -540,10 +556,17 @@ class CfgWeapons
       baseWeapon = "twelfth_BR55_HB";
       magazines[] = COMMON_BR_MAGAZINES;
       ace_overheating_barrelMass = 10;
+	  model = "\TCP\Weapons_Ins\LongRangeRifles\BR55HB\BR55HB.p3d";
+		picture = "\TCP\Weapons_Ins\LongRangeRifles\BR55HB\data\ui\icon_srifle_BR55HB_X_ca.paa";
+		pictureWire = "\TCP\Weapons_Ins\LongRangeRifles\BR55HB\data\ui\icon_srifle_BR55HB_W_ca.paa";
+		hiddenSelections[] = {"camo","camo1"};
+		hiddenSelectionsTextures[] = {"\TCP\Weapons_Ins\LongRangeRifles\BR55HB\data\camo\default\BR55HB_01_CO.paa","\TCP\Weapons_Ins\LongRangeRifles\BR55HB\data\camo\default\BR55HB_02_CO.paa"};
+		handAnim[] = {"OFP2_ManSkeleton","\TCP\Weapons_Ins\LongRangeRifles\BR55HB\data\anim\BR55HB_handAnim.rtm"};
       class WeaponSlotsInfo : WeaponSlotsInfo
       {
         class MuzzleSlot : MuzzleSlot
         {
+			compatibleitems[] = {"TCP_muzzle_comp_95_01","TCP_muzzle_flash_95_01","TCP_muzzle_flash_95_02","TCP_muzzle_flash_95_03","TCP_muzzle_brake_95_01","TCP_muzzle_comp_95_01","TCP_muzzle_snds_95_01","TCP_muzzle_snds_95_02","TCP_muzzle_snds_523_01","TCP_muzzle_snds_523_02"};
         };
         class CowsSlot : CowsSlot
         {
@@ -555,479 +578,17 @@ class CfgWeapons
         };
         class UnderBarrelSlot : UnderBarrelSlot
         {
-          compatibleitems[] = {};
+          compatibleitems[] = COMMON_MEDIUM_BIPOD;
         };
       };
-      class Single: Mode_SemiAuto
-	    {
-		    sounds[]=
-		    {
-		    	"StandardSound",
-		    	"SilencedSound"
-		    };
-		    class BaseSoundModeType
-		    {
-		    	weaponSoundEffect="DefaultRifle";
-		    	closure1[]={};
-		    	closure2[]={};
-		    	soundClosure[]=
-		    	{
-		    		"closure1",
-		    		0.5,
-		    		"closure2",
-		    		0.5
-		    	};
-		    };
-		    class StandardSound: BaseSoundModeType
-		    {
-		    	begin1[]=
-		    	{
-		    		"\UNSC_F_Weapons\weapons\data\Sounds\UNSC_br55_1.wss",
-		    		1.2,
-		    		1,
-		    		2000
-		    	};
-		    	begin2[]=
-		    	{
-		    		"\UNSC_F_Weapons\weapons\data\Sounds\UNSC_br55_2.wss",
-		    		1.2,
-		    		1,
-		    		2000
-		    	};
-		    	begin3[]=
-		    	{
-		    		"\UNSC_F_Weapons\weapons\data\Sounds\UNSC_br55_3.wss",
-		    		1.2,
-		    		1,
-		    		2000
-		    	};
-		    begin4[]=
-		    {
-		    	"\UNSC_F_Weapons\weapons\data\Sounds\UNSC_br55_4.wss",
-		    	1.2,
-		    	1,
-		    	2000
-		    };
-		    	soundBegin[]=
-		    	{
-		    		"begin1",
-		    		0.1,
-		    		"begin2",
-		    		0.1,
-		    		"begin3",
-		    		0.1,
-		    		"begin4",
-		    		0.1
-		    	};
-		    	class SoundTails
-		    	{
-		    		class TailInterior
-		    		{
-		    			sound[]=
-		    			{
-		    				"A3\Sounds_F\arsenal\weapons\Rifles\MX\mx_tail_interior",
-		    				2.2387211,
-		    				1,
-		    				1800
-		    			};
-		    			frequency=1;
-		    			volume="interior";
-		    		};
-		    		class TailTrees
-		    		{
-		    			sound[]=
-		    			{
-		    				"A3\Sounds_F\arsenal\weapons\Rifles\MX\mx_tail_trees",
-		    				1,
-		    				1,
-		    				1800
-		    			};
-		    			frequency=1;
-		    			volume="(1-interior/1.4)*trees";
-		    		};
-		    		class TailForest
-		    		{
-		    			sound[]=
-		    			{
-		    				"A3\Sounds_F\arsenal\weapons\Rifles\MX\mx_tail_forest",
-		    				1,
-		    				1,
-		    				1800
-		    			};
-		    			frequency=1;
-		    			volume="(1-interior/1.4)*forest";
-		    		};
-		    		class TailMeadows
-		    		{
-		    			sound[]=
-		    			{
-		    				"A3\Sounds_F\arsenal\weapons\Rifles\MX\mx_tail_meadows",
-		    				1,
-		    				1,
-		    				1800
-		    			};
-		    			frequency=1;
-		    			volume="(1-interior/1.4)*(meadows/2 max sea/2)";
-		    		};
-		    		class TailHouses
-		    		{
-		    			sound[]=
-		    			{
-		    				"A3\Sounds_F\arsenal\weapons\Rifles\MX\mx_tail_houses",
-		    				1,
-		    				1,
-		    				1800
-		    			};
-		    			frequency=1;
-		    			volume="(1-interior/1.4)*houses";
-		    		};
-		    	};
-		    };
-		    class SilencedSound: BaseSoundModeType
-		    {
-		    	begin1[]=
-		    	{
-		    		"A3\Sounds_F\arsenal\weapons\Rifles\MX\Silencer_Mx_short_01",
-		    		0.79432821,
-		    		1,
-		    		400
-		    	};
-		    	begin2[]=
-		    	{
-		    		"A3\Sounds_F\arsenal\weapons\Rifles\MX\Silencer_Mx_short_02",
-		    		0.79432821,
-		    		1,
-		    		400
-		    	};
-		    	begin3[]=
-		    	{
-		    		"A3\Sounds_F\arsenal\weapons\Rifles\MX\Silencer_Mx_short_03",
-		    		0.79432821,
-		    		1,
-		    		400
-		    	};
-		    	soundBegin[]=
-		    	{
-		    		"begin1",
-		    		0.33000001,
-		    		"begin2",
-		    		0.33000001,
-		    		"begin1",
-		    		0.34
-		    	};
-		    	class SoundTails
-		    	{
-		    		class TailInterior
-		    		{
-		    			sound[]=
-		    			{
-		    				"A3\Sounds_F\arsenal\weapons\Rifles\MX\Silencer_Mx_tail_interior",
-		    				1,
-		    				1,
-		    				400
-		    			};
-		    			frequency=1;
-		    			volume="interior";
-		    		};
-		    		class TailTrees
-		    		{
-		    			sound[]=
-		    			{
-		    				"A3\Sounds_F\arsenal\weapons\Rifles\MX\Silencer_mx_tail_trees",
-		    				1,
-		    				1,
-		    				400
-		    			};
-		    			frequency=1;
-		    			volume="(1-interior/1.4)*trees";
-		    		};
-		    		class TailForest
-		    		{
-		    			sound[]=
-		    			{
-		    				"A3\Sounds_F\arsenal\weapons\Rifles\MX\Silencer_mx_tail_forest",
-		    				1,
-		    				1,
-		    				400
-		    			};
-		    			frequency=1;
-		    			volume="(1-interior/1.4)*forest";
-		    		};
-		    		class TailMeadows
-		    		{
-		    			sound[]=
-		    			{
-		    				"A3\Sounds_F\arsenal\weapons\Rifles\MX\Silencer_mx_tail_meadows",
-		    				1,
-		    				1,
-		    				400
-		    			};
-		    			frequency=1;
-		    			volume="(1-interior/1.4)*(meadows/2 max sea/2)";
-		    		};
-		    		class TailHouses
-		    		{
-		    			sound[]=
-		    			{
-		    				"A3\Sounds_F\arsenal\weapons\Rifles\MX\Silencer_mx_tail_houses",
-		    				1,
-		    				1,
-		    				400
-		    			};
-		    			frequency=1;
-		    			volume="(1-interior/1.4)*houses";
-		    		};
-		    	};
-		    };
-		    reloadTime=0.1;
-		    recoil="recoil_single_mx";
-		    recoilProne="recoil_single_prone_mx";
-		    dispersion=0.00005;
-		    minRange=0;
-		    minRangeProbab=0.80000001;
-		    midRange=500;
-		    midRangeProbab=0.89999998;
-		    maxRange=1000;
-		    maxRangeProbab=0.60000002;
-		    aiRateOfFire=2;
-		    aiRateOfFireDistance=20;
-	    };
-	    class Burst: Mode_Burst
-	    {
-		    sounds[]=
-		    {
-		    	"StandardSound",
-		    	"SilencedSound"
-		    };
-		    class BaseSoundModeType
-		    {
-		    	weaponSoundEffect="DefaultRifle";
-		    	closure1[]={};
-		    	closure2[]={};
-		    	soundClosure[]=
-		    	{
-		    		"closure1",
-		    		0.5,
-		    		"closure2",
-		    		0.5
-		    	};
-		    };
-		    class StandardSound: BaseSoundModeType
-		    {
-		    	begin1[]=
-		    	{
-		    		"\UNSC_F_Weapons\weapons\data\Sounds\UNSC_br55_1.wss",
-		    		1.2,
-		    		1,
-		    		2000
-		    	};
-		    	begin2[]=
-		    	{
-		    		"\UNSC_F_Weapons\weapons\data\Sounds\UNSC_br55_2.wss",
-		    		1.2,
-		    		1,
-		    		2000
-		    	};
-		    	begin3[]=
-		    	{
-		    		"\UNSC_F_Weapons\weapons\data\Sounds\UNSC_br55_3.wss",
-		    		1.2,
-		    		1,
-		    		2000
-		    	};
-		    begin4[]=
-		    {
-		    	"\UNSC_F_Weapons\weapons\data\Sounds\UNSC_br55_4.wss",
-		    	1.2,
-		    	1,
-		    	2000
-		    };
-		    	soundBegin[]=
-		    	{
-		    		"begin1",
-		    		0.1,
-		    		"begin2",
-		    		0.1,
-		    		"begin3",
-		    		0.1,
-		    		"begin4",
-		    		0.1
-		    	};
-		    	class SoundTails
-		    	{
-		    		class TailInterior
-		    		{
-		    			sound[]=
-		    			{
-		    				"A3\Sounds_F\arsenal\weapons\Rifles\MX\mx_tail_interior",
-		    				2.2387211,
-		    				1,
-		    				1800
-		    			};
-		    			frequency=1;
-		    			volume="interior";
-		    		};
-		    		class TailTrees
-		    		{
-		    			sound[]=
-		    			{
-		    				"A3\Sounds_F\arsenal\weapons\Rifles\MX\mx_tail_trees",
-		    				1,
-		    				1,
-		    				1800
-		    			};
-		    			frequency=1;
-		    			volume="(1-interior/1.4)*trees";
-		    		};
-		    		class TailForest
-		    		{
-		    			sound[]=
-		    			{
-		    				"A3\Sounds_F\arsenal\weapons\Rifles\MX\mx_tail_forest",
-		    				1,
-		    				1,
-		    				1800
-		    			};
-		    			frequency=1;
-		    			volume="(1-interior/1.4)*forest";
-		    		};
-		    		class TailMeadows
-		    		{
-		    			sound[]=
-		    			{
-		    				"A3\Sounds_F\arsenal\weapons\Rifles\MX\mx_tail_meadows",
-		    				1,
-		    				1,
-		    				1800
-		    			};
-		    			frequency=1;
-		    			volume="(1-interior/1.4)*(meadows/2 max sea/2)";
-		    		};
-		    		class TailHouses
-		    		{
-		    			sound[]=
-		    			{
-		    				"A3\Sounds_F\arsenal\weapons\Rifles\MX\mx_tail_houses",
-		    				1,
-		    				1,
-		    				1800
-		    			};
-		    			frequency=1;
-		    			volume="(1-interior/1.4)*houses";
-		    		};
-		    	};
-		    };
-		    class SilencedSound: BaseSoundModeType
-		    {
-		    	begin1[]=
-		    	{
-		    		"A3\Sounds_F\arsenal\weapons\Rifles\MX\Silencer_Mx_short_01",
-		    		0.79432821,
-		    		1,
-		    		400
-		    	};
-		    	begin2[]=
-		    	{
-		    		"A3\Sounds_F\arsenal\weapons\Rifles\MX\Silencer_Mx_short_02",
-		    		0.79432821,
-		    		1,
-		    		400
-		    	};
-		    	begin3[]=
-		    	{
-		    		"A3\Sounds_F\arsenal\weapons\Rifles\MX\Silencer_Mx_short_03",
-		    		0.79432821,
-		    		1,
-		    		400
-		    	};
-		    	soundBegin[]=
-		    	{
-		    		"begin1",
-		    		0.33000001,
-		    		"begin2",
-		    		0.33000001,
-		    		"begin1",
-		    		0.34
-		    	};
-		    	class SoundTails
-		    	{
-		    		class TailInterior
-		    		{
-		    			sound[]=
-		    			{
-		    				"A3\Sounds_F\arsenal\weapons\Rifles\MX\Silencer_Mx_tail_interior",
-		    				1,
-		    				1,
-		    				400
-		    			};
-		    			frequency=1;
-		    			volume="interior";
-		    		};
-		    		class TailTrees
-		    		{
-		    			sound[]=
-		    			{
-		    				"A3\Sounds_F\arsenal\weapons\Rifles\MX\Silencer_mx_tail_trees",
-		    				1,
-		    				1,
-		    				400
-		    			};
-		    			frequency=1;
-		    			volume="(1-interior/1.4)*trees";
-		    		};
-		    		class TailForest
-		    		{
-		    			sound[]=
-		    			{
-		    				"A3\Sounds_F\arsenal\weapons\Rifles\MX\Silencer_mx_tail_forest",
-		    				1,
-		    				1,
-		    				400
-		    			};
-		    			frequency=1;
-		    			volume="(1-interior/1.4)*forest";
-		    		};
-		    		class TailMeadows
-		    		{
-		    			sound[]=
-		    			{
-		    				"A3\Sounds_F\arsenal\weapons\Rifles\MX\Silencer_mx_tail_meadows",
-		    				1,
-		    				1,
-		    				400
-		    			};
-		    			frequency=1;
-		    			volume="(1-interior/1.4)*(meadows/2 max sea/2)";
-		    		};
-		    		class TailHouses
-		    		{
-		    			sound[]=
-		    			{
-		    				"A3\Sounds_F\arsenal\weapons\Rifles\MX\Silencer_mx_tail_houses",
-		    				1,
-		    				1,
-		    				400
-		    			};
-		    			frequency=1;
-		    			volume="(1-interior/1.4)*houses";
-		    		};
-		    	};
-		    };
-		    soundBurst=0;
-		    burst=3;
-		    reloadTime=0.08;
-		    recoil="recoil_auto_mx";
-		    recoilProne="recoil_auto_prone_mx";
-		    dispersion=0.00005;
-		    minRange=1;
-		    minRangeProbab=0.80000001;
-		    midRange=500;
-		    midRangeProbab=0.89999998;
-		    maxRange=1000;
-		    maxRangeProbab=0.60000002;
-		    aiRateOfFire=1;
-		    aiRateOfFireDistance=10;
-	    };
+	  class LinkedItems
+		{
+			class LinkedItemsMuzzle
+			{
+				item = "TCP_muzzle_flash_95_02";
+				slot = "MuzzleSlot";
+			};
+		};
     };
 
     // commented out cus marksmen DO NOT need a GL lmfao
@@ -1266,7 +827,7 @@ class CfgWeapons
       baseWeapon = "twelfth_M73H";
       magazines[] = {
           "twelfth_100Rnd_95x40_Box", "twelfth_100Rnd_95x40_Box_T",
-          "OPTRE_36Rnd_95x40_Mag", "OPTRE_36Rnd_95x40_Mag_Tracer","twelfth_56Rnd_95x40_Mag","twelfth_56Rnd_95x40_Mag_T","twelfth_br_36Rnd_UW"
+          "twelfth_br_36Rnd", "twelfth_br_36Rnd_T","twelfth_56Rnd_95x40_Mag","twelfth_56Rnd_95x40_Mag_T","twelfth_br_36Rnd_UW"
           };
 	    distanceZoomMin=100;
 	    distanceZoomMax=700;
@@ -1442,6 +1003,14 @@ class CfgWeapons
           compatibleitems[] = COMMON_HEAVY_BIPOD;
         };
       };
+	  class LinkedItems
+		{
+			class LinkedItemsMuzzle
+			{
+				item = "OPTRE_M247a1_Flashhider";
+				slot = "MuzzleSlot";
+			};
+		};
     };
 	class twelfth_M247A1_Stripped : OPTRE_M247A1_Stripped
     {
@@ -1489,6 +1058,14 @@ class CfgWeapons
           compatibleitems[] = COMMON_HEAVY_BIPOD;
         };
       };
+	  class LinkedItems
+		{
+			class LinkedItemsMuzzle
+			{
+				item = "OPTRE_M247a1_Flashhider";
+				slot = "MuzzleSlot";
+			};
+		};
     };
 
     class twelfth_M250 : OPTRE_M250 
@@ -1726,15 +1303,16 @@ class CfgWeapons
 		};
 	};
 
-  class twelfth_MA6_AL: twelfth_MA5B {
+  class twelfth_MA6_AL: twelfth_br55 {
 		model="x\12thMEU\addons\12th_weapons\data\MA6_D\MA6_D.p3d";
 		author = "Rex";
+		mass = 60;
 		scope = 2;
 		scopeArsenal = 2;
 		displayName = "[12th] MA6-B H-IAR";
 		baseWeapon = "twelfth_MA6_AL";
 		canShootInWater = 1;
-		magazines[] = {"twelfth_56Rnd_95x40_Mag", "twelfth_56Rnd_95x40_Mag_T", "OPTRE_36Rnd_95x40_Mag", "OPTRE_36Rnd_95x40_Mag_Tracer","twelfth_br_36Rnd_UW" };
+		magazines[] = {"twelfth_56Rnd_95x40_Mag", "twelfth_56Rnd_95x40_Mag_T", "twelfth_br_36Rnd", "twelfth_br_36Rnd_T","twelfth_br_36Rnd_UW" };
 		handAnim[] = {"OFP2_ManSkeleton","x\12thMEU\addons\12th_weapons\data\MA6\animations\MA6.rtm"};
 		class WeaponSlotsInfo: WeaponSlotsInfo {
 			class MuzzleSlot: MuzzleSlot {
@@ -1771,6 +1349,59 @@ class CfgWeapons
 		displayName = "[12th] MA6 Smartlink";
 		descriptionShort = "MA6 Smartlink";
 		model = "x\12thMEU\addons\12th_weapons\data\MA6_Smartlink\MA6_SmartLink.p3d";
+	};
+	class twelfth_m43rco : TCP_optic_M43RCO{
+		author = "rex";
+		displayName = "[12th] M43 RCO";
+		class ItemInfo: InventoryOpticsItem_Base_F{
+			mass = 10;
+			modelOptics = "\A3\Weapons_F\empty";
+			optics = 1;
+			opticType = 2;
+			class OpticsModes
+			{
+				class Irons: TCP_OpticsMode_Base_Irons{};
+				class EVOSD
+				{
+					opticsID = 1;
+					useModelOptics = 1;
+					opticsPPEffects[] = {"OpticsCHAbera1","OpticsBlur1"};
+					opticsZoomMin = 0.083333336;
+					opticsZoomMax = 0.25;
+					opticsZoomInit = 0.25;
+					discreteDistance[] = {100,200,300,400,500,600,700,800,900,1000};
+					discreteDistanceInitIndex = 1;
+					distanceZoomMin = 100;
+					distanceZoomMax = 1000;
+					discreteFOV[] = {0.25,0.125,0.083333336};
+					discreteInitIndex = 0;
+					modelOptics[] = {"\TCP\Weapons_ins\Acc\Optic\M43RCO\reticle_M43RCO_1x.p3d","\TCP\Weapons_ins\Acc\Optic\M43RCO\reticle_M43RCO_2x.p3d","\TCP\Weapons_ins\Acc\Optic\M43RCO\reticle_M43RCO_3x.p3d"};
+					memoryPointCamera = "opticView";
+					visionMode[] = {};
+					opticsFlare = 1;
+					opticsDisablePeripherialVision = 1;
+					cameraDir = "";
+				};
+			};
+		};
+	};
+	class twelfth_m43rco_crs : twelfth_m43rco {
+		author = "rex";
+		displayName = "[12th] M43 RCO (CRS)";
+		picture = "\TCP\Weapons_ins\Acc\Optic\M43RCO\data\ui\icon_optic_M43RCO_CRS_CA.paa";
+		model = "\TCP\Weapons_ins\Acc\Optic\M43RCO\acco_M43RCO_CRS.p3d";
+	};
+	class twelfth_m43rco_crs_cup : twelfth_m43rco {
+		author = "rex";
+		displayName = "[12th] M43 RCO (CRS, Eyecup)";
+		picture = "\TCP\Weapons_ins\Acc\Optic\M43RCO\data\ui\icon_optic_M43RCO_CRS_CUP_CA.paa";
+		model = "\TCP\Weapons_ins\Acc\Optic\M43RCO\acco_M43RCO_CRS_CUP.p3d";
+	};
+	class twelfth_m43rco_cup : twelfth_m43rco {
+		author = "rex";
+		displayName = "[12th] M43 RCO (Eyecup)";
+		picture = "\TCP\Weapons_ins\Acc\Optic\M43RCO\data\ui\icon_optic_M43RCO_CUP_CA.paa";
+		model = "\TCP\Weapons_ins\Acc\Optic\M43RCO\acco_M43RCO_CUP.p3d";
 	};
 /* 	class MA6_Flashlight: ACE_SPIR{
 		author = "Sammy";

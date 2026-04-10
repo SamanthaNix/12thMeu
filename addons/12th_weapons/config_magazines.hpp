@@ -65,12 +65,38 @@ class CfgMagazines
   class twelfth_br_36Rnd_UW : OPTRE_36Rnd_95x40_Mag
   {
     author = "Weber";
+    picture = "\TCP\Weapons\Ammo\95x40\Ball\data\ui\icon_95x40mm_36Rnd_ca.paa";
+		modelSpecial = "\TCP\Weapons\Ammo\95x40\Ball\mag_95x40mm_36rnd.p3d";
     displayName = "36Rnd 9.5x40mm Magazine (Underwater)";
     count = 36;
     initspeed = 700;
     descriptionShort = "36 Round Magazine 9.5x40mm";
     mass = 10;
     ammo = "twelfth_95x40_UW"; // Underwater ammunition
+  };
+  //BR magazine
+  class twelfth_br_36Rnd : OPTRE_36Rnd_95x40_Mag
+  {
+    author = "Weber";
+    picture = "\TCP\Weapons\Ammo\95x40\Ball\data\ui\icon_95x40mm_36Rnd_ca.paa";
+		modelSpecial = "\TCP\Weapons\Ammo\95x40\Ball\mag_95x40mm_36rnd.p3d";
+    displayName = "36Rnd 9.5x40mm Magazine";
+    count = 36;
+    initspeed = 700;
+    descriptionShort = "36 Round Magazine 9.5x40mm";
+    mass = 10;
+  };
+    //BR magazine tracer
+  class twelfth_br_36Rnd_T : OPTRE_36Rnd_95x40_Mag_Tracer
+  {
+    author = "Weber";
+    picture = "\TCP\Weapons\Ammo\95x40\Ball\data\ui\icon_95x40mm_36Rnd_ca.paa";
+		modelSpecial = "\TCP\Weapons\Ammo\95x40\Ball\mag_95x40mm_36rnd.p3d";
+    displayName = "36Rnd 9.5x40mm Magazine (Tracer)";
+    count = 36;
+    initspeed = 700;
+    descriptionShort = "36 Round Magazine 9.5x40mm";
+    mass = 10;
   };
   // Underwater M7 60-round mag
   class twelfth_m7_60rnd_UW : OPTRE_60Rnd_5x23mm_Mag
