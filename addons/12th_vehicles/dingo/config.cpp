@@ -33,10 +33,11 @@ class CfgVehicles {
     faction="twelfth_MEU";
     editorCategory="twelfth_MEU";
     editorSubcategory="twelfth_MEU_Cars";
-    hiddenSelections[]= {"camo1","camo7","camo8"};
+    hiddenSelections[]= {"camo1","camo7","camo11","camo8"};
     hiddenSelectionsTextures[] = {
-      "x\12thMEU\addons\dingo\data\textures\standard\Chassis_co.paa",
-      "x\12thMEU\addons\dingo\data\textures\standard\Modules_co.paa",
+      "\x\12thMEU\addons\dingo\data\textures\standard\Chassis_co.paa",
+      "\x\12thMEU\addons\dingo\data\textures\standard\Modules_co.paa",
+      "\x\12thMEU\addons\dingo\data\textures\standard\turret_co.paa",
       "\x\12thMEU\addons\12th_vehicles\dingo\default\decals_ca.paa"
     };
     DINGO_SP_INFO(0,FAV)
@@ -52,10 +53,11 @@ class CfgVehicles {
     faction="twelfth_MEU";
     editorCategory="twelfth_MEU";
     editorSubcategory="twelfth_MEU_Cars";
-    hiddenSelections[]= {"camo1","camo7","camo8"};
+    hiddenSelections[]= {"camo1","camo7","camo11","camo8"};
     hiddenSelectionsTextures[] = {
-      "x\12thMEU\addons\dingo\data\textures\standard\Chassis_co.paa",
-      "x\12thMEU\addons\dingo\data\textures\standard\Modules_co.paa",
+      "\x\12thMEU\addons\dingo\data\textures\standard\Chassis_co.paa",
+      "\x\12thMEU\addons\dingo\data\textures\standard\Modules_co.paa",
+      "\x\12thMEU\addons\dingo\data\textures\standard\turret_co.paa",
       "\x\12thMEU\addons\12th_vehicles\dingo\default\decals_ca.paa"
     };
     DINGO_SP_INFO(0,FAV)
@@ -71,10 +73,11 @@ class CfgVehicles {
     faction="twelfth_MEU";
     editorCategory="twelfth_MEU";
     editorSubcategory="twelfth_MEU_Cars";
-    hiddenSelections[]= {"camo1","camo7","camo8"};
+    hiddenSelections[]= {"camo1","camo7","camo11","camo8"};
     hiddenSelectionsTextures[] = {
-      "x\12thMEU\addons\dingo\data\textures\standard\Chassis_co.paa",
-      "x\12thMEU\addons\dingo\data\textures\standard\Modules_co.paa",
+      "\x\12thMEU\addons\dingo\data\textures\standard\Chassis_co.paa",
+      "\x\12thMEU\addons\dingo\data\textures\standard\Modules_co.paa",
+      "\x\12thMEU\addons\dingo\data\textures\standard\turret_co.paa",
       "\x\12thMEU\addons\12th_vehicles\dingo\default\decals_ca.paa"
     };
     DINGO_SP_INFO(0,FAV)
@@ -90,10 +93,11 @@ class CfgVehicles {
     faction="twelfth_MEU";
     editorCategory="twelfth_MEU";
     editorSubcategory="twelfth_MEU_Cars";
-    hiddenSelections[]= {"camo1","camo7","camo8"};
+    hiddenSelections[]= {"camo1","camo7","camo11","camo8"};
     hiddenSelectionsTextures[] = {
-      "x\12thMEU\addons\dingo\data\textures\standard\Chassis_co.paa",
-      "x\12thMEU\addons\dingo\data\textures\standard\Modules_co.paa",
+      "\x\12thMEU\addons\dingo\data\textures\standard\Chassis_co.paa",
+      "\x\12thMEU\addons\dingo\data\textures\standard\Modules_co.paa",
+      "\x\12thMEU\addons\dingo\data\textures\standard\turret_co.paa",
       "\x\12thMEU\addons\12th_vehicles\dingo\default\decals_ca.paa"
     };
     // NOTE: the police texture here would look too weird
@@ -110,10 +114,11 @@ class CfgVehicles {
     faction="twelfth_MEU";
     editorCategory="twelfth_MEU";
     editorSubcategory="twelfth_MEU_Cars";
-    hiddenSelections[]= {"camo1","camo7","camo8"};
+    hiddenSelections[]= {"camo1","camo7","camo11","camo8"};
     hiddenSelectionsTextures[] = {
-      "x\12thMEU\addons\dingo\data\textures\standard\Chassis_co.paa",
-      "x\12thMEU\addons\dingo\data\textures\standard\Modules_co.paa",
+      "\x\12thMEU\addons\dingo\data\textures\standard\Chassis_co.paa",
+      "\x\12thMEU\addons\dingo\data\textures\standard\Modules_co.paa",
+      "\x\12thMEU\addons\dingo\data\textures\standard\turret_co.paa",
       "\x\12thMEU\addons\12th_vehicles\dingo\default\decals_ca.paa"
     };
     DINGO_SP_INFO(2,Medical APC)
