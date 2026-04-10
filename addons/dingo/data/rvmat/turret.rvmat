@@ -8,7 +8,7 @@ PixelShaderID = "Super";
 VertexShaderID = "Super";
 class Stage1
 {
-	texture = "x\12thmeu\addons\dingo\data\textures\standard\Turret'_nohq.paa";
+	texture = "x\12thmeu\addons\dingo\data\textures\standard\Turret_nohq.paa";
 	uvSource = "tex";
 	class uvTransform
 	{
@@ -44,7 +44,7 @@ class Stage3
 };
 class Stage4
 {
-	texture = "x\12thmeu\addons\dingo\data\textures\standard\Turret'_as.paa";
+	texture = "x\12thmeu\addons\dingo\data\textures\standard\Turret_as.paa";
 	uvSource = "tex";
 	class uvTransform
 	{
@@ -56,7 +56,7 @@ class Stage4
 };
 class Stage5
 {
-	texture = "x\12thmeu\addons\dingo\data\textures\standard\Turret'_smdi.paa";
+	texture = "x\12thmeu\addons\dingo\data\textures\standard\Turret_smdi.paa";
 	uvSource = "tex";
 	class uvTransform
 	{

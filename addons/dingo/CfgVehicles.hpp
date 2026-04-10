@@ -348,8 +348,8 @@ class CfgVehicles
 		};
 		aggregateReflectors[] = {{"LightCarHeadL01", "LightCarHeadL02"}, {"LightCarHeadR01", "LightCarHeadR02"}}; 
 
-		hiddenSelections[] = {"camo1","camo7","camo8","camo10"}; ///we want to allow changing the color of this selection
-		hiddenSelectionsTextures[]={"x\12thMEU\addons\dingo\data\textures\standard\Chassis_co.paa","x\12thMEU\addons\dingo\data\textures\standard\Modules_co.paa","x\12thMEU\addons\dingo\data\textures\standard\decals_ca.paa","#(rgb,8,8,3)color(0.18039216,0.18039216,0.18039216,1)"};	 /// we could use any texture to cover the car
+		hiddenSelections[] = {"camo1","camo7","camo11","camo8","camo10"}; ///we want to allow changing the color of this selection
+		hiddenSelectionsTextures[]={"x\12thMEU\addons\dingo\data\textures\standard\Chassis_co.paa","x\12thMEU\addons\dingo\data\textures\standard\Modules_co.paa","x\12thMEU\addons\dingo\data\textures\standard\turret_co.paa","x\12thMEU\addons\dingo\data\textures\standard\decals_ca.paa","#(rgb,8,8,3)color(0.18039216,0.18039216,0.18039216,1)"};	 /// we could use any texture to cover the car
 		slingLoadCargoMemoryPoints[] = {"SlingLoadCargo1","SlingLoadCargo2","SlingLoadCargo3","SlingLoadCargo4"};
 
 		class textureSources
@@ -358,13 +358,13 @@ class CfgVehicles
 			{
 				displayName="Default"; // name displayed, among other, from the garage
 				author="SamanthaNix"; // Author of the skin
-				hiddenSelections[] = {"camo1","camo7","camo8"};
+				hiddenSelections[] = {"camo1","camo7","camo11","camo8","camo10"};
 				textures[]=// List of textures, in the same order as the hiddenSelections definition
 				{
 					"x\12thMEU\addons\dingo\data\textures\standard\Chassis_co.paa",
-					"x\12thMEU\addons\dingo\data\textures\standard\Modules_co.paa"
+					"x\12thMEU\addons\dingo\data\textures\standard\Modules_co.paa",
+					"x\12thMEU\addons\dingo\data\textures\standard\turret_co.paa"
 				};
-
 			};
 			class Dingo_Camo_winter:Dingo_Camo_standard
 			{
@@ -373,9 +373,9 @@ class CfgVehicles
 				textures[]=
 				{
 					"x\12thMEU\addons\dingo\data\textures\winter\Chassis_co.paa",
-					"x\12thMEU\addons\dingo\data\textures\winter\Modules_co.paa"
+					"x\12thMEU\addons\dingo\data\textures\winter\Modules_co.paa",
+					"x\12thMEU\addons\dingo\data\textures\winter\turret_co.paa"
 				};
-
 			};
 			class Dingo_Camo_forest:Dingo_Camo_standard
 			{
@@ -384,9 +384,9 @@ class CfgVehicles
 				textures[]=
 				{
 					"x\12thMEU\addons\dingo\data\textures\forest\Chassis_co.paa",
-					"x\12thMEU\addons\dingo\data\textures\forest\Modules_co.paa"
+					"x\12thMEU\addons\dingo\data\textures\forest\Modules_co.paa",
+					"x\12thMEU\addons\dingo\data\textures\forest\turret_co.paa"
 				};
-
 			};
 			class Dingo_Camo_TCP:Dingo_Camo_standard
 			{
@@ -395,9 +395,9 @@ class CfgVehicles
 				textures[]=
 				{
 					"x\12thMEU\addons\dingo\data\textures\TCP\Chassis_co.paa",
-					"x\12thMEU\addons\dingo\data\textures\TCP\Modules_co.paa"
+					"x\12thMEU\addons\dingo\data\textures\TCP\Modules_co.paa",
+					"x\12thMEU\addons\dingo\data\textures\TCP\turret_co.paa"
 				};
-
 			};
 			class Dingo_Camo_OPTRE:Dingo_Camo_standard
 			{
@@ -406,9 +406,9 @@ class CfgVehicles
 				textures[]=
 				{
 					"x\12thMEU\addons\dingo\data\textures\OPTRE\Chassis_co.paa",
-					"x\12thMEU\addons\dingo\data\textures\OPTRE\Modules_co.paa"
+					"x\12thMEU\addons\dingo\data\textures\OPTRE\Modules_co.paa",
+					"x\12thMEU\addons\dingo\data\textures\OPTRE\turret_co.paa"
 				};
-
 			};
 			class Dingo_Camo_Black:Dingo_Camo_standard
 			{
@@ -417,9 +417,9 @@ class CfgVehicles
 				textures[]=
 				{
 					"x\12thMEU\addons\dingo\data\textures\black\Chassis_co.paa",
-					"x\12thMEU\addons\dingo\data\textures\black\Modules_co.paa"
+					"x\12thMEU\addons\dingo\data\textures\black\Modules_co.paa",
+					"x\12thMEU\addons\dingo\data\textures\black\turret_co.paa"
 				};
-
 			};
 		};
 	};
@@ -497,7 +497,7 @@ class CfgVehicles
 		forceInGarage = 1;
 		scope	= 2; 			/// makes the car visible in editor
 		scopeCurator = 2;		// scope 2 means it's available in Zeus mode (0 means hidden)
-		displayName = "M18-C2 IMV RCWS";
+		displayName = "M18-C2 IMV Cargo (Minigun)";
 		crew 	= "C_man_1"; 	/// we need someone to fit into the car
 		cargoAction[] 		= {"passenger_low01", "passenger_generic01_foldhands"};
 		model = "x\12thMEU\addons\Dingo\dingoRCWS_minigun.p3d";
@@ -507,12 +507,15 @@ class CfgVehicles
 
 		class AnimationSources: AnimationSources
 		{
-			class flash_rot
-			{
-				source = "ammoRandom.0";
+			class barrelRotation {
+				source = "ammo";
 				weapon = "M134_minigun";
 			};
-			class flash_hide
+			class zaslehRot {
+				source = "ammoRandom";
+				weapon = "M134_minigun";
+			};
+			class zaslehHide
 			{
 				source = "reload";
 				weapon = "M134_minigun";
@@ -783,6 +786,7 @@ class CfgVehicles
 		};
 	};
 	class SMT_DingoRCWS_autocannon: SMT_DingoRCWS_minigun {
+		displayName = "M18-C2 IMV Cargo (Autocannon)";
 		class Turrets: Turrets {
 			class MainTurret {
 				body = "mainTurret";
@@ -853,6 +857,13 @@ class CfgVehicles
 			};
 		};
 	};
+	/*class SMT_DingoRCWS_minigun_troop:SMT_DingoRCWS_minigun{
+		displayName="M18-T2 IMV Troop (Minigun)";
+		model = "x\12thMEU\addons\Dingo\DingoRCWSTroop_minigun.p3d";
+		crew 	= "C_man_1"; 	/// we need someone to fit into the car
+		transportMaxBackpacks 	= 5; /// just some backpacks fit the trunk by default
+		transportSoldier 		= 10; /// number of cargo except driver
+	};*/
 	class SMT_DingoMed: SMT_DingoHull
 	{
     	editorCategory="ED_SMT_Faction";
