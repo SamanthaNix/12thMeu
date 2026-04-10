@@ -786,7 +786,7 @@ class CfgVehicles
 		};
 	};
 	class SMT_DingoRCWS_autocannon: SMT_DingoRCWS_minigun {
-		displayName = "M18-C2 IMV Cargo (Autocannon)";
+		displayName = "M18-C3 IMV Cargo (Autocannon)";
 		class Turrets: Turrets {
 			class MainTurret {
 				body = "mainTurret";

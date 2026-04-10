@@ -1559,7 +1559,6 @@ class twelfth_M43A_##TYPE##_2_##CAMO##_##PLATOON##_##ROLE## {     \
 
 #define ALL_HELM(CAMO)                                                  \
   HELM_CH43A(##CAMO##,         "[12th][Inf] Helmet")                       \
-  HELM_CH43A(##CAMO##_med,     "[12th][Inf] Helmet (Corpsman)")            \
   HELM_CH43A(##CAMO##_1pl,     "[12th][Inf][1Plt] Helmet")                 \
   HELM_CH43A(##CAMO##_1pl_ftl, "[12th][Inf][1Plt] Helmet (FTL)")           \
   HELM_CH43A(##CAMO##_1pl_sl,  "[12th][Inf][1Plt] Helmet (SL)")            \
@@ -1585,7 +1584,6 @@ class twelfth_M43A_##TYPE##_2_##CAMO##_##PLATOON##_##ROLE## {     \
   HELM_CH43A(##CAMO##_lpl_pl,  "[12th][Inf][Logi] Helmet (PL)")            \
   HELM_CH43A(##CAMO##_lpl_med, "[12th][Inf][Logi] Helmet (Corpsman)")      \
   HELM_ECH43A(##CAMO##,         "[12th][Clsd] Helmet")                       \
-  HELM_ECH43A(##CAMO##_med,     "[12th][Clsd] Helmet (Corpsman)")            \
   HELM_ECH43A(##CAMO##_1pl,     "[12th][Clsd][1Plt] Helmet")                 \
   HELM_ECH43A(##CAMO##_1pl_ftl, "[12th][Clsd][1Plt] Helmet (FTL)")           \
   HELM_ECH43A(##CAMO##_1pl_sl,  "[12th][Clsd][1Plt] Helmet (SL)")            \
