@@ -179,6 +179,7 @@ class CfgWeapons {
   CUSTOM_HELM_S_AV(Stacker)
   CUSTOM_HELM_S_AV(Styx)
   CUSTOM_HELM_S_AV(Origami)
+  CUSTOM_HELM_S_AV(Quiggle)
   CUSTOM_HELM_S_AV(Sullivan)
   CUSTOM_HELM_S_AV(Luke)
   CUSTOM_HELM_S_AV(Taji)
@@ -281,6 +282,7 @@ class XtdGearModels {
           "Origami",
           "Perry",
           "Quinn",
+          "Quiggle",
           "Quebec",
           "Quinn",
           "Rex",
@@ -357,6 +359,7 @@ class XtdGearInfos {
     CH_HELM_S_GI(Perry)
     CH_HELM_S_GI(Quebec)
 	  CH_HELM_S_GI(Quinn)
+    CH_HELM_S_GI(Quiggle)
   	CH_HELM_S_GI(Rex)
     CH_HELM_S_GI(Schultz)
     CH_HELM_S_GI(Sand)
