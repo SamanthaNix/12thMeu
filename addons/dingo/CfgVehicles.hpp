@@ -507,12 +507,15 @@ class CfgVehicles
 
 		class AnimationSources: AnimationSources
 		{
-			class flash_rot
-			{
-				source = "ammoRandom.0";
+			class barrelRotation {
+				source = "ammo";
 				weapon = "M134_minigun";
 			};
-			class flash_hide
+			class zaslehRot {
+				source = "ammoRandom";
+				weapon = "M134_minigun";
+			};
+			class zaslehHide
 			{
 				source = "reload";
 				weapon = "M134_minigun";
