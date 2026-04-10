@@ -66,7 +66,7 @@ class CfgVehicles {
     scope=2;
     scopeCurator=2;
     author="Sammy";
-    displayName="[12th] Dingo RCWS (20mm)";
+    displayName="[12th] Dingo RCWS (autocannon)";
     vehicleClass="OPTRE_UNSC_Vehicle_class";
     faction="twelfth_MEU";
     editorCategory="twelfth_MEU";
