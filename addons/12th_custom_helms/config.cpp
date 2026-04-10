@@ -210,6 +210,7 @@ class CfgWeapons {
   CUSTOM_PILOT_HELM(penquite, "[12th][Pilot][Customs] Penquite",default,penquite,default,default,default)
   CUSTOM_PILOT_HELM(Moss, "[12th][Pilot][Customs] Moss",moss,moss,default,default,default)
   CUSTOM_PILOT_HELM(tomb, "[12th][Pilot][Customs] Tomb",tomb,tomb,default,default,default)
+  CUSTOM_PILOT_HELM(kurita, "[12th][Pilot][Customs] Kurita",kurita,kurita,default,default,default)
 
 };
 
