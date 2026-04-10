@@ -251,9 +251,10 @@ class CfgVehicles {
     class TransportMagazines {
       class _xx_OPTRE_32Rnd_762x51_Mag { magazine = "OPTRE_32Rnd_762x51_Mag"; count = 75; };
       class _xx_OPTRE_32Rnd_762x51_Mag_Tracer { magazine = "OPTRE_32Rnd_762x51_Mag_Tracer"; count = 75; };
-      class _xx_OPTRE_36Rnd_95x40_Mag { magazine = "OPTRE_36Rnd_95x40_Mag"; count = 25; };
-      class _xx_OPTRE_36Rnd_95x40_Mag_Tracer { magazine = "OPTRE_36Rnd_95x40_Mag_Tracer"; count = 25; };
+      class _xx_twelfth_br_36Rnd { magazine = "twelfth_br_36Rnd"; count = 25; };
+      class _xx_twelfth_br_36Rnd_T { magazine = "twelfth_br_36Rnd_T"; count = 25; };
       class _xx_OPTRE_60Rnd_5x23mm_Mag { magazine = "OPTRE_60Rnd_5x23mm_Mag"; count = 25; };
+      class _xx_twelfth_m7_60rnd_T { magazine = "twelfth_m7_60rnd_T"; count = 25; };
       class _xx_12Rnd_8Gauge { magazine = "12Rnd_8Gauge"; count = 25; };
       class _xx_OPTRE_4Rnd_145x114_APFSDS_Mag { magazine = "OPTRE_4Rnd_145x114_APFSDS_Mag"; count = 10; };
 
