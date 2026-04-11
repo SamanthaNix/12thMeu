@@ -74,6 +74,8 @@ class CfgVehicles
 
 		displayName = "Dingo Hull"; /// displayed in Editor
 
+
+		//Vehicle loading
 		
 		//Ace stuff
 		ace_repair_spareWheels = 1;
