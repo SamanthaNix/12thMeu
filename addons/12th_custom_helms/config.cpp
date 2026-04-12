@@ -181,6 +181,7 @@ class CfgWeapons {
   CUSTOM_HELM_S_AV(Origami)
   CUSTOM_HELM_S_AV(Quiggle)
   CUSTOM_HELM_S_AV(Sullivan)
+  CUSTOM_HELM_S_AV(Luerssen)
   CUSTOM_HELM_S_AV(Luke)
   CUSTOM_HELM_S_AV(Taji)
   CUSTOM_HELM_S_AV(Thomas)
