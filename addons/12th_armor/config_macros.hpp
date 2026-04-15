@@ -91,35 +91,7 @@
 // paths for extended arsenal icon backgrounds
 #define XTP(SFX) QP(xtd_icons\##SFX.paa)
 
-/* Stands for uniform gear info. */                                                 
-
-
-
-#define VEST_GI(TYPE,CAMO,PLATOON,ROLE)                     \
-class twelfth_M43A_##TYPE##_##CAMO##_##PLATOON##_##ROLE## {     \
-  model="twelfth_base_vests";                          \
-  type=#TYPE;                                            \
-  necktype="no";\
-  camo=#CAMO;                                             \
-  element=#PLATOON;                                       \
-  role=#ROLE;                                             \
-};\
-class twelfth_M43A_##TYPE##_1_##CAMO##_##PLATOON##_##ROLE## {     \
-  model="twelfth_base_vests";                          \
-  type=#TYPE;                                            \
-  necktype="armoured";\
-  camo=#CAMO;                                             \
-  element=#PLATOON;                                       \
-  role=#ROLE;                                             \
-};  \
-class twelfth_M43A_##TYPE##_2_##CAMO##_##PLATOON##_##ROLE## {     \
-  model="twelfth_base_vests";                          \
-  type=#TYPE;                                            \
-  necktype="flak";\
-  camo=#CAMO;                                             \
-  element=#PLATOON;                                       \
-  role=#ROLE;                                             \
-};                            
+/* Stands for uniform gear info. */                                                                     
 
 #define TSHIRT_NORMAL_GI(CAMO,TUCK) \
   class twelfth_U_B_TShirt_##TUCK##_##CAMO## { \
@@ -668,109 +640,6 @@ class twelfth_M43A_##TYPE##_2_##CAMO##_##PLATOON##_##ROLE## {     \
       armor=20;                                                                   \
     };                                                                            \
   };                                                                              
-
-
-#define ALL_UNI_GI(CAMO)      \
-  VEST_GI(Light,CAMO,na,na)        \
-  VEST_GI(Light,CAMO,na,med)       \
-  VEST_GI(Light,CAMO,1pl,na)       \
-  VEST_GI(Light,CAMO,1pl,med)      \
-  VEST_GI(Light,CAMO,2pl,na)       \
-  VEST_GI(Light,CAMO,2pl,med)      \
-  VEST_GI(Light,CAMO,hq,na)        \
-  VEST_GI(Light,CAMO,hq,med)       \
-  VEST_GI(Light,CAMO,lpl,na)       \
-  VEST_GI(Light,CAMO,lpl,med)      \
-  VEST_GI(BaseSec1,CAMO,na,na)        \
-  VEST_GI(BaseSec1,CAMO,na,med)       \
-  VEST_GI(BaseSec1,CAMO,1pl,na)       \
-  VEST_GI(BaseSec1,CAMO,1pl,med)      \
-  VEST_GI(BaseSec1,CAMO,2pl,na)       \
-  VEST_GI(BaseSec1,CAMO,2pl,med)      \
-  VEST_GI(BaseSec1,CAMO,hq,na)        \
-  VEST_GI(BaseSec1,CAMO,hq,med)       \
-  VEST_GI(BaseSec1,CAMO,lpl,na)       \
-  VEST_GI(BaseSec1,CAMO,lpl,med)      \
-  VEST_GI(BaseSec2,CAMO,na,na)        \
-  VEST_GI(BaseSec2,CAMO,na,med)       \
-  VEST_GI(BaseSec2,CAMO,1pl,na)       \
-  VEST_GI(BaseSec2,CAMO,1pl,med)      \
-  VEST_GI(BaseSec2,CAMO,2pl,na)       \
-  VEST_GI(BaseSec2,CAMO,2pl,med)      \
-  VEST_GI(BaseSec2,CAMO,hq,na)        \
-  VEST_GI(BaseSec2,CAMO,hq,med)       \
-  VEST_GI(BaseSec2,CAMO,lpl,na)       \
-  VEST_GI(BaseSec2,CAMO,lpl,med)      \
-  VEST_GI(BaseSec3,CAMO,na,na)        \
-  VEST_GI(BaseSec3,CAMO,na,med)       \
-  VEST_GI(BaseSec3,CAMO,1pl,na)       \
-  VEST_GI(BaseSec3,CAMO,1pl,med)      \
-  VEST_GI(BaseSec3,CAMO,2pl,na)       \
-  VEST_GI(BaseSec3,CAMO,2pl,med)      \
-  VEST_GI(BaseSec3,CAMO,hq,na)        \
-  VEST_GI(BaseSec3,CAMO,hq,med)       \
-  VEST_GI(BaseSec3,CAMO,lpl,na)       \
-  VEST_GI(BaseSec3,CAMO,lpl,med)      \
-  VEST_GI(GungnirS_1,CAMO,na,na)        \
-  VEST_GI(GungnirS_1,CAMO,na,med)       \
-  VEST_GI(GungnirS_1,CAMO,1pl,na)       \
-  VEST_GI(GungnirS_1,CAMO,1pl,med)      \
-  VEST_GI(GungnirS_1,CAMO,2pl,na)       \
-  VEST_GI(GungnirS_1,CAMO,2pl,med)      \
-  VEST_GI(GungnirS_1,CAMO,hq,na)        \
-  VEST_GI(GungnirS_1,CAMO,hq,med)       \
-  VEST_GI(GungnirS_1,CAMO,lpl,na)       \
-  VEST_GI(GungnirS_1,CAMO,lpl,med)      \
-  VEST_GI(GungnirS_2,CAMO,na,na)        \
-  VEST_GI(GungnirS_2,CAMO,na,med)       \
-  VEST_GI(GungnirS_2,CAMO,1pl,na)       \
-  VEST_GI(GungnirS_2,CAMO,1pl,med)      \
-  VEST_GI(GungnirS_2,CAMO,2pl,na)       \
-  VEST_GI(GungnirS_2,CAMO,2pl,med)      \
-  VEST_GI(GungnirS_2,CAMO,hq,na)        \
-  VEST_GI(GungnirS_2,CAMO,hq,med)       \
-  VEST_GI(GungnirS_2,CAMO,lpl,na)       \
-  VEST_GI(GungnirS_2,CAMO,lpl,med)      \
-  VEST_GI(GungnirS_3,CAMO,na,na)        \
-  VEST_GI(GungnirS_3,CAMO,na,med)       \
-  VEST_GI(GungnirS_3,CAMO,1pl,na)       \
-  VEST_GI(GungnirS_3,CAMO,1pl,med)      \
-  VEST_GI(GungnirS_3,CAMO,2pl,na)       \
-  VEST_GI(GungnirS_3,CAMO,2pl,med)      \
-  VEST_GI(GungnirS_3,CAMO,hq,na)        \
-  VEST_GI(GungnirS_3,CAMO,hq,med)       \
-  VEST_GI(GungnirS_3,CAMO,lpl,na)       \
-  VEST_GI(GungnirS_3,CAMO,lpl,med)      \
-  VEST_GI(GungnirL_1,CAMO,na,na)        \
-  VEST_GI(GungnirL_1,CAMO,na,med)       \
-  VEST_GI(GungnirL_1,CAMO,1pl,na)       \
-  VEST_GI(GungnirL_1,CAMO,1pl,med)      \
-  VEST_GI(GungnirL_1,CAMO,2pl,na)       \
-  VEST_GI(GungnirL_1,CAMO,2pl,med)      \
-  VEST_GI(GungnirL_1,CAMO,hq,na)        \
-  VEST_GI(GungnirL_1,CAMO,hq,med)       \
-  VEST_GI(GungnirL_1,CAMO,lpl,na)       \
-  VEST_GI(GungnirL_1,CAMO,lpl,med)      \
-  VEST_GI(GungnirL_2,CAMO,na,na)        \
-  VEST_GI(GungnirL_2,CAMO,na,med)       \
-  VEST_GI(GungnirL_2,CAMO,1pl,na)       \
-  VEST_GI(GungnirL_2,CAMO,1pl,med)      \
-  VEST_GI(GungnirL_2,CAMO,2pl,na)       \
-  VEST_GI(GungnirL_2,CAMO,2pl,med)      \
-  VEST_GI(GungnirL_2,CAMO,hq,na)        \
-  VEST_GI(GungnirL_2,CAMO,hq,med)       \
-  VEST_GI(GungnirL_2,CAMO,lpl,na)       \
-  VEST_GI(GungnirL_2,CAMO,lpl,med)      \
-  VEST_GI(GungnirL_3,CAMO,na,na)        \
-  VEST_GI(GungnirL_3,CAMO,na,med)       \
-  VEST_GI(GungnirL_3,CAMO,1pl,na)       \
-  VEST_GI(GungnirL_3,CAMO,1pl,med)      \
-  VEST_GI(GungnirL_3,CAMO,2pl,na)       \
-  VEST_GI(GungnirL_3,CAMO,2pl,med)      \
-  VEST_GI(GungnirL_3,CAMO,hq,na)        \
-  VEST_GI(GungnirL_3,CAMO,hq,med)       \
-  VEST_GI(GungnirL_3,CAMO,lpl,na)       \
-  VEST_GI(GungnirL_3,CAMO,lpl,med)      \
 
 //New Uniform class definitions
 //cfgVehicle
@@ -1878,3 +1747,5 @@ BOONIE_FOLD(CAMO,Folded_Right)\
     model = "twelfth_utilcap"; \
     camo = #CAMO; \
   }; \
+
+  
