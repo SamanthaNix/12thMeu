@@ -201,6 +201,7 @@ class CfgWeapons
     };
   };
 
+
   // ---------------------------------------------------------------------------
   //  Invisible Vest
   // ---------------------------------------------------------------------------
@@ -229,4 +230,36 @@ class CfgWeapons
   ALL_VESTS(std)
 
   // Base uniform item for new-gen armor
+  // Army
+  class twelft_army_vest : TCP_V_M43A_GungnirL_3_Base{
+    scope = 2;
+    scopeArsenal = 2;
+    author = "Rex";
+    displayName = "[12th] Army";
+    ACE_GForceCoef = 0.4;
+    model = "\TCP\Characters\BLUFOR\UNSC\Army\Vests\M43A\M43A_GungnirL_3.p3d";
+    hiddenSelections[] = {"camo","camo1","camo2","camo3","decals","collararmored","collarflak"};
+    hiddenSelectionsTextures[] = {
+        "\x\12thMeu\addons\12th_vests\data\Army\camo\Vest_01_CO",
+        "\x\12thMeu\addons\12th_vests\data\Army\camo\Gungnir_CO.paa",
+        "\x\12thMeu\addons\12th_vests\data\Army\camo\Vest_02_CO",
+        "\x\12thMeu\addons\12th_vests\data\Army\camo\Vest_03_co",
+        "\TCP\Characters\BLUFOR\UNSC\Army\Vests\M43A\data\camo\black\vest_M43_DecalSheet_CA.paa"
+    };
+    class ItemInfo : VestItem {
+      containerClass="twelfth_vest_supply";                                
+      mass = 80;
+      uniformModel = "\TCP\Characters\BLUFOR\UNSC\Army\Vests\M43A\M43A_GungnirL_3.p3d";
+      VEST_HITPOINT_INFO 
+      setMaxLoad=200;
+      hiddenSelections[] = {"camo","camo1","camo2","camo3","decals","collararmored","collarflak"};
+      hiddenSelectionsTextures[] = {
+        "\x\12thMeu\addons\12th_vests\data\Army\camo\Vest_01_CO",
+        "\x\12thMeu\addons\12th_vests\data\Army\camo\Gungnir_CO.paa",
+        "\x\12thMeu\addons\12th_vests\data\Army\camo\Vest_02_CO",
+        "\x\12thMeu\addons\12th_vests\data\Army\camo\Vest_03_co",
+        "\TCP\Characters\BLUFOR\UNSC\Army\Vests\M43A\data\camo\black\vest_M43_DecalSheet_CA.paa"
+      };
+    };
+  };
 };

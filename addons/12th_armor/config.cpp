@@ -407,6 +407,45 @@ class CfgWeapons {
       };
     };
   };
+
+  // Army
+  class twelfth_army_helmet: TCP_H_Helmet_CH43A_Base {
+    scope=2;
+    author="Rex";
+    scopeArsenal=2;
+    picture="x\12thMEU\addons\12th_ui\data\logo.paa";
+    displayName="[12th] Army";
+    ace_hearing_protection=1;
+    ace_hearing_lowerVolume=0;
+    hiddenSelections[] = { "camo","decals" };              
+    hiddenSelectionsTextures[] = {                
+      "\x\12thMeu\addons\12th_armor\helmets\army\Helm_CO.paa",               
+      "tcp\characters\BLUFOR\UNSC\ARMY\Vests\M43A\data\camo\Black\vest_M43_DecalSheet_CA.paa"									
+    };
+    class TCP_uniformDecals
+    {
+      selectionName = "black";
+    };
+	  model = "\TCP\Characters\BLUFOR\UNSC\Army\Headgear\helmet_CH43A\h_helmet_CH43A.p3d";
+    class ItemInfo: HeadgearItem {
+	  uniformModel = "\TCP\Characters\BLUFOR\UNSC\Army\Headgear\helmet_CH43A\h_helmet_CH43A.p3d";
+      mass=40;
+      modelSides[]={6};
+      passThrough=0.1;
+      class HitpointsProtectionInfo {
+        class Head {
+          hitpointName="HitHead";
+          armor=20;
+          passThrough=0.1;
+        };
+      };
+      hiddenSelections[] = { "camo","decals" };              
+      hiddenSelectionsTextures[] = { 
+        "\x\12thMeu\addons\12th_armor\helmets\army\Helm_CO.paa",               
+        "tcp\characters\BLUFOR\UNSC\ARMY\Vests\M43A\data\camo\Black\vest_M43_DecalSheet_CA.paa"					
+      };
+    };
+  };
   
 
   //-MACRO CALLS------------------------------------------------------
