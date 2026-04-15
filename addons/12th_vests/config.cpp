@@ -29,7 +29,7 @@ class CfgPatches {
   class twelfth_vests {
     units[]= {}; // We’re not defining placeable units in this PBO.
     weapons[]= { 
-      "twelfth_invis_vest","twelfth_M43A_Light_base"
+      "twelfth_invis_vest"
         /*
           If you create more vests that are stand-alone (not just variants),
           add them here so the engine recognizes them as part of this mod.

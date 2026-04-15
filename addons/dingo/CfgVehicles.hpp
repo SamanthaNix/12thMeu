@@ -74,6 +74,8 @@ class CfgVehicles
 
 		displayName = "Dingo Hull"; /// displayed in Editor
 
+
+		//Vehicle loading
 		
 		//Ace stuff
 		ace_repair_spareWheels = 1;
@@ -786,7 +788,7 @@ class CfgVehicles
 		};
 	};
 	class SMT_DingoRCWS_autocannon: SMT_DingoRCWS_minigun {
-		displayName = "M18-C2 IMV Cargo (Autocannon)";
+		displayName = "M18-C3 IMV Cargo (Autocannon)";
 		class Turrets: Turrets {
 			class MainTurret {
 				body = "mainTurret";

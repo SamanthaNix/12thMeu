@@ -30,14 +30,13 @@ class CfgPatches
     units[] = {}; // Currently no placeable units are defined by this config.
                   // If you add a placeable object/vehicle that belongs to this mod,
                   // you should list that class name here.
-    weapons[] = {"twelfth_M96", "twelfth_M96_LAW_Ready", "twelfth_M96_LAW_Used",
-                 "twelfth_M6C", "twelfth_M7_Test", "twelfth_M7_Test_Folded", "twelfth_M90",
-                 "twelfth_MA5A_BB", "twelfth_MA5A", "twelfth_MA5A_gl", "twelfth_MA5B",
-                 "twelfth_br55", "twelfth_br55_gl", "twelfth_br55_HB", "twelfth_br55_HB_gl",
-                 "twelfth_M392", "twelfth_MA37K", "twelfth_BR45", "twelfth_Commando",
+    weapons[] = {
+                 "twelfth_M6C", "twelfth_M7_Test", "twelfth_M7_Test_Folded", "twelfth_M90", "twelfth_MA5B",
+                 "twelfth_br55", "twelfth_br55_HB",
+                 "twelfth_M392", "twelfth_MA37K", "twelfth_Commando",
                  "twelfth_M73H", "twelfth_M33_t", "twelfth_M247", "twelfth_M319",
                  "twelfth_M319N", "twelfth_MA5C", "twelfth_MA5CGL", "twelfth_MA5K", 
-                 "twelfth_MA5CBB","twelfth_MAAWS_base","twelfth_MAAWS_olive","twelfth_MAAWS_sand",
+                 "twelfth_MAAWS_base","twelfth_MAAWS_olive","twelfth_MAAWS_sand",
 				 "twelfth_MA6_K","twelfth_MA6","twelfth_MA6_D","twelfth_MA6_A_BOX","twelfth_MA6_A_DRUM","twelfth_M6C2","twelfth_M6C","twelfth_M6G2","twelfth_MA6_AL"}; // Ensure any newly created weapon class is listed above.
     ammo[] = {"twelfth_20g_bb", "twelfth_95x40_UW", "twelfth_5x23mm_UW", "twelfth_40mmG_HEAT"}; // Please add your new ammo types to this list
     magazines[] = {"twelfth_20g_mag", "twelfth_95x40_100rnd", "twelfth_762x51_200rnd",
