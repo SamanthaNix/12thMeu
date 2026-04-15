@@ -640,62 +640,7 @@ class XtdGearModels {
         class kneepads {label="Kneepads";};
       };
     };
-    // Vests
-    class twelfth_base_vests {
-      label="12th Infantry Vests";
-      options[] = {"type","necktype","camo", "element","role"};
-      class type{
-        alwaysSelectable = 1;
-        label="Armour Type";
-        values[]={"Light","BaseSec1","BaseSec2","BaseSec3","GungnirS_1","GungnirS_2","GungnirS_3","GungnirL_1","GungnirL_2","GungnirL_3"};
-        class Light  {label="Light";};
-        class BaseSec1  {label="Security";};
-        class BaseSec2 {label="Sec. Thighs";};
-        class BaseSec3 {label="Sec. Full";};
-        class GungnirS_1  {label="Gugnir";};
-        class GungnirS_2 {label="G. Thighs";};
-        class GungnirS_3 {label="G. Full";};
-        class GungnirL_1  {label="G. L";};
-        class GungnirL_2 {label="G. L Thighs";};
-        class GungnirL_3 {label="G. L Full";};
-      };
-      class necktype {
-        alwaysSelectable = 1;
-        label="Neck Armour";
-        values[]={"no", "flak", "armoured"};
-        class no {label="No";};
-        class flak {label="Flak";};
-        class armoured {label="Armoured";};
-      };
-      class camo {
-        alwaysSelectable = 1;
-        label="Camouflage";
-        values[]={"forest", "std", "forest90", "urban", "drk", "desert"};
-        class forest {label="Standard";};
-        class std {label="MARPAT";};
-        class forest90 {label="Forest90";};
-        class urban {label="Urban";}; //maybe winter?? will need to look into new armor pieces
-        class drk {label="VBSS";};
-	    	class desert {label="Desert";};
-      };
-      class element {
-        alwaysSelectable = 1;
-        label="Element";
-        values[]={"na","hq","1pl","2pl","lpl"};
-        class na  {label="None";};
-        class hq  {label="HQ";  image=XTP(athena);};
-        class 1pl {label="1PLT"; image=XTP(1pl);};
-        class 2pl {label="2PLT";   image=XTP(2pl);};
-        class lpl {label="LOGI";   image=XTP(chaos);};
-      };
-      class role {
-        alwaysSelectable = 1;
-        label="MOS";
-        values[]={"na","med"};
-        class na  {label="None";};
-        class med {label="Corpsman"; image=XTP(med);};
-      };
-    };
+    
 
     class twelfth_tshirt {
       label="12th TShirts";
@@ -767,7 +712,7 @@ class XtdGearInfos {
     // THIS IS WHERE EXTENDED ARSENAL PULLS INFO FOR THE SELECTIONS FROM
     //-------------------------------------- Uniforms
     
-    ALL_UNI_GI(std)
+    
     // Boonies
 
     BOONIE_GI(std)
