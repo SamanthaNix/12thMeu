@@ -9,7 +9,7 @@ class PrototypeOptics: ACE_optic_LRPS_2D
 {
 	scope = 2;
 	author = "SamanthaNix";
-	displayName = "Tri-Sight Prototype Optics";
+	displayName = "[12th] Tri-Sight Prototype Optics";
 	descriptionShort = "Tri-sight developed in conjunction with the prototype Laser";
 	picture="\x\12thMEU\addons\Custom_Weapons\data\SightPreview.paa";
 	model = "\x\12thMEU\addons\Custom_Weapons\data\PrototypeScope.p3d";
@@ -51,7 +51,7 @@ class PrototypeOpticsV2: OPTRE_SRS99C_Scope
 {
 	scope = 2;
 	author = "SamanthaNix";
-	displayName = "Tri-Sight Prototype Optics V2";
+	displayName = "[12th] Tri-Sight Prototype Optics V2";
 	descriptionShort = "Tri-sight developed in conjunction with the prototype Laser";
 	picture="\x\12thMEU\addons\Custom_Weapons\data\SightPreview.paa";
 	model = "\x\12thMEU\addons\Custom_Weapons\data\PrototypeScope.p3d";

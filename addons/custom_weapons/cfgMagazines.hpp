@@ -11,7 +11,7 @@ class CfgMagazines
 		ace_disableRepacking = 1;
 		scope = 2;
 		displayName = "Liquid Magazine";
-		displayNameShort = "LLR Magazine";
+		displayNameShort = "[12th] LLR Magazine";
 		picture="\x\12thMEU\addons\custom_weapons\data\MagazinePreview_ca.paa";
 		ammo = "StandardLiquidLaserAmmo";
 		count = 3; 
@@ -26,7 +26,7 @@ class CfgMagazines
 		ace_disableRepacking = 1;
 		scope = 2;
 		displayName = "Compressed Liquid Magazine";
-		displayNameShort = "C-LLR Mag";
+		displayNameShort = "[12th] C-LLR Mag";
 		picture="\x\12thMEU\addons\custom_weapons\data\MagazinePreview_ca.paa";
 		ammo = "CompressedLiquidLaserAmmo";
 		count = 1; 

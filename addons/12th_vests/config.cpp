@@ -35,6 +35,7 @@ class CfgPatches {
           add them here so the engine recognizes them as part of this mod.
         */
     };
+    requiredAddons[] = {"TCP_Characters"};
     requiredVersion=0.1;
   };
 };
@@ -201,6 +202,7 @@ class CfgWeapons
     };
   };
 
+
   // ---------------------------------------------------------------------------
   //  Invisible Vest
   // ---------------------------------------------------------------------------
@@ -224,9 +226,120 @@ class CfgWeapons
   };
 
   
-  //-New Armour-----------------------------------------------------
-  NEW_VEST_SETUP
-  ALL_VESTS(std)
+  
 
   // Base uniform item for new-gen armor
+  //-New Armour-----------------------------------------------------
+  GENERATE_VEST_REFERENCES
+  GENERATE_VEST_CLASSES(std)
+
+    // Army
+  class twelft_army_vest : TCP_V_M43A_GungnirL_3_Base{
+    scope = 2;
+    scopeArsenal = 2;
+    author = "Rex";
+    displayName = "[12th] Army";
+    ACE_GForceCoef = 0.4;
+    model = "\TCP\Characters\BLUFOR\UNSC\Army\Vests\M43A\M43A_GungnirL_3.p3d";
+    hiddenSelections[] = {"camo","camo1","camo2","camo3","decals","collararmored","collarflak"};
+    hiddenSelectionsTextures[] = {
+        "\x\12thMeu\addons\12th_vests\data\Army\camo\Vest_01_CO",
+        "\x\12thMeu\addons\12th_vests\data\Army\camo\Gungnir_CO.paa",
+        "\x\12thMeu\addons\12th_vests\data\Army\camo\Vest_02_CO",
+        "\x\12thMeu\addons\12th_vests\data\Army\camo\Vest_03_co",
+        "\TCP\Characters\BLUFOR\UNSC\Army\Vests\M43A\data\camo\black\vest_M43_DecalSheet_CA.paa"
+    };
+    class ItemInfo : VestItem {
+      containerClass="twelfth_vest_supply";                                
+      mass = 80;
+      uniformModel = "\TCP\Characters\BLUFOR\UNSC\Army\Vests\M43A\M43A_GungnirL_3.p3d";
+      VEST_HITPOINT_INFO 
+      setMaxLoad=200;
+      hiddenSelections[] = {"camo","camo1","camo2","camo3","decals","collararmored","collarflak"};
+      hiddenSelectionsTextures[] = {
+        "\x\12thMeu\addons\12th_vests\data\Army\camo\Vest_01_CO",
+        "\x\12thMeu\addons\12th_vests\data\Army\camo\Gungnir_CO.paa",
+        "\x\12thMeu\addons\12th_vests\data\Army\camo\Vest_02_CO",
+        "\x\12thMeu\addons\12th_vests\data\Army\camo\Vest_03_co",
+        "\TCP\Characters\BLUFOR\UNSC\Army\Vests\M43A\data\camo\black\vest_M43_DecalSheet_CA.paa"
+      };
+    };
+  };
+};
+
+class XtdGearModels {
+  class CfgWeapons {
+    class twelfth_base_vests {
+      label="12th Infantry Vests";
+      options[] = {"camo","element","role","belt","shoulders","collar","legs"};
+      class camo {
+        alwaysSelectable = 1;
+        label="Camouflage";
+        values[]={"forest", "std", "forest90", "urban", "drk", "desert"};
+        class forest {label="Standard";};
+        class std {label="MARPAT";};
+        class forest90 {label="Forest90";};
+        class urban {label="Urban";}; //maybe winter?? will need to look into new armor pieces
+        class drk {label="VBSS";};
+        class desert {label="Desert";};
+      };
+      class collar {
+        alwaysSelectable = 1;
+        label="Collar Armour";
+        values[]={"none", "flak", "armored"};
+        class none {label="None";};
+        class flak {label="Flak";};
+        class armored {label="Armoured";};
+      };
+      class shoulders {
+        alwaysSelectable = 1;
+        label="Shoulder Armour";
+        values[]={"Light","Pads","BaseSec","GungnirS","GungnirL"};
+        class Light  {label="None";};
+        class Pads  {label="Pads";};
+        class BaseSec {label="Security";};
+        class GungnirS {label="Gungnir(S)";};
+        class GungnirL {label="Gungnir(L)";};
+      };
+      class belt {
+        alwaysSelectable = 1;
+        label="Belt";
+        values[]={"none", "belt"};
+        class none {label="None";};
+        class belt {label="Belt";};
+      };
+      class legs {
+        alwaysSelectable = 1;
+        label="Leg Armour";
+        values[]={"none", "thigh", "full"};
+        class none {label="None";};
+        class thigh {label="Thigh";};
+        class full {label="Full";};
+      };
+      class element {
+        alwaysSelectable = 1;
+        label="Element";
+        values[]={"na","hq","1pl","2pl","lpl"};
+        class na  {label="None";};
+        class hq  {label="HQ";  image=XTP(athena);};
+        class 1pl {label="1PLT"; image=XTP(1pl);};
+        class 2pl {label="2PLT";   image=XTP(2pl);};
+        class lpl {label="LOGI";   image=XTP(chaos);};
+      };
+      class role {
+        alwaysSelectable = 1;
+        label="MOS";
+        values[]={"na","med"};
+        class na  {label="None";};
+        class med {label="Corpsman"; image=XTP(med);};
+      };
+    };
+  };
+};
+
+class XtdGearInfos {
+  class CfgWeapons {
+    // VEST GI
+    GENERATE_VEST_XTDGI(std)
+  };
 };
