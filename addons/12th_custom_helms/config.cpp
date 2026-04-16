@@ -165,6 +165,7 @@ class CfgWeapons {
   CUSTOM_HELM_S_AV(Jekyll)
   CUSTOM_HELM_S_AV(Kiens)
   CUSTOM_HELM_S_AV(LeDoux)
+  CUSTOM_HELM_S_AV(Luerssen)
   CUSTOM_HELM_S_AV(Mcintyre)
   CUSTOM_HELM_S_AV(Mercer)
   CUSTOM_HELM_S_AV(Moss)
