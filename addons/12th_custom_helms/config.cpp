@@ -152,6 +152,7 @@ class CfgWeapons {
   CUSTOM_HELM_S_AV(Bert)
   CUSTOM_HELM_S_AV(Bob)
   CUSTOM_HELM_S_AV(Bobby)
+  CUSTOM_HELM_S_AV(Bunge)
   CUSTOM_HELM_S_AV(Coady)
   CUSTOM_HELM_S_AV(Clarke)
   CUSTOM_HELM_S_AV(Don)
@@ -164,6 +165,7 @@ class CfgWeapons {
   CUSTOM_HELM_S_AV(Jekyll)
   CUSTOM_HELM_S_AV(Kiens)
   CUSTOM_HELM_S_AV(LeDoux)
+  CUSTOM_HELM_S_AV(Luerssen)
   CUSTOM_HELM_S_AV(Mcintyre)
   CUSTOM_HELM_S_AV(Mercer)
   CUSTOM_HELM_S_AV(Moss)
@@ -178,6 +180,7 @@ class CfgWeapons {
   CUSTOM_HELM_S_AV(Smitty)
   CUSTOM_HELM_S_AV(Stacker)
   CUSTOM_HELM_S_AV(Styx)
+  CUSTOM_HELM_S_AV(Tomb)
   CUSTOM_HELM_S_AV(Origami)
   CUSTOM_HELM_S_AV(Quiggle)
   CUSTOM_HELM_S_AV(Sullivan)
@@ -297,6 +300,7 @@ class XtdGearModels {
           "Smitty",
           "Stacker",
           "Styx",
+          "Tomb",
           "Sullivan",
           "Taji",
           "Thomson",
@@ -373,6 +377,7 @@ class XtdGearInfos {
     CH_HELM_S_GI(Stacker)
     CH_HELM_S_GI(Styx)
     CH_HELM_S_GI(Taji)
+    CH_HELM_S_GI(Tomb)
     CH_HELM_S_GI(Thomson)
     CH_HELM_S_GI(Thomas)
     CH_HELM_S_GI(Vickers)
