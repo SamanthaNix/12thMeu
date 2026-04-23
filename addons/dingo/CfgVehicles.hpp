@@ -360,7 +360,7 @@ class CfgVehicles
 			{
 				displayName="Default"; // name displayed, among other, from the garage
 				author="SamanthaNix"; // Author of the skin
-				hiddenSelections[] = {"camo1","camo7","camo11","camo8","camo10"};
+				hiddenSelections[] = {"camo1","camo7","camo11","camo12","camo8","camo10"};
 				textures[]=// List of textures, in the same order as the hiddenSelections definition
 				{
 					"x\12thMEU\addons\dingo\data\textures\standard\Chassis_co.paa",
