@@ -155,6 +155,7 @@ class CfgWeapons {
   CUSTOM_HELM_S_AV(Bunge)
   CUSTOM_HELM_S_AV(Coady)
   CUSTOM_HELM_S_AV(Clarke)
+  CUSTOM_HELM_S_AV(Deacon)
   CUSTOM_HELM_S_AV(Don)
   CUSTOM_HELM_S_AV(Dixie)
   CUSTOM_HELM_S_AV(Duckworth)
@@ -257,6 +258,7 @@ class XtdGearModels {
           "Burns",
           "Coady",
           "Clarke",
+          "Deacon",
           "Deluge",
           "Dennis",
           "Dixie",
@@ -334,6 +336,7 @@ class XtdGearInfos {
     CH_HELM_S_GI(Bunge)
     CH_HELM_S_GI(Coady)
     CH_HELM_S_GI(Clarke)
+    CH_HELM_S_GI(Deacon)
     CH_HELM_S_GI(Dennis)
     CH_HELM_S_GI(Deluge)
     CH_HELM_S_GI(Dom)
