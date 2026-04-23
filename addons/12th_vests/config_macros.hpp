@@ -616,7 +616,7 @@
       }; \
     }; 
 
-  /* Generate all vest classes. Ordering is CAMO > VEST > TYPE > ELEMENT > ROLE */
+/* Generate all vest classes. Ordering is CAMO > VEST > TYPE > ELEMENT > ROLE */
   #define GENERATE_VEST_CLASSES(CAMO) \
   CLASS_VEST_GENERIC_OOO(V,2,CAMO,M43A,Light,na,na,"[12th][Inf] Light Armor",Light) \
   CLASS_VEST_GENERIC_BOO(V,2,CAMO,M43A,Light,na,na,"[12th][Inf] Light Armor",Light_1) \
@@ -682,6 +682,12 @@
   CLASS_VEST_GENERIC_BOO(V,2,CAMO,M43A,Pads,lpl,med,"[12th][LOGI][Inf] Pads Armor",Pads_1) \
   CLASS_VEST_GENERIC_BLO(V,2,CAMO,M43A,Pads,lpl,med,"[12th][LOGI][Inf] Pads Armor",Pads_2) \
   CLASS_VEST_GENERIC_BLO(V,2,CAMO,M43A,Pads,lpl,med,"[12th][LOGI][Inf] Pads Armor",Pads_3) \
+  CLASS_VEST_GENERIC_BOS(V,2,CAMO,M43A,BaseSecurity,na,na,"[12th][Inf] Base Security Armor",BaseSec_1) \
+  CLASS_VEST_GENERIC_BLS(V,2,CAMO,M43A,BaseSecurity,na,na,"[12th][Inf] Base Security Armor",BaseSec_2) \
+  CLASS_VEST_GENERIC_BLS(V,2,CAMO,M43A,BaseSecurity,na,na,"[12th][Inf] Base Security Armor",BaseSec_3) \
+  CLASS_VEST_GENERIC_BOS(V,2,CAMO,M43A,BaseSecurity,na,med,"[12th][Inf] Base Security Armor",BaseSec_1) \
+  CLASS_VEST_GENERIC_BLS(V,2,CAMO,M43A,BaseSecurity,na,med,"[12th][Inf] Base Security Armor",BaseSec_2) \
+  CLASS_VEST_GENERIC_BLS(V,2,CAMO,M43A,BaseSecurity,na,med,"[12th][Inf] Base Security Armor",BaseSec_3) \
   CLASS_VEST_GENERIC_BOS(V,2,CAMO,M43A,BaseSecurity,1pl,na,"[12th][1PL][Inf] Base Security Armor",BaseSec_1) \
   CLASS_VEST_GENERIC_BLS(V,2,CAMO,M43A,BaseSecurity,1pl,na,"[12th][1PL][Inf] Base Security Armor",BaseSec_2) \
   CLASS_VEST_GENERIC_BLS(V,2,CAMO,M43A,BaseSecurity,1pl,na,"[12th][1PL][Inf] Base Security Armor",BaseSec_3) \
@@ -706,6 +712,12 @@
   CLASS_VEST_GENERIC_BOS(V,2,CAMO,M43A,BaseSecurity,lpl,med,"[12th][LOGI][Inf] Base Security Armor",BaseSec_1) \
   CLASS_VEST_GENERIC_BLS(V,2,CAMO,M43A,BaseSecurity,lpl,med,"[12th][LOGI][Inf] Base Security Armor",BaseSec_2) \
   CLASS_VEST_GENERIC_BLS(V,2,CAMO,M43A,BaseSecurity,lpl,med,"[12th][LOGI][Inf] Base Security Armor",BaseSec_3) \
+  CLASS_VEST_GENERIC_BOS(V,2,CAMO,M43A,Gungnir,na,na,"[12th][Inf] Gungnir Armor",GungnirS_1) \
+  CLASS_VEST_GENERIC_BLS(V,2,CAMO,M43A,Gungnir,na,na,"[12th][Inf] Gungnir Armor",GungnirS_2) \
+  CLASS_VEST_GENERIC_BLS(V,2,CAMO,M43A,Gungnir,na,na,"[12th][Inf] Gungnir Armor",GungnirS_3) \
+  CLASS_VEST_GENERIC_BOS(V,2,CAMO,M43A,Gungnir,na,med,"[12th][Inf] Gungnir Armor",GungnirS_1) \
+  CLASS_VEST_GENERIC_BLS(V,2,CAMO,M43A,Gungnir,na,med,"[12th][Inf] Gungnir Armor",GungnirS_2) \
+  CLASS_VEST_GENERIC_BLS(V,2,CAMO,M43A,Gungnir,na,med,"[12th][Inf] Gungnir Armor",GungnirS_3) \
   CLASS_VEST_GENERIC_BOS(V,2,CAMO,M43A,Gungnir,1pl,na,"[12th][1PL][Inf] Gungnir Armor",GungnirS_1) \
   CLASS_VEST_GENERIC_BLS(V,2,CAMO,M43A,Gungnir,1pl,na,"[12th][1PL][Inf] Gungnir Armor",GungnirS_2) \
   CLASS_VEST_GENERIC_BLS(V,2,CAMO,M43A,Gungnir,1pl,na,"[12th][1PL][Inf] Gungnir Armor",GungnirS_3) \
@@ -730,6 +742,12 @@
   CLASS_VEST_GENERIC_BOS(V,2,CAMO,M43A,Gungnir,lpl,med,"[12th][LOGI][Inf] Gungnir Armor",GungnirS_1) \
   CLASS_VEST_GENERIC_BLS(V,2,CAMO,M43A,Gungnir,lpl,med,"[12th][LOGI][Inf] Gungnir Armor",GungnirS_2) \
   CLASS_VEST_GENERIC_BLS(V,2,CAMO,M43A,Gungnir,lpl,med,"[12th][LOGI][Inf] Gungnir Armor",GungnirS_3) \
+  CLASS_VEST_GENERIC_BOS(V,2,CAMO,M43A,Gungnir,na,na,"[12th][Inf] Gungnir Large Armor",GungnirL_1) \
+  CLASS_VEST_GENERIC_BLS(V,2,CAMO,M43A,Gungnir,na,na,"[12th][Inf] Gungnir Large Armor",GungnirL_2) \
+  CLASS_VEST_GENERIC_BLS(V,2,CAMO,M43A,Gungnir,na,na,"[12th][Inf] Gungnir Large Armor",GungnirL_3) \
+  CLASS_VEST_GENERIC_BOS(V,2,CAMO,M43A,Gungnir,na,med,"[12th][Inf] Gungnir Large Armor",GungnirL_1) \
+  CLASS_VEST_GENERIC_BLS(V,2,CAMO,M43A,Gungnir,na,med,"[12th][Inf] Gungnir Large Armor",GungnirL_2) \
+  CLASS_VEST_GENERIC_BLS(V,2,CAMO,M43A,Gungnir,na,med,"[12th][Inf] Gungnir Large Armor",GungnirL_3) \
   CLASS_VEST_GENERIC_BOS(V,2,CAMO,M43A,Gungnir,1pl,na,"[12th][1PL][Inf] Gungnir Large Armor",GungnirL_1) \
   CLASS_VEST_GENERIC_BLS(V,2,CAMO,M43A,Gungnir,1pl,na,"[12th][1PL][Inf] Gungnir Large Armor",GungnirL_2) \
   CLASS_VEST_GENERIC_BLS(V,2,CAMO,M43A,Gungnir,1pl,na,"[12th][1PL][Inf] Gungnir Large Armor",GungnirL_3) \
