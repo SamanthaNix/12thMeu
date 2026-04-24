@@ -793,7 +793,8 @@ class CfgVehicles
 			};
 		};
 	};
-	class SMT_DingoRCWS_autocannon: SMT_DingoRCWS_minigun {
+	
+	class SMT_DingoRCWS_autogun: SMT_DingoRCWS_minigun {
 		displayName = "M18-C3 IMV Cargo (Autocannon)";
 		model = "x\12thMEU\addons\Dingo\DingoRCWS_Autogun.p3d";
 		class Turrets: Turrets {
@@ -866,18 +867,19 @@ class CfgVehicles
 			};
 		};
 	};
+	/*
 	class SMT_DingoRCWS_minigun_troop:SMT_DingoRCWS_minigun{
 		displayName="M18-T2 IMV Troop (Minigun)";
 		model = "x\12thMEU\addons\Dingo\DingoRCWS_Troop_minigun.p3d";
 		transportMaxBackpacks 	= 5; /// just some backpacks fit the trunk by default
 		transportSoldier 		= 10; /// number of cargo except driver
 	};
-	class SMT_DingoRCWS_autogun_troop:SMT_DingoRCWS_minigun{
+	class SMT_DingoRCWS_autogun_troop:SMT_DingoRCWS_autogun{
 		displayName="M18-T3 IMV Troop (Autocannon)";
 		model = "x\12thMEU\addons\Dingo\DingoRCWS_Troop_Autogun.p3d";
 		transportMaxBackpacks 	= 5; /// just some backpacks fit the trunk by default
 		transportSoldier 		= 10; /// number of cargo except driver
-	};
+	};*/
 	
 	class SMT_DingoMed: SMT_DingoHull
 	{
