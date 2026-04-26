@@ -70,9 +70,9 @@ class CfgVehicles {
 
   class OPTRE_UNSC_hornet;
 
-  class OPTRE_UNSC_MH_144_Falcon;
+  class OPTRE_UNSC_falcon;
   class OPTRE_UNSC_falcon_armed;
-  class OPTRE_UNSC_MH_144S_Falcon;
+  class OPTRE_UNSC_falcon_S;
   class OPTRE_UNSC_falcon_armed_S;
 
   class OPTRE_AV22_Sparrowhawk;
@@ -149,7 +149,7 @@ class CfgVehicles {
   //  UH-144 Falcon Variants
   // ---------------------------------------------------------------------------
   // Unarmed
-  class twelfth_falcon_unarmed: OPTRE_UNSC_MH_144_Falcon {
+  class twelfth_falcon_unarmed: OPTRE_UNSC_falcon {
     scope = 2;
     scopeCurator = 2;
     side = 1;
@@ -175,7 +175,7 @@ class CfgVehicles {
     FALCON_TEXTURESETS
   };
   // S variant (Side Gun) unarmed
-  class twelfth_falcon_s_unarmed: OPTRE_UNSC_MH_144S_Falcon {
+  class twelfth_falcon_s_unarmed: OPTRE_UNSC_falcon_S {
     scope = 2;
     scopeCurator = 2;
     side = 1;
