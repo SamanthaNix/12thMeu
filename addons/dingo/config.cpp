@@ -10,7 +10,9 @@ class CfgPatches {
       "SMT_DingoTroop",
       "SMT_DingoMed",
       "SMT_DingoRCWS_minigun",
-      "SMT_DingoRCWS_autocannon"
+      "SMT_DingoRCWS_autogun",
+      "SMT_DingoRCWS_troop_autogun",
+      "SMT_DingoRCWS_troop_minigun"
     };
     weapons[] = {};           // No specific weapons defined in this config
     ammo[] = {};              // No specific ammo defined in this config

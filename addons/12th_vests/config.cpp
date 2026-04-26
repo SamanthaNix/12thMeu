@@ -232,7 +232,6 @@ class CfgWeapons
   //-New Armour-----------------------------------------------------
   GENERATE_VEST_REFERENCES
   GENERATE_VEST_CLASSES(std)
-
     // Army
   class twelft_army_vest : TCP_V_M43A_GungnirL_3_Base{
     scope = 2;
@@ -275,13 +274,14 @@ class XtdGearModels {
       class camo {
         alwaysSelectable = 1;
         label="Camouflage";
-        values[]={"forest", "std", "forest90", "urban", "drk", "desert"};
+        values[]={"forest", "std", "forest90", "urban", "drk", "desert","winter"};
         class forest {label="Standard";};
         class std {label="MARPAT";};
         class forest90 {label="Forest90";};
         class urban {label="Urban";}; //maybe winter?? will need to look into new armor pieces
         class drk {label="VBSS";};
         class desert {label="Desert";};
+        class winter {label="Winter";};
       };
       class collar {
         alwaysSelectable = 1;
@@ -341,5 +341,7 @@ class XtdGearInfos {
   class CfgWeapons {
     // VEST GI
     GENERATE_VEST_XTDGI(std)
+    GENERATE_VEST_XTDGI(desert)
+    GENERATE_VEST_XTDGI(winter)
   };
 };
