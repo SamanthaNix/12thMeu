@@ -64,6 +64,7 @@ class CfgWeapons
   class EventHandlers;
   class Dmns_M33_T;
   class OPTRE_M250;
+  class OPTRE_M41_SSR;
   class OPTRE_BR55HB;
   class OPTRE_BR55;
   class OPTRE_BR45GL_black;
@@ -205,6 +206,22 @@ class CfgWeapons
 			  "\A3\Weapons_F_Tank\Launchers\MRAWS\Data\launch_MRAWS_sand_01_F_co",
 			  "\A3\Weapons_F_Tank\Launchers\MRAWS\Data\launch_MRAWS_02_F_co"
       };
+    };
+
+    class twelfth_M41_SSR_laserfix: OPTRE_M41_SSR {
+      ace_laser_canSelect = 1;
+      ace_laser_showHud = 1;
+      
+      displayName = "[12th] M41 SSR MAV/AW";
+      baseWeapon = "twelfth_M41_SSR_laserfix";
+    };
+
+    class twelfth_M41_SSR_G_laserfix: OPTRE_M41_SSR {
+      ace_laser_canSelect = 1;
+      ace_laser_showHud = 1;
+      
+      displayName = "[12th] M41 SSR MAV/AW (Guided)";
+      baseWeapon = "twelfth_M41_SSR_laserfix";
     };
 
   /*

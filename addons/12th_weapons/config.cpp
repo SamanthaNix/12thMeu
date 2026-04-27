@@ -37,7 +37,8 @@ class CfgPatches
                  "twelfth_M73H", "twelfth_M33_t", "twelfth_M247", "twelfth_M319",
                  "twelfth_M319N", "twelfth_MA5C", "twelfth_MA5CGL", "twelfth_MA5K", 
                  "twelfth_MAAWS_base","twelfth_MAAWS_olive","twelfth_MAAWS_sand",
-				 "twelfth_MA6_K","twelfth_MA6","twelfth_MA6_D","twelfth_MA6_A_BOX","twelfth_MA6_A_DRUM","twelfth_M6C2","twelfth_M6C","twelfth_M6G2","twelfth_MA6_AL"}; // Ensure any newly created weapon class is listed above.
+                 "twelfth_M41_SSR_laserfix","twelfth_M41_SSR_G_laserfix",
+				         "twelfth_MA6_K","twelfth_MA6","twelfth_MA6_D","twelfth_MA6_A_BOX","twelfth_MA6_A_DRUM","twelfth_M6C2","twelfth_M6C","twelfth_M6G2","twelfth_MA6_AL"}; // Ensure any newly created weapon class is listed above.
     ammo[] = {"twelfth_20g_bb", "twelfth_95x40_UW", "twelfth_5x23mm_UW", "twelfth_40mmG_HEAT"}; // Please add your new ammo types to this list
     magazines[] = {"twelfth_20g_mag", "twelfth_95x40_100rnd", "twelfth_762x51_200rnd",
                    "twelfth_762x51_200rnd_T", "twelfth_br_36Rnd_UW", "twelfth_m7_60rnd_UW",
@@ -62,11 +63,6 @@ class CfgPatches
 		requiredVersion = 0.1;
 		requiredAddons[] = { "A3_Weapons_F" };
 	};
-};
-
-// CBA-Disposable launchers must define two states: the 'ready' version and the 'used' version
-class CBA_DisposableLaunchers {
-    twelfth_m96_READY[] = {"twelfth_m96", "twelfth_m96_USED"};
 };
 
 class CfgMovesBasic {
