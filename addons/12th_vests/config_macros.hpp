@@ -109,7 +109,7 @@
 #define INVIS_VEST_ITEM_INFO \
   class ItemInfo: VestItem { \
     vestType="Rebreather"; \
-    uniformModel = "\halo_marine\null.p3d"; \
+    uniformModel = "x\12thMEU\addons\12th_backpacks\backpack\null.p3d"; \
     containerClass="twelfth_vest_supply"; \
     mass=80; \
     VEST_HITPOINT_INFO \
