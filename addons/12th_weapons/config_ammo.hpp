@@ -92,5 +92,13 @@ class CfgAmmo
     fuseDistance = 30;
   };
 
+  // 9.5x40mm HVAP
+class twelfth_95x40_HVAP : OPTRE_B_95x40_Ball {
+  caliber = 4.0;
+  hit = 20;
+  typicalSpeed = 800;
+};
+
+
 
 };

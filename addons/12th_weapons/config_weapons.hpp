@@ -571,7 +571,7 @@ class CfgWeapons
       canShootInWater = 1;
       displayName = "[12th] BR55HB";
       baseWeapon = "twelfth_BR55_HB";
-      magazines[] = COMMON_BR_MAGAZINES;
+      magazines[] = {"twelfth_br_36Rnd_HVAP", "twelfth_br_36Rnd", "twelfth_br_36Rnd_T", "twelfth_br_36Rnd_UW", "twelfth_br_36Rnd_HVAP_T"};
       ace_overheating_barrelMass = 10;
 	  model = "\TCP\Weapons_Ins\LongRangeRifles\BR55HB\BR55HB.p3d";
 		picture = "\TCP\Weapons_Ins\LongRangeRifles\BR55HB\data\ui\icon_srifle_BR55HB_X_ca.paa";

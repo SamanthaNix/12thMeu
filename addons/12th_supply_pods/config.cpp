@@ -251,12 +251,14 @@ class CfgVehicles {
     class TransportMagazines {
       class _xx_OPTRE_32Rnd_762x51_Mag { magazine = "OPTRE_32Rnd_762x51_Mag"; count = 75; };
       class _xx_OPTRE_32Rnd_762x51_Mag_Tracer { magazine = "OPTRE_32Rnd_762x51_Mag_Tracer"; count = 75; };
-      class _xx_twelfth_br_36Rnd { magazine = "twelfth_br_36Rnd"; count = 25; };
-      class _xx_twelfth_br_36Rnd_T { magazine = "twelfth_br_36Rnd_T"; count = 25; };
+      class _xx_twelfth_br_36Rnd { magazine = "twelfth_br_36Rnd"; count = 75; };
+      class _xx_twelfth_br_36Rnd_T { magazine = "twelfth_br_36Rnd_T"; count = 75; };
       class _xx_OPTRE_60Rnd_5x23mm_Mag { magazine = "OPTRE_60Rnd_5x23mm_Mag"; count = 25; };
       class _xx_twelfth_m7_60rnd_T { magazine = "twelfth_m7_60rnd_T"; count = 25; };
       class _xx_12Rnd_8Gauge { magazine = "12Rnd_8Gauge"; count = 25; };
       class _xx_OPTRE_4Rnd_145x114_APFSDS_Mag { magazine = "OPTRE_4Rnd_145x114_APFSDS_Mag"; count = 10; };
+      class _xx_twelfth_br_36Rnd_HVAP {magazine = "twelfth_br_36Rnd_HVAP"; count = 25; };
+      class _xx_twelfth_br_36Rnd_HVAP_T {magazine = "twelfth_br_36Rnd_HVAP_T"; count = 25; };
 
     };
     class TransportWeapons {};
@@ -281,6 +283,11 @@ class CfgVehicles {
       class _xx_ACE_SpareBarrel { magazine = "ACE_SpareBarrel"; count = 5; };
       class _xx_OPTRE_60Rnd_762x51_Mag { magazine = "OPTRE_60Rnd_762x51_Mag"; count = 25; };
       class _xx_twelfth_60Rnd_762x51_Mag_T { magazine = "twelfth_60Rnd_762x51_Mag_T"; count = 25; };
+      class _xx_twelfth_200Rnd_762x51_Box_T {magazine = "twelfth_200Rnd_762x51_Box_T"; count = 10; };
+      class _xx_twelfth_100Rnd_762x51_Box_T {magazine = "twelfth_100Rnd_762x51_Box_T"; count = 10; };
+      class _xx_twelfth_56Rnd_95x40_Mag {magazine = "twelfth_56Rnd_95x40_Mag"; count = 25; };
+      class _xx_twelfth_56Rnd_95x40_Mag_T {magazine = "twelfth_56Rnd_95x40_Mag_T"; count = 25; };
+      class _xx_OPTRE_50Rnd_127x99_M250_Box {magazine = "OPTRE_50Rnd_127x99_M250_Box"; count = 25; };
 
     };
     class TransportWeapons {};

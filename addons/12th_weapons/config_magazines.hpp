@@ -77,7 +77,7 @@ class CfgMagazines
   //BR magazine
   class twelfth_br_36Rnd : OPTRE_36Rnd_95x40_Mag
   {
-    author = "Weber";
+    author = "Rex";
     picture = "\TCP\Weapons\Ammo\95x40\Ball\data\ui\icon_95x40mm_36Rnd_ca.paa";
 		modelSpecial = "\TCP\Weapons\Ammo\95x40\Ball\mag_95x40mm_36rnd.p3d";
     displayName = "36Rnd 9.5x40mm Magazine";
@@ -89,7 +89,7 @@ class CfgMagazines
     //BR magazine tracer
   class twelfth_br_36Rnd_T : OPTRE_36Rnd_95x40_Mag_Tracer
   {
-    author = "Weber";
+    author = "Rex";
     picture = "\TCP\Weapons\Ammo\95x40\Ball\data\ui\icon_95x40mm_36Rnd_ca.paa";
 		modelSpecial = "\TCP\Weapons\Ammo\95x40\Ball\mag_95x40mm_36rnd.p3d";
     displayName = "36Rnd 9.5x40mm Magazine (Tracer)";
@@ -97,6 +97,33 @@ class CfgMagazines
     initspeed = 700;
     descriptionShort = "36 Round Magazine 9.5x40mm";
     mass = 10;
+  };
+    //BR magazine HVAP
+  class twelfth_br_36Rnd_HVAP : OPTRE_36Rnd_95x40_Mag
+  {
+    author = "Rex";
+    picture = "\TCP\Weapons\Ammo\95x40\Ball\data\ui\icon_95x40mm_36Rnd_ca.paa";
+		modelSpecial = "\TCP\Weapons\Ammo\95x40\Ball\mag_95x40mm_36rnd.p3d";
+    displayName = "36Rnd 9.5x40mm Magazine (HVAP)";
+    count = 36;
+    initspeed = 800;
+    descriptionShort = "36 Round Magazine 9.5x40mm";
+    mass = 10;
+    ammo = "twelfth_95x40_HVAP";
+  };
+     //BR magazine HVAP Tracer
+  class twelfth_br_36Rnd_HVAP_T : OPTRE_36Rnd_95x40_Mag
+  {
+    author = "Rex";
+    picture = "\TCP\Weapons\Ammo\95x40\Ball\data\ui\icon_95x40mm_36Rnd_ca.paa";
+		modelSpecial = "\TCP\Weapons\Ammo\95x40\Ball\mag_95x40mm_36rnd.p3d";
+    displayName = "36Rnd 9.5x40mm Magazine (HVAP Tracer)";
+    count = 36;
+    initspeed = 800;
+    descriptionShort = "36 Round Magazine 9.5x40mm";
+    mass = 10;
+    tracersEvery = 2;
+    ammo = "twelfth_95x40_HVAP";
   };
   // Underwater M7 60-round mag
   class twelfth_m7_60rnd_UW : OPTRE_60Rnd_5x23mm_Mag
