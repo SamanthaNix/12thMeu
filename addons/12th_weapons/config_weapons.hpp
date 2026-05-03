@@ -71,6 +71,7 @@ class CfgWeapons
   class OPTRE_M392_DMR;
   class TCP_optic_M43RCO;
   class TCP_OpticsMode_Base_Irons;
+  class TCP_LMG_M731;
 
   //TCP Class definitions
   //Pistols
@@ -849,6 +850,7 @@ class CfgWeapons
 	    distanceZoomMin=100;
 	    distanceZoomMax=700;
       maxZeroing=700;
+      dispersion = 0.01;
 
 
 
@@ -874,7 +876,7 @@ class CfgWeapons
       };
     };
 
-    class twelfth_M731 : OPTRE_M73
+    class twelfth_M731 : TCP_LMG_M731
     {
       model = "\TCP\Weapons\Machineguns\M731\M731.p3d";
       author = "Rex"; 
