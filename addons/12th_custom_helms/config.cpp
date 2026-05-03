@@ -168,6 +168,7 @@ class CfgWeapons {
   CUSTOM_HELM_S_AV(LeDoux)
   CUSTOM_HELM_S_AV(Luerssen)
   CUSTOM_HELM_S_AV(Mcintyre)
+  CUSTOM_HELM_S_AV(Marley)
   CUSTOM_HELM_S_AV(Mercer)
   CUSTOM_HELM_S_AV(Moss)
   CUSTOM_HELM_S_AV(Perry)
@@ -180,7 +181,6 @@ class CfgWeapons {
   CUSTOM_HELM_S_AV(Simmons)
   CUSTOM_HELM_S_AV(Smitty)
   CUSTOM_HELM_S_AV(Stacker)
-  CUSTOM_HELM_S_AV(Styx)
   CUSTOM_HELM_S_AV(Tomb)
   CUSTOM_HELM_S_AV(Origami)
   CUSTOM_HELM_S_AV(Quiggle)
@@ -247,7 +247,6 @@ class XtdGearModels {
         label="Member";
         values[]={
           "Abrams",
-          "Aurora",
           "Bateman",
           "Bert",
           "Bob",
@@ -279,6 +278,7 @@ class XtdGearModels {
           "Luerssen",
           "Luke",
           "Mackle",
+          "Marley",
           "McMillian",
           "Mcintyre",
           "Mercer",
@@ -301,7 +301,6 @@ class XtdGearModels {
           "Spector",
           "Smitty",
           "Stacker",
-          "Styx",
           "Tomb",
           "Sullivan",
           "Taji",
@@ -325,7 +324,6 @@ class XtdGearInfos {
     */
   class CfgWeapons {
     CH_HELM_S_GI(Abrams)
-    CH_HELM_S_GI(Aurora)
     CH_HELM_S_GI(Bateman)
     CH_HELM_S_GI(Bert)
     CH_HELM_S_GI(Bob)
@@ -358,6 +356,7 @@ class XtdGearInfos {
     CH_HELM_S_GI(Luke)
     CH_HELM_S_GI(Nightingale)
     CH_HELM_S_GI(Mackle)
+    CH_HELM_S_GI(Marley)
     CH_HELM_S_GI(Mercer)
     CH_HELM_S_GI(Moss)
     CH_HELM_S_GI(Mcintyre)
@@ -378,7 +377,6 @@ class XtdGearInfos {
     CH_HELM_S_GI(Spector)
     CH_HELM_S_GI(Smitty)
     CH_HELM_S_GI(Stacker)
-    CH_HELM_S_GI(Styx)
     CH_HELM_S_GI(Taji)
     CH_HELM_S_GI(Tomb)
     CH_HELM_S_GI(Thomson)
