@@ -25,8 +25,9 @@ class CfgVehicles {
   class SMT_DingoCargo;
   class SMT_DingoRCWS_minigun;
   class SMT_DingoRCWS_autocannon;
-
-
+  class SMT_DingoRCWS_minigun_troop;
+  class SMT_DingoRCWS_autogun_troop;
+  
   class Twelfth_Dingo_Cargo: SMT_DingoCargo {
     scope=2;
     scopeCurator=2;
@@ -112,6 +113,47 @@ class CfgVehicles {
     STDINV
   };
 
+    class Twelfth_Dingo_RCWS_minigun_troop: SMT_DingoRCWS_minigun_troop {
+    scope=2;
+    scopeCurator=2;
+    author="Sammy";
+    displayName="[12th] Dingo Troop RCWS (minigun)";
+    vehicleClass="OPTRE_UNSC_Vehicle_class";
+    faction="twelfth_MEU";
+    editorCategory="twelfth_MEU";
+    editorSubcategory="twelfth_MEU_Cars";
+    hiddenSelections[] = {"camo1","camo7","camo11","camo12","camo8","camo10"};
+    hiddenSelectionsTextures[] = {
+      "\x\12thMEU\addons\dingo\data\textures\standard\Chassis_co.paa",
+      "\x\12thMEU\addons\dingo\data\textures\standard\Modules_co.paa",
+      "\x\12thMEU\addons\dingo\data\textures\standard\turret_co.paa",
+      "\x\12thMEU\addons\dingo\data\textures\standard\autoturret_co.paa",
+      "\x\12thMEU\addons\12th_vehicles\dingo\default\decals_ca.paa"
+    };
+    DINGO_SP_INFO(0,Troop Minigun)
+    STDINV
+  };
+
+  class Twelfth_Dingo_RCWS_autocannon_troop: SMT_DingoRCWS_autogun_troop {
+    scope=2;
+    scopeCurator=2;
+    author="Sammy";
+    displayName="[12th] Dingo Troop RCWS (autocannon)";
+    vehicleClass="OPTRE_UNSC_Vehicle_class";
+    faction="twelfth_MEU";
+    editorCategory="twelfth_MEU";
+    editorSubcategory="twelfth_MEU_Cars";
+    hiddenSelections[] = {"camo1","camo7","camo11","camo12","camo8","camo10"};
+    hiddenSelectionsTextures[] = {
+      "\x\12thMEU\addons\dingo\data\textures\standard\Chassis_co.paa",
+      "\x\12thMEU\addons\dingo\data\textures\standard\Modules_co.paa",
+      "\x\12thMEU\addons\dingo\data\textures\standard\turret_co.paa",
+      "\x\12thMEU\addons\dingo\data\textures\standard\autoturret_co.paa",
+      "\x\12thMEU\addons\12th_vehicles\dingo\default\decals_ca.paa"
+    };
+    DINGO_SP_INFO(0,Troop Autocannon)
+    STDINV
+  };
   class Twelfth_Dingo_Fav_Medical: SMT_DingoMed {
     scope=2;
     scopeCurator=2;

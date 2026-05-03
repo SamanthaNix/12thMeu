@@ -429,6 +429,18 @@ class CfgVehicles
 					"x\12thMEU\addons\dingo\data\textures\black\autoturret_co.paa"
 				};
 			};
+			class Dingo_Camo_Desert:Dingo_Camo_standard
+			{
+				displayName="Desert";
+				author="SamanthaNix";
+				textures[]=
+				{
+					"x\12thMEU\addons\dingo\data\textures\desert\Chassis_co.paa",
+					"x\12thMEU\addons\dingo\data\textures\desert\Modules_co.paa",
+					"x\12thMEU\addons\dingo\data\textures\desert\turret_co.paa",
+					"x\12thMEU\addons\dingo\data\textures\desert\autoturret_co.paa"
+				};
+			};
 		};
 	};
 	class SMT_DingoCargo: SMT_DingoHull
@@ -444,12 +456,13 @@ class CfgVehicles
 		crew 	= "C_man_1"; 	/// we need someone to fit into the car
 		textureList[]=
 		{
-			"Dingo_Camo_standard", 0.2,
-			"Dingo_Camo_winter",0.2,
-			"Dingo_Camo_forest",0.2,
-			"Dingo_Camo_TCP",0.2,
-			"Dingo_Camo_OPTRE",0.2,
-			"Dingo_Camo_Black",0.2
+			"Dingo_Camo_standard", 1,
+			"Dingo_Camo_winter",0,
+			"Dingo_Camo_forest",0,
+			"Dingo_Camo_TCP",0,
+			"Dingo_Camo_OPTRE",0,
+			"Dingo_Camo_Black",0,
+			"Dingo_Camo_Desert",0
 		};
 		class VehicleTransport
 		{
@@ -863,12 +876,13 @@ class CfgVehicles
 		transportSoldier 		= 10; /// number of cargo except driver
 		textureList[]=
 		{
-			"Dingo_Camo_standard", 0.2,
-			"Dingo_Camo_winter",0.2,
-			"Dingo_Camo_forest",0.2,
-			"Dingo_Camo_TCP",0.2,
-			"Dingo_Camo_OPTRE",0.2,
-			"Dingo_Camo_Black",0.2
+			"Dingo_Camo_standard", 1,
+			"Dingo_Camo_winter",0,
+			"Dingo_Camo_forest",0,
+			"Dingo_Camo_TCP",0,
+			"Dingo_Camo_OPTRE",0,
+			"Dingo_Camo_Black",0,
+			"Dingo_Camo_Desert",0
 		};
 		class VehicleTransport
 		{
@@ -887,7 +901,6 @@ class CfgVehicles
 			};
 		};
 	};
-	/*
 	class SMT_DingoRCWS_minigun_troop:SMT_DingoRCWS_minigun{
 		displayName="M18-T2 IMV Troop (Minigun)";
 		model = "x\12thMEU\addons\Dingo\DingoRCWS_Troop_minigun.p3d";
@@ -899,7 +912,7 @@ class CfgVehicles
 		model = "x\12thMEU\addons\Dingo\DingoRCWS_Troop_Autogun.p3d";
 		transportMaxBackpacks 	= 5; /// just some backpacks fit the trunk by default
 		transportSoldier 		= 10; /// number of cargo except driver
-	};*/
+	};
 	
 	class SMT_DingoMed: SMT_DingoHull
 	{
@@ -917,12 +930,13 @@ class CfgVehicles
 		transportSoldier 		= 4; /// number of cargo except driver
 		textureList[]=
 		{
-			"Dingo_Camo_standard", 0.2,
-			"Dingo_Camo_winter",0.2,
-			"Dingo_Camo_forest",0.2,
-			"Dingo_Camo_TCP",0.2,
-			"Dingo_Camo_OPTRE",0.2,
-			"Dingo_Camo_Black",0.2
+			"Dingo_Camo_standard", 1,
+			"Dingo_Camo_winter",0,
+			"Dingo_Camo_forest",0,
+			"Dingo_Camo_TCP",0,
+			"Dingo_Camo_OPTRE",0,
+			"Dingo_Camo_Black",0,
+			"Dingo_Camo_Desert",0
 		};
 		class VehicleTransport
 		{
