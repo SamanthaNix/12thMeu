@@ -664,7 +664,7 @@ class CfgWeapons
 		  hiddenSelectionsTextures[] = {"\TCP\Weapons\LongRangeRifles\M392\data\camo\default\M392_01_CO.paa","\TCP\Weapons\LongRangeRifles\M392\data\camo\default\M392_02_CO.paa"};
       handAnim[] = {"OFP2_ManSkeleton","\TCP\Weapons\LongRangeRifles\M392\data\anim\M392_handAnim.rtm"};
       HUD_TotalPosibleBullet = 32; // Total possible bullets displayed in HUD
-      magazines[] = COMMON_MA5C_MAGAZINES;
+      magazines[] = {"OPTRE_32Rnd_762x51_Mag", "OPTRE_32Rnd_762x51_Mag_Tracer", "OPTRE_32Rnd_762x51_Mag_UW", "twelfth_762x51_32Rnd_HVAP", "twelfth_762x51_32Rnd_HVAP_T" };
       class WeaponSlotsInfo : WeaponSlotsInfo
       {
         class MuzzleSlot : MuzzleSlot

@@ -29,6 +29,7 @@ class CfgAmmo
   class R_PG32V_F;
   class SmokeShell;
   class R_MRAAWS_HEAT_F;
+  class OPTRE_B_762x51_Ball;
 
   // Training (non-lethal) bullet
   class twelfth_20g_bb : BulletBase
@@ -98,6 +99,13 @@ class twelfth_95x40_HVAP : OPTRE_B_95x40_Ball {
   hit = 20;
   typicalSpeed = 800;
 };
+
+  // 7.62x51mm HVAP
+  class twelfth_762x51_HVAP : OPTRE_B_762x51_Ball {
+    caliber = 2.1;
+    hit = 18;
+    typicalSpeed = 1200;
+  };
 
 
 

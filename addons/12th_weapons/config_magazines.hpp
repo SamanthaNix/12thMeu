@@ -393,5 +393,24 @@ class CfgMagazines
     count = 6;
     mass = 8;
   };
+  // 7.62 HVAP
+  class twelfth_762x51_32Rnd_HVAP : OPTRE_32Rnd_762x51_Mag
+  {
+    author = "Rex";
+    displayName = "32Rnd 7.62x51mm mag (HVAP)";
+    count = 32;           
+    initspeed = 1200;     
+    ammo = "twelfth_762x51_HVAP";
+  };
+
+  class twelfth_762x51_32Rnd_HVAP_T : OPTRE_32Rnd_762x51_Mag
+  {
+    author = "Rex";
+    displayName = "32Rnd 7.62x51mm mag (HVAP Tracer)";
+    count = 32;           
+    initspeed = 1200;     
+    tracersEvery = 2;
+    ammo = "twelfth_762x51_HVAP";
+  };
 
 };
