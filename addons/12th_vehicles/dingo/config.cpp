@@ -27,7 +27,7 @@ class CfgVehicles {
   class SMT_DingoRCWS_autocannon;
   class SMT_DingoRCWS_minigun_troop;
   class SMT_DingoRCWS_autogun_troop;
-  
+
   class Twelfth_Dingo_Cargo: SMT_DingoCargo {
     scope=2;
     scopeCurator=2;
@@ -66,7 +66,7 @@ class CfgVehicles {
       "\x\12thMEU\addons\dingo\data\textures\standard\autoturret_co.paa",
       "\x\12thMEU\addons\12th_vehicles\dingo\default\decals_ca.paa"
     };
-    DINGO_SP_INFO(0,FAV Minigun)
+    DINGO_SP_INFO(1,FAV Minigun)
     STDINV
   };
 
@@ -87,7 +87,7 @@ class CfgVehicles {
       "\x\12thMEU\addons\dingo\data\textures\standard\autoturret_co.paa",
       "\x\12thMEU\addons\12th_vehicles\dingo\default\decals_ca.paa"
     };
-    DINGO_SP_INFO(0,FAV Autocannon)
+    DINGO_SP_INFO(2,FAV Autocannon)
     STDINV
   };
 
@@ -109,7 +109,7 @@ class CfgVehicles {
       "\x\12thMEU\addons\12th_vehicles\dingo\default\decals_ca.paa"
     };
     // NOTE: the police texture here would look too weird
-    DINGO_SP_INFO(1,Troop)
+    DINGO_SP_INFO(3,Troop)
     STDINV
   };
 
@@ -130,7 +130,7 @@ class CfgVehicles {
       "\x\12thMEU\addons\dingo\data\textures\standard\autoturret_co.paa",
       "\x\12thMEU\addons\12th_vehicles\dingo\default\decals_ca.paa"
     };
-    DINGO_SP_INFO(0,Troop Minigun)
+    DINGO_SP_INFO(4,Troop Minigun)
     STDINV
   };
 
@@ -151,7 +151,7 @@ class CfgVehicles {
       "\x\12thMEU\addons\dingo\data\textures\standard\autoturret_co.paa",
       "\x\12thMEU\addons\12th_vehicles\dingo\default\decals_ca.paa"
     };
-    DINGO_SP_INFO(0,Troop Autocannon)
+    DINGO_SP_INFO(5,Troop Autocannon)
     STDINV
   };
   class Twelfth_Dingo_Fav_Medical: SMT_DingoMed {
@@ -171,7 +171,7 @@ class CfgVehicles {
       "\x\12thMEU\addons\dingo\data\textures\standard\autoturret_co.paa",
       "\x\12thMEU\addons\12th_vehicles\dingo\default\decals_ca.paa"
     };
-    DINGO_SP_INFO(2,Medical APC)
+    DINGO_SP_INFO(6,Medical APC)
     MEDINV
   };
   class LandVehicle;
