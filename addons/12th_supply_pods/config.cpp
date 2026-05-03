@@ -259,8 +259,8 @@ class CfgVehicles {
       class _xx_OPTRE_4Rnd_145x114_APFSDS_Mag { magazine = "OPTRE_4Rnd_145x114_APFSDS_Mag"; count = 10; };
       class _xx_twelfth_br_36Rnd_HVAP {magazine = "twelfth_br_36Rnd_HVAP"; count = 25; };
       class _xx_twelfth_br_36Rnd_HVAP_T {magazine = "twelfth_br_36Rnd_HVAP_T"; count = 25; };
-      class _xx_twelfth_762x51_32Rnd_HVAP {magazine = "twelfth_762x51_32Rnd_HVAP": count = 25; };
-      class _xx_twelfth_762x51_32Rnd_HVAP_T {magazine = "twelfth_762x51_32Rnd_HVAP_T": count = 25; };
+      class _xx_twelfth_762x51_32Rnd_HVAP {magazine = "twelfth_762x51_32Rnd_HVAP"; count = 25; };
+      class _xx_twelfth_762x51_32Rnd_HVAP_T {magazine = "twelfth_762x51_32Rnd_HVAP_T"; count = 25; };
 
     };
     class TransportWeapons {};
