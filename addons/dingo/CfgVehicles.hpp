@@ -797,8 +797,27 @@ class CfgVehicles
 	class SMT_DingoRCWS_autogun: SMT_DingoRCWS_minigun {
 		displayName = "M18-C3 IMV Cargo (Autocannon)";
 		model = "x\12thMEU\addons\Dingo\DingoRCWS_Autogun.p3d";
+		class AnimationSources: AnimationSources {
+			class zaslehRot {
+				source = "ammoRandom";
+				weapon = "SMT_20mm_ac";
+			};
+			class zaslehHide
+			{
+				source = "reload";
+				weapon = "SMT_20mm_ac";
+			};
+			class gunRecoil	{
+				source = "reload";
+				weapon = "SMT_20mm_ac";
+			};
+			class gunRecoilReturn {
+				source = "reload";
+				weapon = "SMT_20mm_ac";
+			};
+		};
 		class Turrets: Turrets {
-			class MainTurret {
+			class MainTurret: MainTurret {
 				body = "mainTurret";
 				gun = "mainGun";
 				gunBeg = "muzzle";
@@ -811,19 +830,20 @@ class CfgVehicles
 				initOutElev = 0;
 				initOutTurn = 0;
 				initTurn = 0;
-				magazines[] = {"200Rnd_127x99_mag_Tracer_Red","200Rnd_127x99_mag_Tracer_Red"};
-				maxCamElev = 90;
-				maxElev = 60;
+				magazines[] = { "SMT_500Rnd_20mm_shells_Dingo","SMT_500Rnd_20mm_shells_Dingo" };
+				maxCamElev = 120;
+				maxElev = 90;
 				maxHorizontalRotSpeed = 1.2;
-				maxOutElev = 20;
-				maxOutTurn = 60;
+				maxOutElev = 90;
+				maxOutTurn = 360;
 				maxTurn = 360;
 				minCamElev = -90;
-				minElev = -25;
-				minOutElev = -4;
-				minOutTurn = -60;
+				minElev = -20;
+				minOutElev = -20;
+				minOutTurn = -360;
 				minTurn = -360;
-				weapons[] = {"HMG_127"};
+				stabilizedInAxes = 3;
+				weapons[] = {"SMT_20mm_ac"};
 			};
 		};
 	};

@@ -1,4 +1,5 @@
 #include "script_component.hpp"
+#include "config_macros.hpp"
 //Fixed with the help of Crowdedlight
 
 
@@ -14,9 +15,12 @@ class CfgPatches {
       "SMT_DingoRCWS_troop_autogun",
       "SMT_DingoRCWS_troop_minigun"
     };
-    weapons[] = {};           // No specific weapons defined in this config
+    weapons[] = { 
+      "SMT_20mm_ac"
+    };
     ammo[] = {};              // No specific ammo defined in this config
     magazines[] = {
+      "SMT_500Rnd_20mm_shells_Dingo"
     };
     requiredVersion = 0.1;    // Minimum required version of the game
     requiredAddons[] = { 
@@ -56,3 +60,5 @@ class WeaponCloudsMGun;
 
 #include "model.cfg"
 #include "CfgVehicles.hpp"
+#include "CfgWeapons.hpp"
+#include "CfgMagazines.hpp"
