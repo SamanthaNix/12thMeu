@@ -159,6 +159,10 @@ class CfgWeapons {
     };
   };
 
+  //Recon cloaks, duh
+  #include "reconCloaks.hpp"
+
+
   //TCP UNIFORM Weapon definitions
   TCP_WEP_CLASS_DEF
   WEP_UNI_CLASS(std)
@@ -579,6 +583,28 @@ class XtdGearModels {
       };
     };
 
+    //Recon Hoods
+    class twelfth_reconhoods {
+      label="12th Recon Hoods";
+      options[] = {"camo", "type"};
+      class camo {
+        alwaysSelectable = 1;
+        label="Camouflage";
+        values[]={"forest","winter","desert"};
+        class forest {label="Forest";     image=XTP(forest);};
+        class winter {label="Winter"; /* image=XTP(winter); */};
+        class desert {label="Desert"; image=XTP(desert);};
+      };
+      class type {
+        alwaysSelectable = 1;
+        label="Hood type";
+        values[]={"Recon","Sniper"};
+        class Recon  {label="Recon";};
+        class Sniper  {label="Sniper";};
+      };
+    };
+
+
     // Uniforms
     class twelfth_new_uniforms {
       label="12th New Infantry Uniforms";
@@ -641,7 +667,7 @@ class XtdGearModels {
       };
     };
     
-
+    //Tshirts
     class twelfth_tshirt {
       label="12th TShirts";
       options[] = {"camo","tuck","glove","kneepad","blouse"};
@@ -683,6 +709,7 @@ class XtdGearModels {
       };
     };
 
+    //Boonies
     class twelfth_boonies {
       label="12th Boonies";
       options[] = {"camo", "fold"};
@@ -771,5 +798,12 @@ class XtdGearInfos {
     TSHIRT_BLOUSED_GI(unscmc,Untucked)
     TSHIRT_BLOUSED_GLOVES_GI(unscmc,Tucked)
     TSHIRT_BLOUSED_GLOVES_GI(unscmc,Untucked)
+
+
+    //-------------------------------------- Hoods
+    //Recon Hoods
+    RECONHOODS_GI(forest)
+    RECONHOODS_GI(winter)
+    RECONHOODS_GI(desert)
   };
 };
