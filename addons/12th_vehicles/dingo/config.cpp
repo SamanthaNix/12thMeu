@@ -24,7 +24,7 @@ class CfgVehicles {
   class SMT_DingoTroop;
   class SMT_DingoCargo;
   class SMT_DingoRCWS_minigun;
-  class SMT_DingoRCWS_autocannon;
+  class SMT_DingoRCWS_autogun;
   class SMT_DingoRCWS_minigun_troop;
   class SMT_DingoRCWS_autogun_troop;
 
@@ -70,7 +70,7 @@ class CfgVehicles {
     STDINV
   };
 
-  class Twelfth_Dingo_RCWS_autocannon: SMT_DingoRCWS_autocannon {
+  class Twelfth_Dingo_RCWS_autocannon: SMT_DingoRCWS_autogun {
     scope=2;
     scopeCurator=2;
     author="Sammy";

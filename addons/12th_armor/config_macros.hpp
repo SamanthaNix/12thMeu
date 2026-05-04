@@ -1746,16 +1746,22 @@ BOONIE_FOLD(CAMO,Folded_Right)\
     camo = #CAMO; \
   }; \
 
-#define RECONHOODS_GI(CAMO)\
-  class 12th_ReconCloaks_H_SniperHood_##CAMO {\
+#define RECONHOODS_GI(CAMO,TYPE)\
+  class 12th_ReconCloaks_H_##TYPE##_##CAMO {\
     model = "twelfth_reconhoods";\
     camo = #CAMO;\
-    type = "Sniper";\
-  };\
-  class 12th_ReconCloaks_H_Hood_##CAMO {\
-    model = "twelfth_reconhoods";\
-    camo = #CAMO;\
-    type = "Recon";\
+    type = #TYPE;\
   };
 
+#define RECONHOODS_DOWN_GI(CAMO)\
+  class 12th_ReconCloaks_H_Hood_Down_RHOT_##CAMO {\
+    model = "twelfth_reconhoods_down";\
+    camo = #CAMO;\
+    type = "RHOT";\
+  };\
+  class 12th_ReconCloaks_H_Hood_Down_WHOT_##CAMO {\
+    model = "twelfth_reconhoods_down";\
+    camo = #CAMO;\
+    type = "WHOT";\
+  };
   
