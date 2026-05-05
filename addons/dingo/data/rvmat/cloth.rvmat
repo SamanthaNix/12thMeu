@@ -1,6 +1,6 @@
 class StageTI
 {
-	texture = "x\12thmeu\addons\dingo\data\textures\standard\Cloth_TI.paa";
+	texture = "#(argb,8,8,1)color(0,0,0,0)";
 	uvSource = "tex";
 	class uvTransform
 	{
