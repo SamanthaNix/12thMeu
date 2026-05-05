@@ -92,7 +92,7 @@ class CfgVehicles
 				displayName = "Hide Unit Affiliation";
 				source = "user";
 				useSource = 1;
-				initPhase = 1;
+				initPhase = 0;
 				animPeriod = 0.5;
 			};
 			class hideAllDecalSelect
@@ -112,11 +112,37 @@ class CfgVehicles
 				initPhase = 1;
 				animPeriod = 0.5;
 			};
+			class CamoNettingSelect {
+				author = "Sammy";
+				displayName = "Camo Netting";
+				source = "user";
+				useSource = 1;
+				initPhase = 1;
+				animPeriod = 0.5;
+			};
+			class TarpSelect {
+				author = "Sammy";
+				displayName = "Add Tarp";
+				source = "user";
+				useSource = 1;
+				initPhase = 1;
+				animPeriod = 0.5;
+			};
+			class CamoNettingRollCageSelect {
+				author = "Sammy";
+				displayName = "Camo Netting (Rollcage)";
+				source = "user";
+				useSource = 1;
+				initPhase = 1;
+				animPeriod = 0.5;
+			};
 		};
 		animationList[] = {
 			"hideUnitAffilSelect",0, // never hide by default
 			"hideAllDecalSelect",0, // never hide by default
-			"hideRollCageSelect",0.5
+			"hideRollCageSelect",0.5,
+			"CamoNetting",0,
+			"Tarp",0
 		};	
 		class UserActions
 		{
@@ -350,8 +376,15 @@ class CfgVehicles
 		};
 		aggregateReflectors[] = {{"LightCarHeadL01", "LightCarHeadL02"}, {"LightCarHeadR01", "LightCarHeadR02"}}; 
 
-		hiddenSelections[] = {"camo1","camo7","camo11","camo12","camo8","camo10"}; ///we want to allow changing the color of this selection
-		hiddenSelectionsTextures[]={"x\12thMEU\addons\dingo\data\textures\standard\Chassis_co.paa","x\12thMEU\addons\dingo\data\textures\standard\Modules_co.paa","x\12thMEU\addons\dingo\data\textures\standard\turret_co.paa","x\12thMEU\addons\dingo\data\textures\standard\autoturret_co.paa","x\12thMEU\addons\dingo\data\textures\standard\decals_ca.paa","#(rgb,8,8,3)color(0.18039216,0.18039216,0.18039216,1)"};	 /// we could use any texture to cover the car
+		hiddenSelections[] = {"camo1","camo7","camo11","camo12","camo13","camo8","camo10"}; ///we want to allow changing the color of this selection
+		hiddenSelectionsTextures[]={
+			"x\12thMEU\addons\dingo\data\textures\standard\Chassis_co.paa",
+			"x\12thMEU\addons\dingo\data\textures\standard\Modules_co.paa",
+			"x\12thMEU\addons\dingo\data\textures\standard\turret_co.paa",
+			"x\12thMEU\addons\dingo\data\textures\standard\autoturret_co.paa",
+			"x\12thMEU\addons\dingo\data\textures\standard\cloth_co.paa",
+			"x\12thMEU\addons\dingo\data\textures\standard\decals_ca.paa",
+			"#(rgb,8,8,3)color(0.18039216,0.18039216,0.18039216,1)"};	 /// we could use any texture to cover the car
 		slingLoadCargoMemoryPoints[] = {"SlingLoadCargo1","SlingLoadCargo2","SlingLoadCargo3","SlingLoadCargo4"};
 
 		class textureSources
@@ -360,13 +393,14 @@ class CfgVehicles
 			{
 				displayName="Default"; // name displayed, among other, from the garage
 				author="SamanthaNix"; // Author of the skin
-				hiddenSelections[] = {"camo1","camo7","camo11","camo12","camo8","camo10"};
+				hiddenSelections[] = {"camo1","camo7","camo11","camo12","camo13","camo8"};
 				textures[]=// List of textures, in the same order as the hiddenSelections definition
 				{
 					"x\12thMEU\addons\dingo\data\textures\standard\Chassis_co.paa",
 					"x\12thMEU\addons\dingo\data\textures\standard\Modules_co.paa",
 					"x\12thMEU\addons\dingo\data\textures\standard\turret_co.paa",
-					"x\12thMEU\addons\dingo\data\textures\standard\autoturret_co.paa"
+					"x\12thMEU\addons\dingo\data\textures\standard\autoturret_co.paa",
+					"x\12thMEU\addons\dingo\data\textures\standard\cloth_co.paa"
 				};
 			};
 			class Dingo_Camo_winter:Dingo_Camo_standard
@@ -378,7 +412,8 @@ class CfgVehicles
 					"x\12thMEU\addons\dingo\data\textures\winter\Chassis_co.paa",
 					"x\12thMEU\addons\dingo\data\textures\winter\Modules_co.paa",
 					"x\12thMEU\addons\dingo\data\textures\winter\turret_co.paa",
-					"x\12thMEU\addons\dingo\data\textures\winter\autoturret_co.paa"
+					"x\12thMEU\addons\dingo\data\textures\winter\autoturret_co.paa",
+					"x\12thMEU\addons\dingo\data\textures\winter\cloth_co.paa"
 				};
 			};
 			class Dingo_Camo_forest:Dingo_Camo_standard
@@ -390,7 +425,8 @@ class CfgVehicles
 					"x\12thMEU\addons\dingo\data\textures\forest\Chassis_co.paa",
 					"x\12thMEU\addons\dingo\data\textures\forest\Modules_co.paa",
 					"x\12thMEU\addons\dingo\data\textures\forest\turret_co.paa",
-					"x\12thMEU\addons\dingo\data\textures\forest\autoturret_co.paa"
+					"x\12thMEU\addons\dingo\data\textures\forest\autoturret_co.paa",
+					"x\12thMEU\addons\dingo\data\textures\forest\cloth_co.paa"
 				};
 			};
 			class Dingo_Camo_TCP:Dingo_Camo_standard
@@ -438,7 +474,8 @@ class CfgVehicles
 					"x\12thMEU\addons\dingo\data\textures\desert\Chassis_co.paa",
 					"x\12thMEU\addons\dingo\data\textures\desert\Modules_co.paa",
 					"x\12thMEU\addons\dingo\data\textures\desert\turret_co.paa",
-					"x\12thMEU\addons\dingo\data\textures\desert\autoturret_co.paa"
+					"x\12thMEU\addons\dingo\data\textures\desert\autoturret_co.paa",
+					"x\12thMEU\addons\dingo\data\textures\desert\cloth_co.paa"
 				};
 			};
 		};
