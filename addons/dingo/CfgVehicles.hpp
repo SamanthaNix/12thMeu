@@ -138,7 +138,7 @@ class CfgVehicles
 			};
 			class TarpSidesSelect {
 				author = "Sammy";
-				displayName = "Camo Netting (Rollcage)";
+				displayName = "Camo Tarp (Sides)";
 				source = "user";
 				useSource = 1;
 				initPhase = 1;
