@@ -83,6 +83,32 @@ class CfgWeapons
     MG Tripod Definitions
     =============================================================================
   */
+	
+  class mortar_82mm;
+	class NDS_W_M224_mortar: mortar_82mm
+	{
+		magazines[] = 
+		{
+			"NDS_M_6Rnd_60mm_HE",
+			"NDS_M_6Rnd_60mm_HE_0",
+			"NDS_M_6Rnd_60mm_ILLUM",
+			"avm224_M_6Rnd_60mm_ILLUM_IR",
+			"NDS_M_6Rnd_60mm_SMOKE",
+      "twelfth_M_6Rnd_60mm_HUNTIR"
+		};
+	};
+  class avm224_W_M224_mortar_proxy: NDS_W_M224_mortar {
+    magazines[] = 
+		{
+			"NDS_M_6Rnd_60mm_HE",
+			"NDS_M_6Rnd_60mm_HE_0",
+			"NDS_M_6Rnd_60mm_ILLUM",
+			"avm224_M_6Rnd_60mm_ILLUM_IR",
+			"NDS_M_6Rnd_60mm_SMOKE",
+      "twelfth_M_6Rnd_60mm_HUNTIR"
+		};
+	};
+
   class 12th_MG_Tripod_Carry: dzn_MG_Tripod_Universal_Carry{
     displayName = "[12th] MG Tripod";
     author = "10Dozen, Waylen";
@@ -220,9 +246,33 @@ class CfgWeapons
     class twelfth_M41_SSR_G_laserfix: OPTRE_M41_SSR {
       ace_laser_canSelect = 1;
       ace_laser_showHud = 1;
-      
+
       displayName = "[12th] M41 SSR MAV/AW (Guided)";
       baseWeapon = "twelfth_M41_SSR_laserfix";
+    };
+
+  /*
+    =============================================================================
+    Aircraft ordenances
+    =============================================================================
+  */
+    
+
+    class weapon_GBU12Launcher;
+    class twelfth_W_GBU_prototype_250_Launcher: weapon_GBU12Launcher {
+      ace_laser_canSelect = 1;
+      ace_laser_showHud = 1;
+      displayName = "GBU-139/P";
+      magazines[] = {"twelfth_W_P_GBU_prototype_250x1","twelfth_W_P_GBU_prototype_250x2","twelfth_W_P_GBU_prototype_250x4"};
+      scope = 2;
+    };
+
+    class twelfth_W_GBU_prototype_500_Launcher: weapon_GBU12Launcher {
+      ace_laser_canSelect = 1;
+      ace_laser_showHud = 1;
+      displayName = "GBU-140/P";
+      magazines[] = {"twelfth_W_P_GBU_prototype_500x1","twelfth_W_P_GBU_prototype_500x2"};
+      scope = 2;
     };
 
   /*

@@ -108,5 +108,99 @@ class twelfth_95x40_HVAP : OPTRE_B_95x40_Ball {
   };
 
 
+  class Bomb_03_F;
+  class twelfth_W_B250 : Bomb_03_F {
+    maneuvrability = 0; // no maneuvrability so that default guidance doesnt work
+    class ace_missileguidance {
+      enabled = 1; // Explicit enabling of the system
+      
+      pitchRate = 15; // How many degrees/second the missile can pitch
+      yawRate = 20; // How many degrees/second this missile can yaw
+      
+      canVanillaLock = 0;          // Can this default vanilla lock? Only applicable to non-cadet mode
 
+      // Guidance type for munitions
+      defaultSeekerType = "GPS"; // Default seeker type
+      seekerTypes[] = { "SALH", "GPS" };
+
+      defaultSeekerLockMode = "LOAL"; // Default lock mode
+      seekerLockModes[] = { "LOAL" };
+
+      defaultNavigationType = "LINE";
+      navigationTypes[] = { "LINE" };
+
+      lineGainP = 50;
+      lineGainD = 0;
+
+      useModeForAttackProfile = 1;
+
+      seekLastTargetPos = 1;      // seek last target position [if seeker loses LOS of target, continue to last known pos]
+      seekerAngle = 70;           // Angle in front of the missile which can be searched
+      seekerAccuracy = 1;         // seeker accuracy multiplier
+
+      seekerMinRange = 5;         // Minimum range from the missile which the seeker can visually search
+      seekerMaxRange = 4000;      // Maximum range from the missile which the seeker can visually search
+
+      // Attack profile type selection
+      defaultAttackProfile = "JDAM";
+      attackProfiles[] = {"JDAM"};
+    };
+    hit = 5000;
+    indirectHit = 1200;
+    indirectHitRange = 12;
+  };
+
+  class Bomb_04_F;
+  class twelfth_W_B500 : Bomb_04_F {
+    maneuvrability = 0; // no maneuvrability so that default guidance doesnt work
+    class ace_missileguidance {
+      enabled = 1; // Explicit enabling of the system
+      
+      pitchRate = 15; // How many degrees/second the missile can pitch
+      yawRate = 20; // How many degrees/second this missile can yaw
+
+      canVanillaLock = 0;          // Can this default vanilla lock? Only applicable to non-cadet mode
+
+      // Guidance type for munitions
+      defaultSeekerType = "GPS"; // Default seeker type
+      seekerTypes[] = { "SALH", "GPS" };
+
+      defaultSeekerLockMode = "LOAL"; // Default lock mode
+      seekerLockModes[] = { "LOAL" };
+
+      defaultNavigationType = "LINE";
+      navigationTypes[] = { "LINE" };
+
+      lineGainP = 50;
+      lineGainD = 0;
+
+      useModeForAttackProfile = 1;
+
+      seekLastTargetPos = 1;      // seek last target position [if seeker loses LOS of target, continue to last known pos]
+      seekerAngle = 70;           // Angle in front of the missile which can be searched
+      seekerAccuracy = 1;         // seeker accuracy multiplier
+
+      seekerMinRange = 5;         // Minimum range from the missile which the seeker can visually search
+      seekerMaxRange = 4000;      // Maximum range from the missile which the seeker can visually search
+
+      // Attack profile type selection
+      defaultAttackProfile = "JDAM";
+      attackProfiles[] = {"JDAM"};
+    };
+    hit = 5000;
+    indirectHit = 1200;
+    indirectHitRange = 12;
+  };
+
+  class FlareBase;
+  class F_HuntIR: FlareBase {
+    class Eventhandlers;
+  };
+  class F_HuntIR_mortar : F_HuntIR {
+    author = "Hen gizzard and Turnip wizard";
+    timeToLive = 15;
+    class Eventhandlers {
+      fired = "[gunner (_this#0), _this#1, _this#2, _this#3, _this#4, _this#5, _this#6] call ACE_huntir_fnc_handleFired;";
+    };
+  };
 };

@@ -21,14 +21,14 @@
 #include "config_macros.hpp"
 #include "config_ammo.hpp"
 #include "config_magazines.hpp"
+#include "config_magazineGroups.hpp"
 #include "config_weapons.hpp"
 #include "model.cfg"
 class CfgPatches
 {
   class twelfth_weapons
   {
-    units[] = {}; // Currently no placeable units are defined by this config.
-                  // If you add a placeable object/vehicle that belongs to this mod,
+    units[] = {}; // If you add a placeable object/vehicle that belongs to this mod,
                   // you should list that class name here.
     weapons[] = {
                  "twelfth_M6C", "twelfth_M7_Test", "twelfth_M7_Test_Folded", "twelfth_M90", "twelfth_MA5B",
@@ -38,15 +38,23 @@ class CfgPatches
                  "twelfth_M319N", "twelfth_MA5C", "twelfth_MA5CGL", "twelfth_MA5K", 
                  "twelfth_MAAWS_base","twelfth_MAAWS_olive","twelfth_MAAWS_sand",
                  "twelfth_M41_SSR_laserfix","twelfth_M41_SSR_G_laserfix",
-				         "twelfth_MA6_K","twelfth_MA6","twelfth_MA6_D","twelfth_MA6_A_BOX","twelfth_MA6_A_DRUM","twelfth_M6C2","twelfth_M6C","twelfth_M6G2","twelfth_MA6_AL"}; // Ensure any newly created weapon class is listed above.
-    ammo[] = {"twelfth_20g_bb", "twelfth_95x40_UW", "twelfth_5x23mm_UW", "twelfth_40mmG_HEAT"}; // Please add your new ammo types to this list
+				         "twelfth_MA6_K","twelfth_MA6","twelfth_MA6_D","twelfth_MA6_A_BOX","twelfth_MA6_A_DRUM","twelfth_M6C2","twelfth_M6C","twelfth_M6G2","twelfth_MA6_AL",
+                 "twelfth_W_GBU_prototype_250_Launcher","twelfth_W_GBU_prototype_500_Launcher",
+                 "avm224_W_M224_mortar_proxy","NDS_W_M224_mortar"
+                 }; // Ensure any newly created weapon class is listed above.
+    ammo[] = {"twelfth_20g_bb", "twelfth_95x40_UW", "twelfth_5x23mm_UW", "twelfth_40mmG_HEAT",
+              "twelfth_W_B250","twelfth_W_B500",
+              "F_HuntIR_mortar"}; // Please add your new ammo types to this list
     magazines[] = {"twelfth_20g_mag", "twelfth_95x40_100rnd", "twelfth_762x51_200rnd",
                    "twelfth_762x51_200rnd_T", "twelfth_br_36Rnd_UW", "twelfth_m7_60rnd_UW",
-                   "twelfth_m7_48rnd_UW", "twelfth_40mm_heat","twelfth_100Rnd_95x40_Box_T","twelfth_56Rnd_95x40_Mag","twelfth_56Rnd_95x40_Mag_T"}; // Add new magazines here.
+                   "twelfth_m7_48rnd_UW", "twelfth_40mm_heat","twelfth_100Rnd_95x40_Box_T","twelfth_56Rnd_95x40_Mag","twelfth_56Rnd_95x40_Mag_T",
+                   "twelfth_W_P_GBU_prototype_250x1","twelfth_W_P_GBU_prototype_250x2","twelfth_W_P_GBU_prototype_250x4",
+                   "twelfth_W_P_GBU_prototype_500x1","twelfth_W_P_GBU_prototype_500x2",
+                   "twelfth_M_1Rnd_60mm_HUNTIR_csw", "twelfth_M_6Rnd_60mm_HUNTIR"}; // Add new magazines here.
     requiredVersion = 0.1;
     requiredAddons[] = {"Dmns_Weapons", "OPTRE_Weapons", "Dmns_Weapons_F_MachineGuns",
                         "A3_Weapons_F", "A3_Weapons_F_Exp", "19_UNSC_Weapons", 
-                        "ace_common", "a3_weapons_f_tank", "ace_reloadlaunchers",
+                        "ace_missileguidance","ace_common", "a3_weapons_f_tank", "ace_reloadlaunchers","NDS_M224_mortar","avm224_mortar","ace_csw","ace_apl","ace_huntir"
                         }; 
         /*
         IMPORTANT: If you rely on additional external mods,

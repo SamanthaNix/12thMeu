@@ -14,6 +14,8 @@ class CfgWeapons
         class far;
     };
     class SMT_20mm_ac: ACE_gatling_20mm_Comanche {
+        dexterity = 0.5;
+        inertia = 0.7;
         class manual: manual {
             reloadTime = 0.3369; // because we can the memes
             showToPlayer = 1;
@@ -42,7 +44,7 @@ class CfgWeapons
             reloadTime = 0.3369;
             SOUND_20MM_CLASS
         };
-        modes[] = {"manual","burst","close","short","medium","far"};
+        modes[] += {"burst"};
         magazines[] = { "SMT_500Rnd_20mm_shells_Dingo" };
     };
 
