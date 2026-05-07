@@ -413,4 +413,63 @@ class CfgMagazines
     ammo = "twelfth_762x51_HVAP";
   };
 
+  class PylonMissile_1Rnd_Bomb_03_F;
+  class twelfth_W_P_GBU_prototype_250x1: PylonMissile_1Rnd_Bomb_03_F {
+    displayName = "1x GBU-139/P 'Weakass' Guided 250lbs Bomb";
+    displayNameShort = "GBU-139/P";
+    ammo = "twelfth_W_B250";
+    count = 1;
+    hardpoints[] = {"twelfth_hardpoint_prototypes"};
+    pylonWeapon = "twelfth_W_GBU_prototype_250_Launcher";
+    scope = 2;
+  };
+  class twelfth_W_P_GBU_prototype_250x2: twelfth_W_P_GBU_prototype_250x1 {
+    displayName = "2x GBU-139/P 'Weakass' Guided 250lbs Bomb";
+    count = 2;
+  };
+  class twelfth_W_P_GBU_prototype_250x4: twelfth_W_P_GBU_prototype_250x1 {
+    displayName = "4x GBU-139/P 'Weakass' Guided 250lbs Bomb";
+    count = 4;
+  };
+  class PylonMissile_1Rnd_Bomb_04_F;
+  class twelfth_W_P_GBU_prototype_500x1: PylonMissile_1Rnd_Bomb_04_F {
+    displayName = "1x GBU-140/P 'Bigass' Guided 500lbs Bomb";
+    displayNameShort = "GBU-140/P";
+    ammo = "twelfth_W_B500";
+    count = 1;
+    hardpoints[] = {"twelfth_hardpoint_prototypes"};
+    pylonWeapon = "twelfth_W_GBU_prototype_500_Launcher";
+    scope = 2;
+  };
+  class twelfth_W_P_GBU_prototype_500x2: twelfth_W_P_GBU_prototype_500x1 {
+    displayName = "2x GBU-140/P 'Bigass' Guided 500lbs Bomb";
+    count = 2;
+  };
+  class avm224_M_6Rnd_60mm_ILLUM_IR;
+  class twelfth_M_6Rnd_60mm_HUNTIR: avm224_M_6Rnd_60mm_ILLUM_IR {
+    displayName = "M770 6Rnd 60mm HuntIR";
+		displayNameShort = "6Rnd M770 HuntIR";
+    author = "Hen gizzard and Turnip wizard";
+    picture = "\x\12thMEU\addons\12th_weapons\data\m224\ammo_mag_huntir.paa";
+    hiddenSelections[] = { "box_1" };
+    hiddenSelectionsMaterials[] = { "x\12thMEU\addons\12th_weapons\data\m224\M224_mag_huntir.rvmat" };
+    ammo = "F_HuntIR_mortar";
+    mass = 60;
+  };
+  class twelfth_M_1Rnd_60mm_HUNTIR_csw: twelfth_M_6Rnd_60mm_HUNTIR {
+    displayName = "[CSW] M770 1Rnd 60mm HuntIR";
+		displayNameShort = "M770 HuntIR x1";
+    author = "Hen gizzard and Turnip wizard";
+    picture = "\x\12thMEU\addons\12th_weapons\data\m224\ammo_mag_huntir.paa";
+    model = "\z\ace\addons\mk6mortar\data\l16_ammo_illum.p3d";
+    hiddenSelections[] = {};
+    hiddenSelectionsMaterials[] = {};
+    type = 256;
+    count = 1;
+    ACE_isBelt = 1;
+    mass = 6;
+  };
+
+  
+
 };
