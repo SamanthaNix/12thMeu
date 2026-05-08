@@ -73,7 +73,7 @@ class CfgWeapons
 
   // Ponchos
 
-  class twelft_poncho_dry_vest: mgsr_poncho_dry_vest{
+  class twelfth_poncho_dry_vest: mgsr_poncho_dry_vest{
     author = "Sammy";
 		scope = 2;
     model="\mgsr_poncho\mgsr_poncho.p3d";
@@ -127,7 +127,7 @@ class CfgWeapons
 		};
   };
   
-  class twelft_poncho_wet_vest: mgsr_poncho_wet_vest{
+  class twelfth_poncho_wet_vest: mgsr_poncho_wet_vest{
     author = "Sammy";
 		scope = 2;
 		displayName = "[12th] Poncho (Wet)";
@@ -182,7 +182,7 @@ class CfgWeapons
   };
 
   // ODST
-  class twelft_odst_vest : TCP_V_M43D_ODST_4_Black {
+  class twelfth_odst_vest : TCP_V_M43D_ODST_4_Black {
     scope = 2;
     scopeArsenal = 2;
     author = "Rex";
@@ -233,7 +233,7 @@ class CfgWeapons
   GENERATE_VEST_REFERENCES
   GENERATE_VEST_CLASSES(std)
     // Army
-  class twelft_army_vest : TCP_V_M43A_GungnirL_3_Base{
+  class twelfth_army_vest : TCP_V_M43A_GungnirL_3_Base{
     scope = 2;
     scopeArsenal = 2;
     author = "Rex";

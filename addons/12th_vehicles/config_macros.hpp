@@ -88,7 +88,7 @@ class TransportItems{                                                           
 };                                                                                                                            \
 class TransportWeapons {                                                                                                      \
     class _xx_twelfth_M247A1 { weapon = "twelfth_M247A1"; count = 1; };                                                           \
-    class _xx_12th_MG_Tripod_Carry { weapon = "12th_MG_Tripod_Carry"; count = 1; };                                           \
+    class _xx_twelfth_MG_Tripod_Carry { weapon = "twelfth_MG_Tripod_Carry"; count = 1; };                                           \
     class _xx_avm224_W_M224_mortar_carry { weapon = "avm224_W_M224_mortar_carry"; count = 1; };                               \
     class _xx_OPTRE_M41_SSR { weapon = "OPTRE_M41_SSR"; count = 1; };                                                         \
 };

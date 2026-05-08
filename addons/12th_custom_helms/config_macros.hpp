@@ -166,7 +166,7 @@ class twelfth_helmECH43A_##CAMO##_##SFX##_clsd {\
   MID_co, or Visor_co, respectively.
 */
 #define CUSTOM_PILOT_HELM(SUFFIX,DISPLAY,C1,C2,C3,C4,C5)                  \
-class 12th_pilot_ch_##SUFFIX : H_HelmetB {                                \
+class twelfth_pilot_ch_##SUFFIX : H_HelmetB {                                \
   author="Waylen";                                                          \
   scope=2;                                                                \
   scopeArsenal=2;                                                         \

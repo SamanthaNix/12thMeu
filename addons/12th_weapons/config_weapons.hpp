@@ -109,7 +109,7 @@ class CfgWeapons
 		};
 	};
 
-  class 12th_MG_Tripod_Carry: dzn_MG_Tripod_Universal_Carry{
+  class twelfth_MG_Tripod_Carry: dzn_MG_Tripod_Universal_Carry{
     displayName = "[12th] MG Tripod";
     author = "10Dozen, Waylen";
     scope = 2;
@@ -121,11 +121,11 @@ class CfgWeapons
 		};
 		dzn_MG_Tripod_AttachItems[]=
 		{
-			"12th_MG_Tripod"
+			"twelfth_MG_Tripod"
 		};
   };
 
-  class 12th_MG_Tripod: dzn_MG_Tripod_Universal{
+  class twelfth_MG_Tripod: dzn_MG_Tripod_Universal{
     displayName = "[12th] MG Tripod";
     author = "10Dozen, Waylen";
     scope = 2;
@@ -166,8 +166,8 @@ class CfgWeapons
 			};
 		};
     inertia=2;
-		dzn_MG_Tripod_CarryItem="12th_MG_Tripod_Carry";
-		dzn_MG_Tripod_CarryItemUniversal="12th_MG_Tripod_Carry";
+		dzn_MG_Tripod_CarryItem="twelfth_MG_Tripod_Carry";
+		dzn_MG_Tripod_CarryItemUniversal="twelfth_MG_Tripod_Carry";
   };
 
   /*

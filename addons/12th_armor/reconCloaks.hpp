@@ -1,7 +1,7 @@
 class ReconCloaks_H_Hood_oli;
 class ReconCloaks_H_SniperHood_mcam;
 //Forest camo
-class 12th_ReconCloaks_H_Hood_Forest: ReconCloaks_H_Hood_oli{
+class twelfth_ReconCloaks_H_Hood_Forest: ReconCloaks_H_Hood_oli{
     author = "Sammy";
     displayName = "[12th] Recon Hood (Forest)";
     model = "\ReconCloaks\reconcloaks_characters\Headgear\H_ReconCloak.p3d";
@@ -23,7 +23,7 @@ class 12th_ReconCloaks_H_Hood_Forest: ReconCloaks_H_Hood_oli{
         };
     };
 };
-class 12th_ReconCloaks_H_SniperHood_Forest: ReconCloaks_H_SniperHood_mcam{
+class twelfth_ReconCloaks_H_SniperHood_Forest: ReconCloaks_H_SniperHood_mcam{
     author = "Sammy";
     displayName = "[12th] Sniper Hood (Forest)";
     hiddenSelections[] = {"camo","camo1"};
@@ -45,7 +45,7 @@ class 12th_ReconCloaks_H_SniperHood_Forest: ReconCloaks_H_SniperHood_mcam{
     };
 };
 //winter camo
-class 12th_ReconCloaks_H_Hood_Winter: ReconCloaks_H_Hood_oli{
+class twelfth_ReconCloaks_H_Hood_Winter: ReconCloaks_H_Hood_oli{
     author = "Sammy";
     displayName = "[12th] Recon Hood (Winter)";
     model = "\ReconCloaks\reconcloaks_characters\Headgear\H_ReconCloak.p3d";
@@ -68,7 +68,7 @@ class 12th_ReconCloaks_H_Hood_Winter: ReconCloaks_H_Hood_oli{
     };
 };
 
-class 12th_ReconCloaks_H_SniperHood_Winter: ReconCloaks_H_SniperHood_mcam{
+class twelfth_ReconCloaks_H_SniperHood_Winter: ReconCloaks_H_SniperHood_mcam{
     author = "Sammy";
     displayName = "[12th] Sniper Hood (Winter)";
     hiddenSelections[] = {"camo","camo1"};
@@ -90,7 +90,7 @@ class 12th_ReconCloaks_H_SniperHood_Winter: ReconCloaks_H_SniperHood_mcam{
     };
 };
 //desert camo
-class 12th_ReconCloaks_H_Hood_Desert: ReconCloaks_H_Hood_oli{
+class twelfth_ReconCloaks_H_Hood_Desert: ReconCloaks_H_Hood_oli{
     author = "Sammy";
     displayName = "[12th] Recon Hood (Desert)";
     model = "\ReconCloaks\reconcloaks_characters\Headgear\H_ReconCloak.p3d";
@@ -112,7 +112,7 @@ class 12th_ReconCloaks_H_Hood_Desert: ReconCloaks_H_Hood_oli{
         };
     };
 };
-class 12th_ReconCloaks_H_SniperHood_Desert: ReconCloaks_H_SniperHood_mcam{
+class twelfth_ReconCloaks_H_SniperHood_Desert: ReconCloaks_H_SniperHood_mcam{
     author = "Sammy";
     displayName = "[12th] Sniper Hood (Desert)";
     hiddenSelections[] = {"camo","camo1"};
@@ -135,7 +135,7 @@ class 12th_ReconCloaks_H_SniperHood_Desert: ReconCloaks_H_SniperHood_mcam{
 };
 
 //Black
-class 12th_ReconCloaks_H_Hood_Black: ReconCloaks_H_Hood_oli{
+class twelfth_ReconCloaks_H_Hood_Black: ReconCloaks_H_Hood_oli{
     author = "Sammy";
     displayName = "[12th] Recon Hood (Black)";
     model = "\ReconCloaks\reconcloaks_characters\Headgear\H_ReconCloak.p3d";
@@ -164,7 +164,7 @@ class OPTRE_NVGT_C;
 class OPTRE_NVG_MVI;
 
 //Forest
-class 12th_ReconCloaks_H_Hood_Down_WHOT_Forest: OPTRE_NVGT_C
+class twelfth_ReconCloaks_H_Hood_Down_WHOT_Forest: OPTRE_NVGT_C
 {
     author = "OokamiJamie";
     displayName = "Recon Hood (Forest, Down, WHOT)";
@@ -182,7 +182,7 @@ class 12th_ReconCloaks_H_Hood_Down_WHOT_Forest: OPTRE_NVGT_C
     };
 };
 
-class 12th_ReconCloaks_H_Hood_Down_RHOT_Forest: OPTRE_NVG_MVI
+class twelfth_ReconCloaks_H_Hood_Down_RHOT_Forest: OPTRE_NVG_MVI
 {
     author = "OokamiJamie";
     displayName = "Recon Hood (Forest, Down, RHOT)";
@@ -201,7 +201,7 @@ class 12th_ReconCloaks_H_Hood_Down_RHOT_Forest: OPTRE_NVG_MVI
 };
 
 //Desert
-class 12th_ReconCloaks_H_Hood_Down_WHOT_Desert: OPTRE_NVGT_C
+class twelfth_ReconCloaks_H_Hood_Down_WHOT_Desert: OPTRE_NVGT_C
 {
     author = "OokamiJamie";
     displayName = "Recon Hood (Desert, Down, WHOT)";
@@ -219,7 +219,7 @@ class 12th_ReconCloaks_H_Hood_Down_WHOT_Desert: OPTRE_NVGT_C
     };
 };
 
-class 12th_ReconCloaks_H_Hood_Down_RHOT_Desert: OPTRE_NVG_MVI
+class twelfth_ReconCloaks_H_Hood_Down_RHOT_Desert: OPTRE_NVG_MVI
 {
     author = "OokamiJamie";
     displayName = "Recon Hood (Desert, Down, RHOT)";
@@ -239,7 +239,7 @@ class 12th_ReconCloaks_H_Hood_Down_RHOT_Desert: OPTRE_NVG_MVI
 
 //Winter
 
-class 12th_ReconCloaks_H_Hood_Down_WHOT_Winter: OPTRE_NVGT_C
+class twelfth_ReconCloaks_H_Hood_Down_WHOT_Winter: OPTRE_NVGT_C
 {
     author = "OokamiJamie";
     displayName = "Recon Hood (Winter, Down, WHOT)";
@@ -257,7 +257,7 @@ class 12th_ReconCloaks_H_Hood_Down_WHOT_Winter: OPTRE_NVGT_C
     };
 };
 
-class 12th_ReconCloaks_H_Hood_Down_RHOT_Winter: OPTRE_NVG_MVI
+class twelfth_ReconCloaks_H_Hood_Down_RHOT_Winter: OPTRE_NVG_MVI
 {
     author = "OokamiJamie";
     displayName = "Recon Hood (Forest, Down, RHOT)";
@@ -278,7 +278,7 @@ class 12th_ReconCloaks_H_Hood_Down_RHOT_Winter: OPTRE_NVG_MVI
 //Black
 
 
-class 12th_ReconCloaks_H_Hood_Down_WHOT_Black: OPTRE_NVGT_C
+class twelfth_ReconCloaks_H_Hood_Down_WHOT_Black: OPTRE_NVGT_C
 {
     author = "OokamiJamie";
     displayName = "Recon Hood (Black, Down, WHOT)";
@@ -296,7 +296,7 @@ class 12th_ReconCloaks_H_Hood_Down_WHOT_Black: OPTRE_NVGT_C
     };
 };
 
-class 12th_ReconCloaks_H_Hood_Down_RHOT_Black: OPTRE_NVG_MVI
+class twelfth_ReconCloaks_H_Hood_Down_RHOT_Black: OPTRE_NVG_MVI
 {
     author = "OokamiJamie";
     displayName = "Recon Hood (Black, Down, RHOT)";
