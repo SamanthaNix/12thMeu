@@ -141,7 +141,7 @@ class CfgWeapons {
   class twelfth_helmCH43A_base;
   class twelfth_helmECH43A_base;
   class TCP_uniformDecals;
-  // ---------------------------------------------------------------------------
+  class TCP_equipmentTypes;  // ---------------------------------------------------------------------------
   //  Base Class for 12th Custom Helmets
   // ---------------------------------------------------------------------------
 
