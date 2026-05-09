@@ -31,10 +31,6 @@ class CfgVehicles
 		};
 		class HitPoints
 		{
-			class HitLFWheel;
-			class HitLF2Wheel;
-			class HitRFWheel;
-			class HitRF2Wheel;
 			class HitGlass1;
 			class HitGlass2;
 			class HitGlass3;
@@ -59,6 +55,16 @@ class CfgVehicles
 		};
 		class NewTurret;
 		class AnimationSources;
+		class HitPoints
+		{
+			class HitGlass1;
+			class HitGlass2;
+			class HitGlass3;
+			class HitGlass4;
+			class HitGlass5;
+			class HitGlass6;
+			class HitBody;
+		};
 	};
 
 
@@ -182,13 +188,13 @@ class CfgVehicles
 			};
 		};
 		acre_hasInfantryPhone = 1; // 1 - enabled, 0 - disabled (default: 0)
-        acre_infantryPhoneDisableRinging = 0;   // If set to 1, the ringing funtionality will not be available (default: 0)
-        acre_infantryPhoneCustomRinging[] = {}; // An array used in order to override the default sound for the ringing functionality (default: {})
-        // List of intercom names (intercom_1, intercom_2) or "all" in order to specify which intercom networks the phone can connect to
-        acre_infantryPhoneIntercom[] = {"all"};
-        acre_infantryPhoneControlActions[] = {"intercom_1"}; // Only those units in "intercom_1" can have access to ringing functionality
-        // Here a custom function can be defined that is called when the infantry phone is picked up, put back, given to another unit or the intercom network is switched
-        acre_eventInfantryPhone = QFUNC(noApiFunction);
+		acre_infantryPhoneDisableRinging = 0;   // If set to 1, the ringing funtionality will not be available (default: 0)
+		acre_infantryPhoneCustomRinging[] = {}; // An array used in order to override the default sound for the ringing functionality (default: {})
+		// List of intercom names (intercom_1, intercom_2) or "all" in order to specify which intercom networks the phone can connect to
+		acre_infantryPhoneIntercom[] = {"all"};
+		acre_infantryPhoneControlActions[] = {"intercom_1"}; // Only those units in "intercom_1" can have access to ringing functionality
+		// Here a custom function can be defined that is called when the infantry phone is picked up, put back, given to another unit or the intercom network is switched
+		acre_eventInfantryPhone = QFUNC(noApiFunction);
 		class AcreRacks 
 		{
            class Rack_1 
@@ -247,15 +253,68 @@ class CfgVehicles
 		class Turrets{}; /// doesn't have any gunner nor commander
 		class HitPoints: HitPoints
 		{
-			class HitLFWheel: HitLFWheel	{armor=0.2; passThrough=0;}; /// it is easier to destroy wheels than hull of the vehicle
-			class HitLBWheel: HitLF2Wheel	{armor=0.2; passThrough=0;};
-
-			class HitRFWheel: HitRFWheel	{armor=0.2; passThrough=0;};
-			class HitRBWheel: HitRF2Wheel 	{armor=0.2; passThrough=0;};
+			class HitRFWheel {
+				armor = -200; 
+				//armor=0.2;
+				armorComponent = "wheel_1_1_steer";
+				explosionShielding = 4;
+				material = -1;
+				minimalHit = -0.01;
+				name = "wheel_1_1_steering";
+				passThrough = 0;
+				//radius = 0.25;
+				visual = "wheel_1_1_unhide";
+			}; /// it is easier to destroy wheels than hull of the vehicle
+			class HitLFWheel {
+				armor = -200; 
+				armorComponent = "wheel_2_1_steer";
+				explosionShielding = 4;
+				material = -1;
+				minimalHit = -0.01;
+				name = "wheel_2_1_steer";
+				passThrough = 0;
+				visual = "wheel_2_1_unhide";
+			};
+			class HitRBWheel 	{
+				armor = -200; 
+				armorComponent = "wheel_1_2_damper";
+				explosionShielding = 4;
+				material = -1;
+				minimalHit = -0.01;
+				name = "wheel_1_2_damper";
+				passThrough = 0;
+				visual = "wheel_1_2_unhide";
+			};
+			class HitLBWheel	{
+				armor = -200; 
+				armorComponent = "wheel_2_2_damper";
+				explosionShielding = 4;
+				material = -1;
+				minimalHit = -0.01;
+				name = "wheel_2_2_damper";
+				passThrough = 0;
+				visual = "wheel_2_2_unhide";
+			};
 
 			class HitFuel 			{armor=0.50; material=-1; name="FuelTank"; visual=""; passThrough=0.2;}; /// correct points for fuel tank, some of the damage is aFRLied to the whole
 			class HitEngine 		{armor=0.50; material=-1; name="Engine"; visual=""; passThrough=0.2;};
 			class HitBody: HitBody 	{name = "body"; visual="camo1"; passThrough=1;}; /// all damage to the hull is aFRLied to total damage
+
+			class HitHull {
+				armor = 1.5;
+				explosionShielding = 8;
+				material = -1;
+				minimalHit = 0.1;
+				name = "palivo";
+				passThrough = 0.5;
+			};
+
+			class HitGlass1: HitGlass1 { armor = 1.5; explosionShielding = 3; passThrough = 0; };
+			class HitGlass2: HitGlass2 { armor = 1.5; explosionShielding = 3; passThrough = 0; };
+			class HitGlass3: HitGlass3 { armor = 1.5; explosionShielding = 3; passThrough = 0; };
+			class HitGlass4: HitGlass4 { armor = 1.5; explosionShielding = 3; passThrough = 0; };
+			class HitGlass5: HitGlass5 { armor = 1.5; explosionShielding = 3; passThrough = 0; };
+			class HitGlass6: HitGlass6 { armor = 1.5; explosionShielding = 3; passThrough = 0; };
 
 		};
 
