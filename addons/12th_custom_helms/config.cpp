@@ -41,8 +41,10 @@ class CfgPatches {
       "twelfth_helmCH43A_std_Bert",
       "twelfth_helmCH43A_std_Bob",
       "twelfth_helmCH43A_std_Bobby",
+      "twelfth_helmCH43A_std_Bunge",
+      "twelfth_helmCH43A_std_Clarke",
       "twelfth_helmCH43A_std_Coady",
-      "twelfth_helmCH43A_std_Don",
+      "twelfth_helmCH43A_std_Deacon",
       "twelfth_helmCH43A_std_Dixie",
       "twelfth_helmCH43A_std_Duckworth",
       "twelfth_helmCH43A_std_Felix",
@@ -52,33 +54,37 @@ class CfgPatches {
       "twelfth_helmCH43A_std_Jekyll",
       "twelfth_helmCH43A_std_Kiens",
       "twelfth_helmCH43A_std_LeDoux",
+      "twelfth_helmCH43A_std_Luerssen",
+      "twelfth_helmCH43A_std_Luke",
+      "twelfth_helmCH43A_std_Marley",
       "twelfth_helmCH43A_std_Mcintyre",
       "twelfth_helmCH43A_std_Mercer",
       "twelfth_helmCH43A_std_Moss",
+      "twelfth_helmCH43A_std_Origami",
       "twelfth_helmCH43A_std_Perry",
+      "twelfth_helmCH43A_std_Quiggle",
       "twelfth_helmCH43A_std_Quinn",
       "twelfth_helmCH43A_std_Rex",
-      "twelfth_helmCH43A_std_Sand",
       "twelfth_helmCH43A_std_Sammy",
+      "twelfth_helmCH43A_std_Sand",
       "twelfth_helmCH43A_std_Schultz",
       "twelfth_helmCH43A_std_Shepard",
       "twelfth_helmCH43A_std_Simmons",
       "twelfth_helmCH43A_std_Smitty",
       "twelfth_helmCH43A_std_Stacker",
-      "twelfth_helmCH43A_std_Styx",
-      "twelfth_helmCH43A_std_Origami",
+      "twelfth_helmCH43A_std_Stokes",
       "twelfth_helmCH43A_std_Sullivan",
-      "twelfth_helmCH43A_std_Luke",
       "twelfth_helmCH43A_std_Taji",
       "twelfth_helmCH43A_std_Thomas",
       "twelfth_helmCH43A_std_Wilson",
-      
       "twelfth_helmECH43A_std_Bateman_clsd",
       "twelfth_helmECH43A_std_Bert_clsd",
       "twelfth_helmECH43A_std_Bob_clsd",
       "twelfth_helmECH43A_std_Bobby_clsd",
+      "twelfth_helmECH43A_std_Bunge_clsd",
+      "twelfth_helmECH43A_std_Clarke_clsd",
       "twelfth_helmECH43A_std_Coady_clsd",
-      "twelfth_helmECH43A_std_Don_clsd",
+      "twelfth_helmECH43A_std_Deacon_clsd",
       "twelfth_helmECH43A_std_Dixie_clsd",
       "twelfth_helmECH43A_std_Duckworth_clsd",
       "twelfth_helmECH43A_std_Felix_clsd",
@@ -88,28 +94,32 @@ class CfgPatches {
       "twelfth_helmECH43A_std_Jekyll_clsd",
       "twelfth_helmECH43A_std_Kiens_clsd",
       "twelfth_helmECH43A_std_LeDoux_clsd",
+      "twelfth_helmECH43A_std_Luerssen_clsd",
+      "twelfth_helmECH43A_std_Luke_clsd",
+      "twelfth_helmECH43A_std_Marley_clsd",
       "twelfth_helmECH43A_std_Mcintyre_clsd",
       "twelfth_helmECH43A_std_Mercer_clsd",
       "twelfth_helmECH43A_std_Moss_clsd",
+      "twelfth_helmECH43A_std_Origami_clsd",
       "twelfth_helmECH43A_std_Perry_clsd",
+      "twelfth_helmECH43A_std_Quiggle_clsd",
       "twelfth_helmECH43A_std_Quinn_clsd",
       "twelfth_helmECH43A_std_Rex_clsd",
       "twelfth_helmECH43A_std_Sammy_clsd",
+      "twelfth_helmECH43A_std_Sand_clsd",
       "twelfth_helmECH43A_std_Schultz_clsd",
       "twelfth_helmECH43A_std_Shepard_clsd",
       "twelfth_helmECH43A_std_Simmons_clsd",
       "twelfth_helmECH43A_std_Smitty_clsd",
       "twelfth_helmECH43A_std_Stacker_clsd",
-      "twelfth_helmECH43A_std_Styx_clsd",
-      "twelfth_helmECH43A_std_Origami_clsd",
+      "twelfth_helmECH43A_std_Stokes_clsd",
       "twelfth_helmECH43A_std_Sullivan_clsd",
-      "twelfth_helmECH43A_std_Luke_clsd",
       "twelfth_helmECH43A_std_Taji_clsd",
       "twelfth_helmECH43A_std_Thomas_clsd",
       "twelfth_helmECH43A_std_Wilson_clsd",
-      "12th_pilot_ch_penquite",
-      "12th_pilot_ch_Moss",
-      "12th_pilot_ch_tomb",
+      "twelfth_pilot_ch_penquite",
+      "twelfth_pilot_ch_Moss",
+      "twelfth_pilot_ch_tomb",
     };
     requiredAddons[]= {
       "A3_Armor_F_Beta",
@@ -131,7 +141,7 @@ class CfgWeapons {
   class twelfth_helmCH43A_base;
   class twelfth_helmECH43A_base;
   class TCP_uniformDecals;
-  // ---------------------------------------------------------------------------
+  class TCP_equipmentTypes;  // ---------------------------------------------------------------------------
   //  Base Class for 12th Custom Helmets
   // ---------------------------------------------------------------------------
 
@@ -153,10 +163,9 @@ class CfgWeapons {
   CUSTOM_HELM_S_AV(Bob)
   CUSTOM_HELM_S_AV(Bobby)
   CUSTOM_HELM_S_AV(Bunge)
-  CUSTOM_HELM_S_AV(Coady)
   CUSTOM_HELM_S_AV(Clarke)
+  CUSTOM_HELM_S_AV(Coady)
   CUSTOM_HELM_S_AV(Deacon)
-  CUSTOM_HELM_S_AV(Don)
   CUSTOM_HELM_S_AV(Dixie)
   CUSTOM_HELM_S_AV(Duckworth)
   CUSTOM_HELM_S_AV(Felix)
@@ -167,27 +176,28 @@ class CfgWeapons {
   CUSTOM_HELM_S_AV(Kiens)
   CUSTOM_HELM_S_AV(LeDoux)
   CUSTOM_HELM_S_AV(Luerssen)
-  CUSTOM_HELM_S_AV(Mcintyre)
+  CUSTOM_HELM_S_AV(Luke)
   CUSTOM_HELM_S_AV(Marley)
+  CUSTOM_HELM_S_AV(Mcintyre)
   CUSTOM_HELM_S_AV(Mercer)
   CUSTOM_HELM_S_AV(Moss)
+  CUSTOM_HELM_S_AV(Origami)
   CUSTOM_HELM_S_AV(Perry)
+  CUSTOM_HELM_S_AV(Quiggle)
   CUSTOM_HELM_S_AV(Quinn)
   CUSTOM_HELM_S_AV(Rex)
-  CUSTOM_HELM_S_AV(Sand)
   CUSTOM_HELM_S_AV(Sammy)
+  CUSTOM_HELM_S_AV(Sand)
   CUSTOM_HELM_S_AV(Schultz)
   CUSTOM_HELM_S_AV(Shepard)
   CUSTOM_HELM_S_AV(Simmons)
   CUSTOM_HELM_S_AV(Smitty)
   CUSTOM_HELM_S_AV(Stacker)
-  CUSTOM_HELM_S_AV(Tomb)
-  CUSTOM_HELM_S_AV(Origami)
-  CUSTOM_HELM_S_AV(Quiggle)
+  CUSTOM_HELM_S_AV(Stokes)
   CUSTOM_HELM_S_AV(Sullivan)
-  CUSTOM_HELM_S_AV(Luke)
   CUSTOM_HELM_S_AV(Taji)
   CUSTOM_HELM_S_AV(Thomas)
+  CUSTOM_HELM_S_AV(Tomb)
   CUSTOM_HELM_S_AV(Wilson)
 
 
@@ -246,22 +256,18 @@ class XtdGearModels {
         alwaysSelectable=1;
         label="Member";
         values[]={
-          "Abrams",
           "Bateman",
           "Bert",
           "Bob",
           "Bobby",
-          "Bretek",
           "Broad",
           "Bunge",
-          "Burns",
-          "Coady",
           "Clarke",
+          "Coady",
           "Deacon",
-          "Deluge",
           "Dennis",
           "Dixie",
-          "Dom",
+          "Stokes",
           "Don",
           "Dras",
           "Duckworth",
@@ -323,21 +329,17 @@ class XtdGearInfos {
       (visor = "Yes") and NV (visor = "No") for each name in "member".
     */
   class CfgWeapons {
-    CH_HELM_S_GI(Abrams)
     CH_HELM_S_GI(Bateman)
     CH_HELM_S_GI(Bert)
     CH_HELM_S_GI(Bob)
     CH_HELM_S_GI(Bobby)
-    CH_HELM_S_GI(Bretek)
     CH_HELM_S_GI(Broad)
-    CH_HELM_S_GI(Burns)
     CH_HELM_S_GI(Bunge)
-    CH_HELM_S_GI(Coady)
     CH_HELM_S_GI(Clarke)
+    CH_HELM_S_GI(Coady)
     CH_HELM_S_GI(Deacon)
     CH_HELM_S_GI(Dennis)
-    CH_HELM_S_GI(Deluge)
-    CH_HELM_S_GI(Dom)
+    CH_HELM_S_GI(Stokes)
     CH_HELM_S_GI(Don)
     CH_HELM_S_GI(Dras)
     CH_HELM_S_GI(Duckworth)

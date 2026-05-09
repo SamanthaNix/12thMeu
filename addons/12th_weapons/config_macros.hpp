@@ -15,7 +15,7 @@
 #define COMMON_RAIL_ATTACHMENTS "TCP_acc_flashlight_M6G","TCP_acc_pointer_lam_M6G","TCP_acc_pointer_lam_M6C2","OPTRE_BMR_Laser","OPTRE_BMR_MEQ_Flashlight","OPTRE_BMR_Vis_Red_Laser","OPTRE_BMR_Flashlight","OPTRE_BMR_Flashlight_Laser","OPTRE_BMR_Flashlight_Vis_Red_Laser", "ACE_acc_pointer_red", "ACE_acc_pointer_green", "ACE_acc_pointer_green_IR", "acc_pointer_IR", "OPTRE_M12_Laser","OPTRE_M12_Flashlight","OPTRE_M12_Vis_Red_Laser","ACE_SPIR","ACE_SPIR_Medium","ACE_SPIR_Narrow","ACE_SPIR_LR","ACE_SPIR_LR_Medium","ACE_SPIR_LR_Narrow"
 #define COMMON_LIGHT_BIPOD {"bipod_01_F_blk", "bipod_02_F_blk", "bipod_03_F_blk","TCP_bipod_01"}
 #define COMMON_MEDIUM_BIPOD {"bipod_01_F_blk", "bipod_02_F_blk", "bipod_03_F_blk", "dzn_tripod_rifle","TCP_bipod_01"}
-#define COMMON_HEAVY_BIPOD {"bipod_01_F_blk", "bipod_02_F_blk", "bipod_03_F_blk", "12th_MG_Tripod"}
+#define COMMON_HEAVY_BIPOD {"bipod_01_F_blk", "bipod_02_F_blk", "bipod_03_F_blk", "twelfth_MG_Tripod"}
 // Start Magazine Macros
 // Start Rifle Macros
 #define COMMON_MA5C_MAGAZINES {"OPTRE_32Rnd_762x51_Mag", "OPTRE_32Rnd_762x51_Mag_Tracer", "OPTRE_32Rnd_762x51_Mag_UW" }

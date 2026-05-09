@@ -54,8 +54,8 @@ class CfgPatches {
       "twelfth_backpack_medic_desert",
       "twelfth_backpack_rto_desert",
       "twelfth_M3_MAAWS_backpack",
-      "twelft_poncho_wet",
-      "twelft_poncho_dry",
+      "twelfth_poncho_wet",
+      "twelfth_poncho_dry",
       "twelfth_ANPRC"
 
 	  // Alternative RTO backpack.
@@ -99,7 +99,7 @@ class CfgVehicles {
   };
 
   // Poncho backpack
-  class twelft_poncho_wet:mgsr_poncho_wet{
+  class twelfth_poncho_wet:mgsr_poncho_wet{
     maximumLoad = BP_MAXLOAD;
     mass = BP_MASS;
     author = "Sammy";
@@ -107,7 +107,7 @@ class CfgVehicles {
 		displayName = "[Twelfth] Poncho (Wet)";
   };
 
-  class twelft_poncho_dry:mgsr_poncho_dry{
+  class twelfth_poncho_dry:mgsr_poncho_dry{
     maximumLoad = BP_MAXLOAD;
     mass = BP_MASS;
     author = "Sammy";

@@ -399,7 +399,7 @@ class CfgVehicles
 				innerAngle 		= 100;						/// angle of full light
 				outerAngle 		= 179;						/// angle of some light
 				coneFadeCoef 	= 10;						/// attenuation of light between the above angles
-				intensity 		= 1;						/// strength of the light
+				intensity 		= 2;						/// strength of the light
 				useFlare 		= 1;						/// does the light use flare?
 				dayLight 		= 0;					/// switching light off during day saves CPU a lot
 				flareSize 		= 1.0;						/// how big is the flare
@@ -410,7 +410,7 @@ class CfgVehicles
 					constant 		= 0;
 					linear 			= 0;
 					quadratic 		= 0.25;
-					hardLimitStart 	= 30;		/// it is good to have some limit otherwise the light would shine to infinite distance
+					hardLimitStart 	= 50;		/// it is good to have some limit otherwise the light would shine to infinite distance
 					hardLimitEnd 	= 70;		/// this allows adding more lights into scene
 				};
 			};
@@ -912,6 +912,9 @@ class CfgVehicles
 	};
 	
 	class SMT_DingoRCWS_autogun: SMT_DingoRCWS_minigun {
+		forceInGarage=1;
+		scope	= 2; 			/// makes the car visible in editor
+		scopeCurator=2;	
 		displayName = "M18-C3 IMV Cargo (Autocannon)";
 		model = "x\12thMEU\addons\Dingo\DingoRCWS_Autogun.p3d";
 		class AnimationSources: AnimationSources {
@@ -1006,12 +1009,18 @@ class CfgVehicles
 		};
 	};
 	class SMT_DingoRCWS_minigun_troop:SMT_DingoRCWS_minigun{
+		forceInGarage=1;
+		scope	= 2; 			/// makes the car visible in editor
+		scopeCurator=2;	
 		displayName="M18-T2 IMV Troop (Minigun)";
 		model = "x\12thMEU\addons\Dingo\DingoRCWS_Troop_minigun.p3d";
 		transportMaxBackpacks 	= 5; /// just some backpacks fit the trunk by default
 		transportSoldier 		= 10; /// number of cargo except driver
 	};
 	class SMT_DingoRCWS_autogun_troop:SMT_DingoRCWS_autogun{
+		forceInGarage=1;
+		scope	= 2; 			/// makes the car visible in editor
+		scopeCurator=2;	
 		displayName="M18-T3 IMV Troop (Autocannon)";
 		model = "x\12thMEU\addons\Dingo\DingoRCWS_Troop_Autogun.p3d";
 		transportMaxBackpacks 	= 5; /// just some backpacks fit the trunk by default

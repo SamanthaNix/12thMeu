@@ -12,6 +12,10 @@
   specifying item info, armor, hearing protection, etc.
   ==============================================================================
 */
+
+#define QOUTE(s) #s
+
+
 #define HELMTEXPATH(SUFFIX) \x\12thMEU\addons\12th_custom_helms\data\helms\Helm_co_##SUFFIX.paa
   // Resolves to: "\x\12thMEU\addons\12th_custom_helms\data\helms\Helm_co_<SUFFIX>.paa"
 
@@ -63,7 +67,11 @@ class twelfth_helmCH43A_std_##SUFFIX##: twelfth_helmCH43A_base {  \
 	class TCP_uniformDecals: TCP_uniformDecals		\
 	{												\
 		decalColor = "white";						\
-	};  											\
+	};\
+  class TCP_equipmentTypes:TCP_equipmentTypes\
+		{\
+      baseEquipment = QOUTE(twelfth_helmCH43A_std_##SUFFIX##);\
+    };\
   class ItemInfo: HeadgearItem {                \
     uniformModel = "\TCP\Characters\BLUFOR\UNSC\Army\Headgear\helmet_CH43A\h_helmet_CH43A.p3d";   \
     picture="\x\12thMEU\addons\12th_ui\data\logo.paa";                                 \
@@ -121,7 +129,18 @@ class twelfth_helmECH43A_std_##SUFFIX##_clsd: twelfth_helmECH43A_base { \
       #HELM_DEC_PATH	  						\
     };                                          \
   };                                            \
-};
+};\
+	class twelfth_helmCH43A_std_##SUFFIX##_ChinstrapOffset: twelfth_helmCH43A_std_##SUFFIX##\
+	{\
+		author = "$STR_TCP_Data_Author";\
+		dlc = "TCP";\
+		scope = 0;\
+		model = "\TCP\Characters\BLUFOR\UNSC\Army\Headgear\helmet_CH43A\h_helmet_CH43A_ChinstrapOffset.p3d";\
+		class ItemInfo: ItemInfo\
+		{\
+			uniformModel = "\TCP\Characters\BLUFOR\UNSC\Army\Headgear\helmet_CH43A\h_helmet_CH43A_ChinstrapOffset.p3d";\
+		};\
+	};
 
 /*
   ==============================================================================
@@ -166,7 +185,7 @@ class twelfth_helmECH43A_##CAMO##_##SFX##_clsd {\
   MID_co, or Visor_co, respectively.
 */
 #define CUSTOM_PILOT_HELM(SUFFIX,DISPLAY,C1,C2,C3,C4,C5)                  \
-class 12th_pilot_ch_##SUFFIX : H_HelmetB {                                \
+class twelfth_pilot_ch_##SUFFIX : H_HelmetB {                                \
   author="Waylen";                                                          \
   scope=2;                                                                \
   scopeArsenal=2;                                                         \
