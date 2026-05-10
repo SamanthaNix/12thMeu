@@ -6,6 +6,7 @@ class CfgWeapons
     class cannonCore;
     class gatling_20mm;
     class StandardSound;
+    class M134_minigun;
     class ACE_gatling_20mm_Comanche: gatling_20mm {
         class manual;
         class close;
@@ -48,5 +49,7 @@ class CfgWeapons
         magazines[] = { "SMT_500Rnd_20mm_shells_Dingo" };
     };
 
-    class SMT_minigun_556mm {};
+    class SMT_minigun_762mm:M134_minigun {
+    magazines[] = { "SMT_2000Rnd_762_shells_Dingo" };
+    };
 };

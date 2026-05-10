@@ -28,7 +28,7 @@ class TransportMagazines {      \
     class _xx_OPTRE_36Rnd_95x40_Mag_Tracer { magazine = "OPTRE_36Rnd_95x40_Mag_Tracer"; count = 6; };   \
 };  \
 class TransportWeapons {    \
-    class _xx_twelfth_m96 { weapon = "twelfth_m96"; count = 1; };   \
+    class _xx_OPTRE_M44_Lykoi_HEAT_mag { weapon = "OPTRE_M44_Lykoi_HEAT_mag"; count = 1; };   \
 };  \
 class TransportItems{   \
     class _xx_ACE_IR_Strobe_Item { name = "ACE_IR_Strobe_Item"; count = 2; };   \

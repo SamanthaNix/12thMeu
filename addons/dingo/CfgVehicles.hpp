@@ -57,12 +57,12 @@ class CfgVehicles
 		class AnimationSources;
 		class HitPoints
 		{
-			class HitGlass1;
-			class HitGlass2;
-			class HitGlass3;
-			class HitGlass4;
-			class HitGlass5;
-			class HitGlass6;
+			//class HitGlass1;
+			//class HitGlass2;
+			//class HitGlass3;
+			//class HitGlass4;
+			//class HitGlass5;
+			//class HitGlass6;
 			class HitBody;
 		};
 	};
@@ -309,12 +309,12 @@ class CfgVehicles
 				passThrough = 0.5;
 			};
 
-			class HitGlass1: HitGlass1 { armor = 1.5; explosionShielding = 3; passThrough = 0; };
+			/*class HitGlass1: HitGlass1 { armor = 1.5; explosionShielding = 3; passThrough = 0; };
 			class HitGlass2: HitGlass2 { armor = 1.5; explosionShielding = 3; passThrough = 0; };
 			class HitGlass3: HitGlass3 { armor = 1.5; explosionShielding = 3; passThrough = 0; };
 			class HitGlass4: HitGlass4 { armor = 1.5; explosionShielding = 3; passThrough = 0; };
 			class HitGlass5: HitGlass5 { armor = 1.5; explosionShielding = 3; passThrough = 0; };
-			class HitGlass6: HitGlass6 { armor = 1.5; explosionShielding = 3; passThrough = 0; };
+			class HitGlass6: HitGlass6 { armor = 1.5; explosionShielding = 3; passThrough = 0; };*/
 
 		};
 
@@ -634,16 +634,16 @@ class CfgVehicles
 		{
 			class barrelRotation {
 				source = "ammo";
-				weapon = "M134_minigun";
+				weapon = "SMT_minigun_762mm";
 			};
 			class zaslehRot {
 				source = "ammoRandom";
-				weapon = "M134_minigun";
+				weapon = "SMT_minigun_762mm";
 			};
 			class zaslehHide
 			{
 				source = "reload";
-				weapon = "M134_minigun";
+				weapon = "SMT_minigun_762mm";
 			};
 		};
 		class Turrets: Turrets {
@@ -764,14 +764,14 @@ class CfgVehicles
 				lockWhenVehicleSpeed = -1;
 				LODTurnedIn = -1;
 				LODTurnedOut = -1;
-				magazines[] = {"5000Rnd_762x51_Yellow_Belt"};
+				magazines[] = {"SMT_2000Rnd_762_shells_Dingo"};
 				maxCamElev = 90;
 				maxElev = 60;
 				maxHorizontalRotSpeed = 1.2;
 				maxOutElev = 20;
 				maxOutTurn = 60;
 				maxTurn = 360;
-				maxVerticalRotSpeed = 1.2;
+				maxVerticalRotSpeed = 2.2;
 				memoryPointGun = "muzzle";
 				memoryPointGunnerOptics = "PIP0_dir";
 				memoryPointGunnerOutOptics = "";
@@ -883,7 +883,7 @@ class CfgVehicles
 					thermalMode[] = {0,1};
 					visionMode[] = {"Normal","NVG","Ti"};
 				};
-				weapons[] = {"M134_minigun"};
+				weapons[] = {"SMT_minigun_762mm"};
 			};
 		};
 		class RenderTargets
@@ -942,7 +942,7 @@ class CfgVehicles
 				gun = "mainGun";
 				gunBeg = "muzzle";
 				gunEnd = "chamber";
-				gunnerName = "$STR_POSITION_GUNNER";
+				gunnerName = "RCWS Gunner";
 				class HitPoints: HitPoints {};
 				inGunnerMayFire = 1;
 				initCamElev = 0;
@@ -951,16 +951,16 @@ class CfgVehicles
 				initOutTurn = 0;
 				initTurn = 0;
 				magazines[] = { "SMT_500Rnd_20mm_shells_Dingo","SMT_500Rnd_20mm_shells_Dingo" };
-				maxCamElev = 120;
-				maxElev = 90;
+				maxCamElev = 90;
+				maxElev = 60;
 				maxHorizontalRotSpeed = 1.2;
-				maxOutElev = 90;
-				maxOutTurn = 360;
+				maxOutElev = 20;
+				maxOutTurn = 60;
 				maxTurn = 360;
 				minCamElev = -90;
-				minElev = -20;
-				minOutElev = -20;
-				minOutTurn = -360;
+				minElev = -50;
+				minOutElev = -50;
+				minOutTurn = -60;
 				minTurn = -360;
 				stabilizedInAxes = 3;
 				weapons[] = {"SMT_20mm_ac"};
