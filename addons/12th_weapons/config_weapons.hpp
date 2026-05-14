@@ -943,6 +943,7 @@ class CfgWeapons
 	    distanceZoomMin=100;
 	    distanceZoomMax=700;
       maxZeroing=700;
+      ace_overheating_allowSwapBarrel = 1;
 
 
 
