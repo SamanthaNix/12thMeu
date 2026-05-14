@@ -62,3 +62,4 @@ class WeaponCloudsMGun;
 #include "CfgVehicles.hpp"
 #include "CfgWeapons.hpp"
 #include "CfgMagazines.hpp"
+

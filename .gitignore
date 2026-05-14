@@ -17,6 +17,7 @@ logs/
 *.ogg
 *.wss
 *.bisign
+*.hemttprivatekey
 # un-ignore all external pbos
 
 !pbo_include/*

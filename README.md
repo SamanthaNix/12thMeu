@@ -14,7 +14,7 @@ PBO file.
 
 * `12th_vests` contains any and all customized vests.
 * `12th_backpacks` contains any and all customized backpacks.
-* `12th_custom_helms` contains all individually customized helmets
+* `twelfthMEU_custom_helms` contains all individually customized helmets
 * `12th_armor` contains any and all customized uniforms, non-custom helmets included.
 * `12th_tagging` contains a set of spray cans with 12th-specific tags programmed in.
 * `12th_weapons` contains any and all customzied weapons.

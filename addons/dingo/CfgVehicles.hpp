@@ -66,7 +66,7 @@ class CfgVehicles
 			class HitBody;
 		};
 	};
-
+	
 
 	class SMT_DingoHull: Dingo_Base_F
 	{
@@ -80,7 +80,7 @@ class CfgVehicles
 
 		displayName = "Dingo Hull"; /// displayed in Editor
 
-
+		#include "pip.hpp"
 		//Vehicle loading
 		
 		//Ace stuff
@@ -890,7 +890,7 @@ class CfgVehicles
 		{
 			class Gunner_display
 			{
-				renderTarget="rendertarget0";
+				renderTarget="rendertarget4";
 				class CameraView1
 				{
 					pointPosition="PIP0_pos";
