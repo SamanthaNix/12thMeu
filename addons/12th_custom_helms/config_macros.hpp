@@ -16,15 +16,15 @@
 #define QOUTE(s) #s
 
 
-#define HELMTEXPATH(SUFFIX) \x\12thMEU\addons\twelfthMEU_custom_helms\data\helms\Helm_co_##SUFFIX.paa
-  // Resolves to: "\x\12thMEU\addons\twelfthMEU_custom_helms\data\helms\Helm_co_<SUFFIX>.paa"
+#define HELMTEXPATH(SUFFIX) \x\12thMEU\addons\12th_custom_helms\data\helms\Helm_co_##SUFFIX.paa
+  // Resolves to: "\x\12thMEU\addons\12th_custom_helms\data\helms\Helm_co_<SUFFIX>.paa"
 
-#define P(PATH) \x\12thMEU\addons\twelfthMEU_custom_helms\##PATH
+#define P(PATH) \x\12thMEU\addons\12th_custom_helms\##PATH
   // Standard path concatenation for the twelfth_custom_helms addon
 
 #define CH_PILOT_TEX(CAMOTYPE,FILENAME) P(data\pilots\##CAMOTYPE\##FILENAME)
   // Points to the pilot texture location, e.g.:
-  // "\x\12thMEU\addons\twelfthMEU_custom_helms\data\pilots\<CAMOTYPE>\FILENAME"
+  // "\x\12thMEU\addons\12th_custom_helms\data\pilots\<CAMOTYPE>\FILENAME"
 
 #define GLUE(A,B) A##B
 #define GLUE3(A,B,C) A##B##C
