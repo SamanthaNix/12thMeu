@@ -4,6 +4,8 @@ class ReconCloaks_H_SniperHood_mcam;
 class twelfth_ReconCloaks_H_Hood_Forest: ReconCloaks_H_Hood_oli{
     author = "Sammy";
     displayName = "[12th] Recon Hood (Forest)";
+    ace_hearing_protection=1;
+    ace_hearing_lowerVolume=0;
     model = "\ReconCloaks\reconcloaks_characters\Headgear\H_ReconCloak.p3d";
     hiddenSelections[] = {"camo"};
     hiddenSelectionsTextures[] = {"\x\12thMEU\addons\12th_armor\reconcloaks\H_ReconCloak_forest_CO.paa"};
@@ -26,6 +28,8 @@ class twelfth_ReconCloaks_H_Hood_Forest: ReconCloaks_H_Hood_oli{
 class twelfth_ReconCloaks_H_SniperHood_Forest: ReconCloaks_H_SniperHood_mcam{
     author = "Sammy";
     displayName = "[12th] Sniper Hood (Forest)";
+    ace_hearing_protection=1;
+    ace_hearing_lowerVolume=0;
     hiddenSelections[] = {"camo","camo1"};
     hiddenSelectionsTextures[] = {"\x\12thMEU\addons\12th_armor\reconcloaks\H_ReconCloak_forest_CO.paa","\x\12thMEU\addons\12th_armor\reconcloaks\ghillie_leaves_forest_CA.paa"};
     class ItemInfo: ItemInfo
@@ -48,6 +52,8 @@ class twelfth_ReconCloaks_H_SniperHood_Forest: ReconCloaks_H_SniperHood_mcam{
 class twelfth_ReconCloaks_H_Hood_Winter: ReconCloaks_H_Hood_oli{
     author = "Sammy";
     displayName = "[12th] Recon Hood (Winter)";
+    ace_hearing_protection=1;
+    ace_hearing_lowerVolume=0;
     model = "\ReconCloaks\reconcloaks_characters\Headgear\H_ReconCloak.p3d";
     hiddenSelections[] = {"camo"};
     hiddenSelectionsTextures[] = {"\x\12thMEU\addons\12th_armor\reconcloaks\H_ReconCloak_winter_CO.paa"};
@@ -71,6 +77,8 @@ class twelfth_ReconCloaks_H_Hood_Winter: ReconCloaks_H_Hood_oli{
 class twelfth_ReconCloaks_H_SniperHood_Winter: ReconCloaks_H_SniperHood_mcam{
     author = "Sammy";
     displayName = "[12th] Sniper Hood (Winter)";
+    ace_hearing_protection=1;
+    ace_hearing_lowerVolume=0;
     hiddenSelections[] = {"camo","camo1"};
     hiddenSelectionsTextures[] = {"\x\12thMEU\addons\12th_armor\reconcloaks\H_ReconCloak_winter_CO.paa","\x\12thMEU\addons\12th_armor\reconcloaks\ghillie_leaves_winter_CA.paa"};
     class ItemInfo: ItemInfo
@@ -93,6 +101,8 @@ class twelfth_ReconCloaks_H_SniperHood_Winter: ReconCloaks_H_SniperHood_mcam{
 class twelfth_ReconCloaks_H_Hood_Desert: ReconCloaks_H_Hood_oli{
     author = "Sammy";
     displayName = "[12th] Recon Hood (Desert)";
+    ace_hearing_protection=1;
+    ace_hearing_lowerVolume=0;
     model = "\ReconCloaks\reconcloaks_characters\Headgear\H_ReconCloak.p3d";
     hiddenSelections[] = {"camo"};
     hiddenSelectionsTextures[] = {"\x\12thMEU\addons\12th_armor\reconcloaks\H_ReconCloak_desert_CO.paa"};
@@ -116,6 +126,8 @@ class twelfth_ReconCloaks_H_SniperHood_Desert: ReconCloaks_H_SniperHood_mcam{
     author = "Sammy";
     displayName = "[12th] Sniper Hood (Desert)";
     hiddenSelections[] = {"camo","camo1"};
+    ace_hearing_protection=1;
+    ace_hearing_lowerVolume=0;
     hiddenSelectionsTextures[] = {"\x\12thMEU\addons\12th_armor\reconcloaks\H_ReconCloak_desert_CO.paa","\x\12thMEU\addons\12th_armor\reconcloaks\ghillie_leaves_desert_CA.paa"};
     class ItemInfo: ItemInfo
     {
@@ -138,6 +150,8 @@ class twelfth_ReconCloaks_H_SniperHood_Desert: ReconCloaks_H_SniperHood_mcam{
 class twelfth_ReconCloaks_H_Hood_Black: ReconCloaks_H_Hood_oli{
     author = "Sammy";
     displayName = "[12th] Recon Hood (Black)";
+    ace_hearing_protection=1;
+    ace_hearing_lowerVolume=0;
     model = "\ReconCloaks\reconcloaks_characters\Headgear\H_ReconCloak.p3d";
     hiddenSelections[] = {"camo"};
     hiddenSelectionsTextures[] = {"\ReconCloaks\reconcloaks_characters\Headgear\Data\H_ReconCloak_blk_CO.paa"};
