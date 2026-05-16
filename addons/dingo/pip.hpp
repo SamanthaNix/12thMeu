@@ -47,5 +47,25 @@ class RenderTargets /// class for all Picture-in-Picture (PiP)
 			renderVisionMode 	= 0;
 			fov 				= 0.6;					
 		}; 			
-	};			
+	};
+	class Gunner_display
+	{
+		renderTarget="rendertarget4";
+		class CameraView1
+		{
+			pointPosition="PIP0_pos";
+			pointDirection="PIP0_dir";
+			renderVisionMode=2;
+			renderQuality=2;
+			fov=0.34999999;
+			turret[]={0};
+		};
+		BBoxes[]=
+		{
+			"PIP_0_TL",
+			"PIP_0_TR",
+			"PIP_0_BL",
+			"PIP_0_BR"
+		};
+	};	
 };
