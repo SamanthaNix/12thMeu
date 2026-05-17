@@ -173,28 +173,6 @@ class CfgVehicles
 		};
 
 		//ACRE stuff
-		class AcreIntercoms
-		{
-			class Intercom_1 
-			{                            
-                displayName = "Crew intercom";
-                shortName = "Crew";
-                allowedPositions[] = {"crew"};
-                disabledPositions[] = {{"Turret", {0,0}}};
-                limitedPositions[] = {{"cargo", "all"}};
-                numLimitedPositions = 1;
-                masterPositions[] = {"commander"};
-                connectedByDefault = 1;
-			};
-		};
-		acre_hasInfantryPhone = 1; // 1 - enabled, 0 - disabled (default: 0)
-		acre_infantryPhoneDisableRinging = 0;   // If set to 1, the ringing funtionality will not be available (default: 0)
-		acre_infantryPhoneCustomRinging[] = {}; // An array used in order to override the default sound for the ringing functionality (default: {})
-		// List of intercom names (intercom_1, intercom_2) or "all" in order to specify which intercom networks the phone can connect to
-		acre_infantryPhoneIntercom[] = {"all"};
-		acre_infantryPhoneControlActions[] = {"intercom_1"}; // Only those units in "intercom_1" can have access to ringing functionality
-		// Here a custom function can be defined that is called when the infantry phone is picked up, put back, given to another unit or the intercom network is switched
-		acre_eventInfantryPhone = QFUNC(noApiFunction);
 		class AcreRacks 
 		{
            class Rack_1 
@@ -202,12 +180,11 @@ class CfgVehicles
                displayName = "Dash"; 
                shortName = "Dash";
                componentName = "ACRE_VRC103";
-               allowedPositions[] = {"driver", "commander"};
+               allowedPositions[] = {"driver"};
                disabledPositions[] = {};
                defaultComponents[] = {};
                mountedRadio = "ACRE_PRC117F";               
-               isRadioRemovable = 0;
-               intercom[] = {"intercom_1"};                   
+               isRadioRemovable = 0;                 
            };
 		};
 
@@ -241,8 +218,8 @@ class CfgVehicles
 
 		wheelDamageRadiusCoef = 0.75;
 		wheelDestroyRadiusCoef = 0.6127954;			/// for tweaking of rims size to fit ground
-		maxFordingDepth 		= 1.5;			/// how high water would damage the engine of the car
-		waterResistance 		= 1;			/// if the depth of water is bigger than maxFordingDepth it starts to damage the engine after this time
+		maxFordingDepth 		= 2;			/// how high water would damage the engine of the car
+		waterResistance 		= 10;			/// if the depth of water is bigger than maxFordingDepth it starts to damage the engine after this time
 		crewCrashProtection		= 0.3;			/// multiplier of damage to crew of the vehicle => low number means better protection
 
 		class TransportItems /// some first aid kits in trunk according to safety regulations

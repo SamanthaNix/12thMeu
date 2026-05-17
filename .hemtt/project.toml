@@ -16,5 +16,5 @@ include = [
 major = 7
 minor = 1
 patch = 2
-build = 3
+build = 4
 git_hash = 4
