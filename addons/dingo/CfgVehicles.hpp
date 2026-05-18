@@ -170,6 +170,46 @@ class CfgVehicles
 				condition = "(alive this) AND !(canMove this) AND (count crew this == 0 || isAutonomous this) AND (simulationEnabled this) AND ((locked this) < 2)";
 				statement = "[this] call bis_fnc_unflipVehicle";
 			};
+			class Floodlights_on
+			{
+				userActionID = 50;
+				displayName = "Turn Flood Lights On";
+				displayNameDefault = "<img image='\A3\Ui_f\data\IGUI\Cfg\Actions\beacons_ON_ca.paa' size='2'/>";
+				priority = 1.5;
+				radius = 2;
+				position = "temp";
+				onlyForPlayer = 0;
+				condition = "((driver this) isEqualTo player) AND (this animationSourcePhase 'Floodlights' < 0.5) AND ([0,0,0] getEnvSoundController 'night' > 0.7)";
+				statement = "this animateSource ['Floodlights', 1]; this switchLight 'On'";
+			};
+			class Floodlights_off: Floodlights_on
+			{
+				userActionID = 51;
+				displayName = "Turn Flood Lights Off";
+				displayNameDefault = "<img image='\A3\Ui_f\data\IGUI\Cfg\Actions\beacons_OFF_ca.paa' size='2'/>";
+				condition = "((driver this) isEqualTo player) AND (this animationSourcePhase 'Floodlights' > 0.5)";
+				statement = "this animateSource ['Floodlights', 0];";
+			};
+			class IRlights_on
+			{
+				userActionID = 52;
+				displayName = "Turn IR Lights On";
+				displayNameDefault = "<img image='\A3\Ui_f\data\IGUI\Cfg\Actions\beacons_ON_ca.paa' size='2'/>";
+				priority = 1.6;
+				radius = 2;
+				position = "temp";
+				onlyForPlayer = 0;
+				condition = "((driver this) isEqualTo player) AND (this animationSourcePhase 'IRlights' < 0.5) AND ([0,0,0] getEnvSoundController 'night' > 0.7)";
+				statement = "this animateSource ['IRlights', 1]; this switchLight 'On'";
+			};
+			class IRlights_off: IRlights_on
+			{
+				userActionID = 53;
+				displayName = "Turn IR Lights Off";
+				displayNameDefault = "<img image='\A3\Ui_f\data\IGUI\Cfg\Actions\beacons_OFF_ca.paa' size='2'/>";
+				condition = "((driver this) isEqualTo player) AND (this animationSourcePhase 'IRlights' > 0.5)";
+				statement = "this animateSource ['IRlights', 0];";
+			};
 		};
 
 		//ACRE stuff
@@ -412,6 +452,47 @@ class CfgVehicles
 				position 	= "LightCarHeadR02";
 				direction 	= "LightCarHeadR02_end";
 				FlareSize 	= 0.5;
+			};
+			class IRLightCarHeadL01: LightCarHeadL01
+			{
+				FlareSize 	= 0.2;
+				irLight = 1;
+				innerAngle = 100;
+				outerAngle = 130;
+				position 	= "IRLightCarHeadM01";
+				direction 	= "IRLightCarHeadM01_end";
+				class Attenuation
+				{
+					start 			= 1.0;
+					constant 		= 1;
+					linear 			= 1;
+					quadratic 		= 1;
+					hardLimitStart 	= 70;		/// it is good to have some limit otherwise the light would shine to infinite distance
+					hardLimitEnd 	= 100;		/// this allows adding more lights into scene
+				};
+			};
+			class FloodLightCarHeadL01: LightCarHeadL01
+			{
+				FlareSize 	= 2;
+				innerAngle  = 50;
+				outerAngle  = 70;
+				intensity 	= 2;
+				position 	= "FloodLightCarHeadL01";
+				direction 	= "FloodLightCarHeadL01_end";
+				class Attenuation
+				{
+					start 			= 70;
+					constant 		= 0;
+					linear 			= 0;
+					quadratic 		= 0.25;
+					hardLimitStart 	= 500;		/// it is good to have some limit otherwise the light would shine to infinite distance
+					hardLimitEnd 	= 800;		/// this allows adding more lights into scene
+				};
+			};
+			class FloodLightCarHeadR01: FloodLightCarHeadL01
+			{
+				position 	= "FloodLightCarHeadR01";
+				direction 	= "FloodLightCarHeadR01_end";
 			};
 		};
 		class EventHandlers: EventHandlers
