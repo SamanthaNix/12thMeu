@@ -199,16 +199,16 @@ class CfgVehicles
 				radius = 2;
 				position = "temp";
 				onlyForPlayer = 0;
-				condition = "((driver this) isEqualTo player) AND (this animationSourcePhase 'IRlights' < 0.5) AND ([0,0,0] getEnvSoundController 'night' > 0.7)";
-				statement = "this animateSource ['IRlights', 1]; this switchLight 'On'";
+				condition = "((driver this) isEqualTo player) AND (this animationSourcePhase 'NonIRlights' < 0.5) AND ([0,0,0] getEnvSoundController 'night' > 0.7)";
+				statement = "this animateSource ['NonIRlights', 1]; this switchLight 'On'";
 			};
 			class IRlights_off: IRlights_on
 			{
 				userActionID = 53;
 				displayName = "Turn IR Lights Off";
 				displayNameDefault = "<img image='\A3\Ui_f\data\IGUI\Cfg\Actions\beacons_OFF_ca.paa' size='2'/>";
-				condition = "((driver this) isEqualTo player) AND (this animationSourcePhase 'IRlights' > 0.5)";
-				statement = "this animateSource ['IRlights', 0];";
+				condition = "((driver this) isEqualTo player) AND (this animationSourcePhase 'NonIRlights' > 0.5)";
+				statement = "this animateSource ['NonIRlights', 0];";
 			};
 		};
 
@@ -457,18 +457,19 @@ class CfgVehicles
 			{
 				FlareSize 	= 0.2;
 				irLight = 1;
-				innerAngle = 100;
-				outerAngle = 130;
+				innerAngle = 50;
+				outerAngle = 70;
+				intensity 	= 0.4;
 				position 	= "IRLightCarHeadM01";
 				direction 	= "IRLightCarHeadM01_end";
 				class Attenuation
 				{
-					start 			= 1.0;
+					start 			= 70;
 					constant 		= 1;
 					linear 			= 1;
 					quadratic 		= 1;
-					hardLimitStart 	= 70;		/// it is good to have some limit otherwise the light would shine to infinite distance
-					hardLimitEnd 	= 100;		/// this allows adding more lights into scene
+					hardLimitStart 	= 500;		/// it is good to have some limit otherwise the light would shine to infinite distance
+					hardLimitEnd 	= 800;		/// this allows adding more lights into scene
 				};
 			};
 			class FloodLightCarHeadL01: LightCarHeadL01
