@@ -41,7 +41,7 @@ try {
     try { Unblock-File -Path $hemttExe -ErrorAction SilentlyContinue } catch {}
 
     $proc = Start-Process -FilePath $hemttExe `
-        -ArgumentList "release --no-bin" `
+        -ArgumentList "release" `
         -WorkingDirectory $scriptRoot `
         -NoNewWindow -Wait -PassThru
     if ($null -ne $proc.ExitCode -and $proc.ExitCode -ne 0) {
