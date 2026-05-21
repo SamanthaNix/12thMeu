@@ -193,7 +193,7 @@ class CfgVehicles
 			class IRlights_on
 			{
 				userActionID = 52;
-				displayName = "Turn IR Lights On";
+				displayName = "Switch to IR only";
 				displayNameDefault = "<img image='\A3\Ui_f\data\IGUI\Cfg\Actions\beacons_ON_ca.paa' size='2'/>";
 				priority = 1.6;
 				radius = 2;
@@ -205,7 +205,7 @@ class CfgVehicles
 			class IRlights_off: IRlights_on
 			{
 				userActionID = 53;
-				displayName = "Turn IR Lights Off";
+				displayName = "Switch to Normal Lights";
 				displayNameDefault = "<img image='\A3\Ui_f\data\IGUI\Cfg\Actions\beacons_OFF_ca.paa' size='2'/>";
 				condition = "((driver this) isEqualTo player) AND (this animationSourcePhase 'NonIRlights' > 0.5)";
 				statement = "this animateSource ['NonIRlights', 0];";
