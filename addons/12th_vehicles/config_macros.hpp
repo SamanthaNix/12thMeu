@@ -72,23 +72,23 @@ class TransportItems{   \
 //  This macro sets a Weapons Team oriented default inventory for a vehicle’s cargo.
 // -----------------------------------------------------------------------------
 
-#define WPNSINV                                                                                                               \
-class TransportMagazines {                                                                                                    \
-    class _xx_OPTRE_400Rnd_762x51_M118_M247A1_BOX { magazine = "OPTRE_400Rnd_762x51_M118_M247A1_BOX"; count = 10; };                          \
-    class _xx_avm224_M_6Rnd_60mm_HE_0_csw { magazine = "avm224_M_6Rnd_60mm_HE_0_csw"; count = 5; };                           \
-    class _xx_avm224_M_6Rnd_60mm_HE_csw { magazine = "avm224_M_6Rnd_60mm_HE_csw"; count = 20; };                              \
-    class _xx_OPTRE_M41_Twin_HEAT_G_AA { magazine = "OPTRE_M41_Twin_HEAT_G_AA"; count = 4; };                           \
-    class _xx_OPTRE_M41_Twin_HEAT_G { magazine = "OPTRE_M41_Twin_HEAT_G"; count = 4; };                                       \
-    class _xx_OPTRE_M41_Twin_HE { magazine = "OPTRE_M41_Twin_HE"; count = 2; };   \
-};                                                                                                                            \
-class TransportItems{                                                                                                         \
-    class _xx_ACE_SpareBarrel { name = "ACE_SpareBarrel"; count = 3; };                                                       \
-    class _xx_ACE_WaterBottle { name = "ACE_WaterBottle"; count = 10; };                                                      \
-    class _xx_optic_DMS { name = "optic_DMS"; count = 1; };                                                                   \
-};                                                                                                                            \
-class TransportWeapons {                                                                                                      \
-    class _xx_twelfth_M247A1 { weapon = "twelfth_M247A1"; count = 1; };                                                           \
-    class _xx_twelfth_MG_Tripod_Carry { weapon = "twelfth_MG_Tripod_Carry"; count = 1; };                                           \
-    class _xx_avm224_W_M224_mortar_carry { weapon = "avm224_W_M224_mortar_carry"; count = 1; };                               \
-    class _xx_OPTRE_M41_SSR { weapon = "OPTRE_M41_SSR"; count = 1; };                                                         \
+#define WPNSINV \
+class TransportMagazines { \
+    class _xx_OPTRE_400Rnd_762x51_M118_M247A1_BOX { magazine = "OPTRE_400Rnd_762x51_M118_M247A1_BOX"; count = 10; }; \
+    class _xx_avm224_M_6Rnd_60mm_HE_0_csw { magazine = "avm224_M_6Rnd_60mm_HE_0_csw"; count = 5; }; \
+    class _xx_avm224_M_6Rnd_60mm_HE_csw { magazine = "avm224_M_6Rnd_60mm_HE_csw"; count = 20; }; \
+    class _xx_twelfth_M_1Rnd_60mm_HUNTIR_csw { magazine = "twelfth_M_1Rnd_60mm_HUNTIR_csw"; count = 5; }; \
+    class _xx_OPTRE_M41_Twin_HEAT_G { magazine = "OPTRE_M41_Twin_HEAT_G"; count = 4; }; \
+    class _xx_OPTRE_M41_Twin_HEAT_SACLOS { magazine = "OPTRE_M41_Twin_HEAT_SACLOS"; count = 6; }; \
+}; \
+class TransportItems{ \
+    class _xx_ACE_SpareBarrel { name = "ACE_SpareBarrel"; count = 3; }; \
+    class _xx_ACE_WaterBottle { name = "ACE_WaterBottle"; count = 10; }; \
+    class _xx_optic_DMS { name = "optic_DMS"; count = 1; }; \
+}; \
+class TransportWeapons { \
+    class _xx_twelfth_M247A1 { weapon = "twelfth_M247A1"; count = 1; }; \
+    class _xx_twelfth_MG_Tripod_Carry { weapon = "twelfth_MG_Tripod_Carry"; count = 1; }; \
+    class _xx_avm224_W_M224_mortar_carry { weapon = "avm224_W_M224_mortar_carry"; count = 1; }; \
+    class _xx_twelfth_M41_SSR_laserfix { weapon = "twelfth_M41_SSR_laserfix"; count = 1; }; \
 };
