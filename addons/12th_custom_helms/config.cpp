@@ -160,7 +160,6 @@ class CfgWeapons {
   // -- Standard Helmets --
   CUSTOM_HELM_S_AV(Bateman)
   CUSTOM_HELM_S_AV(Bert)
-  CUSTOM_HELM_S_AV(Bob)
   CUSTOM_HELM_S_AV(Bobby)
   CUSTOM_HELM_S_AV(Bunge)
   CUSTOM_HELM_S_AV(Clarke)
@@ -186,6 +185,7 @@ class CfgWeapons {
   CUSTOM_HELM_S_AV(Perry)
   CUSTOM_HELM_S_AV(Quiggle)
   CUSTOM_HELM_S_AV(Quinn)
+  CUSTOM_HELM_S_AV(Raven)
   CUSTOM_HELM_S_AV(Rex)
   CUSTOM_HELM_S_AV(Sammy)
   CUSTOM_HELM_S_AV(Sand)
@@ -295,8 +295,9 @@ class XtdGearModels {
           "Oliver",
           "Origami",
           "Perry",
-          "Quinn",
           "Quiggle",
+          "Quinn",
+          "Raven",
           "Quebec",
           "Quinn",
           "Rex",
@@ -370,8 +371,9 @@ class XtdGearInfos {
   	CH_HELM_S_GI(Origami)
     CH_HELM_S_GI(Perry)
     CH_HELM_S_GI(Quebec)
-	  CH_HELM_S_GI(Quinn)
     CH_HELM_S_GI(Quiggle)
+	  CH_HELM_S_GI(Quinn)
+    CH_HELM_S_GI(Raven)
   	CH_HELM_S_GI(Rex)
     CH_HELM_S_GI(Schultz)
     CH_HELM_S_GI(Sand)

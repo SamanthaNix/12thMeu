@@ -229,6 +229,7 @@ class CfgVehicles
 		};
 
 		//TFAR
+		tf_RadioType = "TFAR_rt1523g_big";
 		tf_hasLRradio = 1;
 		tf_isolatedAmount = 0.3;
 
