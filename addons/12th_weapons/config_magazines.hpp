@@ -82,7 +82,6 @@ class CfgMagazines
 		modelSpecial = "\TCP\Weapons\Ammo\95x40\Ball\mag_95x40mm_36rnd.p3d";
     displayName = "36Rnd 9.5x40mm Magazine";
     count = 36;
-    initspeed = 700;
     descriptionShort = "36 Round Magazine 9.5x40mm";
     mass = 10;
   };
@@ -94,37 +93,34 @@ class CfgMagazines
 		modelSpecial = "\TCP\Weapons\Ammo\95x40\Ball\mag_95x40mm_36rnd.p3d";
     displayName = "36Rnd 9.5x40mm Magazine (Tracer)";
     count = 36;
-    initspeed = 700;
     descriptionShort = "36 Round Magazine 9.5x40mm";
     mass = 10;
   };
-    //BR magazine HVAP
-  class twelfth_br_36Rnd_HVAP : OPTRE_36Rnd_95x40_Mag
+    //BR magazine AP
+  class twelfth_br_36Rnd_AP : OPTRE_36Rnd_95x40_Mag
   {
     author = "Rex";
     picture = "\TCP\Weapons\Ammo\95x40\Ball\data\ui\icon_95x40mm_36Rnd_ca.paa";
 		modelSpecial = "\TCP\Weapons\Ammo\95x40\Ball\mag_95x40mm_36rnd.p3d";
-    displayName = "36Rnd 9.5x40mm Magazine (HVAP)";
+    displayName = "36Rnd 9.5x40mm Magazine (AP)";
     count = 36;
-    initspeed = 800;
     descriptionShort = "36 Round Magazine 9.5x40mm";
     mass = 10;
-    ammo = "twelfth_95x40_HVAP";
+    ammo = "twelfth_95x40_AP";
   };
-     //BR magazine HVAP Tracer
-  class twelfth_br_36Rnd_HVAP_T : OPTRE_36Rnd_95x40_Mag
+     //BR magazine AP Tracer
+  class twelfth_br_36Rnd_AP_T : OPTRE_36Rnd_95x40_Mag
   {
     author = "Rex";
     picture = "\TCP\Weapons\Ammo\95x40\Ball\data\ui\icon_95x40mm_36Rnd_ca.paa";
 		modelSpecial = "\TCP\Weapons\Ammo\95x40\Ball\mag_95x40mm_36rnd.p3d";
-    displayName = "36Rnd 9.5x40mm Magazine (HVAP Tracer)";
+    displayName = "36Rnd 9.5x40mm Magazine (AP Tracer)";
     count = 36;
-    initspeed = 800;
     descriptionShort = "36 Round Magazine 9.5x40mm";
     mass = 10;
     tracersEvery = 2;
-    ammo = "twelfth_95x40_HVAP";
-  };
+    ammo = "twelfth_95x40_AP";
+  }; 
   // Underwater M7 60-round mag
   class twelfth_m7_60rnd_UW : OPTRE_60Rnd_5x23mm_Mag
   {
@@ -159,7 +155,6 @@ class CfgMagazines
     author = "Weber";
     displayName = "60Rnd 5x23mm Magazine";
     count = 60;
-    initspeed = 700;
     descriptionShort = "60 Round Magazine 5x23mm (Increased Muzzle Velocity)";
     mass = 6;
   };
@@ -171,7 +166,6 @@ class CfgMagazines
     author = "Weber";
     displayName = "48Rnd 5x23mm Magazine";
     count = 48;
-    initspeed = 700;
     descriptionShort = "48 Round Magazine 5x23mm (Increased Muzzle Velocity)";
     mass = 6;
   };
@@ -183,7 +177,6 @@ class CfgMagazines
     author = "Weber";
     displayName = "60Rnd 5x23mm Magazine (Tracer)";
     count = 60;
-    initspeed = 700;
     descriptionShort = "60 Round Magazine 5x23mm (Increased Muzzle Velocity)";
     mass = 6;
   };
@@ -195,7 +188,6 @@ class CfgMagazines
     author = "Weber";
     displayName = "48Rnd 5x23mm Magazine (Tracer)";
     count = 48;
-    initspeed = 700;
     descriptionShort = "48 Round Magazine 5x23mm (Increased Muzzle Velocity)";
     mass = 6;
   };
@@ -393,25 +385,23 @@ class CfgMagazines
     count = 6;
     mass = 8;
   };
-  // 7.62 HVAP
-  class twelfth_762x51_32Rnd_HVAP : OPTRE_32Rnd_762x51_Mag
+  // 7.62 AP
+  class twelfth_762x51_32Rnd_AP : OPTRE_32Rnd_762x51_Mag
   {
     author = "Rex";
-    displayName = "32Rnd 7.62x51mm mag (HVAP)";
-    count = 32;           
-    initspeed = 1200;     
-    ammo = "twelfth_762x51_HVAP";
+    displayName = "32Rnd 7.62x51mm mag (AP)";
+    count = 32;                
+    ammo = "twelfth_762x51_AP";
   };
 
-  class twelfth_762x51_32Rnd_HVAP_T : OPTRE_32Rnd_762x51_Mag
+  class twelfth_762x51_32Rnd_AP_T : OPTRE_32Rnd_762x51_Mag
   {
     author = "Rex";
-    displayName = "32Rnd 7.62x51mm mag (HVAP Tracer)";
-    count = 32;           
-    initspeed = 1200;     
+    displayName = "32Rnd 7.62x51mm mag (AP Tracer)";
+    count = 32;               
     tracersEvery = 2;
-    ammo = "twelfth_762x51_HVAP";
-  };
+    ammo = "twelfth_762x51_AP";
+  }; 
 
   class PylonMissile_1Rnd_Bomb_03_F;
   class twelfth_W_P_GBU_prototype_250x1: PylonMissile_1Rnd_Bomb_03_F {

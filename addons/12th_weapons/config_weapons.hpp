@@ -622,7 +622,7 @@ class CfgWeapons
       canShootInWater = 1;
       displayName = "[12th] BR55HB";
       baseWeapon = "twelfth_BR55_HB";
-      magazines[] = {"twelfth_br_36Rnd_HVAP", "twelfth_br_36Rnd", "twelfth_br_36Rnd_T", "twelfth_br_36Rnd_UW", "twelfth_br_36Rnd_HVAP_T"};
+      magazines[] = {"twelfth_br_36Rnd_AP", "twelfth_br_36Rnd", "twelfth_br_36Rnd_T", "twelfth_br_36Rnd_UW", "twelfth_br_36Rnd_AP_T"};
       ace_overheating_barrelMass = 10;
 	  model = "\TCP\Weapons_Ins\LongRangeRifles\BR55HB\BR55HB.p3d";
 		picture = "\TCP\Weapons_Ins\LongRangeRifles\BR55HB\data\ui\icon_srifle_BR55HB_X_ca.paa";
@@ -714,7 +714,7 @@ class CfgWeapons
 		  hiddenSelectionsTextures[] = {"\TCP\Weapons\LongRangeRifles\M392\data\camo\default\M392_01_CO.paa","\TCP\Weapons\LongRangeRifles\M392\data\camo\default\M392_02_CO.paa"};
       handAnim[] = {"OFP2_ManSkeleton","\TCP\Weapons\LongRangeRifles\M392\data\anim\M392_handAnim.rtm"};
       HUD_TotalPosibleBullet = 32; // Total possible bullets displayed in HUD
-      magazines[] = {"OPTRE_32Rnd_762x51_Mag", "OPTRE_32Rnd_762x51_Mag_Tracer", "OPTRE_32Rnd_762x51_Mag_UW", "twelfth_762x51_32Rnd_HVAP", "twelfth_762x51_32Rnd_HVAP_T" };
+      magazines[] = {"OPTRE_32Rnd_762x51_Mag", "OPTRE_32Rnd_762x51_Mag_Tracer", "OPTRE_32Rnd_762x51_Mag_UW", "twelfth_762x51_32Rnd_AP", "twelfth_762x51_32Rnd_AP_T" };
       class WeaponSlotsInfo : WeaponSlotsInfo
       {
         class MuzzleSlot : MuzzleSlot

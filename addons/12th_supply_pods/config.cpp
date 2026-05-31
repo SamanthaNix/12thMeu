@@ -257,10 +257,12 @@ class CfgVehicles {
       class _xx_twelfth_m7_60rnd_T { magazine = "twelfth_m7_60rnd_T"; count = 25; };
       class _xx_12Rnd_8Gauge { magazine = "12Rnd_8Gauge"; count = 25; };
       class _xx_OPTRE_4Rnd_145x114_APFSDS_Mag { magazine = "OPTRE_4Rnd_145x114_APFSDS_Mag"; count = 10; };
-      class _xx_twelfth_br_36Rnd_HVAP {magazine = "twelfth_br_36Rnd_HVAP"; count = 25; };
-      class _xx_twelfth_br_36Rnd_HVAP_T {magazine = "twelfth_br_36Rnd_HVAP_T"; count = 25; };
-      class _xx_twelfth_762x51_32Rnd_HVAP {magazine = "twelfth_762x51_32Rnd_HVAP"; count = 25; };
-      class _xx_twelfth_762x51_32Rnd_HVAP_T {magazine = "twelfth_762x51_32Rnd_HVAP_T"; count = 25; };
+      class _xx_twelfth_br_36Rnd_AP {magazine = "twelfth_br_36Rnd_AP"; count = 25; };
+      class _xx_twelfth_br_36Rnd_AP_T {magazine = "twelfth_br_36Rnd_AP_T"; count = 25; };
+      class _xx_twelfth_762x51_32Rnd_AP {magazine = "twelfth_762x51_32Rnd_AP"; count = 25; };
+      class _xx_twelfth_762x51_32Rnd_AP_T {magazine = "twelfth_762x51_32Rnd_AP_T"; count = 25; }; 
+      class _xx_LLRLaserMag {magazine = "LLRLaserMag"; count = 10;};
+      class _xx_CompressedLaserMag {magazine = "CompressedLaserMag"; count = 10;};
     };
     class TransportWeapons {};
     class TransportItems {};
