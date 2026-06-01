@@ -93,18 +93,16 @@ class CfgAmmo
     fuseDistance = 30;
   };
 
-  // 9.5x40mm HVAP
-class twelfth_95x40_HVAP : OPTRE_B_95x40_Ball {
+  // 9.5x40mm AP
+class twelfth_95x40_AP : OPTRE_B_95x40_Ball {
   caliber = 4.0;
   hit = 20;
-  typicalSpeed = 800;
 };
 
-  // 7.62x51mm HVAP
-  class twelfth_762x51_HVAP : OPTRE_B_762x51_Ball {
+  // 7.62x51mm AP
+  class twelfth_762x51_AP : OPTRE_B_762x51_Ball {
     caliber = 2.1;
     hit = 18;
-    typicalSpeed = 1200;
   };
 
 
