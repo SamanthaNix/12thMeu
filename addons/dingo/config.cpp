@@ -12,8 +12,8 @@ class CfgPatches {
       "SMT_DingoMed",
       "SMT_DingoRCWS_minigun",
       "SMT_DingoRCWS_autogun",
-      "SMT_DingoRCWS_troop_autogun",
-      "SMT_DingoRCWS_troop_minigun"
+      "SMT_DingoRCWS_autogun_troop",
+      "SMT_DingoRCWS_minigun_troop"
     };
     weapons[] = { 
       "SMT_20mm_ac"

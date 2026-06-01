@@ -949,9 +949,13 @@ class CfgVehicles
 	};
 	
 	class SMT_DingoRCWS_autogun: SMT_DingoRCWS_minigun {
-		forceInGarage=1;
+    	editorCategory = "ED_SMT_Faction";
+    	editorSubcategory="EDS_SMT_faction_Dingo";
+		side	= 1; 			/// civilian car should be on civilian side
+		faction	= "BLU_F";		/// and with civilian faction
+		forceInGarage = 1;
 		scope	= 2; 			/// makes the car visible in editor
-		scopeCurator=2;	
+		scopeCurator = 2;		// scope 2 means it's available in Zeus mode (0 means hidden)
 		displayName = "M18-C3 IMV Cargo (Autocannon)";
 		model = "x\12thMEU\addons\Dingo\DingoRCWS_Autogun.p3d";
 		class AnimationSources: AnimationSources {
@@ -1006,13 +1010,13 @@ class CfgVehicles
 	};
 	class SMT_DingoTroop: SMT_DingoHull
 	{
-    	editorCategory="ED_SMT_Faction";
+    	editorCategory = "ED_SMT_Faction";
     	editorSubcategory="EDS_SMT_faction_Dingo";
 		side	= 1; 			/// civilian car should be on civilian side
 		faction	= "BLU_F";		/// and with civilian faction
-		forceInGarage=1;
+		forceInGarage = 1;
 		scope	= 2; 			/// makes the car visible in editor
-		scopeCurator=2;	
+		scopeCurator = 2;		// scope 2 means it's available in Zeus mode (0 means hidden)
 		displayName="M18-T IMV Troop";
 		model = "x\12thMEU\addons\Dingo\DingoTroop.p3d";
 		crew 	= "C_man_1"; 	/// we need someone to fit into the car
@@ -1046,18 +1050,26 @@ class CfgVehicles
 		};
 	};
 	class SMT_DingoRCWS_minigun_troop:SMT_DingoRCWS_minigun{
-		forceInGarage=1;
+    	editorCategory = "ED_SMT_Faction";
+    	editorSubcategory="EDS_SMT_faction_Dingo";
+		side	= 1; 			/// civilian car should be on civilian side
+		faction	= "BLU_F";		/// and with civilian faction
+		forceInGarage = 1;
 		scope	= 2; 			/// makes the car visible in editor
-		scopeCurator=2;	
+		scopeCurator = 2;		// scope 2 means it's available in Zeus mode (0 means hidden)
 		displayName="M18-T2 IMV Troop (Minigun)";
 		model = "x\12thMEU\addons\Dingo\DingoRCWS_Troop_minigun.p3d";
 		transportMaxBackpacks 	= 5; /// just some backpacks fit the trunk by default
 		transportSoldier 		= 10; /// number of cargo except driver
 	};
 	class SMT_DingoRCWS_autogun_troop:SMT_DingoRCWS_autogun{
-		forceInGarage=1;
+    	editorCategory = "ED_SMT_Faction";
+    	editorSubcategory="EDS_SMT_faction_Dingo";
+		side	= 1; 			/// civilian car should be on civilian side
+		faction	= "BLU_F";		/// and with civilian faction
+		forceInGarage = 1;
 		scope	= 2; 			/// makes the car visible in editor
-		scopeCurator=2;	
+		scopeCurator = 2;		// scope 2 means it's available in Zeus mode (0 means hidden)
 		displayName="M18-T3 IMV Troop (Autocannon)";
 		model = "x\12thMEU\addons\Dingo\DingoRCWS_Troop_Autogun.p3d";
 		transportMaxBackpacks 	= 5; /// just some backpacks fit the trunk by default
