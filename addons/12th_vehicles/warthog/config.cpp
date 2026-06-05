@@ -11,7 +11,8 @@ class CfgPatches {
       "twelfth_warthog_tt",
       "twelfth_warthog_mg",
       "twelfth_warthog_atgm",
-      "twelfth_warthog_gauss",
+      "twelfth_warthog_gauss_b",
+      "twelfth_warthog_gauss_a",
       "twelfth_warthog_mlms",
     };
     requiredAddons[]= {
@@ -32,7 +33,8 @@ class CfgVehicles {
   class OPTRE_M12G1_LRV;
   class OPTRE_M12R_AA;
   class SAG6_M12_MLMS;
-
+  class TCP_B_UNSC_A_M12A_ALIM_M68B;
+  class TCP_B_UNSC_A_M12A_ALIM_M68A;
 
   class twelfth_warthog_fav: TCP_B_UNSC_MC_M12A {
     scope=2;
@@ -188,30 +190,31 @@ class CfgVehicles {
     STDINV
   };
 
-  class twelfth_warthog_gauss: OPTRE_M12G1_LRV {
+  class twelfth_warthog_gauss_b: TCP_B_UNSC_A_M12A_ALIM_M68B {
     scope=2;
     scopeCurator=2;
     author="Waylen";
-    displayName="[12th] Warthog Gauss";
+    displayName="[12th] Warthog Gauss(B)";
     vehicleClass="OPTRE_UNSC_Vehicle_class";
     faction="twelfth_MEU";
     editorCategory="twelfth_MEU";
     editorSubcategory="twelfth_MEU_Cars";
-    hiddenSelections[]= {"camo1", "camo2", "camo3", "camo4", "camo_doors"};
-    hiddenSelectionsTextures[] = {
-      "\x\12thMEU\addons\12th_vehicles\warthog\default\body_co.paa",
-      "\x\12thMEU\addons\12th_vehicles\warthog\default\under_co.paa",
-      "\x\12thMEU\addons\12th_vehicles\warthog\default\m68_co.paa",
-      "\x\12thMEU\addons\12th_vehicles\warthog\default\m12_co.paa",
-      "\x\12thMEU\addons\12th_vehicles\warthog\default\apc_co.paa"
-    };
-    class TextureSources {
-      WARTHOG_TEX_STD_V1_M68
-    };
-    WARTHOG_SP_INFO(6,Gauss)
+    WARTHOG_SP_INFO(6,Gauss B)
     STDINV
   };
 
+  class twelfth_warthog_gauss_a: TCP_B_UNSC_A_M12A_ALIM_M68A {
+    scope=2;
+    scopeCurator=2;
+    author="Waylen";
+    displayName="[12th] Warthog Gauss(A)";
+    vehicleClass="OPTRE_UNSC_Vehicle_class";
+    faction="twelfth_MEU";
+    editorCategory="twelfth_MEU";
+    editorSubcategory="twelfth_MEU_Cars";
+    WARTHOG_SP_INFO(6,Gauss A)
+    STDINV
+  };
   class twelfth_warthog_aa: OPTRE_M12R_AA {
     scope=2;
     scopeCurator=2;
