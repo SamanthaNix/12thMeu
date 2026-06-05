@@ -182,8 +182,8 @@ class twelfth_helmECH43A_##CAMO##_##SFX##_clsd {\
   MID_co, or Visor_co, respectively.
 */
 #define CUSTOM_PILOT_HELM(SUFFIX,DISPLAY,C1,C2,C3,C4,C5)                  \
-class twelfth_pilot_ch_##SUFFIX : H_HelmetB {                                \
-  author="Waylen";                                                          \
+class twelfth_pilot_ch_##SUFFIX : twelfth_pilot_helm_base {                                \
+  author="Sammy";                                                          \
   scope=2;                                                                \
   scopeArsenal=2;                                                         \
   picture="\x\12thMEU\addons\12th_ui\data\logo.paa";                                                             \
@@ -193,7 +193,6 @@ class twelfth_pilot_ch_##SUFFIX : H_HelmetB {                                \
   optreHUDStyle = "ODST_1";                                               \
   displayName=DISPLAY;                                                    \
   hiddenSelections[] = {"camo1", "camo2", "camo3", "camo4", "camo5"};     \
-  model="\Foundries\DMNS_Units\Armour\Pilot_Helm_01\Pilot_Helmet_01.p3d";          \
   hiddenSelectionsTextures[]={                                            \
       #CH_PILOT_TEX(C1,Addons_co.paa),                                    \
       #CH_PILOT_TEX(C2,EXT_co.paa),                                       \
@@ -201,10 +200,9 @@ class twelfth_pilot_ch_##SUFFIX : H_HelmetB {                                \
       #CH_PILOT_TEX(C4,MID_co.paa),                                       \
       #CH_PILOT_TEX(C5,Visor_co.paa)                                      \
   };                                                                      \
-  class ItemInfo : HeadgearItem {                                         \
+  class ItemInfo : ItemInfo {                                         \
     mass = 25;                                                            \
     modelSides[]={6};                                                     \
-    uniformModel="\Foundries\DMNS_Units\Armour\Pilot_Helm_01\Pilot_Helmet_01.p3d"; \
     hiddenSelections[]={"camo1", "camo2", "camo3", "camo4", "camo5"};     \
     hiddenSelectionsTextures[]={                                          \
       #CH_PILOT_TEX(C1,Addons_co.paa),                                    \

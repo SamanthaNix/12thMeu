@@ -11,10 +11,10 @@ class CfgPatches {
 
 class CfgVehicles {
   // scorpion base classes
-  class DMNS_M808B_F;
+  class OPTRE_M808BM_UNSC;
 
   //-SCORPIONS--------------------------------------------------------
-  class twelfth_scorpion: DMNS_M808B_F {
+  class twelfth_scorpion: OPTRE_M808BM_UNSC {
     scope=2;
     scopeCurator=2;
     author="Waylen";
@@ -35,7 +35,7 @@ class CfgVehicles {
 			"clan_text",
 			"insignia"
     };
-    SCORPION_TEXTURESET
+    //SCORPION_TEXTURESET
     SCORPION_SP_INFO(0,Base)
   };
 

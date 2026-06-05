@@ -66,7 +66,7 @@ class CfgPatches {
 
 class CfgVehicles {
   // -------------------------- Base Classes --------------------------
-  class Splits_Pelican_base;
+  class OPTRE_Pelican_armed_SOCOM;
 
   class OPTRE_UNSC_hornet;
 
@@ -92,7 +92,7 @@ class CfgVehicles {
   // ---------------------------------------------------------------------------
   //  Pelican (D77-TC)
   // ---------------------------------------------------------------------------
-  class twelfth_d77_tc_pelican: Splits_Pelican_base {
+  class twelfth_d77_tc_pelican: OPTRE_Pelican_armed_SOCOM {
     scope = 2;
     scopeCurator = 2;
     side = 1;
@@ -107,7 +107,7 @@ class CfgVehicles {
     OPTRE_velocityMult = 1;
     crew = "OPTRE_UNSC_Marine_Soldier_Rifleman_AR"; // When we make our own faction be sure to change this
     displayName = "[12th] D77-TC Pelican";
-    PELICAN_TEXTURESETS
+    //PELICAN_TEXTURESETS
     AIR_SP_INFO(Pelican,0,Troop Transport)
   };
   // ---------------------------------------------------------------------------

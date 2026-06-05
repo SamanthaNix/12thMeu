@@ -29,7 +29,7 @@ class CfgPatches {
   class twelfth_armor {
     /*
       units[]: All the placeable "vehicle" classes for uniforms in the editor 
-               or gear lists.  
+   or gear lists.  
       weapons[]: The “weapon” (i.e., uniform item) classes.  
     */
     units[]= {
@@ -124,6 +124,7 @@ class CfgWeapons {
   class ItemInfo;
   class Uniform_Base;
   class H_HelmetB;
+  class H_PilotHelmetHeli_B;
   class HeadgearItem;
   class OPTRE_UNSC_Army_Uniform_WDL;
   class OPTRE_UNSC_Army_Uniform_R_WDL;
@@ -364,28 +365,35 @@ class CfgWeapons {
       };
     };
   };
-  class twelfth_pilot_helm_base: H_HelmetB {
-    scope=0;
+  class twelfth_pilot_helm_base: H_PilotHelmetHeli_B {
+    scope=2;
     author="Waylen";
-    scopeArsenal=0;
+    scopeArsenal=2;
     displayName="[12th] Pilot Helmet Base (DON'T USE)";
     ace_hearing_protection=1;
-    ace_hearing_lowerVolume=0;
-    model="A3\Characters_F\Common\headgear_helmet_heli.p3d";
+    ace_hearing_lowerVolume=0.30000001;
     picture="\x\12thMEU\addons\12th_ui\data\logo.paa";
-    class ItemInfo: HeadgearItem {
-      uniformModel="A3\Characters_F\Common\headgear_helmet_heli";
-      mass=30;
-      modelSides[]={3,1};
-      passThrough=0.1;
+    class ItemInfo : ItemInfo {
+      mass = 25;       
+      modelSides[]={6};
       class HitpointsProtectionInfo {
-        class Head {
-          hitpointName="HitHead";
-          armor=20;
-          passThrough=0.1;
-        };
-      };
-    };
+        class Head {   
+          hitpointName = "HitHead";
+          armor = 20;  
+          passThrough = 0.2;       
+        }; 
+        class Face {   
+          hitpointName = "HitFace";
+          armor = 8;   
+          passThrough = 0.3;       
+        }; 
+        class Neck {   
+          hitpointName = "HitNeck";
+          armor = 15;  
+          passThrough = 0.1;       
+        }; 
+      };   
+    };     
   };
 
   // ODST
@@ -421,9 +429,9 @@ class CfgWeapons {
     displayName="[12th] Army";
     ace_hearing_protection=1;
     ace_hearing_lowerVolume=0;
-    hiddenSelections[] = { "camo","decals" };              
-    hiddenSelectionsTextures[] = {                
-      "\x\12thMeu\addons\12th_armor\helmets\army\Helm_CO.paa",               
+    hiddenSelections[] = { "camo","decals" };  
+    hiddenSelectionsTextures[] = {    
+      "\x\12thMeu\addons\12th_armor\helmets\army\Helm_CO.paa",   
       "tcp\characters\BLUFOR\UNSC\ARMY\Vests\M43A\data\camo\Black\vest_M43_DecalSheet_CA.paa"									
     };
     class TCP_uniformDecals
@@ -443,9 +451,9 @@ class CfgWeapons {
           passThrough=0.1;
         };
       };
-      hiddenSelections[] = { "camo","decals" };              
+      hiddenSelections[] = { "camo","decals" };  
       hiddenSelectionsTextures[] = { 
-        "\x\12thMeu\addons\12th_armor\helmets\army\Helm_CO.paa",               
+        "\x\12thMeu\addons\12th_armor\helmets\army\Helm_CO.paa",   
         "tcp\characters\BLUFOR\UNSC\ARMY\Vests\M43A\data\camo\Black\vest_M43_DecalSheet_CA.paa"					
       };
     };

@@ -39,7 +39,6 @@ class CfgPatches {
     weapons[] = {
       "twelfth_helmCH43A_std_Bateman",
       "twelfth_helmCH43A_std_Bert",
-      "twelfth_helmCH43A_std_Bob",
       "twelfth_helmCH43A_std_Bobby",
       "twelfth_helmCH43A_std_Bunge",
       "twelfth_helmCH43A_std_Clarke",
@@ -79,7 +78,6 @@ class CfgPatches {
       "twelfth_helmCH43A_std_Wilson",
       "twelfth_helmECH43A_std_Bateman_clsd",
       "twelfth_helmECH43A_std_Bert_clsd",
-      "twelfth_helmECH43A_std_Bob_clsd",
       "twelfth_helmECH43A_std_Bobby_clsd",
       "twelfth_helmECH43A_std_Bunge_clsd",
       "twelfth_helmECH43A_std_Clarke_clsd",
@@ -221,7 +219,7 @@ class CfgWeapons {
       \...\pilots\default\MID_co.paa
       \...\pilots\default\Visor_co.paa
   */
-
+  class twelfth_pilot_helm_base;
   CUSTOM_PILOT_HELM(penquite, "[12th][Pilot][Customs] Penquite",default,penquite,default,default,default)
   CUSTOM_PILOT_HELM(Moss, "[12th][Pilot][Customs] Moss",moss,moss,default,default,default)
   CUSTOM_PILOT_HELM(tomb, "[12th][Pilot][Customs] Tomb",tomb,tomb,default,default,default)

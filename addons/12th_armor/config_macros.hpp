@@ -1580,7 +1580,7 @@ a local copy of the base textures from UNSCF around here.
                    hidden selection is going to be pulling from.
 */
 #define PILOT_HELM(SUFFIX,DISPLAY,C1,C2,C3,C4,C5)                         \
-  class twelfth_pilot_h_##SUFFIX : H_HelmetB {                                 \
+  class twelfth_pilot_h_##SUFFIX : twelfth_pilot_helm_base {                                 \
   author="Weber";                                                          \
   scope=2;                                                                \
   scopeArsenal=2;                                                         \
@@ -1590,45 +1590,6 @@ a local copy of the base textures from UNSCF around here.
   optreVarietys[] = {"", "", "_broken"};                                  \
   optreHUDStyle = "ODST_1";                                               \
   displayName=DISPLAY;                                                    \
-  hiddenSelections[] = {"camo1", "camo2", "camo3", "camo4", "camo5"};     \
-  model="Foundries\DMNS_Units\Armour\Pilot_Helm_01\Pilot_Helmet_01.p3d";          \
-  hiddenSelectionsTextures[]={                                            \
-      #PILOT_H_TEX(C1,Addons_co.paa),                                     \
-      #PILOT_H_TEX(C2,EXT_co.paa),                                        \
-      #PILOT_H_TEX(C3,INT_co.paa),                                        \
-      #PILOT_H_TEX(C4,MID_co.paa),                                        \
-      #PILOT_H_TEX(C5,Visor_co.paa)                                       \
-  };                                                                      \
-  class ItemInfo : HeadgearItem {                                         \
-    mass = 25;                                                            \
-    modelSides[]={6};                                                     \
-    uniformModel="Foundries\DMNS_Units\Armour\Pilot_Helm_01\Pilot_Helmet_01.p3d"; \
-    hiddenSelections[]={"camo1", "camo2", "camo3", "camo4", "camo5"};     \
-    hiddenSelectionsTextures[]={                                          \
-      #PILOT_H_TEX(C1,Addons_co.paa),                                     \
-      #PILOT_H_TEX(C2,EXT_co.paa),                                        \
-      #PILOT_H_TEX(C3,INT_co.paa),                                        \
-      #PILOT_H_TEX(C4,MID_co.paa),                                        \
-      #PILOT_H_TEX(C5,Visor_co.paa)                                       \
-    };                                                                    \
-    class HitpointsProtectionInfo {                                       \
-      class Head {                                                        \
-        hitpointName = "HitHead";                                         \
-        armor = 20;                                                       \
-        passThrough = 0.2;                                                \
-      };                                                                  \
-      class Face {                                                        \
-        hitpointName = "HitFace";                                         \
-        armor = 8;                                                        \
-        passThrough = 0.3;                                                \
-      };                                                                  \
-      class Neck {                                                        \
-        hitpointName = "HitNeck";                                         \
-        armor = 15;                                                       \
-        passThrough = 0.1;                                                \
-      };                                                                  \
-    };                                                                    \
-  };                                                                      \
 };
 
 // New Boonie
