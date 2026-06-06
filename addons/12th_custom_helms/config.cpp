@@ -45,6 +45,7 @@ class CfgPatches {
       "twelfth_helmCH43A_std_Coady",
       "twelfth_helmCH43A_std_Deacon",
       "twelfth_helmCH43A_std_Dixie",
+      "twelfth_helmECH43A_std_Don",
       "twelfth_helmCH43A_std_Duckworth",
       "twelfth_helmCH43A_std_Felix",
       "twelfth_helmCH43A_std_Geoff",
@@ -84,6 +85,7 @@ class CfgPatches {
       "twelfth_helmECH43A_std_Coady_clsd",
       "twelfth_helmECH43A_std_Deacon_clsd",
       "twelfth_helmECH43A_std_Dixie_clsd",
+      "twelfth_helmECH43A_std_Don_clsd",
       "twelfth_helmECH43A_std_Duckworth_clsd",
       "twelfth_helmECH43A_std_Felix_clsd",
       "twelfth_helmECH43A_std_Geoff_clsd",
@@ -164,6 +166,7 @@ class CfgWeapons {
   CUSTOM_HELM_S_AV(Coady)
   CUSTOM_HELM_S_AV(Deacon)
   CUSTOM_HELM_S_AV(Dixie)
+  CUSTOM_HELM_S_AV(Don)
   CUSTOM_HELM_S_AV(Duckworth)
   CUSTOM_HELM_S_AV(Felix)
   CUSTOM_HELM_S_AV(Geoff)
