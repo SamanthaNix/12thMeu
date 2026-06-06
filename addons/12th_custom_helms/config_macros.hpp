@@ -22,7 +22,7 @@
 #define P(PATH) \x\12thMEU\addons\12th_custom_helms\##PATH
   // Standard path concatenation for the twelfth_custom_helms addon
 
-#define CH_PILOT_TEX(CAMOTYPE,FILENAME) P(data\pilots\##CAMOTYPE\##FILENAME)
+#define CH_PILOT_TEX(FILENAME) P(data\pilots\##FILENAME##_PilotHelmet_co.paa)
   // Points to the pilot texture location, e.g.:
   // "\x\12thMEU\addons\12th_custom_helms\data\pilots\<CAMOTYPE>\FILENAME"
 
@@ -194,14 +194,14 @@ class twelfth_pilot_ch_##SUFFIX : twelfth_pilot_helm_base {                     
   displayName=DISPLAY;                                                    \
   hiddenSelections[] = {"camo"};     \
   hiddenSelectionsTextures[]={                                            \
-      #CH_PILOT_TEX(C1,_co.paa),                                    \
+      #CH_PILOT_TEX(C1),                                    \
   };                                                                      \
   class ItemInfo : ItemInfo {                                         \
     mass = 25;                                                            \
     modelSides[]={6};                                                     \
     hiddenSelections[]={"camo"};     \
     hiddenSelectionsTextures[]={                                          \
-      #CH_PILOT_TEX(C1,_co.paa),                                    \
+      #CH_PILOT_TEX(C1),                                    \
     };                                                                    \
     class HitpointsProtectionInfo {                                       \
       class Head {                                                        \
