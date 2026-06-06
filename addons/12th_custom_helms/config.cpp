@@ -45,7 +45,7 @@ class CfgPatches {
       "twelfth_helmCH43A_std_Coady",
       "twelfth_helmCH43A_std_Deacon",
       "twelfth_helmCH43A_std_Dixie",
-      "twelfth_helmECH43A_std_Don",
+      "twelfth_helmCH43A_std_Don",
       "twelfth_helmCH43A_std_Duckworth",
       "twelfth_helmCH43A_std_Felix",
       "twelfth_helmCH43A_std_Geoff",
@@ -72,7 +72,6 @@ class CfgPatches {
       "twelfth_helmCH43A_std_Simmons",
       "twelfth_helmCH43A_std_Smitty",
       "twelfth_helmCH43A_std_Stacker",
-      "twelfth_helmCH43A_std_Stokes",
       "twelfth_helmCH43A_std_Sullivan",
       "twelfth_helmCH43A_std_Taji",
       "twelfth_helmCH43A_std_Thomas",
@@ -112,7 +111,6 @@ class CfgPatches {
       "twelfth_helmECH43A_std_Simmons_clsd",
       "twelfth_helmECH43A_std_Smitty_clsd",
       "twelfth_helmECH43A_std_Stacker_clsd",
-      "twelfth_helmECH43A_std_Stokes_clsd",
       "twelfth_helmECH43A_std_Sullivan_clsd",
       "twelfth_helmECH43A_std_Taji_clsd",
       "twelfth_helmECH43A_std_Thomas_clsd",
@@ -195,7 +193,6 @@ class CfgWeapons {
   CUSTOM_HELM_S_AV(Simmons)
   CUSTOM_HELM_S_AV(Smitty)
   CUSTOM_HELM_S_AV(Stacker)
-  CUSTOM_HELM_S_AV(Stokes)
   CUSTOM_HELM_S_AV(Sullivan)
   CUSTOM_HELM_S_AV(Taji)
   CUSTOM_HELM_S_AV(Thomas)
@@ -269,7 +266,6 @@ class XtdGearModels {
           "Deacon",
           "Dennis",
           "Dixie",
-          "Stokes",
           "Don",
           "Dras",
           "Duckworth",
