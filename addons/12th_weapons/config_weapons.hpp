@@ -1344,12 +1344,14 @@ class CfgWeapons
 
   // IAR Rifle
   class twelfth_MA6_B: twelfth_MA5B {
-		model="x\12thMEU\addons\12th_weapons\data\MA6_D\MA6_D.p3d";
+		model="x\12thMEU\addons\12th_weapons\data\MA6_B\MA6_B.p3d";
 		author = "Rex";
 		scope = 2;
 		scopeArsenal = 2;
 		displayName = "[12th] MA6-B IAR";
 		baseWeapon = "twelfth_MA6_B";
+    hiddenSelections[] = {"camo"};
+    hiddenSelectionsTextures[] = {"addons\12th_weapons\data\MA6_B\MA6_B_CO.paa"};
 		canShootInWater = 1;
 		magazines[] = {"OPTRE_60Rnd_762x51_Mag", "twelfth_60Rnd_762x51_Mag_T", "OPTRE_32Rnd_762x51_Mag", "OPTRE_32Rnd_762x51_Mag_Tracer", "OPTRE_32Rnd_762x51_Mag_UW" };
 		handAnim[] = {"OFP2_ManSkeleton","x\12thMEU\addons\12th_weapons\data\MA6\animations\MA6.rtm"};
@@ -1374,13 +1376,14 @@ class CfgWeapons
 	};
 
   class twelfth_MA6_AL: twelfth_br55 {
-		model="x\12thMEU\addons\12th_weapons\data\MA6_D\MA6_D.p3d";
+		model="x\12thMEU\addons\12th_weapons\data\MA6_B\MA6_B.p3d";
 		author = "Rex";
 		mass = 60;
 		scope = 2;
 		scopeArsenal = 2;
 		displayName = "[12th] MA6-B H-IAR";
 		baseWeapon = "twelfth_MA6_AL";
+    texture[] = {"addons\12th_weapons\data\MA6_B\MA6_B_CO.paa"};
 		canShootInWater = 1;
 		magazines[] = {"twelfth_56Rnd_95x40_Mag", "twelfth_56Rnd_95x40_Mag_T", "twelfth_br_36Rnd", "twelfth_br_36Rnd_T","twelfth_br_36Rnd_UW" };
 		handAnim[] = {"OFP2_ManSkeleton","x\12thMEU\addons\12th_weapons\data\MA6\animations\MA6.rtm"};

@@ -382,7 +382,7 @@ class CfgWeapons {
       modelSides[]={6};
       class HitpointsProtectionInfo {
         class Head {   
-          hitpointName = "HitHead";
+          hitpointName = "HitHead"; 
           armor = 20;  
           passThrough = 0.2;       
         }; 
