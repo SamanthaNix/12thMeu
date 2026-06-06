@@ -373,7 +373,11 @@ class CfgWeapons {
     ace_hearing_protection=1;
     ace_hearing_lowerVolume=0.30000001;
     picture="\x\12thMEU\addons\12th_ui\data\logo.paa";
+    hiddenSelections[] = {"camo"};
+    hiddenSelectionsTextures[]={"\x\12thMEU\addons\12th_custom_helms\data\pilots\default\PilotHelmet_co.paa"};  
     class ItemInfo : ItemInfo {
+      hiddenSelections[] = {"camo"};
+      hiddenSelectionsTextures[]={"\x\12thMEU\addons\12th_custom_helms\data\pilots\default\PilotHelmet_co.paa"};  
       mass = 25;       
       modelSides[]={6};
       class HitpointsProtectionInfo {

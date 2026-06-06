@@ -181,7 +181,7 @@ class twelfth_helmECH43A_##CAMO##_##SFX##_clsd {\
   in data\pilots\[C1..C5]. Each subfolder's .paa name is Addons_co, EXT_co, INT_co,
   MID_co, or Visor_co, respectively.
 */
-#define CUSTOM_PILOT_HELM(SUFFIX,DISPLAY,C1,C2,C3,C4,C5)                  \
+#define CUSTOM_PILOT_HELM(SUFFIX,DISPLAY,C1)                  \
 class twelfth_pilot_ch_##SUFFIX : twelfth_pilot_helm_base {                                \
   author="Sammy";                                                          \
   scope=2;                                                                \
@@ -192,24 +192,16 @@ class twelfth_pilot_ch_##SUFFIX : twelfth_pilot_helm_base {                     
   optreVarietys[] = {"", "", "_broken"};                                  \
   optreHUDStyle = "ODST_1";                                               \
   displayName=DISPLAY;                                                    \
-  hiddenSelections[] = {"camo1", "camo2", "camo3", "camo4", "camo5"};     \
+  hiddenSelections[] = {"camo"};     \
   hiddenSelectionsTextures[]={                                            \
-      #CH_PILOT_TEX(C1,Addons_co.paa),                                    \
-      #CH_PILOT_TEX(C2,EXT_co.paa),                                       \
-      #CH_PILOT_TEX(C3,INT_co.paa),                                       \
-      #CH_PILOT_TEX(C4,MID_co.paa),                                       \
-      #CH_PILOT_TEX(C5,Visor_co.paa)                                      \
+      #CH_PILOT_TEX(C1,_co.paa),                                    \
   };                                                                      \
   class ItemInfo : ItemInfo {                                         \
     mass = 25;                                                            \
     modelSides[]={6};                                                     \
-    hiddenSelections[]={"camo1", "camo2", "camo3", "camo4", "camo5"};     \
+    hiddenSelections[]={"camo"};     \
     hiddenSelectionsTextures[]={                                          \
-      #CH_PILOT_TEX(C1,Addons_co.paa),                                    \
-      #CH_PILOT_TEX(C2,EXT_co.paa),                                       \
-      #CH_PILOT_TEX(C3,INT_co.paa),                                       \
-      #CH_PILOT_TEX(C4,MID_co.paa),                                       \
-      #CH_PILOT_TEX(C5,Visor_co.paa)                                      \
+      #CH_PILOT_TEX(C1,_co.paa),                                    \
     };                                                                    \
     class HitpointsProtectionInfo {                                       \
       class Head {                                                        \
