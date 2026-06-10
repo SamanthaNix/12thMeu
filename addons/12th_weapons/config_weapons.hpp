@@ -502,6 +502,18 @@ class CfgWeapons
           compatibleitems[] = {};
       };
     };
+    //--- Ammocounter config & hiddenSelections
+    TCP_weaponDisplayFont = "SquareFont";
+    TCP_weaponDisplayColor[] = {0.152,0.547,0.930,1};
+    TCP_weaponDisplayTexture = "TCP\Weapons\Rifles\MA5B\data\ui\weaponDisplay_CA.paa";
+
+    class Eventhandlers
+    {
+        fired = "[""RscDisplayTCPCounterMA5K"", _this] call TCP_fnc_weaponDisplayCounterFired;";
+        reloaded = "[""RscDisplayTCPCounterMA5K"", _this] call TCP_fnc_weaponDisplayCounterReloaded;";
+        weaponChanged = "[""RscDisplayTCPCounterMA5K"", _this] call TCP_fnc_weaponDisplayCounterWeaponChanged;";
+        magazineUnloaded = "[""RscDisplayTCPCounterMA5K"", _this] call TCP_fnc_weaponDisplayCounterUnloaded;";
+    };
   };
 
  // Training MA5A configuration
@@ -549,38 +561,50 @@ class CfgWeapons
       baseWeapon = "twelfth_BR55";
       magazines[] = COMMON_BR_MAGAZINES;
       ace_overheating_barrelMass = 5;
-	  model = "\TCP\Weapons_Ins\Rifles\BR55\BR55.p3d";
-	  picture = "\TCP\Weapons_Ins\Rifles\BR55\data\ui\icon_arifle_BR55_X_ca.paa";
-	  pictureWire = "\TCP\Weapons_Ins\Rifles\BR55\data\ui\icon_arifle_BR55_W_ca.paa";
-	  hiddenSelections[] = {"camo","camo1"};
-	  hiddenSelectionsTextures[] = {"\TCP\Weapons_Ins\Rifles\BR55\data\camo\default\BR55_01_CO.paa","\TCP\Weapons_Ins\Rifles\BR55\data\camo\default\BR55_02_CO.paa"};
-	  handAnim[] = {"OFP2_ManSkeleton","\TCP\Weapons_Ins\Rifles\BR55\data\anim\BR55_handAnim.rtm"};
-      class WeaponSlotsInfo : WeaponSlotsInfo
+      model = "\TCP\Weapons_Ins\Rifles\BR55\BR55.p3d";
+      picture = "\TCP\Weapons_Ins\Rifles\BR55\data\ui\icon_arifle_BR55_X_ca.paa";
+      pictureWire = "\TCP\Weapons_Ins\Rifles\BR55\data\ui\icon_arifle_BR55_W_ca.paa";
+      hiddenSelections[] = {"camo","camo1"};
+      hiddenSelectionsTextures[] = {"\TCP\Weapons_Ins\Rifles\BR55\data\camo\default\BR55_01_CO.paa","\TCP\Weapons_Ins\Rifles\BR55\data\camo\default\BR55_02_CO.paa"};
+      handAnim[] = {"OFP2_ManSkeleton","\TCP\Weapons_Ins\Rifles\BR55\data\anim\BR55_handAnim.rtm"};
+        class WeaponSlotsInfo : WeaponSlotsInfo
+        {
+          class MuzzleSlot : MuzzleSlot
+          {
+        compatibleitems[] = {"TCP_muzzle_comp_95_01","TCP_muzzle_flash_95_01","TCP_muzzle_flash_95_02","TCP_muzzle_flash_95_03","TCP_muzzle_brake_95_01","TCP_muzzle_comp_95_01","TCP_muzzle_snds_95_01","TCP_muzzle_snds_95_02","TCP_muzzle_snds_523_01","TCP_muzzle_snds_523_02"};
+          };
+          class CowsSlot : CowsSlot
+          {
+            compatibleitems[] = COMMON_SIGHTS;
+          };
+          class PointerSlot : PointerSlot
+          {
+            compatibleitems[] = {COMMON_RAIL_ATTACHMENTS};
+          };
+          class UnderBarrelSlot : UnderBarrelSlot
+          {
+          };
+        };
+    class LinkedItems
       {
-        class MuzzleSlot : MuzzleSlot
+        class LinkedItemsMuzzle
         {
-			compatibleitems[] = {"TCP_muzzle_comp_95_01","TCP_muzzle_flash_95_01","TCP_muzzle_flash_95_02","TCP_muzzle_flash_95_03","TCP_muzzle_brake_95_01","TCP_muzzle_comp_95_01","TCP_muzzle_snds_95_01","TCP_muzzle_snds_95_02","TCP_muzzle_snds_523_01","TCP_muzzle_snds_523_02"};
-        };
-        class CowsSlot : CowsSlot
-        {
-          compatibleitems[] = COMMON_SIGHTS;
-        };
-        class PointerSlot : PointerSlot
-        {
-          compatibleitems[] = {COMMON_RAIL_ATTACHMENTS};
-        };
-        class UnderBarrelSlot : UnderBarrelSlot
-        {
+          item = "TCP_muzzle_flash_95_02";
+          slot = "MuzzleSlot";
         };
       };
-	 class LinkedItems
-		{
-			class LinkedItemsMuzzle
-			{
-				item = "TCP_muzzle_flash_95_02";
-				slot = "MuzzleSlot";
-			};
-		};
+      //--- Weapon Display Settings
+        TCP_weaponDisplayFont = "SquareFont";
+        TCP_weaponDisplayColor[] = {0.309,0.625,0.836,1};
+        TCP_weaponDisplayTexture = "\TCP\Weapons_Ins\Rifles\BR55\data\ui\weaponDisplay_CA.paa";
+
+        class Eventhandlers
+        {
+            fired = "[""RscDisplayTCPCounterBR55"", _this] call TCP_fnc_weaponDisplayCounterFired;";
+            reloaded = "[""RscDisplayTCPCounterBR55"", _this] call TCP_fnc_weaponDisplayCounterReloaded;";
+            weaponChanged = "[""RscDisplayTCPCounterBR55"", _this] call TCP_fnc_weaponDisplayCounterWeaponChanged;";
+            magazineUnloaded = "[""RscDisplayTCPCounterBR55"", _this] call TCP_fnc_weaponDisplayCounterUnloaded;";
+        };
     };
 
     // Additional BR55 variants with grenade launchers
@@ -624,12 +648,12 @@ class CfgWeapons
       baseWeapon = "twelfth_BR55_HB";
       magazines[] = {"twelfth_br_36Rnd_AP", "twelfth_br_36Rnd", "twelfth_br_36Rnd_T", "twelfth_br_36Rnd_UW", "twelfth_br_36Rnd_AP_T"};
       ace_overheating_barrelMass = 10;
-	  model = "\TCP\Weapons_Ins\LongRangeRifles\BR55HB\BR55HB.p3d";
-		picture = "\TCP\Weapons_Ins\LongRangeRifles\BR55HB\data\ui\icon_srifle_BR55HB_X_ca.paa";
-		pictureWire = "\TCP\Weapons_Ins\LongRangeRifles\BR55HB\data\ui\icon_srifle_BR55HB_W_ca.paa";
-		hiddenSelections[] = {"camo","camo1"};
-		hiddenSelectionsTextures[] = {"\TCP\Weapons_Ins\LongRangeRifles\BR55HB\data\camo\default\BR55HB_01_CO.paa","\TCP\Weapons_Ins\LongRangeRifles\BR55HB\data\camo\default\BR55HB_02_CO.paa"};
-		handAnim[] = {"OFP2_ManSkeleton","\TCP\Weapons_Ins\LongRangeRifles\BR55HB\data\anim\BR55HB_handAnim.rtm"};
+      model = "\TCP\Weapons_Ins\LongRangeRifles\BR55HB\BR55HB.p3d";
+      picture = "\TCP\Weapons_Ins\LongRangeRifles\BR55HB\data\ui\icon_srifle_BR55HB_X_ca.paa";
+      pictureWire = "\TCP\Weapons_Ins\LongRangeRifles\BR55HB\data\ui\icon_srifle_BR55HB_W_ca.paa";
+      hiddenSelections[] = {"camo","camo1"};
+      hiddenSelectionsTextures[] = {"\TCP\Weapons_Ins\LongRangeRifles\BR55HB\data\camo\default\BR55HB_01_CO.paa","\TCP\Weapons_Ins\LongRangeRifles\BR55HB\data\camo\default\BR55HB_02_CO.paa"};
+      handAnim[] = {"OFP2_ManSkeleton","\TCP\Weapons_Ins\LongRangeRifles\BR55HB\data\anim\BR55HB_handAnim.rtm"};
       class WeaponSlotsInfo : WeaponSlotsInfo
       {
         class MuzzleSlot : MuzzleSlot
@@ -649,56 +673,31 @@ class CfgWeapons
           compatibleitems[] = COMMON_MEDIUM_BIPOD;
         };
       };
-	  class LinkedItems
-		{
-			class LinkedItemsMuzzle
-			{
-				item = "TCP_muzzle_flash_95_02";
-				slot = "MuzzleSlot";
-			};
-		};
+      class LinkedItems
+      {
+        class LinkedItemsMuzzle
+        {
+          item = "TCP_muzzle_flash_95_02";
+          slot = "MuzzleSlot";
+        };
+      };
+      //--- Weapon Display Settings
+        TCP_weaponDisplayFont = "SquareFont";
+        TCP_weaponDisplayColor[] = {0.309,0.625,0.836,1};
+        TCP_weaponDisplayTexture = "\TCP\Weapons_Ins\LongRangeRifles\BR55HB\data\ui\weaponDisplay_CA.paa";
+        class Eventhandlers
+        {
+            fired = "[""RscDisplayTCPCounterBR55HB"", _this] call TCP_fnc_weaponDisplayCounterFired;";
+            reloaded = "[""RscDisplayTCPCounterBR55HB"", _this] call TCP_fnc_weaponDisplayCounterReloaded;";
+            weaponChanged = "[""RscDisplayTCPCounterBR55HB"", _this] call TCP_fnc_weaponDisplayCounterWeaponChanged;";
+            magazineUnloaded = "[""RscDisplayTCPCounterBR55HB"", _this] call TCP_fnc_weaponDisplayCounterUnloaded;";
+        };
     };
-
-    // commented out cus marksmen DO NOT need a GL lmfao
-    //class twelfth_BR55_HB_gl : 19_UNSC_br55_HB_gl
-    //{
-    //  author = "Weber";
-    //  scope = 2;
-    //  scopeArsenal = 2;
-    //  canShootInWater = 1;
-    //  displayName = "[12th] BR55HB UGL";
-    //  muzzles[] = {"this", "twelfth_M301UGL"}; // Attachments
-    //  class twelfth_m301ugl : GL_3GL_F
-    //  {
-    //    displayName = "M301 Grenade Launcher";
-    //    descriptionShort = "M301 GL";
-    //    magazines[] = COMMON_GL_MAGS; // Grenade launcher mags
-    //  };
-    //  baseWeapon = "twelfth_BR55_HB_gl";
-    //  magazines[] = COMMON_BR_MAGAZINES;
-    //  class WeaponSlotsInfo : WeaponSlotsInfo
-    //  {
-    //    class MuzzleSlot : MuzzleSlot
-    //    {
-    //    };
-    //    class CowsSlot : CowsSlot
-    //    {
-    //      compatibleitems[] = COMMON_BR_SIGHTS;
-    //    };
-    //    class PointerSlot : PointerSlot
-    //    {
-    //    };
-    //    class UnderBarrelSlot : UnderBarrelSlot
-    //    {
-    //    };
-    //  };
-    //};
-  /*
+/*
     =============================================================================
     Machine Guns
     =============================================================================
-  */
-
+*/
     class twelfth_M392 : OPTRE_M392_DMR
     {
       model = "\TCP\Weapons\LongRangeRifles\M392\M392.p3d";
@@ -735,13 +734,25 @@ class CfgWeapons
         };
       };
       class LinkedItems
-		{
-			class LinkedItemsMuzzle
-			{
-				item = "TCP_muzzle_flash_762_01";
-				slot = "MuzzleSlot";
-			};
-		};
+      {
+        class LinkedItemsMuzzle
+        {
+          item = "TCP_muzzle_flash_762_01";
+          slot = "MuzzleSlot";
+        };
+      };
+              //--- Weapon Display Settings
+        TCP_weaponDisplayFont = "AgencyFBBold";
+        TCP_weaponDisplayColor[] = {0.309,0.625,0.836,1};
+        TCP_weaponDisplayTexture = "\TCP\Weapons\LongRangeRifles\M392\data\ui\weaponDisplay_CA.paa";
+
+        class Eventhandlers
+        {
+            fired = "[""RscDisplayTCPCounterM392"", _this] call TCP_fnc_weaponDisplayCounterFired;";
+            reloaded = "[""RscDisplayTCPCounterM392"", _this] call TCP_fnc_weaponDisplayCounterReloaded;";
+            weaponChanged = "[""RscDisplayTCPCounterM392"", _this] call TCP_fnc_weaponDisplayCounterWeaponChanged;";
+            magazineUnloaded = "[""RscDisplayTCPCounterM392"", _this] call TCP_fnc_weaponDisplayCounterUnloaded;";
+        };
     };
 
 	class twelfth_M739B: OPTRE_M739_SAW_Foregrip_Black_F
