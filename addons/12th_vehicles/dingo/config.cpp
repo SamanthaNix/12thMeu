@@ -167,7 +167,7 @@ class CfgVehicles {
   class Twelfth_Dingo_Fav_Medical: SMT_DingoMed {
     scope=2;
     scopeCurator=2;
-    author="Waylen";
+    author="Sammy";
     displayName="[12th] Dingo Medical";
     vehicleClass="OPTRE_UNSC_Vehicle_class";
     faction="twelfth_MEU";

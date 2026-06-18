@@ -69,7 +69,8 @@ class CfgVehicles {
   class OPTRE_Pelican_armed_SOCOM;
 
   class OPTRE_UNSC_hornet;
-
+  class UserActions;
+  class PelLift_LoadVehicle;
   class OPTRE_UNSC_falcon;
   class OPTRE_UNSC_falcon_armed;
   class OPTRE_UNSC_falcon_S;
@@ -109,6 +110,11 @@ class CfgVehicles {
     displayName = "[12th] D77-TC Pelican";
     //PELICAN_TEXTURESETS
     AIR_SP_INFO(Pelican,0,Troop Transport)
+    class UserActions:  UserActions{
+      class PelLift_LoadVehicle: PelLift_LoadVehicle{
+        statement = "0=[this,vehicle player] spawn SMT_fnc_PelicanLoadValidate;";
+      };
+    };
   };
   // ---------------------------------------------------------------------------
   //  AV-14 Hornet

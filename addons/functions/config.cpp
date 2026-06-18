@@ -22,6 +22,13 @@ class CfgFunctions{
                 file = "x\12thMEU\addons\functions\fn_loadIntoNearestVehicle.sqf";
             };
         };
+        class PelicanMagLiftSystem
+        {
+            class PelicanLoadValidate
+            {
+                file = "x\12thMEU\addons\functions\fn_twelfthMagLock.sqf";
+            };
+        };
     };
 };
 

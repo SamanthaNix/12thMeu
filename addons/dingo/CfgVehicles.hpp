@@ -316,7 +316,7 @@ class CfgVehicles
 
 			class HitFuel 			{armor=0.50; material=-1; name="FuelTank"; visual=""; passThrough=0.2;}; /// correct points for fuel tank, some of the damage is aFRLied to the whole
 			class HitEngine 		{armor=0.50; material=-1; name="Engine"; visual=""; passThrough=0.2;};
-			class HitBody: HitBody 	{name = "body"; visual="camo1"; passThrough=1;}; /// all damage to the hull is aFRLied to total damage
+			class HitBody: HitBody 	{armor=1; name = "body"; visual="camo1"; passThrough=1;}; /// all damage to the hull is aFRLied to total damage
 
 			class HitHull {
 				armor = 1.5;
