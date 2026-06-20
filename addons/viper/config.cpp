@@ -7,9 +7,17 @@ class CfgPatches {
     weapons[] = { 
       "SMT_200mm"
     };
-    ammo[] = {};              // No specific ammo defined in this config
+    ammo[] = {
+        "SMT_200mm_HE_Slow",
+        "SMT_200mm_HE",
+        "SMT_200mm_SALH",
+        "SMT_200mm_APFSDS"
+        };              // No specific ammo defined in this config
     magazines[] = {
-      "SMT_500Rnd_20mm_shells_Dingo"
+      "SMT_Mag_XXRnd_200mm_HE",
+      "SMT_Mag_XXRnd_200mm_HE_Slow",
+      "SMT_Mag_XXRnd_200mm_SALH",
+      "SMT_Mag_XXRnd_200mm_APFSDS"
     };
     requiredVersion = 0.1;    // Minimum required version of the game
     requiredAddons[] = { 
