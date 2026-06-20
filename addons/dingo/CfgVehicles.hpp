@@ -232,6 +232,7 @@ class CfgVehicles
 		tf_RadioType = "TFAR_rt1523g_big";
 		tf_hasLRradio = 1;
 		tf_isolatedAmount = 0.3;
+		TFAR_AdditionalLR_Cargo[] = {0,1}; // allows cargo proxy 0 and 1 to use vehicle LR
 
 		//hand anims
 		driverLeftHandAnimName 	= "drivewheel"; /// according to what bone in model of car does hand move
