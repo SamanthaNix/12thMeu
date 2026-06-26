@@ -34,7 +34,7 @@ class CfgPatches
                  "twelfth_M6C", "twelfth_M7_Test", "twelfth_M7_Test_Folded", "twelfth_M90", "twelfth_MA5B",
                  "twelfth_br55", "twelfth_br55_HB",
                  "twelfth_M392", "twelfth_MA37K", "twelfth_Commando",
-                 "twelfth_M73H", "twelfth_M33_t", "twelfth_M247", "twelfth_M319",
+                 "twelfth_M73H", "twelfth_M247", "twelfth_M319",
                  "twelfth_M319N", "twelfth_MA5C", "twelfth_MA5CGL", "twelfth_MA5K", 
                  "twelfth_MAAWS_base","twelfth_MAAWS_olive","twelfth_MAAWS_sand",
                  "twelfth_M41_SSR_laserfix","twelfth_M41_SSR_G_laserfix",

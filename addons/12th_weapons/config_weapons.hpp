@@ -62,7 +62,6 @@ class CfgWeapons
   class OPTRE_M739_SAW_Foregrip_Black_F;
   class OPTRE_M247a1_Flashhider;
   class EventHandlers;
-  class Dmns_M33_T;
   class OPTRE_M250;
   class OPTRE_M41_SSR;
   class OPTRE_BR55HB;
@@ -818,84 +817,6 @@ class CfgWeapons
       };
     };
 
-    // M33-T Machine Gun configuration
-
-    class twelfth_M33_T: Dmns_M33_T {
-        author = "Jack, Waylen";
-        displayName = "[12th] M33-T";
-        baseWeapon = "twelfth_M33_T";
-        magazines[] = COMMON_LMG_MAGAZINES;
-        modes[] = { "FullAuto", "FullAutoFast" };
-	      distanceZoomMin=100;
-	      distanceZoomMax=700;
-        maxZeroing=700;
-
-        // Tripod compat
-        DEPLOYED_GESTURE_GPMG;
-        RELOAD_EH;
-
-        ace_overheating_mrbs = 5500;
-        ace_overheating_slowdownFactor = 1;
-        ace_overheating_allowSwapBarrel = 1;
-        ace_overheating_dispersion = 0.25;
-        ace_overheating_jamTypesAllowed[] = {"Feed", "Fire", "Eject", "Extract"};
-        ace_overheating_closedbolt = 1;
-        ace_overheating_barrelMass = 3.5;
-
-        class FullAuto: FullAuto {
-            dispersion = 0.00116;
-            minRange = 0;
-            minRangeProbab = 0.9;
-            midRange = 15;
-            midRangeProbab = 0.7;
-            maxRange = 30;
-            maxRangeProbab = 0.1;
-            aiRateOfFire = 1e-06;
-            reloadTime = 0.15;
-
-            class BaseSoundModType {};
-            class standardsound: BaseSoundModType {
-                soundsetshot[] = {
-                    "MMG01_Shot_SoundSet", "MMG01_Tail_SoundSet",
-                    "MMG01_InteriorTail_SoundSet"
-                };
-            };
-        };
-      class FullAutoFast : FullAuto
-      {
-        reloadTime = 0.08; // 800 RPM
-        textureType = "fastAuto";
-        class BaseSoundModType
-        {
-        };
-        class standardsound : BaseSoundModType
-        {
-          soundsetshot[] = {
-              "MMG01_Shot_SoundSet", "MMG01_Tail_SoundSet",
-              "MMG01_InteriorTail_SoundSet"
-          };
-        };
-      };
-
-        class WeaponSlotsInfo: WeaponSlotsInfo {
-          class MuzzleSlot : MuzzleSlot
-          {
-            compatibleitems[] = {"OPTRE_MA5Suppressor"};
-          };
-          class CowsSlot : CowsSlot
-          {
-            compatibleItems[] = COMMON_SIGHTS;
-          };
-          class PointerSlot : PointerSlot
-          {
-            compatibleitems[] = {COMMON_RAIL_ATTACHMENTS};
-          };
-          class UnderBarrelSlot : UnderBarrelSlot
-          {
-            compatibleitems[] = COMMON_HEAVY_BIPOD;
-          };
-        };
-    };
 
     class twelfth_M73H : OPTRE_M73
     {

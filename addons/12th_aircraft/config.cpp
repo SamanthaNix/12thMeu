@@ -50,7 +50,6 @@ class CfgPatches {
       "A3_Weapons_F",
       "OPTRE_Core",
       "OPTRE_Vehicles_Air",
-      "Splits_Functions"
     };
   };
 };
