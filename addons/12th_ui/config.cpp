@@ -25,13 +25,7 @@ class CfgPatches {
     requiredVersion=0.1;
     requiredAddons[] = {
       "cba_main",
-      "ace_main",
-      "19th_Fleet_Armor"
-      /*
-          Ensure you list all mods which your UI might rely on. If the UI
-          references textures or classes from “19th_Fleet_Armor,” it needs to
-          load after that mod is present.
-      */
+      "ace_main"
     };
   };
 };

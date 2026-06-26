@@ -52,8 +52,8 @@ class CfgPatches
                    "twelfth_W_P_GBU_prototype_500x1","twelfth_W_P_GBU_prototype_500x2",
                    "twelfth_M_1Rnd_60mm_HUNTIR_csw", "twelfth_M_6Rnd_60mm_HUNTIR"}; // Add new magazines here.
     requiredVersion = 0.1;
-    requiredAddons[] = {"Dmns_Weapons", "OPTRE_Weapons", "Dmns_Weapons_F_MachineGuns",
-                        "A3_Weapons_F", "A3_Weapons_F_Exp", "19_UNSC_Weapons", 
+    requiredAddons[] = { "OPTRE_Weapons",
+                        "A3_Weapons_F", "A3_Weapons_F_Exp", 
                         "ace_missileguidance","ace_common", "a3_weapons_f_tank", "ace_reloadlaunchers","NDS_M224_mortar","avm224_mortar","ace_csw","ace_apl","ace_huntir"
                         }; 
         /*

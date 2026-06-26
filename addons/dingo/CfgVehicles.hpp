@@ -504,7 +504,7 @@ class CfgVehicles
 		};
 		aggregateReflectors[] = {{"LightCarHeadL01", "LightCarHeadL02"}, {"LightCarHeadR01", "LightCarHeadR02"}}; 
 
-		hiddenSelections[] = {"camo1","camo7","camo11","camo12","camo13","unit","camo10"}; ///we want to allow changing the color of this selection
+		hiddenSelections[] = {"camo1","camo7","camo11","camo12","camo13","unit"}; ///we want to allow changing the color of this selection
 		hiddenSelectionsTextures[]={
 			"x\12thMEU\addons\dingo\data\textures\standard\Chassis_co.paa",
 			"x\12thMEU\addons\dingo\data\textures\standard\Modules_co.paa",
@@ -512,7 +512,7 @@ class CfgVehicles
 			"x\12thMEU\addons\dingo\data\textures\standard\autoturret_co.paa",
 			"x\12thMEU\addons\dingo\data\textures\standard\cloth_co.paa",
 			"x\12thMEU\addons\dingo\data\logo.paa",
-			"#(rgb,8,8,3)color(0.18039216,0.18039216,0.18039216,1)"};	 /// we could use any texture to cover the car
+			};
 		slingLoadCargoMemoryPoints[] = {"SlingLoadCargo1","SlingLoadCargo2","SlingLoadCargo3","SlingLoadCargo4"};
 
 		class textureSources

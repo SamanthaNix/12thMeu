@@ -56,7 +56,6 @@ class CfgPatches {
       "twelfth_M3_MAAWS_backpack",
       "twelfth_poncho_wet",
       "twelfth_poncho_dry",
-      "twelfth_ANPRC"
 
 	  // Alternative RTO backpack.
     };
@@ -70,7 +69,6 @@ class CfgVehicles {
   class M3_Backpack_Mcm_B;
   class mgsr_poncho_wet;
   class mgsr_poncho_dry;
-  class DMNS_RUCKSACK_UNSC_ANPRC_521_F;
   class TCP_equipmentTypes;
   // ---------------------------------------------------------------------------
   //  twelfth_backpack_base
@@ -79,25 +77,6 @@ class CfgVehicles {
     This serves as a parent class for standard 12th MEU backpacks. 
     All other variants (standard, forest, etc.) inherit from it.
   */
-  class twelfth_backpack_base : B_AssaultPack_Base {
-    author = "19th; Sammy";
-    scope = 0;  // Not visible in the editor.
-    scopeArsenal = 0;  // Not visible in the arsenal.
-    picture = "";  // No picture defined.
-    displayName = "[12th] Backpack Base (DON'T USE)";
-    model = "Foundries\19th_H2A_Armor\19th_H2A_marines_backpacks.p3d";
-    hiddenSelections[] = {  // Available texture selections.
-      "main",
-      "pouches",
-      "roll",
-      "radio"
-    };
-    maximumLoad = BP_MAXLOAD;  // Load capacity macro.
-    mass = BP_MASS;  // Backpack mass macro.
-    class TransportMagazines {};  // No magazines by default.
-    class TransportItems {};  // No items by default.
-  };
-
   // Poncho backpack
   class twelfth_poncho_wet:mgsr_poncho_wet{
     maximumLoad = BP_MAXLOAD;
@@ -125,13 +104,18 @@ class CfgVehicles {
     An invisible backpack used for special cases (maybe for certain loadouts
     that need a backpack slot but no visible model).
   */
-  class twelfth_backpack_invis : twelfth_backpack_base {
+  class twelfth_backpack_invis : B_AssaultPack_Base {
     author = "Waylen";
     scope = 2;
     scopeArsenal = 2;
+    picture = "";  // No picture defined.
     displayName = "[12th] Invisible Backpack";
     model = "x\12thMEU\addons\12th_backpacks\backpack\null.p3d";  // Invisible model.
     hiddenSelectionsTextures[] = {"", "", "", ""};  // No textures.
+    maximumLoad = BP_MAXLOAD;  // Load capacity macro.
+    mass = BP_MASS;  // Backpack mass macro.
+    class TransportMagazines {};  // No magazines by default.
+    class TransportItems {};  // No items by default.
   };
 
   class twelfth_M3_MAAWS_backpack: M3_Backpack_Mcm_B {
@@ -158,34 +142,6 @@ class CfgVehicles {
       maximumLoad = BP_MAXLOAD;  // Load capacity macro.
       mass = BP_MASS;  // Backpack mass macro.
     };
-
-
-  class twelfth_ANPRC: DMNS_RUCKSACK_UNSC_ANPRC_521_F {
-    author = "Sammy";
-    scope = 2;
-    scopeArsenal = 2;
-    displayName = "[12th] AN/PRC-521 Backpack";
-    maximumLoad = BP_MAXLOAD;  // Load capacity macro.
-    mass = BP_MASS;  // Backpack mass macro.
-    };
-
-
-  /*
-    The big macro: BACKPACK_ALLTYPES(CAMOTYPE, DISPLAY_TYPE)
-    For example, BACKPACK_ALLTYPES(standard,Standard) creates:
-      twelfth_backpack_na_standard     -> [12th][Standard] Backpack
-      twelfth_backpack_light_standard  -> [12th][Standard][Light] Backpack
-      twelfth_backpack_heavy_standard  -> [12th][Standard][Heavy] Backpack
-      twelfth_backpack_rto_standard    -> [12th][Standard][RTO] Backpack
-      twelfth_backpack_medic_standard  -> [12th][Standard][Medic] Backpack
-    Each sets a different texture combination for hiddenSelectionsTextures[].
-  */
-  BACKPACK_ALLTYPES(standard,Standard)
-  BACKPACK_ALLTYPES(forest,Forest)
-  BACKPACK_ALLTYPES(desert,Desert)
-
-
-
 
 
 

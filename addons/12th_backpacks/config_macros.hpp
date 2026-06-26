@@ -79,63 +79,6 @@ BACKPACK_GI(CAMO,rto) \
   Each backpack inherits from twelfth_backpack_base and sets hiddenSelectionsTextures
   accordingly to show/hide certain pouches or rolls.
 */
-#define BACKPACK_ALLTYPES(CAMOTYPE, DISPLAY_TYPE)                          \
-class twelfth_backpack_na_##CAMOTYPE : twelfth_backpack_base {                \
-  scope=2;                                                                 \
-  scopeArsenal=2;                                                          \
-  displayName=#BP_DISP(DISPLAY_TYPE);                                      \
-  hiddenSelectionsTextures[]={                                             \
-    #BP_TEXPATH(CAMOTYPE,main_ca.paa),                                     \
-    #BP_TEXPATH(CAMOTYPE,main_ca.paa),                                     \
-    "",                                                                    \
-    ""                                                                     \
-  };                                                                       \
-};                                                                         \
-class twelfth_backpack_light_##CAMOTYPE : twelfth_backpack_base {          \
-  scope=2;                                                                 \
-  scopeArsenal=2;                                                          \
-  displayName=#BP_DISP_LIGHT(DISPLAY_TYPE);                                \
-  hiddenSelectionsTextures[]={                                             \
-    #BP_TEXPATH(CAMOTYPE,main_ca.paa),                                     \
-    "",                                                                    \
-    "",                                                                    \
-    ""                                                                     \
-  };                                                                       \
-};                                                                         \
-class twelfth_backpack_heavy_##CAMOTYPE : twelfth_backpack_base {          \
-  scope=2;                                                                 \
-  scopeArsenal=2;                                                          \
-  displayName=#BP_DISP_HEAVY(DISPLAY_TYPE);                                \
-  hiddenSelectionsTextures[]={                                             \
-    #BP_TEXPATH(CAMOTYPE,main_ca.paa),                                     \
-    #BP_TEXPATH(CAMOTYPE,main_ca.paa),                                     \
-    #BP_TEXPATH(CAMOTYPE,main_ca.paa),                                     \
-    ""                                                                     \
-  };                                                                       \
-};                                                                         \
-class twelfth_backpack_rto_##CAMOTYPE : twelfth_backpack_base {            \
-  scope=2;                                                                 \
-  scopeArsenal=2;                                                          \
-  displayName=#BP_DISP_RTO(DISPLAY_TYPE);                                  \
-  hiddenSelectionsTextures[]={                                             \
-    #BP_TEXPATH(CAMOTYPE,main_ca.paa),                                     \
-    #BP_TEXPATH(CAMOTYPE,main_ca.paa),                                     \
-    #BP_TEXPATH(CAMOTYPE,main_ca.paa),                                     \
-    #BP_TEXPATH(CAMOTYPE,main_ca.paa)                                      \
-  };                                                                       \
-};                                                                         \
-class twelfth_backpack_medic_##CAMOTYPE : twelfth_backpack_base {          \
-  scope=2;                                                                 \
-  scopeArsenal=2;                                                          \
-  displayName=#BP_DISP_MEDIC(DISPLAY_TYPE);                                \
-  hiddenSelectionsTextures[]={                                             \
-    #BP_TEXPATH(CAMOTYPE,medic_ca.paa),                                    \
-    #BP_TEXPATH(CAMOTYPE,medic_ca.paa),                                    \
-    #BP_TEXPATH(CAMOTYPE,medic_ca.paa),                                    \
-    ""                                                                     \
-  };                                                                       \
-};                                                                         \
-
 
 
 /*

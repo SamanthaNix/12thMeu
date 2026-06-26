@@ -45,7 +45,6 @@ class CfgPatches {
       "A3_Armor_F_Beta",
       "A3_Soft_F",
       "OPTRE_UNSC_Units",
-      "DMNS_Units",
       "cba_main",
       "ace_main",
       "TCP_characters"
@@ -67,7 +66,6 @@ class CfgVehicles {
   class OPTRE_UNSC_CH252A_Helmet_Base;
   class OPTRE_UNSC_CH252A_Helmet_dp;
  
-  class 19th_ODST;
   //TCP UNIFORM vehicle definitions
   
   // ---------------------------------------------------------------------------
@@ -90,26 +88,6 @@ class CfgVehicles {
   VEH_UNI_TSHIRT_CLASS(instructor)
   VEH_UNI_TSHIRT_CLASS(aic)
   VEH_UNI_TSHIRT_CLASS(unscmc)
-
-  // ---------------------------------------------------------------------------
-  //  twelfth_odst_uniform_veh
-  // ---------------------------------------------------------------------------
-  /*
-    A special ODST uniform referencing a 19th ODST base. If you only need 
-    one ODST variant, there’s no macro overhead. If you plan many variants, 
-    you might consider macros.
-  */
-  class twelfth_odst_uniform_veh: 19th_ODST {
-    scope=1;
-    scopeArsenal=0;
-    author="Waylen";
-    model="Foundries\ODST\ODST_Uniform_F.p3d";
-    hiddenSelections[]={"camo1", "camo2"};
-    hiddenSelectionsTextures[]= {
-      "\x\12thMEU\addons\12th_armor\uniforms\odst\odst_top.paa",
-      "\x\12thMEU\addons\12th_armor\uniforms\odst\odst_pants.paa"
-    };
-  };
   
 
 };
