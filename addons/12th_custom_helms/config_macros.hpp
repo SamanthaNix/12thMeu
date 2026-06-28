@@ -127,18 +127,18 @@ class twelfth_helmECH43A_std_##SUFFIX##_clsd: twelfth_helmECH43A_base { \
     };                                          \
   };                                            \
 };\
-	class twelfth_helmCH43A_std_##SUFFIX##_ChinstrapOffset: twelfth_helmCH43A_std_##SUFFIX##\
-	{\
-		author = "$STR_TCP_Data_Author";\
-		dlc = "TCP";\
-		scope = 0;\
-    ace_arsenal_uniqueBase = QOUTE(twelfth_helmCH43A_std_##SUFFIX##); \
-		model = "\TCP\Characters\BLUFOR\UNSC\Army\Headgear\helmet_CH43A\h_helmet_CH43A_ChinstrapOffset.p3d";\
-		class ItemInfo: ItemInfo\
-		{\
-			uniformModel = "\TCP\Characters\BLUFOR\UNSC\Army\Headgear\helmet_CH43A\h_helmet_CH43A_ChinstrapOffset.p3d";\
-		};\
-	};
+class twelfth_helmCH43A_std_##SUFFIX##_ChinstrapOffset: twelfth_helmCH43A_std_##SUFFIX##\
+{\
+  author = "$STR_TCP_Data_Author";\
+  dlc = "TCP";\
+  scope = 0;\
+  ace_arsenal_uniqueBase = QOUTE(twelfth_helmCH43A_std_##SUFFIX##); \
+  model = "\TCP\Characters\BLUFOR\UNSC\Army\Headgear\helmet_CH43A\h_helmet_CH43A_ChinstrapOffset.p3d";\
+  class ItemInfo: ItemInfo\
+  {\
+    uniformModel = "\TCP\Characters\BLUFOR\UNSC\Army\Headgear\helmet_CH43A\h_helmet_CH43A_ChinstrapOffset.p3d";\
+  };\
+};
 
 /*
   ==============================================================================

@@ -1381,7 +1381,19 @@
 	    #HELM_DEC_PATH	  						\
     };                                          \
   };                                            \
-};   
+}; \
+class twelfth_helmCH43A_##SUFFIX##_ChinstrapOffset: twelfth_helmCH43A_##SUFFIX##\
+{\
+  author = "$STR_TCP_Data_Author";\
+  dlc = "TCP";\
+  scope = 0;\
+  ace_arsenal_uniqueBase = QOUTE(twelfth_helmCH43A_##SUFFIX##); \
+  model = "\TCP\Characters\BLUFOR\UNSC\Army\Headgear\helmet_CH43A\h_helmet_CH43A_ChinstrapOffset.p3d";\
+  class ItemInfo: ItemInfo\
+  {\
+    uniformModel = "\TCP\Characters\BLUFOR\UNSC\Army\Headgear\helmet_CH43A\h_helmet_CH43A_ChinstrapOffset.p3d";\
+  };\
+};
 //Closed version
 #define HELM_ECH43A(SUFFIX,DISPLAY)                 \
   class twelfth_helmECH43A_##SUFFIX##: twelfth_helmECH43A_base {    \
