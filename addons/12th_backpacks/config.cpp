@@ -37,22 +37,6 @@ class CfgPatches {
     requiredAddons[] = {
     };
     units[] = {  // List of all custom backpack units.
-      "twelfth_backpack_na_standard",
-      "twelfth_backpack_light_standard",
-      "twelfth_backpack_heavy_standard",
-      "twelfth_backpack_rto_standard",
-      "twelfth_backpack_medic_standard",
-      "twelfth_backpack_na_forest",
-      "twelfth_backpack_light_forest",
-      "twelfth_backpack_heavy_forest",
-      "twelfth_backpack_rto_forest",
-      "twelfth_backpack_medic_forest",
-	    "twelfth_backpack_na_desert",
-	    "twelfth_backpack_light_desert",
-      "twelfth_backpack_heavy_desert",
-      "twelfth_backpack_rto_desert",
-      "twelfth_backpack_medic_desert",
-      "twelfth_backpack_rto_desert",
       "twelfth_M3_MAAWS_backpack",
       "twelfth_poncho_wet",
       "twelfth_poncho_dry",

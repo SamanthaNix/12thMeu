@@ -30,7 +30,6 @@ class CfgVehicles {
   class TCP_B_UNSC_MC_M12A_LAAG_M41;
   class OPTRE_M12A1_LRV;
   class TCP_B_UNSC_MC_M831A;
-  class OPTRE_M12G1_LRV;
   class OPTRE_M12R_AA;
   class SAG6_M12_MLMS;
   class TCP_B_UNSC_A_M12A_ALIM_M68B;

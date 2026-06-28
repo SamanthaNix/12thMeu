@@ -32,10 +32,7 @@ class CfgPatches {
    or gear lists.  
       weapons[]: The “weapon” (i.e., uniform item) classes.  
     */
-    units[]= {
-      "twelfth_odst_uniform_veh",
-
-    };
+    units[]= {};
     weapons[]= {
       "twelfth_odst_uniform_wep",
       "twelfth_uni_ng_base_wep",
