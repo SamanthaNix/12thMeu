@@ -194,6 +194,7 @@
         containerClass="twelfth_vest_supply"; \
         setMaxLoad=200; \
         VEST_HITPOINT_INFO \
+        vestType="Rebreather"; \
         uniformModel = MODEL_PATH_01(ARMOR,arg1); \
         hiddenSelections[] = {"decals","camo"}; \
         hiddenSelectionsTextures[] = \
@@ -228,6 +229,7 @@
         containerClass="twelfth_vest_supply"; \
         setMaxLoad=200; \
         VEST_HITPOINT_INFO \
+        vestType="Rebreather"; \
         uniformModel = MODEL_PATH_01(ARMOR,arg1); \
         hiddenSelections[] = {"decals","camo","camo1","collararmored","collarflak"}; \
         hiddenSelectionsTextures[] = \
@@ -259,6 +261,7 @@
         containerClass="twelfth_vest_supply"; \
         setMaxLoad=200; \
         VEST_HITPOINT_INFO \
+        vestType="Rebreather"; \
         uniformModel = MODEL_PATH_01(ARMOR,arg1); \
         hiddenSelections[] = {"decals","camo","camo1","collararmored"}; \
         hiddenSelectionsTextures[] = \
@@ -290,6 +293,7 @@
         containerClass="twelfth_vest_supply"; \
         setMaxLoad=200; \
         VEST_HITPOINT_INFO \
+        vestType="Rebreather"; \
         uniformModel = MODEL_PATH_01(ARMOR,arg1); \
         hiddenSelections[] = {"decals","camo","camo1","collarflak"}; \
         hiddenSelectionsTextures[] = \
@@ -326,6 +330,7 @@
         containerClass="twelfth_vest_supply"; \
         setMaxLoad=200; \
         VEST_HITPOINT_INFO \
+        vestType="Rebreather"; \
         uniformModel = MODEL_PATH_01(ARMOR,arg1); \
         hiddenSelections[] = {"decals","camo","camo1","camo2","collararmored","collarflak"}; \
         hiddenSelectionsTextures[] = \
@@ -359,6 +364,7 @@
         containerClass="twelfth_vest_supply"; \
         setMaxLoad=200; \
         VEST_HITPOINT_INFO \
+        vestType="Rebreather"; \
         uniformModel = MODEL_PATH_01(ARMOR,arg1); \
         hiddenSelections[] = {"decals","camo","camo1","camo2","collararmored"}; \
         hiddenSelectionsTextures[] = \
@@ -392,6 +398,7 @@
         containerClass="twelfth_vest_supply"; \
         setMaxLoad=200; \
         VEST_HITPOINT_INFO \
+        vestType="Rebreather"; \
         uniformModel = MODEL_PATH_01(ARMOR,arg1); \
         hiddenSelections[] = {"decals","camo","camo1","camo2","collarflak"}; \
         hiddenSelectionsTextures[] = \
@@ -429,6 +436,7 @@
         containerClass="twelfth_vest_supply"; \
         setMaxLoad=200; \
         VEST_HITPOINT_INFO \
+        vestType="Rebreather"; \
         uniformModel = MODEL_PATH_01(ARMOR,arg1); \
         hiddenSelections[] = {"decals","camo","camo1","camo2","collararmored","collarflak"}; \
         hiddenSelectionsTextures[] = \
@@ -462,6 +470,7 @@
         containerClass="twelfth_vest_supply"; \
         setMaxLoad=200; \
         VEST_HITPOINT_INFO \
+        vestType="Rebreather"; \
         uniformModel = MODEL_PATH_01(ARMOR,arg1); \
         hiddenSelections[] = {"decals","camo","camo1","camo2","collararmored"}; \
         hiddenSelectionsTextures[] = \
@@ -495,6 +504,7 @@
         containerClass="twelfth_vest_supply"; \
         setMaxLoad=200; \
         VEST_HITPOINT_INFO \
+        vestType="Rebreather"; \
         uniformModel = MODEL_PATH_01(ARMOR,arg1); \
         hiddenSelections[] = {"decals","camo","camo1","camo2","collarflak"}; \
         hiddenSelectionsTextures[] = \
@@ -533,6 +543,7 @@
         containerClass="twelfth_vest_supply"; \
         setMaxLoad=200; \
         VEST_HITPOINT_INFO \
+        vestType="Rebreather"; \
         uniformModel = MODEL_PATH_01(ARMOR,arg1); \
         hiddenSelections[] = {"decals","camo","camo1","camo2","camo3","collararmored","collarflak"}; \
         hiddenSelectionsTextures[] = \
@@ -568,6 +579,7 @@
         containerClass="twelfth_vest_supply"; \
         setMaxLoad=200; \
         VEST_HITPOINT_INFO \
+        vestType="Rebreather"; \
         uniformModel = MODEL_PATH_01(ARMOR,arg1); \
         hiddenSelections[] = {"decals","camo","camo1","camo2","camo3","collararmored"}; \
         hiddenSelectionsTextures[] = \
@@ -603,6 +615,7 @@
         containerClass="twelfth_vest_supply"; \
         setMaxLoad=200; \
         VEST_HITPOINT_INFO \
+        vestType="Rebreather"; \
         uniformModel = MODEL_PATH_01(ARMOR,arg1); \
         hiddenSelections[] = {"decals","camo","camo1","camo2","camo3","collarflak"}; \
         hiddenSelectionsTextures[] = \
