@@ -95,6 +95,8 @@ class twelfth_helmECH43A_std_##SUFFIX##_clsd: twelfth_helmECH43A_base { \
   picture="\x\12thMEU\addons\12th_ui\data\logo.paa";                                        \
   scopeArsenal=2;                                    \
   displayName=#GLUE3(S_PREFIX,[CLSD] ,SUFFIX);         \
+  TCP_visrClasses[] = {QOUTE(twelfth_helmECH43A_std_##SUFFIX##_clsd),QOUTE(twelfth_helmECH43A_std_##SUFFIX##_clsd_DP)};\
+  ace_arsenal_uniqueBase = QOUTE(twelfth_helmECH43A_std_##SUFFIX##_clsd); \
   model = "\TCP\Characters\BLUFOR\UNSC\Army\Headgear\helmet_ECH43A\h_helmet_ECH43A_Black.p3d"; \
   hiddenSelections[]= {"camo","camo1","decals"};             \
   hiddenSelectionsTextures[] = {                \
@@ -123,6 +125,32 @@ class twelfth_helmECH43A_std_##SUFFIX##_clsd: twelfth_helmECH43A_base { \
     hiddenSelectionsTextures[]= {               \
       #HELMTEXPATH(SUFFIX),				\
       "\TCP\Characters\BLUFOR\UNSC\Army\Headgear\helmet_ECH43A\data\camo\black\helmet_ECH43A_Visor_CO.paa",\
+      #HELM_DEC_PATH	  						\
+    };                                          \
+  };                                            \
+};\
+class twelfth_helmECH43A_std_##SUFFIX##_clsd_DP: twelfth_helmECH43A_std_##SUFFIX##_clsd{\
+  scope = 1;\
+  scopeArsenal=1;\
+  displayName =#GLUE3(S_PREFIX,[CLSD] ,SUFFIX);\
+  picture = "\TCP\Characters\BLUFOR\UNSC\Army\Headgear\helmet_ECH43A\data\ui\Black\icon_headgear_ECH43A_Black_CA.paa";\
+  TCP_visrClasses[] = {QOUTE(twelfth_helmECH43A_std_##SUFFIX##_clsd),QOUTE(twelfth_helmECH43A_std_##SUFFIX##_clsd_DP)};\
+  ace_arsenal_uniqueBase = QOUTE(twelfth_helmECH43A_std_##SUFFIX##_clsd); \
+  class TCP_uniformDecals: TCP_uniformDecals\
+  {\
+    decalColor = "white";\
+  };\
+  hiddenSelectionsTextures[] = {\
+    #HELMTEXPATH(SUFFIX),				\
+    "\TCP\Characters\BLUFOR\UNSC\Army\Headgear\helmet_ECH43A\data\camo\Black\helmet_ECH43A_Visor_CA.paa",\
+    #HELM_DEC_PATH\
+  };\
+  class ItemInfo: ItemInfo {                \
+    uniformModel = "\TCP\Characters\BLUFOR\UNSC\Army\Headgear\helmet_ECH43A\h_helmet_ECH43A_DP.p3d";   \
+    hiddenSelections[]= {"camo","camo1","decals"};      \
+    hiddenSelectionsTextures[]= {               \
+      #HELMTEXPATH(SUFFIX),				\
+      "\TCP\Characters\BLUFOR\UNSC\Army\Headgear\helmet_ECH43A\data\camo\default\helmet_ECH43A_Visor_CA.paa",\
       #HELM_DEC_PATH	  						\
     };                                          \
   };                                            \

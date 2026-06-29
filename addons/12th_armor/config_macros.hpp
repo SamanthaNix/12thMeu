@@ -1402,6 +1402,7 @@ class twelfth_helmCH43A_##SUFFIX##_ChinstrapOffset: twelfth_helmCH43A_##SUFFIX##
   picture="";                                   \
   scopeArsenal=2;                               \
   displayName=DISPLAY;                          \
+  TCP_visrClasses[] = {QOUTE(twelfth_helmECH43A_##SUFFIX##),QOUTE(twelfth_helmECH43A_##SUFFIX##_DP)};\
   model = "\TCP\Characters\BLUFOR\UNSC\Army\Headgear\helmet_ECH43A\h_helmet_ECH43A_Black.p3d"; \
   hiddenSelections[]= {"camo","camo1","decals"};             \
   hiddenSelectionsTextures[] = {                \
@@ -1433,8 +1434,34 @@ class twelfth_helmCH43A_##SUFFIX##_ChinstrapOffset: twelfth_helmCH43A_##SUFFIX##
 	    #HELM_DEC_PATH	  						\
     };                                          \
   };                                            \
-};  
-
+};  \
+class twelfth_helmECH43A_##SUFFIX##_DP: twelfth_helmECH43A_##SUFFIX##\
+{\
+  scope = 1;\
+  scopeArsenal=1;\
+  displayName = DISPLAY;\
+  picture = "\TCP\Characters\BLUFOR\UNSC\Army\Headgear\helmet_ECH43A\data\ui\Black\icon_headgear_ECH43A_Black_CA.paa";\
+  TCP_visrClasses[] = {QOUTE(twelfth_helmECH43A_##SUFFIX##),QOUTE(twelfth_helmECH43A_##SUFFIX##_DP)};\
+  ace_arsenal_uniqueBase = QOUTE(twelfth_helmECH43A_##SUFFIX##); \
+  class TCP_uniformDecals: TCP_uniformDecals\
+  {\
+    decalColor = "white";\
+  };\
+  hiddenSelectionsTextures[] = {\
+    #HELM_TEX_PATH_CH43A(SUFFIX),				\
+    "\TCP\Characters\BLUFOR\UNSC\Army\Headgear\helmet_ECH43A\data\camo\Black\helmet_ECH43A_Visor_CA.paa",\
+    #HELM_DEC_PATH\
+  };\
+  class ItemInfo: ItemInfo {                \
+    uniformModel = "\TCP\Characters\BLUFOR\UNSC\Army\Headgear\helmet_ECH43A\h_helmet_ECH43A_DP.p3d";   \
+    hiddenSelections[]= {"camo","camo1","decals"};      \
+    hiddenSelectionsTextures[]= {               \
+      #HELM_TEX_PATH_CH43A(SUFFIX),				\
+      "\TCP\Characters\BLUFOR\UNSC\Army\Headgear\helmet_ECH43A\data\camo\default\helmet_ECH43A_Visor_CA.paa",\
+      #HELM_DEC_PATH	  						\
+    };                                          \
+  };                                            \
+};
 
 // this is shoved into here so that it need not be repeated 20x for different variants
 
