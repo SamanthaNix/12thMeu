@@ -21,7 +21,7 @@ class CfgAmmo
 		/////////////////////ACE STUFF//////////////////////////////
 
 	};
-    class SMT_200mm_HE: SMT_200mm_HE_Slow //Fast High explosive
+    class SMT_200mm_HE_fast: SMT_200mm_HE_slow //Fast High explosive
 	{
 		typicalSpeed = 1400;
 		
