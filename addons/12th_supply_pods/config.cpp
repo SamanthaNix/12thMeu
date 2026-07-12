@@ -206,12 +206,12 @@ class CfgVehicles {
       class _xx_OPTRE_M41_Twin_HEAT_SACLOS { magazine = "OPTRE_M41_Twin_HEAT_SACLOS"; count = 4; };
       class _xx_OPTRE_M41_Twin_HEAT_SALH { magazine = "OPTRE_M41_Twin_HEAT_SALH"; count = 4; };
       //class _xx_OPTRE_M41_Twin_HEAT_Thermal { magazine = "OPTRE_M41_Twin_HEAT_Thermal"; count = 4; };
-	  class _xx_MRAWS_HE_F { magazine = "MRAWS_HE_F"; count = 4; };
-	  class _xx_twelfth_HEAT_95 { magazine = "twelfth_HEAT_95"; count = 4; };
-	  class _xx_MRAWS_HEAT_F { magazine = "MRAWS_HEAT_F"; count = 4; };
-    class _xx_OPTRE_M44_Lykoi_HEAT_mag {magazine = "OPTRE_M44_Lykoi_HEAT_mag"; count = 20;};
-    class _xx_OPTRE_M44_Lykoi_HE_mag {magazine = "OPTRE_M44_Lykoi_HE_mag"; count = 10;};
-    class _xx_OPTRE_M44_Lykoi_AA_mag {magazine = "OPTRE_M44_Lykoi_AA_mag"; count = 10;};
+      class _xx_MRAWS_HE_F { magazine = "MRAWS_HE_F"; count = 4; };
+      class _xx_twelfth_HEAT_95 { magazine = "twelfth_HEAT_95"; count = 4; };
+      class _xx_MRAWS_HEAT_F { magazine = "MRAWS_HEAT_F"; count = 4; };
+      class _xx_OPTRE_M44_Lykoi_HEAT_mag {magazine = "OPTRE_M44_Lykoi_HEAT_mag"; count = 20;};
+      class _xx_OPTRE_M44_Lykoi_HE_mag {magazine = "OPTRE_M44_Lykoi_HE_mag"; count = 10;};
+      class _xx_OPTRE_M44_Lykoi_AA_mag {magazine = "OPTRE_M44_Lykoi_AA_mag"; count = 10;};
     };
     class TransportWeapons {};
     class TransportItems {};
