@@ -1,4 +1,4 @@
-pragma hemtt suppress pw3_padded_arg config
+#pragma hemtt suppress pw3_padded_arg config
 
 
 class CfgWeapons
@@ -6,6 +6,13 @@ class CfgWeapons
     class cannonCore;
     class gatling_20mm;
     class StandardSound;
+    class ACE_gatling_20mm_Comanche: gatling_20mm {
+        class manual;
+        class close;
+        class short;
+        class medium;
+        class far;
+    };
     class SMT_200mm: ACE_gatling_20mm_Comanche {
         dexterity = 0.5;
         inertia = 0.7;

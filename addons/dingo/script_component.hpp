@@ -1,5 +1,5 @@
 #define COMPONENT 12th_items
-#include "\x\12thMEU\addons\main\script_mod.hpp"
+#include "\x\twelfthMEU\addons\main\script_mod.hpp"
 
 // #define DEBUG_MODE_FULL
 // #define DISABLE_COMPILE_CACHE
@@ -11,4 +11,4 @@
     #define DEBUG_SETTINGS DEBUG_SETTINGS_MAIN
 #endif
 
-#include "\x\12thMEU\addons\main\script_macros.hpp"
+#include "\x\twelfthMEU\addons\main\script_macros.hpp"
