@@ -1,12 +1,9 @@
 #pragma hemtt suppress pw3_padded_arg config
 
-class CfgMagazines { 
-    class SMT_200mm_HE_Slow;
-    class SMT_200mm_HE_fast;
-    class SMT_200mm_SALH;
-    class SMT_200mm_APFSDS;
+class CfgMagazines {
 
-    class SMT_200mm_HE_Slow: {
+    class SMT_200mm_HE_Slow {
+        displayNameMFDFormat = "HEFS";
         tracersEvery = 1;
         count=8;
     };
@@ -19,6 +16,7 @@ class CfgMagazines {
         count=6;
     };
     class SMT_200mm_APFSDS {
+        displayNameMFDFormat = "APFSDS";
         tracersEvery = 1;
         count=18;
     };
