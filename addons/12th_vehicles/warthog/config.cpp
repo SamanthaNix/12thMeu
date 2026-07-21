@@ -255,9 +255,9 @@ class CfgVehicles {
       "\x\12thMEU\addons\12th_vehicles\warthog\default\m12_co.paa",
       "\x\12thMEU\addons\12th_vehicles\warthog\default\apc_co.paa"
     };
-    class TextureSources {
+    /*class TextureSources {
       WARTHOG_TEX_STD_V1_M79
-    };
+    };*/
     WARTHOG_SP_INFO(8,MLMS)
     STDINV
   };
