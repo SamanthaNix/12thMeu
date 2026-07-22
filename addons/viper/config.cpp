@@ -5,7 +5,7 @@ class DefaultEventhandlers;
 class CfgPatches {
   class vehicle_Viper {
     units[] = {
-      "SMT_Viper"
+      "SMT_Viper_200mm"
     };
     weapons[] = { 
       "SMT_200mm"

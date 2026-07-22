@@ -8,7 +8,7 @@ PixelShaderID = "Super";
 VertexShaderID = "Super";
 class Stage1
 {
-	texture = "x\12thmeu\addons\viper\data\textures\standard\Tracks_nohq.paa";
+	texture = "x\12thmeu\addons\viper\data\textures\Tracks_nohq.paa";
 	uvSource = "tex";
 	class uvTransform
 	{
@@ -44,7 +44,7 @@ class Stage3
 };
 class Stage4
 {
-	texture = "x\12thmeu\addons\viper\data\textures\standard\Tracks_as.paa";
+	texture = "x\12thmeu\addons\viper\data\textures\Tracks_as.paa";
 	uvSource = "tex";
 	class uvTransform
 	{
@@ -56,7 +56,7 @@ class Stage4
 };
 class Stage5
 {
-	texture = "x\12thmeu\addons\viper\data\textures\standard\Tracks_smdi.paa";
+	texture = "x\12thmeu\addons\viper\data\textures\Tracks_smdi.paa";
 	uvSource = "tex";
 	class uvTransform
 	{

@@ -511,7 +511,7 @@ class CfgVehicles
 			"x\12thMEU\addons\dingo\data\textures\standard\turret_co.paa",
 			"x\12thMEU\addons\dingo\data\textures\standard\autoturret_co.paa",
 			"x\12thMEU\addons\dingo\data\textures\standard\cloth_co.paa",
-			"x\12thMEU\addons\dingo\data\logo.paa",
+			"x\12thMEU\addons\smt_core\data\logo.paa",
 			};
 		slingLoadCargoMemoryPoints[] = {"SlingLoadCargo1","SlingLoadCargo2","SlingLoadCargo3","SlingLoadCargo4"};
 

@@ -8,7 +8,7 @@ PixelShaderID = "Super";
 VertexShaderID = "Super";
 class Stage1
 {
-	texture = "x\12thmeu\addons\viper\data\textures\standard\Chassis_nohq.paa";
+	texture = "x\12thmeu\addons\viper\data\textures\Chassis_nohq.paa";
 	uvSource = "tex";
 	class uvTransform
 	{
@@ -44,7 +44,7 @@ class Stage3
 };
 class Stage4
 {
-	texture = "x\12thmeu\addons\viper\data\textures\standard\Chassis_as.paa";
+	texture = "x\12thmeu\addons\viper\data\textures\Chassis_as.paa";
 	uvSource = "tex";
 	class uvTransform
 	{
@@ -56,7 +56,7 @@ class Stage4
 };
 class Stage5
 {
-	texture = "x\12thmeu\addons\viper\data\textures\standard\Chassis_smdi.paa";
+	texture = "x\12thmeu\addons\viper\data\textures\Chassis_smdi.paa";
 	uvSource = "tex";
 	class uvTransform
 	{
