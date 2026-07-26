@@ -402,6 +402,70 @@ class CfgMagazines
     tracersEvery = 2;
     ammo = "twelfth_762x51_AP";
   }; 
+    // pylonWeapon = "twelfth_universal_sabre_launcher";
+  // AIM-120D
+  class ace_missile_aim120_PylonRack_Missile_d_x1;
+  class ace_missile_aim120_PylonRack_Missile_d_x2;
+  class twelfth_pylonrack_aim120x1: ace_missile_aim120_PylonRack_Missile_d_x1 { pylonWeapon = "ace_missile_aim120_aim120Launcher"; displayNameShort = "AIM-120D"; hardpoints[] += {"twelfth_hardpoint_sabre2"}; };
+  class twelfth_pylonrack_aim120x2: ace_missile_aim120_PylonRack_Missile_d_x2 { pylonWeapon = "ace_missile_aim120_aim120Launcher"; displayNameShort = "AIM-120D"; hardpoints[] += {"twelfth_hardpoint_sabre2"}; };
+  // AIM-132
+  class ace_missile_aim9_PylonRack_1Rnd_aim132;
+  class ace_missile_aim9_PylonRack_2Rnd_aim132;
+  class twelfth_pylonrack_aim132x1: ace_missile_aim9_PylonRack_1Rnd_aim132 { pylonWeapon = "twelfth_ace_hellfire_launcher"; displayNameShort = "AIM-132"; hardpoints[] += {"twelfth_hardpoint_sabre2"}; };
+  class twelfth_pylonrack_aim132x2: ace_missile_aim9_PylonRack_2Rnd_aim132 { pylonWeapon = "twelfth_ace_hellfire_launcher"; displayNameShort = "AIM-132"; hardpoints[] += {"twelfth_hardpoint_sabre2"}; };
+  // AGM-65 D/G/L
+  class ace_maverick_D_pylonRack_1Rnd;
+  class ace_maverick_D_pylonRack_3Rnd;
+  class twelfth_pylonrack_AGM65Dx1: ace_maverick_D_pylonRack_1Rnd { pylonWeapon = "twelfth_ace_maverick_D_Launcher"; displayNameShort = "AGM-65D"; hardpoints[] += {"twelfth_hardpoint_sabre2"}; };
+  class twelfth_pylonrack_AGM65Dx3: ace_maverick_D_pylonRack_3Rnd { pylonWeapon = "twelfth_ace_maverick_D_Launcher"; displayNameShort = "AGM-65D"; hardpoints[] += {"twelfth_hardpoint_sabre2"}; };
+  class ace_maverick_G_pylonRack_1Rnd;
+  class ace_maverick_G_pylonRack_3Rnd;
+  class twelfth_pylonrack_AGM65Gx1: ace_maverick_G_pylonRack_1Rnd { pylonWeapon = "twelfth_ace_maverick_G_Launcher"; displayNameShort = "AGM-65G"; hardpoints[] += {"twelfth_hardpoint_sabre2"}; };
+  class twelfth_pylonrack_AGM65Gx3: ace_maverick_G_pylonRack_3Rnd { pylonWeapon = "twelfth_ace_maverick_G_Launcher"; displayNameShort = "AGM-65G"; hardpoints[] += {"twelfth_hardpoint_sabre2"}; };
+  class ace_maverick_L_pylonRack_1Rnd;
+  class ace_maverick_L_pylonRack_3Rnd;
+  class twelfth_pylonrack_AGM65Lx1: ace_maverick_L_pylonRack_1Rnd { pylonWeapon = "twelfth_ace_maverick_L_Launcher_Plane"; displayNameShort = "AGM-65L"; hardpoints[] += {"twelfth_hardpoint_sabre2"}; };
+  class twelfth_pylonrack_AGM65Lx3: ace_maverick_L_pylonRack_3Rnd { pylonWeapon = "twelfth_ace_maverick_L_Launcher_Plane"; displayNameShort = "AGM-65L"; hardpoints[] += {"twelfth_hardpoint_sabre2"}; };
+  // AGM-88
+  class PylonMissile_Missile_HARM_x1;
+  class twelfth_pylonrack_AGM88Cx1: PylonMissile_Missile_HARM_x1 { pylonWeapon = "twelfth_weapon_HARMLauncher"; displayNameShort = "AGM-88C"; hardpoints[] += {"twelfth_hardpoint_sabre2"}; };
+  // AGM-114K/L/N
+  class PylonRack_1Rnd_ACE_Hellfire_AGM114K;
+  class PylonRack_3Rnd_ACE_Hellfire_AGM114K;
+  class PylonRack_4Rnd_ACE_Hellfire_AGM114K;
+  class twelfth_pylonrack_AGM114Kx1: PylonRack_1Rnd_ACE_Hellfire_AGM114K { pylonWeapon = "ace_hellfire_launcher"; displayNameShort = "AGM-114K"; hardpoints[] += {"twelfth_hardpoint_sabre2"}; };
+  class twelfth_pylonrack_AGM114Kx3: PylonRack_3Rnd_ACE_Hellfire_AGM114K { pylonWeapon = "ace_hellfire_launcher"; displayNameShort = "AGM-114K"; hardpoints[] += {"twelfth_hardpoint_sabre2"}; };
+  class twelfth_pylonrack_AGM114Kx4: PylonRack_4Rnd_ACE_Hellfire_AGM114K { pylonWeapon = "ace_hellfire_launcher"; displayNameShort = "AGM-114K"; hardpoints[] += {"twelfth_hardpoint_sabre2"}; };
+  class PylonRack_1Rnd_ACE_Hellfire_AGM114L;
+  class PylonRack_3Rnd_ACE_Hellfire_AGM114L;
+  class PylonRack_4Rnd_ACE_Hellfire_AGM114L;
+  class twelfth_pylonrack_AGM114Lx1: PylonRack_1Rnd_ACE_Hellfire_AGM114L { pylonWeapon = "twelfth_ace_hellfire_launcher_L"; displayNameShort = "AGM-114L"; hardpoints[] += {"twelfth_hardpoint_sabre2"}; };
+  class twelfth_pylonrack_AGM114Lx3: PylonRack_3Rnd_ACE_Hellfire_AGM114L { pylonWeapon = "twelfth_ace_hellfire_launcher_L"; displayNameShort = "AGM-114L"; hardpoints[] += {"twelfth_hardpoint_sabre2"}; };
+  class twelfth_pylonrack_AGM114Lx4: PylonRack_4Rnd_ACE_Hellfire_AGM114L { pylonWeapon = "twelfth_ace_hellfire_launcher_L"; displayNameShort = "AGM-114L"; hardpoints[] += {"twelfth_hardpoint_sabre2"}; };
+  class PylonRack_1Rnd_ACE_Hellfire_AGM114N;
+  class PylonRack_3Rnd_ACE_Hellfire_AGM114N;
+  class PylonRack_4Rnd_ACE_Hellfire_AGM114N;
+  class twelfth_pylonrack_AGM114Nx1: PylonRack_1Rnd_ACE_Hellfire_AGM114N { pylonWeapon = "twelfth_ace_hellfire_launcher_N"; displayNameShort = "AGM-114L"; hardpoints[] += {"twelfth_hardpoint_sabre2"}; };
+  class twelfth_pylonrack_AGM114Nx3: PylonRack_3Rnd_ACE_Hellfire_AGM114N { pylonWeapon = "twelfth_ace_hellfire_launcher_N"; displayNameShort = "AGM-114L"; hardpoints[] += {"twelfth_hardpoint_sabre2"}; };
+  class twelfth_pylonrack_AGM114Nx4: PylonRack_4Rnd_ACE_Hellfire_AGM114N { pylonWeapon = "twelfth_ace_hellfire_launcher_N"; displayNameShort = "AGM-114L"; hardpoints[] += {"twelfth_hardpoint_sabre2"}; };
+  // AGM-502
+  class OPTRE_1Rnd_Jackknife_missile;
+  class OPTRE_2Rnd_Jackknife_missile;
+  class OPTRE_3Rnd_Jackknife_missile;
+  class OPTRE_4Rnd_Jackknife_missile;
+  class twelfth_pylonrack_AGM502x1: OPTRE_1Rnd_Jackknife_missile { pylonWeapon = "twelfth_OPTRE_missiles_Jackknife"; displayNameShort = "AGM-502"; hardpoints[] += {"twelfth_hardpoint_sabre2"}; };
+  class twelfth_pylonrack_AGM502x2: OPTRE_2Rnd_Jackknife_missile { pylonWeapon = "twelfth_OPTRE_missiles_Jackknife"; displayNameShort = "AGM-502"; hardpoints[] += {"twelfth_hardpoint_sabre2"}; };
+  class twelfth_pylonrack_AGM502x3: OPTRE_3Rnd_Jackknife_missile { pylonWeapon = "twelfth_OPTRE_missiles_Jackknife"; displayNameShort = "AGM-502"; hardpoints[] += {"twelfth_hardpoint_sabre2"}; };
+  class twelfth_pylonrack_AGM502x4: OPTRE_4Rnd_Jackknife_missile { pylonWeapon = "twelfth_OPTRE_missiles_Jackknife"; displayNameShort = "AGM-502"; hardpoints[] += {"twelfth_hardpoint_sabre2"}; };
+  // AGM-90B
+  class OPTRE_1Rnd_Scorpion_missiles;
+  class OPTRE_2Rnd_Scorpion_missiles;
+  class OPTRE_4Rnd_Scorpion_missiles;
+  class OPTRE_8Rnd_Scorpion_missiles;
+  class twelfth_pylonrack_AGM90Bx1: OPTRE_1Rnd_Scorpion_missiles { pylonWeapon = "twelfth_OPTRE_missiles_Scorpion"; displayNameShort = "AGM-90B"; hardpoints[] += {"twelfth_hardpoint_sabre2"}; };
+  class twelfth_pylonrack_AGM90Bx2: OPTRE_2Rnd_Scorpion_missiles { pylonWeapon = "twelfth_OPTRE_missiles_Scorpion"; displayNameShort = "AGM-90B"; hardpoints[] += {"twelfth_hardpoint_sabre2"}; };
+  class twelfth_pylonrack_AGM90Bx4: OPTRE_4Rnd_Scorpion_missiles { pylonWeapon = "twelfth_OPTRE_missiles_Scorpion"; displayNameShort = "AGM-90B"; hardpoints[] += {"twelfth_hardpoint_sabre2"}; };
+  class twelfth_pylonrack_AGM90Bx8: OPTRE_8Rnd_Scorpion_missiles { pylonWeapon = "twelfth_OPTRE_missiles_Scorpion"; displayNameShort = "AGM-90B"; hardpoints[] += {"twelfth_hardpoint_sabre2"}; };
 
   class PylonMissile_1Rnd_Bomb_03_F;
   class twelfth_W_P_GBU_prototype_250x1: PylonMissile_1Rnd_Bomb_03_F {

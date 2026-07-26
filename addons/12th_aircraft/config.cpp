@@ -498,6 +498,13 @@ class DefaultVehicleSystemsDisplayManagerLeft
     editorCategory="twelfth_MEU";
     editorSubcategory="twelfth_MEU_FixedWing";
     magazines[] = {"Laserbatteries","120Rnd_CMFlare_Chaff_Magazine","120Rnd_CMFlare_Chaff_Magazine","120Rnd_CMFlare_Chaff_Magazine","OPTRE_SpLaser_Battery","OPTRE_SpLaser_Battery","OPTRE_SpLaser_Battery","OPTRE_SpLaser_Battery","OPTRE_SpLaser_Battery","OPTRE_SpLaser_Battery"};
+    weapons[] += { 
+      "twelfth_ace_missile_aim120_aim120Launcher",
+      "twelfth_ace_maverick_D_Launcher","twelfth_ace_maverick_G_Launcher","twelfth_ace_maverick_L_Launcher_Plane",
+      "twelfth_weapon_HARMLauncher",
+      "twelfth_ace_hellfire_launcher", "twelfth_ace_hellfire_launcher_L","twelfth_ace_hellfire_launcher_N",
+      "twelfth_OPTRE_missiles_Scorpion","twelfth_OPTRE_missiles_Jackknife",
+      "twelfth_W_GBU_prototype_250_Launcher", "twelfth_W_GBU_prototype_500_Launcher" };
     //single seater
     class Turrets{};
     AIR_SP_INFO(Sabre,4,Fixed Wing)
@@ -510,42 +517,47 @@ class DefaultVehicleSystemsDisplayManagerLeft
 				{
 					class Pylons_MedusaPod_1
 					{
-						hardpoints[] = {"OPTRE_Hardpoint_SabrePilot"};
-						attachment = "OPTRE_STMedusa_6Rnd_AA_Missile";
-						priority = 5;
-						maxweight = 10000;
-						UIposition[] = {0.1,0.1};
-						bay = 1;
+            hardpoints[] = {"twelfth_hardpoint_sabre2","B_GBU12","twelfth_hardpoint_prototypes"}; //"B_BOMB_PYLON"
+            priority = 5;
+            maxweight = 10000;
+            UIposition[] = {0.1,0.1};
+            bay = 1;
 					};
-					class Pylons_Missile_Bay_1
+          class Pylons_DO_NOT_USE1: Pylons_MedusaPod_1
+          {
+            UIposition[] = {1,1};
+            bay = 1;
+          };
+          class Pylons_Missile_Bay_1: Pylons_MedusaPod_1
 					{
-						hardpoints[] = {"OPTRE_Hardpoint_SabreCopilot","B_MISSILE_PYLON","B_BOMB_PYLON"};
-						priority = 4;
-						attachment = "OPTRE_3Rnd_Jackknife_sabre_missile";
-						maxweight = 10000;
 						UIposition[] = {0.5,0.1};
-						bay = 3;
-					};
-					class Pylons_MedusaPod_2: Pylons_MedusaPod_1
-					{
-						UIposition[] = {0.05,0.2};
 						bay = 1;
 					};
-					class Pylons_Missile_Bay_2: Pylons_Missile_Bay_1
+          class Pylons_DO_NOT_USE2: Pylons_MedusaPod_1
 					{
-						UIposition[] = {0.55,0.2};
-						bay = 3;
+            UIposition[] = {1,1};
+						bay = 1;
 					};
-          class Pylons_Missile_Bay_3: Pylons_Missile_Bay_1
+          class Pylons_Missile_Bay_3: Pylons_MedusaPod_1
 					{
 						UIposition[] = {0.1,0.3};
-						bay = 5;
+						bay = 1;
 					};
-          class Pylons_Missile_Bay_4: Pylons_Missile_Bay_1
+          class Pylons_Missile_Bay_4: Pylons_MedusaPod_1
 					{
 						UIposition[] = {0.5,0.3};
-						bay = 6;
+						bay = 1;
 					};
+          class Pylons_Poopbay: Pylons_MedusaPod_1
+          {
+            UIposition[] = {0.05,0.2};
+            bay = 1;
+          };
+          class  Pylons_Poopbay2: Pylons_MedusaPod_1
+          {
+            UIposition[] = {0.55,0.2};
+            bay = 1;
+          };
 					class Pylons_30mmGun
 					{
 						displayName = "M1024 ASW/AC 30mm MLA";

@@ -264,6 +264,7 @@ class CfgWeapons
       displayName = "GBU-139/P";
       magazines[] = {"twelfth_W_P_GBU_prototype_250x1","twelfth_W_P_GBU_prototype_250x2","twelfth_W_P_GBU_prototype_250x4"};
       scope = 2;
+      showEmpty = 0;
     };
 
     class twelfth_W_GBU_prototype_500_Launcher: weapon_GBU12Launcher {
@@ -272,6 +273,7 @@ class CfgWeapons
       displayName = "GBU-140/P";
       magazines[] = {"twelfth_W_P_GBU_prototype_500x1","twelfth_W_P_GBU_prototype_500x2"};
       scope = 2;
+      showEmpty = 0;
     };
 
   /*
@@ -1415,4 +1417,32 @@ class CfgWeapons
 			allowedSlots[]={};
 		};
 	}; */
+    class Missile_AA_04_Plane_CAS_01_F;
+  class twelfth_universal_sabre_launcher: Missile_AA_04_Plane_CAS_01_F {
+    magazines[] = { 
+      "twelfth_pylonrack_aim120x1", "twelfth_pylonrack_aim120x2",
+      "twelfth_pylonrack_aim132x1", "twelfth_pylonrack_aim132x2"
+    };
+  };
+  
+  class ace_missile_aim120_aim120Launcher; // AIM-120D
+  class twelfth_ace_missile_aim120_aim120Launcher: ace_missile_aim120_aim120Launcher { magazines[] += {"twelfth_pylonrack_aim120x1","twelfth_pylonrack_aim120x2"}; showEmpty = 0; };
+  class ace_maverick_D_Launcher; // AGM-65D
+  class twelfth_ace_maverick_D_Launcher: ace_maverick_D_Launcher { magazines[] += {"twelfth_pylonrack_AGM65Dx1","twelfth_pylonrack_AGM65Dx3"}; showEmpty = 0;};
+  class ace_maverick_G_Launcher; // AGM-65G
+  class twelfth_ace_maverick_G_Launcher: ace_maverick_G_Launcher { magazines[] += {"twelfth_pylonrack_AGM65Gx1","twelfth_pylonrack_AGM65Gx3"}; showEmpty = 0;};
+  class ace_maverick_L_Launcher_Plane; // AGM-65L
+  class twelfth_ace_maverick_L_Launcher_Plane: ace_maverick_L_Launcher_Plane { magazines[] += {"twelfth_pylonrack_AGM65Lx1","twelfth_pylonrack_AGM65Lx3"}; showEmpty = 0;};
+  class weapon_HARMLauncher; // AGM-88C
+  class twelfth_weapon_HARMLauncher: weapon_HARMLauncher { magazines[] += {"twelfth_pylonrack_AGM88Cx1"}; showEmpty = 0;};
+  class ace_hellfire_launcher; // AIM-132, AGM-114K
+  class twelfth_ace_hellfire_launcher: ace_hellfire_launcher { magazines[] += {"twelfth_pylonrack_AGM114Kx1","twelfth_pylonrack_AGM114Kx3","twelfth_pylonrack_AGM114Kx4","twelfth_pylonrack_aim132x1","twelfth_pylonrack_aim132x2"}; showEmpty = 0; };
+  class ace_hellfire_launcher_L; // AGM-114L
+  class twelfth_ace_hellfire_launcher_L: ace_hellfire_launcher_L { magazines[] += {"twelfth_pylonrack_AGM114Lx1","twelfth_pylonrack_AGM114Lx3","twelfth_pylonrack_AGM114Lx4"}; showEmpty = 0;};
+  class ace_hellfire_launcher_N; // AGM-114N
+  class twelfth_ace_hellfire_launcher_N: ace_hellfire_launcher_N { magazines[] += {"twelfth_pylonrack_AGM114Nx1","twelfth_pylonrack_AGM114Nx3","twelfth_pylonrack_AGM114Nx4"}; showEmpty = 0;};
+  class OPTRE_missiles_Jackknife; // AGM-502
+  class twelfth_OPTRE_missiles_Jackknife: OPTRE_missiles_Jackknife { magazines[] += {"twelfth_pylonrack_AGM502x1","twelfth_pylonrack_AGM502x2","twelfth_pylonrack_AGM502x3","twelfth_pylonrack_AGM502x4"}; showEmpty = 0;};
+  class OPTRE_missiles_Scorpion; // AGM-90B
+  class twelfth_OPTRE_missiles_Scorpion: OPTRE_missiles_Scorpion { magazines[] += {"twelfth_pylonrack_AGM90Bx1","twelfth_pylonrack_AGM90Bx2","twelfth_pylonrack_AGM90Bx3","twelfth_pylonrack_AGM90Bx4"}; showEmpty = 0;};
 };

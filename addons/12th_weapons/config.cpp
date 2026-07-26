@@ -31,26 +31,43 @@ class CfgPatches
     units[] = {}; // If you add a placeable object/vehicle that belongs to this mod,
                   // you should list that class name here.
     weapons[] = {
-                 "twelfth_M6C", "twelfth_M7_Test", "twelfth_M7_Test_Folded", "twelfth_M90", "twelfth_MA5B",
-                 "twelfth_br55", "twelfth_br55_HB",
-                 "twelfth_M392", "twelfth_MA37K", "twelfth_Commando",
-                 "twelfth_M73H", "twelfth_M247", "twelfth_M319",
-                 "twelfth_M319N", "twelfth_MA5C", "twelfth_MA5CGL", "twelfth_MA5K", 
-                 "twelfth_MAAWS_base","twelfth_MAAWS_olive","twelfth_MAAWS_sand",
-                 "twelfth_M41_SSR_laserfix","twelfth_M41_SSR_G_laserfix",
-				         "twelfth_MA6_K","twelfth_MA6","twelfth_MA6_D","twelfth_MA6_A_BOX","twelfth_MA6_A_DRUM","twelfth_M6C2","twelfth_M6C","twelfth_M6G2","twelfth_MA6_AL",
-                 "twelfth_W_GBU_prototype_250_Launcher","twelfth_W_GBU_prototype_500_Launcher",
-                 "avm224_W_M224_mortar_proxy","NDS_W_M224_mortar"
+                  "twelfth_M6C", "twelfth_M7_Test", "twelfth_M7_Test_Folded", "twelfth_M90", "twelfth_MA5B",
+                  "twelfth_br55", "twelfth_br55_HB",
+                  "twelfth_M392", "twelfth_MA37K", "twelfth_Commando",
+                  "twelfth_M73H", "twelfth_M247", "twelfth_M319",
+                  "twelfth_M319N", "twelfth_MA5C", "twelfth_MA5CGL", "twelfth_MA5K", 
+                  "twelfth_MAAWS_base","twelfth_MAAWS_olive","twelfth_MAAWS_sand",
+                  "twelfth_M41_SSR_laserfix","twelfth_M41_SSR_G_laserfix",
+                  "twelfth_MA6_K","twelfth_MA6","twelfth_MA6_D","twelfth_MA6_A_BOX","twelfth_MA6_A_DRUM","twelfth_M6C2","twelfth_M6C","twelfth_M6G2","twelfth_MA6_AL",
+                  "twelfth_W_GBU_prototype_250_Launcher","twelfth_W_GBU_prototype_500_Launcher",
+                  "avm224_W_M224_mortar_proxy","NDS_W_M224_mortar",
+                  "twelfth_universal_sabre_launcher", // launcher for SABRE supporting all the whack ass fucking missiles
+                  "twelfth_ace_hellfire_launcher","twelfth_ace_missile_aim120_aim120Launcher",
+                  "twelfth_ace_maverick_D_Launcher","twelfth_ace_maverick_G_Launcher","twelfth_ace_maverick_L_Launcher_Plane",
+                  "twelfth_weapon_HARMLauncher",
+                  "twelfth_ace_hellfire_launcher", "twelfth_ace_hellfire_launcher_L","twelfth_ace_hellfire_launcher_N",
+                  "twelfth_OPTRE_missiles_Scorpion","twelfth_OPTRE_missiles_Jackknife"
                  }; // Ensure any newly created weapon class is listed above.
     ammo[] = {"twelfth_20g_bb", "twelfth_95x40_UW", "twelfth_5x23mm_UW", "twelfth_40mmG_HEAT",
               "twelfth_W_B250","twelfth_W_B500",
               "F_HuntIR_mortar"}; // Please add your new ammo types to this list
     magazines[] = {"twelfth_20g_mag", "twelfth_95x40_100rnd", "twelfth_762x51_200rnd",
-                   "twelfth_762x51_200rnd_T", "twelfth_br_36Rnd_UW", "twelfth_m7_60rnd_UW",
-                   "twelfth_m7_48rnd_UW", "twelfth_40mm_heat","twelfth_100Rnd_95x40_Box_T","twelfth_56Rnd_95x40_Mag","twelfth_56Rnd_95x40_Mag_T",
-                   "twelfth_W_P_GBU_prototype_250x1","twelfth_W_P_GBU_prototype_250x2","twelfth_W_P_GBU_prototype_250x4",
-                   "twelfth_W_P_GBU_prototype_500x1","twelfth_W_P_GBU_prototype_500x2",
-                   "twelfth_M_1Rnd_60mm_HUNTIR_csw", "twelfth_M_6Rnd_60mm_HUNTIR"}; // Add new magazines here.
+                    "twelfth_762x51_200rnd_T", "twelfth_br_36Rnd_UW", "twelfth_m7_60rnd_UW",
+                    "twelfth_m7_48rnd_UW", "twelfth_40mm_heat","twelfth_100Rnd_95x40_Box_T","twelfth_56Rnd_95x40_Mag","twelfth_56Rnd_95x40_Mag_T",
+                    "twelfth_W_P_GBU_prototype_250x1","twelfth_W_P_GBU_prototype_250x2","twelfth_W_P_GBU_prototype_250x4",
+                    "twelfth_W_P_GBU_prototype_500x1","twelfth_W_P_GBU_prototype_500x2",
+                    "twelfth_pylonrack_aim120x1","twelfth_pylonrack_aim120x2",
+                    "twelfth_pylonrack_aim132x1","twelfth_pylonrack_aim132x2",
+                    "twelfth_pylonrack_AGM65Dx1","twelfth_pylonrack_AGM65Dx3",
+                    "twelfth_pylonrack_AGM65Gx1","twelfth_pylonrack_AGM65Gx3",
+                    "twelfth_pylonrack_AGM65Lx1","twelfth_pylonrack_AGM65Lx3",
+                    "twelfth_pylonrack_AGM88Cx1",
+                    "twelfth_pylonrack_AGM114Kx1","twelfth_pylonrack_AGM114Kx3","twelfth_pylonrack_AGM114Kx4",
+                    "twelfth_pylonrack_AGM114Lx1","twelfth_pylonrack_AGM114Lx3","twelfth_pylonrack_AGM114Lx4",
+                    "twelfth_pylonrack_AGM114Nx1","twelfth_pylonrack_AGM114Nx3","twelfth_pylonrack_AGM114Nx4",
+                    "twelfth_pylonrack_AGM502x1","twelfth_pylonrack_AGM502x2","twelfth_pylonrack_AGM502x3","twelfth_pylonrack_AGM502x4",
+                    "twelfth_pylonrack_AGM90Bx1","twelfth_pylonrack_AGM90Bx2","twelfth_pylonrack_AGM90Bx4","twelfth_pylonrack_AGM90Bx8",
+                    "twelfth_M_1Rnd_60mm_HUNTIR_csw", "twelfth_M_6Rnd_60mm_HUNTIR"}; // Add new magazines here.
     requiredVersion = 0.1;
     requiredAddons[] = { "OPTRE_Weapons",
                         "A3_Weapons_F", "A3_Weapons_F_Exp", 
