@@ -152,6 +152,11 @@ class CfgVehicles {
       class _xx_tsp_breach_stick_mag { magazine = "tsp_breach_stick_mag"; count = 20; };
       class _xx_DemoCharge_Remote_Mag { magazine = "DemoCharge_Remote_Mag"; count = 10; };
       class _xx_M319_HEDP_Grenade_Shell { magazine = "M319_HEDP_Grenade_Shell"; count = 20; };
+      class _xx_twelfth_40mm_heat { magazine = "twelfth_40mm_heat"; count = 20; };
+      class _xx_OPTRE_signalSmokeB { magazine = "OPTRE_signalSmokeB"; count = 10; };
+      class _xx_OPTRE_signalSmokeG { magazine = "OPTRE_signalSmokeG"; count = 10; };
+      class _xx_OPTRE_signalSmokeR { magazine = "OPTRE_signalSmokeR"; count = 10; };
+      class _xx_OPTRE_signalSmokeP { magazine = "OPTRE_signalSmokeP"; count = 10; };
     };
     class TransportWeapons {};
     class TransportItems {
@@ -165,6 +170,10 @@ class CfgVehicles {
       class _xx_OPTRE_ELB47_Strobe { name = "OPTRE_ELB47_Strobe"; count = 5; };
       class _xx_ACE_M84 { name = "ACE_M84"; count = 10; };
       class _xx_ACRE_M26_Clacker { name = "ACRE_M26_Clacker"; count = 10; };
+      class _xx_OPTRE_M8_Flare_Blue { name = "OPTRE_M8_Flare_Blue"; count = 10; };
+      class _xx_OPTRE_M8_Flare { name = "OPTRE_M8_Flare"; count = 10; };
+      class _xx_OPTRE_M8_Flare_Green { name = "OPTRE_M8_Flare_Green"; count = 10; };
+      class _xx_ACE_M14 { name = "ACE_M14"; count = 10; };
     };
   };
 
@@ -205,7 +214,7 @@ class CfgVehicles {
     class TransportMagazines {
       class _xx_OPTRE_M41_Twin_HEAT_SACLOS { magazine = "OPTRE_M41_Twin_HEAT_SACLOS"; count = 8; };
       class _xx_OPTRE_M41_Twin_HEAT_SALH { magazine = "OPTRE_M41_Twin_HEAT_SALH"; count = 8; };
-      //class _xx_OPTRE_M41_Twin_HEAT_Thermal { magazine = "OPTRE_M41_Twin_HEAT_Thermal"; count = 4; };
+      class _xx_OPTRE_M41_Twin_HEAT_G { magazine = "OPTRE_M41_Twin_HEAT_G"; count = 8; };
       class _xx_MRAWS_HE_F { magazine = "MRAWS_HE_F"; count = 8; };
       class _xx_twelfth_HEAT_95 { magazine = "twelfth_HEAT_95"; count = 8; };
       class _xx_MRAWS_HEAT_F { magazine = "MRAWS_HEAT_F"; count = 8; };
@@ -231,6 +240,7 @@ class CfgVehicles {
       class _xx_avm224_M_6Rnd_60mm_ILLUM_IR_csw { magazine = "avm224_M_6Rnd_60mm_ILLUM_IR_csw"; count = 10; };
       class _xx_avm224_M_6Rnd_60mm_ILLUM_csw { magazine = "avm224_M_6Rnd_60mm_ILLUM_csw"; count = 50; };
       class _xx_avm224_M_6Rnd_60mm_SMOKE_csw { magazine = "avm224_M_6Rnd_60mm_SMOKE_csw"; count = 200; };
+      class _xx_twelfth_M_1Rnd_60mm_HUNTIR_csw { magazine = "twelfth_M_1Rnd_60mm_HUNTIR_csw"; count = 10; };
     };
     class TransportWeapons {
       class _xx_avm224_W_M224_mortar_carry { weapon = "avm224_W_M224_mortar_carry"; count = 2; };
@@ -255,7 +265,8 @@ class CfgVehicles {
       class _xx_twelfth_br_36Rnd_T { magazine = "twelfth_br_36Rnd_T"; count = 75; };
       class _xx_OPTRE_60Rnd_5x23mm_Mag { magazine = "OPTRE_60Rnd_5x23mm_Mag"; count = 25; };
       class _xx_twelfth_m7_60rnd_T { magazine = "twelfth_m7_60rnd_T"; count = 25; };
-      class _xx_12Rnd_8Gauge { magazine = "12Rnd_8Gauge"; count = 25; };
+      class _xx_twelfth_12rnd_8ga_b { magazine = "twelfth_12rnd_8ga_b"; count = 25; };
+      class _xx_twelfth_12rnd_8ga_s { magazine = "twelfth_12rnd_8ga_s"; count = 25; };
       class _xx_OPTRE_4Rnd_145x114_APFSDS_Mag { magazine = "OPTRE_4Rnd_145x114_APFSDS_Mag"; count = 10; };
       class _xx_twelfth_br_36Rnd_AP {magazine = "twelfth_br_36Rnd_AP"; count = 25; };
       class _xx_twelfth_br_36Rnd_AP_T {magazine = "twelfth_br_36Rnd_AP_T"; count = 25; };
