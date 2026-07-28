@@ -31,7 +31,8 @@ class CfgPatches {
       "twelfth_supply_pod_mortar",
       "twelfth_supply_pod_rifle",
       "twelfth_supply_pod_mg",
-      "twelfth_supply_pod_eq"
+      "twelfth_supply_pod_eq",
+      "twelfth_supply_pod_mines"
     };
     weapons[] = {};
     requiredVersion = 0.1;
