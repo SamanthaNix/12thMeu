@@ -30,6 +30,7 @@ class CfgAmmo
   class SmokeShell;
   class R_MRAAWS_HEAT_F;
   class OPTRE_B_762x51_Ball;
+  class OPTRE_M41_Rocket_HEAT_G;
 
   // Training (non-lethal) bullet
   class twelfth_20g_bb : BulletBase
@@ -200,5 +201,37 @@ class twelfth_95x40_AP : OPTRE_B_95x40_Ball {
     class Eventhandlers {
       fired = "[gunner (_this#0), _this#1, _this#2, _this#3, _this#4, _this#5, _this#6] call ACE_huntir_fnc_handleFired;";
     };
+  };
+
+  class twelfth_M41_IR_rocket : OPTRE_M41_Rocket_HEAT_G {
+    author = "Rex";
+    hit = 150;
+		indirectHit = 100;
+		proximityExplosionDistance = 12;
+		indirectHitRange = 12;
+		explosive= 0.80000001;
+		irLock = 1;
+		airLock = 1;
+		laserLock = 0;
+		nvLock = 0;
+		cmImmunity = 0.8;
+		simulationStep = 0.002;
+		airFriction = 0.064999998;
+		sideAirFriction = 0.2;
+		manualControl = 0;
+		maneuvrability = 15;
+		missileKeepLockedCone = 75;
+		missileLockCone = 15;
+		missileLockMaxDistance = 5000;
+		missileLockMinDistance = 50;
+		missileLockMaxSpeed = 150;
+		trackOversteer = 0.9;
+		trackLead = 0.8;
+		weaponLockSystem = "2 + 16";
+		timeToLive = 30;
+		initTime = 0.2;
+		thrustTime = 1.5;
+		thrust = 150;
+		maxSpeed = 200;
   };
 };

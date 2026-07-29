@@ -240,6 +240,7 @@ class CfgWeapons
       
       displayName = "[12th] M41 SSR MAV/AW";
       baseWeapon = "twelfth_M41_SSR_laserfix";
+      magazines[] = {"twelfth_M41_IR"};
     };
 
     class twelfth_M41_SSR_G_laserfix: OPTRE_M41_SSR {
@@ -248,6 +249,7 @@ class CfgWeapons
 
       displayName = "[12th] M41 SSR MAV/AW (Guided)";
       baseWeapon = "twelfth_M41_SSR_laserfix";
+      magazines[] = {"twelfth_M41_IR"};
     };
 
   /*

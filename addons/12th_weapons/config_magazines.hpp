@@ -51,6 +51,7 @@ class CfgMagazines
   class OPTRE_M739_SAW_192rnd_Box;
   class OPTRE_12Rnd_8Gauge_Slugs;
   class OPTRE_12Rnd_8Gauge_Pellets;
+  class OPTRE_M41_Twin_HEAT_G;
 
   // Training Magazine for BB
   class twelfth_20g_mag : OPTRE_32Rnd_762x51_Mag
@@ -524,6 +525,12 @@ class CfgMagazines
     mass = 6;
   };
 
-  
+ class twelfth_M41_IR : OPTRE_M41_Twin_HEAT_G {
+  displayName = "[12th] M41 Rocket IR";
+  displayNameShort = "M41 IR";
+  author = "Rex";
+  ammo = "twelfth_M41_IR_rocket";
+  count = 2;
+ };
 
 };
