@@ -167,12 +167,14 @@ class CfgWeapons {
   CUSTOM_HELM_S_AV(Don)
   CUSTOM_HELM_S_AV(Duckworth)
   CUSTOM_HELM_S_AV(Felix)
+  CUSTOM_HELM_S_AV(Fenty)
   CUSTOM_HELM_S_AV(Geoff)
   CUSTOM_HELM_S_AV(Germain)
   CUSTOM_HELM_S_AV(Grant)
   CUSTOM_HELM_S_AV(Hathaway)
   CUSTOM_HELM_S_AV(Jekyll)
   CUSTOM_HELM_S_AV(Kiens)
+  CUSTOM_HELM_S_AV(Kovac)
   CUSTOM_HELM_S_AV(LeDoux)
   CUSTOM_HELM_S_AV(Link)
   CUSTOM_HELM_S_AV(Luerssen)
@@ -272,6 +274,7 @@ class XtdGearModels {
           "Dras",
           "Duckworth",
           "Felix",
+          "Fenty",
           "Gallegos",
           "Galvin",
           "Geoff",
@@ -280,6 +283,7 @@ class XtdGearModels {
           "Hathaway",
           "Jekyll",
           "Kiens",
+          "Kovac",
           "LeDoux",
           "Link",
           "Luerssen",
@@ -348,6 +352,7 @@ class XtdGearInfos {
     CH_HELM_S_GI(Duckworth)
     CH_HELM_S_GI(Dixie)
     CH_HELM_S_GI(Felix)
+    CH_HELM_S_GI(Fenty)
     CH_HELM_S_GI(Gallegos)
     CH_HELM_S_GI(Galvin)
     CH_HELM_S_GI(Geoff)
@@ -356,6 +361,7 @@ class XtdGearInfos {
     CH_HELM_S_GI(Hathaway)
     CH_HELM_S_GI(Jekyll)
     CH_HELM_S_GI(Kiens)
+    CH_HELM_S_GI(Kovac)
     CH_HELM_S_GI(LeDoux)
     CH_HELM_S_GI(Link)
     CH_HELM_S_GI(Luerssen)
