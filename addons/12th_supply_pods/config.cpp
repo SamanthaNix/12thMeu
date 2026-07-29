@@ -215,7 +215,7 @@ class CfgVehicles {
     class TransportMagazines {
       class _xx_OPTRE_M41_Twin_HEAT_SACLOS { magazine = "OPTRE_M41_Twin_HEAT_SACLOS"; count = 8; };
       class _xx_OPTRE_M41_Twin_HEAT_SALH { magazine = "OPTRE_M41_Twin_HEAT_SALH"; count = 8; };
-      class _xx_OPTRE_M41_Twin_HEAT_G { magazine = "OPTRE_M41_Twin_HEAT_G"; count = 8; };
+      class _xx_twelfth_M41_IR { magazine = "twelfth_M41_IR"; count = 8; };
       class _xx_MRAWS_HE_F { magazine = "MRAWS_HE_F"; count = 8; };
       class _xx_twelfth_HEAT_95 { magazine = "twelfth_HEAT_95"; count = 8; };
       class _xx_MRAWS_HEAT_F { magazine = "MRAWS_HEAT_F"; count = 8; };

@@ -78,7 +78,7 @@ class TransportMagazines { \
     class _xx_avm224_M_6Rnd_60mm_HE_0_csw { magazine = "avm224_M_6Rnd_60mm_HE_0_csw"; count = 5; }; \
     class _xx_avm224_M_6Rnd_60mm_HE_csw { magazine = "avm224_M_6Rnd_60mm_HE_csw"; count = 20; }; \
     class _xx_twelfth_M_1Rnd_60mm_HUNTIR_csw { magazine = "twelfth_M_1Rnd_60mm_HUNTIR_csw"; count = 5; }; \
-    class _xx_OPTRE_M41_Twin_HEAT_G { magazine = "OPTRE_M41_Twin_HEAT_G"; count = 4; }; \
+    class _xx_twelfth_M41_IR { magazine = "twelfth_M41_IR"; count = 4; }; \
     class _xx_OPTRE_M41_Twin_HEAT_SACLOS { magazine = "OPTRE_M41_Twin_HEAT_SACLOS"; count = 6; }; \
 }; \
 class TransportItems{ \
