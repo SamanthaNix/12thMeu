@@ -376,6 +376,7 @@ class CfgVehicles {
           class n6 { name = "[12th] Machine Gun Supply Pod"; value = "twelfth_supply_pod_mg"; };
           class n7 { name = "[12th] Equipment Supply Pod"; value = "twelfth_supply_pod_eq"; };
           class n8 { name = "[12th] Mines Supply Pod"; value = "twelfth_supply_pod_mines"; };
+          class n9 { name = "[12th] [12th] Supply Pod (Empty)"; value = "twelfth_supply_pod_empty"; };
         };
       };
     };
