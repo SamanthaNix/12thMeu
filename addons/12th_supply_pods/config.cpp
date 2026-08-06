@@ -366,17 +366,38 @@ class CfgVehicles {
           The 'values' array enumerates all possible supply pod classes 
           for the drop-down. We add references to our 12th supply pods at
           the bottom, letting you pick them in Eden's module interface.
+          Do not change the vanilla supply pods, breaks the config for some reason.
         */
         class values {
-          class n1 { name = "[12th] Medical Supply Pod"; value = "twelfth_supply_pod_medical"; };
-          class n2 { name = "[12th] Explosives Supply Pod"; value = "twelfth_supply_pod_ex"; };
-          class n3 { name = "[12th] Launcher Supply Pod"; value = "twelfth_supply_pod_at"; };
-          class n4 { name = "[12th] Mortar Supply Pod"; value = "twelfth_supply_pod_mortar"; };
-          class n5 { name = "[12th] Rifle Supply Pod"; value = "twelfth_supply_pod_rifle"; };
-          class n6 { name = "[12th] Machine Gun Supply Pod"; value = "twelfth_supply_pod_mg"; };
-          class n7 { name = "[12th] Equipment Supply Pod"; value = "twelfth_supply_pod_eq"; };
-          class n8 { name = "[12th] Mines Supply Pod"; value = "twelfth_supply_pod_mines"; };
-          class n9 { name = "[12th] [12th] Supply Pod (Empty)"; value = "twelfth_supply_pod_empty"; };
+          class n1 { name = "none"; value = "none"; };
+          class n2 { name = "Random Supply Pod"; value = "rdm"; default = 1; };
+          class n3 { name = "Sniper [OLD] Supply Pod"; value = "OPTRE_Ammo_SupplyPod_Sniper"; };
+          class n4 { name = "Medical Supply Pod"; value = "OPTRE_Ammo_SupplyPod_Medical"; };
+          class n5 { name = "MA5B Supply Pod"; value = "OPTRE_Ammo_SupplyPod_AR"; };
+          class n6 { name = "LMG Supply Pod"; value = "OPTRE_Ammo_SupplyPod_LMG"; };
+          class n7 { name = "SMG Supply Pod"; value = "OPTRE_Ammo_SupplyPod_SMG"; };
+          class n8 { name = "Pistol Supply Pod"; value = "OPTRE_Ammo_SupplyPod_Pistol"; };
+          class n9 { name = "Shotgun Supply Pod"; value = "OPTRE_Ammo_SupplyPod_Shotgun"; };
+          class n10 { name = "Launcher Supply Pod"; value = "OPTRE_Ammo_SupplyPod_Launcher"; };
+          class n11 { name = "DMR Supply Pod"; value = "OPTRE_Ammo_SupplyPod_DMR"; };
+          class n12 { name = "BR Supply Pod"; value = "OPTRE_Ammo_SupplyPod_BR"; };
+          class n13 { name = "MA5K Supply Pod"; value = "OPTRE_Ammo_SupplyPod_MA5K"; };
+          class n14 { name = "SRS99C Supply Pod"; value = "OPTRE_Ammo_SupplyPod_SRS99C"; };
+          class n15 { name = "MA5BAC Supply Pod"; value = "OPTRE_Ammo_SupplyPod_ARC"; };
+          class n16 { name = "MA5BAC Supply Pod"; value = "OPTRE_Ammo_SupplyPod_ARC_GL"; };
+          class n17 { name = "M37 Supply Pod"; value = "OPTRE_Ammo_SupplyPod_37"; };
+          class n18 { name = "M37GL Supply Pod"; value = "OPTRE_Ammo_SupplyPod_37_GL"; };
+          class n19 { name = "MA5BGL Supply Pod"; value = "OPTRE_Ammo_SupplyPod_AR_GL"; };
+          class n20 { name = "CUSTOM Supply Pod"; value = "OPTRE_Ammo_SupplyPod_Empty"; };
+          class n21 { name = "[12th] Medical Supply Pod"; value = "twelfth_supply_pod_medical"; };
+          class n23 { name = "[12th] Explosives Supply Pod"; value = "twelfth_supply_pod_ex"; };
+          class n25 { name = "[12th] Launcher Supply Pod"; value = "twelfth_supply_pod_at"; };
+          class n26 { name = "[12th] Mortar Supply Pod"; value = "twelfth_supply_pod_mortar"; };
+          class n27 { name = "[12th] Rifle Supply Pod"; value = "twelfth_supply_pod_rifle"; };
+          class n28 { name = "[12th] Machine Gun Supply Pod"; value = "twelfth_supply_pod_mg"; };
+          class n29 { name = "[12th] Equipment Supply Pod"; value = "twelfth_supply_pod_eq"; };
+          class n30 { name = "[12th] Mine Supply Pod"; value = "twelfth_supply_pod_mines"; };
+          class n31 { name = "[12th] Empty Supply Pod"; value = "twelfth_supply_pod_empty";};
         };
       };
     };
