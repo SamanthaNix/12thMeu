@@ -5,10 +5,11 @@ class DefaultEventhandlers;
 class CfgPatches {
   class vehicle_Viper {
     units[] = {
-      "SMT_Viper_200mm"
+      "SMT_Viper_200mm",
+      "SMT_Viper_200mm_20"
     };
     weapons[] = { 
-      "SMT_200mm"
+      "SMT_200mm_railgun"
     };
     ammo[] = {
         "SMT_200mm_HE_Slow",
@@ -17,10 +18,10 @@ class CfgPatches {
         "SMT_200mm_APFSDS"
         };              // No specific ammo defined in this config
     magazines[] = {
-      "SMT_Mag_XXRnd_200mm_HE",
-      "SMT_Mag_XXRnd_200mm_HE_Slow",
-      "SMT_Mag_XXRnd_200mm_SALH",
-      "SMT_Mag_XXRnd_200mm_APFSDS"
+      "SMT_200mm_HE_fast_18rnd",
+      "SMT_200mm_HE_Slow_8rnd",
+      "SMT_200mm_SALH_6rnd",
+      "SMT_200mm_APFSDS_18rnd"
     };
     requiredVersion = 0.1;    // Minimum required version of the game
     requiredAddons[] = { 

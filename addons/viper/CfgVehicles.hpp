@@ -43,30 +43,33 @@ class CfgVehicles
 	class LandVehicle;
 	class Tank: LandVehicle {
 		class NewTurret;
+		class Sounds;
+		class HitPoints;
 	};
 
 	class Tank_F: Tank {
 		class AnimationSources;
-		class Turrets
-		{
-			class MainTurret: NewTurret
-			{
-				class Components;
-				class ViewGunner;
+		class Turrets {
+			class MainTurret:NewTurret {
+				class Turrets {
+					class CommanderOptics;
+				};
 			};
 		};
-		class Components {
-			class VehicleSystemsDisplayManagerComponentLeft;
-			class VehicleSystemsDisplayManagerComponentRight;
-		};
-		class EventYHandlers;
-		class HitPoints {
-			class HitEngine;
+		class ViewPilot;
+		class ViewOptics;
+		class ViewCargo;
+		class HeadLimits;
+		class HitPoints: HitPoints {
 			class HitHull;
+			class HitEngine;
 			class HitLTrack;
 			class HitRTrack;
 		};
-		class ViewCargo;
+		class Sounds: Sounds {
+			class Engine;
+			class Movement;
+		};
 	};
 
 	class MBT_02_railgun_base_F: Tank_F {
@@ -84,6 +87,8 @@ class CfgVehicles
 		picture	= "\x\12thMEU\addons\Viper\Data\preview.paa"; /// just some icon in command bar
 
 		#include "pip.hpp"
+		#include "sound.hpp"	/// sounds are in a separate file to make this one simple
+		#include "physx.hpp"	/// PhysX settings are in a separate file to make this one simple
 
 		//Editor stuff
 		editorPreview = "\x\12thMEU\addons\Viper\Data\preview.paa";
@@ -145,8 +150,7 @@ class CfgVehicles
 		getInAction 		= "GetInLow"; 		/// how does driver look while getting in
 		getOutAction 		= "GetOutLow"; 		/// and out
 
-		#include "sound.hpp"	/// sounds are in a separate file to make this one simple
-		#include "physx.hpp"	/// PhysX settings are in a separate file to make this one simple
+
 
 /* 		class UVAnimations{
 			class TrackAnimation{
@@ -226,11 +230,6 @@ class CfgVehicles
 				animationSourceStickY = "joystick_gunner_y";
 				armorLights = 0.4;
 				body = "mainTurret";
-				canEject = 0;
-				canHideGunner = -1;
-				canUseScanners = 1;
-				castGunnerShadow = 1;
-				commanding = 1;
 				class Components {};
 				disableSoundAttenuation = 0;
 				discreteDistance[] = {100,200,300,400,500,600,700,800,900,1000,1100,1200,1300,1400,1500};
@@ -318,12 +317,12 @@ class CfgVehicles
 				slingLoadOperator = 0;
 				stabilizedInAxes = 3;
 				startEngine = 0;
-				/*class TurnIn {
+				class TurnIn {
 					turnOffset = 0;
 				};
 				class TurnOut {
 					turnOffset = 0;
-				}; */
+				};
 				turretCanSee = 0;
 				turretFollowFreeLook = 0;
 				turretInfoType = "RscOptics_MBT_02_Railgun_gunner";
@@ -356,7 +355,7 @@ class CfgVehicles
 				viewGunnerShadow = 1;
 				viewGunnerShadowAmb = 1;
 				viewGunnerShadowDiff = 1;
-				/*class ViewOptics {
+				class ViewOptics {
 					initAngleX = 0;
 					initAngleY = 0;
 					initFov = 0.4375;
@@ -374,7 +373,7 @@ class CfgVehicles
 					minMoveZ = 0;
 					thermalMode[] = {0,1};
 					visionMode[] = {"Normal","NVG","Ti"};
-				}; */
+				};
 				weapons[] = {"cannon_railgun"};
 				magazines[] = { "60Rnd_75mm_RailGun_APFSDS_mag" };
 			};
@@ -533,6 +532,21 @@ class CfgVehicles
 		scope	= 2; 			/// makes the car visible in editor
 		scopeCurator = 2;		// scope 2 means it's available in Zeus mode (0 means hidden)
 		displayName = "M-700 Viper";
+		crew 	= "C_man_1"; 	/// we need someone to fit into the car
+
+		weapons[] += {}; //TODO add gun
+		magazines[] += {}; //TODO add gun mags
+	};
+	class SMT_Viper_200mm_20: SMT_Viper_Base_F {
+		model = "\x\12thMEU\addons\Viper\SMT_viper20.p3d";
+		editorCategory = "ED_SMT_Faction";
+		editorSubcategory="EDS_SMT_faction_Viper";
+		side	= 1; 			/// civilian car should be on civilian side
+		faction	= "BLU_F";		/// and with civilian faction
+		forceInGarage = 1;
+		scope	= 2; 			/// makes the car visible in editor
+		scopeCurator = 2;		// scope 2 means it's available in Zeus mode (0 means hidden)
+		displayName = "M-700 Viper 80%";
 		crew 	= "C_man_1"; 	/// we need someone to fit into the car
 
 		weapons[] += {}; //TODO add gun

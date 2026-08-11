@@ -56,7 +56,7 @@
         class L1
         {
             boneName = "wheel_1_1_damper";
-            steering = 1;
+            steering = 0;
             side = "left";
             center = "wheel_1_1_axis";
             boundary = "wheel_1_1_bound";
@@ -84,7 +84,7 @@
         class R1
         {
             boneName = "wheel_2_1_damper";
-            steering = 1;
+            steering = 0;
             side = "right";
             center = "wheel_2_1_axis";
             boundary = "wheel_2_1_bound";
