@@ -3,48 +3,11 @@
 
 class CfgWeapons
 { 
-    class cannonCore;
-    class gatling_20mm;
-    class StandardSound;
-    class ACE_gatling_20mm_Comanche: gatling_20mm {
-        class manual;
-        class close;
-        class short;
-        class medium;
-        class far;
-    };
-    class SMT_200mm: ACE_gatling_20mm_Comanche {
+    class cannon_railgun;
+
+    class SMT_200mm: cannon_railgun {
         dexterity = 0.5;
-        inertia = 0.7;
-        class manual: manual {
-            reloadTime = 0.3369; // because we can the memes
-            showToPlayer = 1;
-            SOUND_20MM_CLASS
-        };
-        class burst: manual {
-            burst = 4;
-            showToPlayer = 1;
-            reloadTime = 0.2;
-            textureType = "burst";
-            SOUND_20MM_CLASS
-        };
-        class close: close {
-            reloadTime = 0.3369; 
-            SOUND_20MM_CLASS
-        };
-        class short: short {
-            reloadTime = 0.3369;
-            SOUND_20MM_CLASS
-        };
-        class medium: medium {
-            reloadTime = 0.3369;
-            SOUND_20MM_CLASS
-        };
-        class far: far {
-            reloadTime = 0.3369;
-            SOUND_20MM_CLASS
-        };
-        modes[] += {"burst"};
-        magazines[] = { "SMT_500Rnd_20mm_shells_Dingo" };
+        displayName = "200mm Railgun";
+        magazines[] = { "SMT_200mm_HE_Slow_8rnd","SMT_200mm_HE_fast_18rnd","SMT_200mm_SALH_6rnd","SMT_200mm_APFSDS_18rnd" };
     };
 };
