@@ -60,26 +60,30 @@
             side = "left";
             center = "wheel_1_1_axis";
             boundary = "wheel_1_1_bound";
-            width = 0.28;
             mass = 42;
-            MOI = 3.194;
+            MOI = 10;
             dampingRate = 0.35;
             dampingRateDamaged = 1;
             dampingRateDestroyed = 1000;
             maxBrakeTorque = 10000;
-            maxHandBrakeTorque = 0;
+            maxHandBrakeTorque = 20000;
             suspTravelDirection[] = { 0, -1, 0 };
             suspForceAppPointOffset = "wheel_1_1_axis";
             tireForceAppPointOffset = "wheel_1_1_axis";
-            maxCompression = 0.18;
-            maxDroop = 0.12;
-            sprungMass = 1060.8;
-            springStrength = 43450;
-            springDamperRate = 14257;
+            maxCompression = 0.1;
+            maxDroop = 0.1;
+            sprungMass = 1800;
+            springStrength = 45000;
+            springDamperRate = 9000;
             longitudinalStiffnessPerUnitGravity = 10000;
             latStiffX = 2.5;
-            latStiffY = 18;
-            frictionVsSlipGraph[] = { { 0.0, 1.0 }, { 0.5, 1.0 }, { 1.0, 1.0 } };
+            latStiffY = 180;
+            frictionVsSlipGraph[] =
+				{
+					{0.0, 1.0},
+					{0.075, 2.0},
+					{0.75, 1.0}
+				};
         };
         class R1
         {
@@ -88,361 +92,125 @@
             side = "right";
             center = "wheel_2_1_axis";
             boundary = "wheel_2_1_bound";
-            width = 0.28;
             mass = 42;
-            MOI = 3.194;
+            MOI = 10;
             dampingRate = 0.35;
             dampingRateDamaged = 1;
             dampingRateDestroyed = 1000;
             maxBrakeTorque = 10000;
-            maxHandBrakeTorque = 0;
+            maxHandBrakeTorque = 20000;
             suspTravelDirection[] = { 0, -1, 0 };
             suspForceAppPointOffset = "wheel_2_1_axis";
             tireForceAppPointOffset = "wheel_2_1_axis";
-            maxCompression = 0.18;
-            maxDroop = 0.12;
-            sprungMass = 1060.8;
-            springStrength = 43450;
-            springDamperRate = 14257;
+            maxCompression = 0.1;
+            maxDroop = 0.1;
+            sprungMass = 1800;
+            springStrength = 45000;
+            springDamperRate = 9000;
             longitudinalStiffnessPerUnitGravity = 10000;
             latStiffX = 2.5;
-            latStiffY = 18;
-            frictionVsSlipGraph[] = { { 0.0, 1.0 }, { 0.5, 1.0 }, { 1.0, 1.0 } };
+            latStiffY = 180;
+            frictionVsSlipGraph[] =
+				{
+					{0.0, 1.0},
+					{0.075, 2.0},
+					{0.75, 1.0}
+				};
         };
-        class L2
+        class L2 : L1
         {
             boneName = "wheel_1_2_damper";
-            steering = 0;
-            side = "left";
             center = "wheel_1_2_axis";
             boundary = "wheel_1_2_bound";
-            width = 0.28;
-            mass = 42;
-            MOI = 3.194;
-            dampingRate = 0.35;
-            dampingRateDamaged = 1;
-            dampingRateDestroyed = 1000;
-            maxBrakeTorque = 10000;
-            maxHandBrakeTorque = 15000;
-            suspTravelDirection[] = { 0, -1, 0 };
             suspForceAppPointOffset = "wheel_1_2_axis";
             tireForceAppPointOffset = "wheel_1_2_axis";
-            maxCompression = 0.183;
-            maxDroop = 0.123;
-            sprungMass = 1396;
-            springStrength = 55406;
-            springDamperRate = 18557;
-            longitudinalStiffnessPerUnitGravity = 10000;
-            latStiffX = 2.5;
-            latStiffY = 18;
-            frictionVsSlipGraph[] = { { 0.0, 1.0 }, { 0.5, 1.0 }, { 1.0, 1.0 } };
         };
-        class R2
+        class R2 : R1
         {
             boneName = "wheel_2_2_damper";
-            steering = 0;
-            side = "right";
             center = "wheel_2_2_axis";
             boundary = "wheel_2_2_bound";
-            width = 0.28;
-            mass = 42;
-            MOI = 3.194;
-            dampingRate = 0.35;
-            dampingRateDamaged = 1;
-            dampingRateDestroyed = 1000;
-            maxBrakeTorque = 10000;
-            maxHandBrakeTorque = 15000;
-            suspTravelDirection[] = { 0, -1, 0 };
             suspForceAppPointOffset = "wheel_2_2_axis";
             tireForceAppPointOffset = "wheel_2_2_axis";
-            maxCompression = 0.183;
-            maxDroop = 0.123;
-            sprungMass = 1396;
-            springStrength = 55406;
-            springDamperRate = 18557;
-            longitudinalStiffnessPerUnitGravity = 10000;
-            latStiffX = 2.5;
-            latStiffY = 18;
-            frictionVsSlipGraph[] = { { 0.0, 1.0 }, { 0.5, 1.0 }, { 1.0, 1.0 } };
         };
-        class L3
+        class L3 : L1
         {
             boneName = "wheel_1_3_damper";
-            steering = 0;
-            side = "left";
             center = "wheel_1_3_axis";
             boundary = "wheel_1_3_bound";
-            width = 0.28;
-            mass = 42;
-            MOI = 3.194;
-            dampingRate = 0.35;
-            dampingRateDamaged = 1;
-            dampingRateDestroyed = 1000;
-            maxBrakeTorque = 10000;
-            maxHandBrakeTorque = 15000;
-            suspTravelDirection[] = { 0, -1, 0 };
             suspForceAppPointOffset = "wheel_1_3_axis";
             tireForceAppPointOffset = "wheel_1_3_axis";
-            maxCompression = 0.187;
-            maxDroop = 0.127;
-            sprungMass = 1731.1;
-            springStrength = 66545;
-            springDamperRate = 22754;
-            longitudinalStiffnessPerUnitGravity = 10000;
-            latStiffX = 2.5;
-            latStiffY = 18;
-            frictionVsSlipGraph[] = { { 0.0, 1.0 }, { 0.5, 1.0 }, { 1.0, 1.0 } };
         };
-        class R3
+        class R3 : R1
         {
             boneName = "wheel_2_3_damper";
-            steering = 0;
-            side = "right";
             center = "wheel_2_3_axis";
             boundary = "wheel_2_3_bound";
-            width = 0.28;
-            mass = 42;
-            MOI = 3.194;
-            dampingRate = 0.35;
-            dampingRateDamaged = 1;
-            dampingRateDestroyed = 1000;
-            maxBrakeTorque = 10000;
-            maxHandBrakeTorque = 15000;
-            suspTravelDirection[] = { 0, -1, 0 };
             suspForceAppPointOffset = "wheel_2_3_axis";
             tireForceAppPointOffset = "wheel_2_3_axis";
-            maxCompression = 0.187;
-            maxDroop = 0.127;
-            sprungMass = 1731.1;
-            springStrength = 66545;
-            springDamperRate = 22754;
-            longitudinalStiffnessPerUnitGravity = 10000;
-            latStiffX = 2.5;
-            latStiffY = 18;
-            frictionVsSlipGraph[] = { { 0.0, 1.0 }, { 0.5, 1.0 }, { 1.0, 1.0 } };
         };
-        class L4
+        class L4 : L1
         {
             boneName = "wheel_1_4_damper";
-            steering = 0;
-            side = "left";
             center = "wheel_1_4_axis";
             boundary = "wheel_1_4_bound";
-            width = 0.28;
-            mass = 42;
-            MOI = 3.194;
-            dampingRate = 0.35;
-            dampingRateDamaged = 1;
-            dampingRateDestroyed = 1000;
-            maxBrakeTorque = 10000;
-            maxHandBrakeTorque = 15000;
-            suspTravelDirection[] = { 0, -1, 0 };
             suspForceAppPointOffset = "wheel_1_4_axis";
             tireForceAppPointOffset = "wheel_1_4_axis";
-            maxCompression = 0.19;
-            maxDroop = 0.13;
-            sprungMass = 1955.8;
-            springStrength = 72775;
-            springDamperRate = 25412;
-            longitudinalStiffnessPerUnitGravity = 10000;
-            latStiffX = 2.5;
-            latStiffY = 18;
-            frictionVsSlipGraph[] = { { 0.0, 1.0 }, { 0.5, 1.0 }, { 1.0, 1.0 } };
         };
-        class R4
+        class R4 : R1
         {
             boneName = "wheel_2_4_damper";
-            steering = 0;
-            side = "right";
             center = "wheel_2_4_axis";
             boundary = "wheel_2_4_bound";
-            width = 0.28;
-            mass = 42;
-            MOI = 3.194;
-            dampingRate = 0.35;
-            dampingRateDamaged = 1;
-            dampingRateDestroyed = 1000;
-            maxBrakeTorque = 10000;
-            maxHandBrakeTorque = 15000;
-            suspTravelDirection[] = { 0, -1, 0 };
             suspForceAppPointOffset = "wheel_2_4_axis";
             tireForceAppPointOffset = "wheel_2_4_axis";
-            maxCompression = 0.19;
-            maxDroop = 0.13;
-            sprungMass = 1955.8;
-            springStrength = 72775;
-            springDamperRate = 25412;
-            longitudinalStiffnessPerUnitGravity = 10000;
-            latStiffX = 2.5;
-            latStiffY = 18;
-            frictionVsSlipGraph[] = { { 0.0, 1.0 }, { 0.5, 1.0 }, { 1.0, 1.0 } };
         };
-        class L5
+        class L5 : L1
         {
             boneName = "wheel_1_5_damper";
-            steering = 0;
-            side = "left";
             center = "wheel_1_5_axis";
             boundary = "wheel_1_5_bound";
-            width = 0.28;
-            mass = 42;
-            MOI = 3.194;
-            dampingRate = 0.35;
-            dampingRateDamaged = 1;
-            dampingRateDestroyed = 1000;
-            maxBrakeTorque = 10000;
-            maxHandBrakeTorque = 15000;
-            suspTravelDirection[] = { 0, -1, 0 };
             suspForceAppPointOffset = "wheel_1_5_axis";
             tireForceAppPointOffset = "wheel_1_5_axis";
-            maxCompression = 0.193;
-            maxDroop = 0.133;
-            sprungMass = 1620.6;
-            springStrength = 58342;
-            springDamperRate = 20809;
-            longitudinalStiffnessPerUnitGravity = 10000;
-            latStiffX = 2.5;
-            latStiffY = 18;
-            frictionVsSlipGraph[] = { { 0.0, 1.0 }, { 0.5, 1.0 }, { 1.0, 1.0 } };
         };
-        class R5
+        class R5 : R1
         {
             boneName = "wheel_2_5_damper";
-            steering = 0;
-            side = "right";
             center = "wheel_2_5_axis";
             boundary = "wheel_2_5_bound";
-            width = 0.28;
-            mass = 42;
-            MOI = 3.194;
-            dampingRate = 0.35;
-            dampingRateDamaged = 1;
-            dampingRateDestroyed = 1000;
-            maxBrakeTorque = 10000;
-            maxHandBrakeTorque = 15000;
-            suspTravelDirection[] = { 0, -1, 0 };
             suspForceAppPointOffset = "wheel_2_5_axis";
             tireForceAppPointOffset = "wheel_2_5_axis";
-            maxCompression = 0.193;
-            maxDroop = 0.133;
-            sprungMass = 1620.6;
-            springStrength = 58342;
-            springDamperRate = 20809;
-            longitudinalStiffnessPerUnitGravity = 10000;
-            latStiffX = 2.5;
-            latStiffY = 18;
-            frictionVsSlipGraph[] = { { 0.0, 1.0 }, { 0.5, 1.0 }, { 1.0, 1.0 } };
         };
-        class L6
+        class L6 : L1
         {
             boneName = "wheel_1_6_damper";
-            steering = 0;
-            side = "left";
             center = "wheel_1_6_axis";
             boundary = "wheel_1_6_bound";
-            width = 0.28;
-            mass = 42;
-            MOI = 3.194;
-            dampingRate = 0.35;
-            dampingRateDamaged = 1;
-            dampingRateDestroyed = 1000;
-            maxBrakeTorque = 10000;
-            maxHandBrakeTorque = 15000;
-            suspTravelDirection[] = { 0, -1, 0 };
             suspForceAppPointOffset = "wheel_1_6_axis";
             tireForceAppPointOffset = "wheel_1_6_axis";
-            maxCompression = 0.197;
-            maxDroop = 0.137;
-            sprungMass = 1285.4;
-            springStrength = 44746;
-            springDamperRate = 16306;
-            longitudinalStiffnessPerUnitGravity = 10000;
-            latStiffX = 2.5;
-            latStiffY = 18;
-            frictionVsSlipGraph[] = { { 0.0, 1.0 }, { 0.5, 1.0 }, { 1.0, 1.0 } };
         };
-        class R6
+        class R6 : R1
         {
             boneName = "wheel_2_6_damper";
-            steering = 0;
-            side = "right";
             center = "wheel_2_6_axis";
             boundary = "wheel_2_6_bound";
-            width = 0.28;
-            mass = 42;
-            MOI = 3.194;
-            dampingRate = 0.35;
-            dampingRateDamaged = 1;
-            dampingRateDestroyed = 1000;
-            maxBrakeTorque = 10000;
-            maxHandBrakeTorque = 15000;
-            suspTravelDirection[] = { 0, -1, 0 };
             suspForceAppPointOffset = "wheel_2_6_axis";
             tireForceAppPointOffset = "wheel_2_6_axis";
-            maxCompression = 0.197;
-            maxDroop = 0.137;
-            sprungMass = 1285.4;
-            springStrength = 44746;
-            springDamperRate = 16306;
-            longitudinalStiffnessPerUnitGravity = 10000;
-            latStiffX = 2.5;
-            latStiffY = 18;
-            frictionVsSlipGraph[] = { { 0.0, 1.0 }, { 0.5, 1.0 }, { 1.0, 1.0 } };
         };
-        class L7
+        class L7 : L1
         {
             boneName = "wheel_1_7_damper";
-            steering = 0;
-            side = "left";
             center = "wheel_1_7_axis";
             boundary = "wheel_1_7_bound";
-            width = 0.28;
-            mass = 42;
-            MOI = 3.194;
-            dampingRate = 0.35;
-            dampingRateDamaged = 1;
-            dampingRateDestroyed = 1000;
-            maxBrakeTorque = 10000;
-            maxHandBrakeTorque = 15000;
-            suspTravelDirection[] = { 0, -1, 0 };
             suspForceAppPointOffset = "wheel_1_7_axis";
             tireForceAppPointOffset = "wheel_1_7_axis";
-            maxCompression = 0.2;
-            maxDroop = 0.14;
-            sprungMass = 950.3;
-            springStrength = 31967;
-            springDamperRate = 11905;
-            longitudinalStiffnessPerUnitGravity = 10000;
-            latStiffX = 2.5;
-            latStiffY = 18;
-            frictionVsSlipGraph[] = { { 0.0, 1.0 }, { 0.5, 1.0 }, { 1.0, 1.0 } };
         };
-        class R7
+        class R7 : R1
         {
             boneName = "wheel_2_7_damper";
-            steering = 0;
-            side = "right";
             center = "wheel_2_7_axis";
             boundary = "wheel_2_7_bound";
-            width = 0.28;
-            mass = 42;
-            MOI = 3.194;
-            dampingRate = 0.35;
-            dampingRateDamaged = 1;
-            dampingRateDestroyed = 1000;
-            maxBrakeTorque = 10000;
-            maxHandBrakeTorque = 15000;
-            suspTravelDirection[] = { 0, -1, 0 };
             suspForceAppPointOffset = "wheel_2_7_axis";
             tireForceAppPointOffset = "wheel_2_7_axis";
-            maxCompression = 0.2;
-            maxDroop = 0.14;
-            sprungMass = 950.3;
-            springStrength = 31967;
-            springDamperRate = 11905;
-            longitudinalStiffnessPerUnitGravity = 10000;
-            latStiffX = 2.5;
-            latStiffY = 18;
-            frictionVsSlipGraph[] = { { 0.0, 1.0 }, { 0.5, 1.0 }, { 1.0, 1.0 } };
         };
     };

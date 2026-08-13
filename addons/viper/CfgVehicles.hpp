@@ -152,26 +152,40 @@ class CfgVehicles
 
 
 
-/* 		class UVAnimations{
-			class TrackAnimation{
+ 		class UVAnimations{
+			class TrackAnimationLeft{
 				type			= "translation";
 				// name of source, either custom one, defined in AnimationSources class or regular model.cfg source
 				// It can be animated with animateSource & value can be retrieved via animationSourcePhase
-				source			= "time";
+				source			= "speed";
 				sourceAddress	= "loop";
 				// section name from model.cfg sections[] array
-				section			= "camo3";
+				section			= "trackL";
 				minValue		= 0;
 				maxValue		= 1;
 				// Transformation of UV coordinates
 				offset0[]		= { 0, 0 };
 				offset1[]		= { 0, 1 };
 			};
-		}; */
+			class TrackAnimationRight{
+				type			= "translation";
+				// name of source, either custom one, defined in AnimationSources class or regular model.cfg source
+				// It can be animated with animateSource & value can be retrieved via animationSourcePhase
+				source			= "speed";
+				sourceAddress	= "loop";
+				// section name from model.cfg sections[] array
+				section			= "trackR";
+				minValue		= 0;
+				maxValue		= 1;
+				// Transformation of UV coordinates
+				offset0[]		= { 0, 0 };
+				offset1[]		= { 0, 1 };
+			};
+		};
 		class AnimationSources : AnimationSources {
 
 		};
-		class PlayerSteeringCoefficients /// steering sensitivity configuration
+/* 		class PlayerSteeringCoefficients /// steering sensitivity configuration
 		{
 			 turnIncreaseConst 	= 0.3; // basic sensitivity value, higher value = faster steering
 			 turnIncreaseLinear = 1.0; // higher value means less sensitive steering in higher speed, more sensitive in lower speeds
@@ -182,7 +196,7 @@ class CfgVehicles
 			 turnDecreaseTime 	= 0.0; // higher value means stronger caster effect at the max. steering angle and weaker once the wheels are closer to centered position
 
 			 maxTurnHundred 	= 0.7; // coefficient of the maximum turning angle @ 100km/h; limit goes linearly to the default max. turn. angle @ 0km/h
-		};
+		}; */
 
 		class Exhausts { /// specific exhaust effects for the car
 				class Exhaust1 { // left exhaust pipes behind tank
