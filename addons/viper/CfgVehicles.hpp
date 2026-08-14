@@ -79,11 +79,18 @@ class CfgVehicles
 			class HitLTrack;
 			class HitRTrack;
 		};
+		class Turrets {
+			class MainTurret:NewTurret {
+				class Turrets {
+					class CommanderOptics;
+				};
+			};
+		};
 	};
 
 	class SMT_Viper_Base_F: MBT_02_railgun_base_F {
 		author = "SamanthaNix";
-		model = "\x\12thMEU\addons\Viper\SMT_viper.p3d";
+		model = "\x\12thMEU\addons\Viper\SMT_viper20.p3d";
 		picture	= "\x\12thMEU\addons\Viper\Data\preview.paa"; /// just some icon in command bar
 
 		#include "pip.hpp"
@@ -128,6 +135,11 @@ class CfgVehicles
 		class TransportMagazines {};
 		class TransportWeapons {};
 
+
+		//Tracks
+		tracksSpeed=0;
+		selectionLeftOffset= "PasOffsetL";
+		selectionRightOffset= "PasOffsetP";
 		//Handling
 		terrainCoef = 0;
 		turnCoef = 4;
@@ -135,7 +147,7 @@ class CfgVehicles
 		brakeDistance = 3.0;
 		acceleration = 30;
 		fireResistance = 5;
-		armor = 250;
+		armor = 400;
 		cost = 50000; /// how likely is the enemy going to target this vehicle
 
 		transportMaxBackpacks 	= 2; /// just some backpacks fit the trunk by default

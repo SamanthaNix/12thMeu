@@ -1,3 +1,4 @@
+    simulation = "tankX";
     maxSpeed = 145;
     slowSpeedForwardCoef = 0.3;
     normalSpeedForwardCoef = 0.85;
@@ -10,12 +11,21 @@
     waterLeakiness = 10;
 
     enginePower = 1309;
-    maxOmega = 670.206;
-    minOmega = 89.012;
+    maxOmega = __EVAL((6400 * 2 * PI) / 60);
+	minOmega = __EVAL((850 * 2 * PI) / 60);
     idleRpm = 850;
     redRpm = 6400;
     peakTorque = 2500;
-    torqueCurve[] = { { 0.0, 0.55 }, { 0.25, 0.80 }, { 0.45, 1.0 }, { 0.70, 0.92 }, { 1.0, 0.72 } };
+    torqueCurve[] = {
+			{0.347826,0.735294},
+			{0.434783,0.911765},
+			{0.521739,1},
+			{0.608696,1},
+			{0.695652,0.985294},
+			{0.782609,0.926471},
+			{0.869565,0.823529},
+			{1,0.676471}
+		};
     engineMOI = 1;
     dampingRateFullThrottle = 0.08;
     dampingRateZeroThrottleClutchEngaged = 2;
@@ -36,19 +46,19 @@
     antiRollbarForceLimit = 2;
     antiRollbarSpeedMin = 10;
     antiRollbarSpeedMax = 60;
-    tankTurnForce = 34100000;
+    tankTurnForce = 2800000;
     tankTurnForceAngMinSpd = 3;
     tankTurnForceAngSpd = 4;
 
     class complexGearbox
     {
-        GearboxRatios[] = { "R1", -3.23, "N", 0, "D1", 2.46, "D2", 1.87, "D3", 1.24, "D4", 0.97, "D5", 0.71 };
-        TransmissionRatios[] = { "High", 4.11 };
-        gearBoxMode = "auto";
-        moveOffGear = 1;
-        driveString = "D";
-        neutralString = "N";
-        reverseString = "R";
+        GearboxRatios[] = {"R1",-6,"N",0,"D1",8.1,"D2",3.51,"D3",1.90,"D4",1.44,"D5",1.00,"D6",0.74,"D7",0.64};
+        TransmissionRatios[] = {"High",4.111}; // Optional: defines transmission ratios (for example, High and Low range as commonly found in offroad vehicles)
+        gearBoxMode        = "auto"; //gearbox can be of type: full-auto (only requires 'W' or 'S'), auto (requires shift between drive and reverse), semi-auto, manual
+        moveOffGear        = 1; // defines what gear an automatic or semi-automatic gearbox will move off from stationary in. 1 by default.
+        driveString        = "D"; // string to display in the HUD for forward gears.
+        neutralString      = "N"; // string to display in the HUD for neutral gear.
+        reverseString      = "R"; // string to display in the HUD for reverse gears.
     };
 
     class Wheels
@@ -92,7 +102,7 @@
             side = "right";
             center = "wheel_2_1_axis";
             boundary = "wheel_2_1_bound";
-            mass = 42;
+            mass = 100;
             MOI = 10;
             dampingRate = 0.35;
             dampingRateDamaged = 1;
