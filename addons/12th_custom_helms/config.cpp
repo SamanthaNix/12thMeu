@@ -228,6 +228,7 @@ class CfgWeapons {
   CUSTOM_PILOT_HELM(Moss, "[12th][Pilot][Customs] Moss",moss)
   CUSTOM_PILOT_HELM(tomb, "[12th][Pilot][Customs] Tomb",tomb)
   CUSTOM_PILOT_HELM(kurita, "[12th][Pilot][Customs] Kurita",kurita)
+  CUSTOM_PILOT_HELM(rich, "[12th][Pilot][Customs] Rich",rich)
 
 };
 
