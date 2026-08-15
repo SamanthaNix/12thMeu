@@ -74,7 +74,7 @@ class CfgVehicles {
     // HiddenSelections for retexturing
     hiddenSelections[] = {"camo"};
     hiddenSelectionsTextures[] = {
-      "\x\12thMEU\addons\12th_supply_pods\data\pod_co_equipment.paa"  
+      "\x\12thMEU\addons\12th_supply_pods\data\pod_co_blank.paa"  
         // The default texture for an empty supply pod
     };
 
@@ -186,7 +186,7 @@ class CfgVehicles {
   class twelfth_supply_pod_mines: twelfth_supply_pod_empty {
     displayName = "[12th] Supply Pod (Mines)";
     hiddenSelectionsTextures[] = {
-      "\x\12thMEU\addons\12th_supply_pods\data\pod_co_grenades.paa"
+      "\x\12thMEU\addons\12th_supply_pods\data\pod_co_mines.paa"
     };
     class TransportMagazines {};
     class TransportWeapons {};
