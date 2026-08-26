@@ -82,6 +82,7 @@ class CfgVehicles {
   VEH_UNI_CLASS(winter)
   VEH_UNI_CLASS(opfor)
   VEH_UNI_CLASS(desert)
+  VEH_UNI_CLASS(vbss)
   VEH_UNI_TSHIRT_CLASS(instructor)
   VEH_UNI_TSHIRT_CLASS(aic)
   VEH_UNI_TSHIRT_CLASS(unscmc)
@@ -146,6 +147,7 @@ class CfgWeapons {
   WEP_UNI_CLASS(winter)
   WEP_UNI_CLASS(desert)
   WEP_UNI_CLASS(opfor)
+  WEP_UNI_CLASS(vbss)
   WEP_UNI_TSHIRT_CLASS(instructor)
   WEP_UNI_TSHIRT_CLASS(aic)
   WEP_UNI_TSHIRT_CLASS(unscmc)
@@ -651,7 +653,7 @@ class XtdGearModels {
       class camo {
         alwaysSelectable = 1;
         label="Camouflage";
-        values[]={"std","winter","opfor","desert"};
+        values[]={"std","winter","opfor","desert","vbss"};
         class std {label="Standard";     image=XTP(forest);};
         class winter {label="Winter"; /* image=XTP(winter); */};
         class desert {label="Desert"; image=XTP(desert);};
@@ -804,6 +806,7 @@ class XtdGearInfos {
     NEW_UNIFROM_GI(winter)
     NEW_UNIFROM_GI(desert)
     NEW_UNIFROM_GI(opfor)
+    NEW_UNIFROM_GI(vbss)
     // Utility cover
 
     UTILITYCOVER_GI(std)
