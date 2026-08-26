@@ -7,7 +7,7 @@ class CfgPatches
 	class PrototypeLaser_F
 	{
 		units[] = {};
-		weapons[] = {"PrototypeLaser_01_F","PrototypeOptics"};
+		weapons[] = {"PrototypeLaser_01_F","PrototypeOptics","G82"};
 		requiredVersion = 0.1;
 		requiredAddons[] = {"A3_Weapons_F"};
 		magazines[] = {"3Rnd_test_mag"};
@@ -148,6 +148,7 @@ class CfgWeapons
 				midRange = 200; midRangeProbab = 0.7; 	/// it is no real probability of hit, just used for AI to compute if the shot is worth to take - AI chooses highest
 				maxRange = 1000; maxRangeProbab = 0.3; 	/// probability of the weapon, does some calculation and compares it with calculated probability of other weapons
 			};
+
     //////////////////////////////////////////////////// OPTICS //////////////////////////////////////////////////
 
 		class single_medium_optics1: Single /// Pew for AI with collimator sights
@@ -177,8 +178,17 @@ class CfgWeapons
 		};
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	};
-	
-
+	class twelfth_MA5C;
+	class twelfth_G82: twelfth_MA5C {
+		model="x\12thMEU\addons\custom_weapons\G82\G82.p3d";
+		author = "Sammy";
+		scope = 2;
+		scopeArsenal = 2;
+		displayName = "[12th] G82";
+		baseWeapon = "twelfth_G82";
+		canShootInWater = 1;
+		handAnim[] = {"OFP2_ManSkeleton","x\12thMEU\addons\12th_weapons\data\MA6\animations\MA6.rtm"};
+	};
 	class PrototypeLaser_01_F: PrototypeLaser_01_Base_F
 	{
 		scope = 2;
