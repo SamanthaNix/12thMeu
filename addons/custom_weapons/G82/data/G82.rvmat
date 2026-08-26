@@ -2,12 +2,12 @@
 	Generated on https://jdtools.dev/
 	Made by John Doe
 */
-ambient[] = { 1, 1, 1, 1 };
-diffuse[] = { 1, 1, 1, 1 };
-forcedDiffuse[] = { 0, 0, 0, 1 };
-emmisive[] = { 0, 0, 0, 1 };
-specular[] = {0.25,0.25,0.25,1};
-specularPower = 80;
+ambient[] = {1,1,1,1};
+diffuse[] = {1,1,1,1};
+forcedDiffuse[] = {0,0,0,0};
+emmisive[] = {0,0,0,0};
+specular[] = {0.25,0.25,0.25,1}; // Modify these to increase/decrease the overall shine
+specularPower = 80; // Modify this to increase/decrease the precision of the shine
 PixelShaderID = "Super";
 VertexShaderID = "Super";
 class Stage1

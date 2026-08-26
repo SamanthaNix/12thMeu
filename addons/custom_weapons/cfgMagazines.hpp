@@ -35,4 +35,23 @@ class CfgMagazines
 		descriptionShort = "Compressed Mag <br />Rounds: 1"; /// on mouse-over in Inventory
 		magazineGroup[]	= {"Liquid_mag_group"}; /// all magazines in the same group may be used in weapon that has the group defined as compatible
 	};
+	class Commando_20Rnd_65_Mag;
+	class G82_35Rnd_Mag : Commando_20Rnd_65_Mag {
+		mass = 12;
+		scope = 2;
+		displayName = "35Rnd 6.5 Creedmoor Magazine";
+		displayNameShort = "G82 Mag";
+		descriptionShort = "35 Round Magazine";
+		count = 35;
+	};
+
+	class G82_35Rnd_Mag_T : Commando_20Rnd_65_Mag {
+		mass = 12;
+		scope = 2;
+		displayName = "35Rnd 6.5 Creedmoor Magazine Tracer";
+		displayNameShort = "G82 Mag T";
+		descriptionShort = "35 Round Magazine";
+		count = 35;
+		tracersEvery = 3;
+	};
 };

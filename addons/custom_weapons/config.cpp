@@ -44,6 +44,12 @@ class CfgMagazineWells
 			"CompressedLaserMag"
 		};
 	};
+	class G82mag {
+		SMT_Magazines[] =
+		{
+			"G82_35Rnd_Mag", "G82_35Rnd_Mag_T"
+		};
+	};
 };
 
 class CfgWeapons
@@ -178,17 +184,31 @@ class CfgWeapons
 		};
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	};
-	class twelfth_MA5C;
-	class twelfth_G82: twelfth_MA5C {
+	class OPTRE_Commando;
+	class twelfth_G82: OPTRE_Commando {
 		model="x\12thMEU\addons\custom_weapons\G82\G82.p3d";
-		author = "Sammy";
+		author = "Rex";
 		scope = 2;
 		scopeArsenal = 2;
 		displayName = "[12th] G82";
 		baseWeapon = "twelfth_G82";
 		canShootInWater = 1;
-		handAnim[] = {"OFP2_ManSkeleton","x\12thMEU\addons\12th_weapons\data\MA6\animations\MA6.rtm"};
-	};
+		magazineWell[] = { "G82mag" };
+		magazines[] = {"G82_35Rnd_Mag", "G82_35Rnd_Mag_T"};
+		ace_overheating_barrelMass = 5;
+		/*class WeaponSlotsInfo = WeaponSlotsInfo {
+			class CowsSlot : CowsSlot
+          {
+            compatibleitems[] = ;
+          };
+		};
+		class LinkedItems {
+			class LinkedItemsCows {
+				item = "";
+				slot = "CowsSlot";
+			};
+		}; */
+	}; 
 	class PrototypeLaser_01_F: PrototypeLaser_01_Base_F
 	{
 		scope = 2;
@@ -226,3 +246,4 @@ class CfgMovesMaleSdr: CfgMovesBasic {
 		};
 	};
 };
+
