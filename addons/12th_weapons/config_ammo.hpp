@@ -205,8 +205,8 @@ class twelfth_95x40_AP : OPTRE_B_95x40_Ball {
 
   class twelfth_M41_IR_rocket : OPTRE_M41_Rocket_HEAT_G {
     author = "Rex";
-    hit = 150;
-		indirectHit = 100;
+    hit = 200;
+		indirectHit = 150;
 		proximityExplosionDistance = 12;
 		indirectHitRange = 12;
 		explosive= 0.80000001;
