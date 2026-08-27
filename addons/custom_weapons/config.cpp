@@ -7,10 +7,10 @@ class CfgPatches
 	class PrototypeLaser_F
 	{
 		units[] = {};
-		weapons[] = {"PrototypeLaser_01_F","PrototypeOptics","G82"};
+		weapons[] = {"PrototypeLaser_01_F","PrototypeOptics","twelfth_G82","twelfth_G82_sight"};
 		requiredVersion = 0.1;
 		requiredAddons[] = {"A3_Weapons_F"};
-		magazines[] = {"3Rnd_test_mag"};
+		magazines[] = {"3Rnd_test_mag","twelfth_G82_35Rnd_Mag", "twelfth_G82_35Rnd_Mag_T"};
 		ammo[] = {"StandardLiquidLaserAmmo"};
 	};
 };
@@ -47,7 +47,7 @@ class CfgMagazineWells
 	class G82mag {
 		SMT_Magazines[] =
 		{
-			"G82_35Rnd_Mag", "G82_35Rnd_Mag_T"
+			"twelfth_G82_35Rnd_Mag", "twelfth_G82_35Rnd_Mag_T"
 		};
 	};
 };
@@ -185,6 +185,7 @@ class CfgWeapons
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	};
 	class OPTRE_Commando;
+	class WeaponSlotsInfo;
 	class twelfth_G82: OPTRE_Commando {
 		model="x\12thMEU\addons\custom_weapons\G82\G82.p3d";
 		author = "Rex";
@@ -196,19 +197,20 @@ class CfgWeapons
 		magazineWell[] = { "G82mag" };
 		magazines[] = {"G82_35Rnd_Mag", "G82_35Rnd_Mag_T"};
 		ace_overheating_barrelMass = 5;
-		/*class WeaponSlotsInfo = WeaponSlotsInfo {
+		class WeaponSlotsInfo : WeaponSlotsInfo {
 			class CowsSlot : CowsSlot
           {
-            compatibleitems[] = ;
+            compatibleitems[] = {"twelfth_G82_sight"};
           };
-		};
+		}; 
 		class LinkedItems {
 			class LinkedItemsCows {
-				item = "";
+				item = "twelfth_G82_sight";
 				slot = "CowsSlot";
 			};
-		}; */
+		}; 
 	}; 
+
 	class PrototypeLaser_01_F: PrototypeLaser_01_Base_F
 	{
 		scope = 2;

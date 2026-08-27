@@ -56,3 +56,42 @@ class PrototypeOpticsV2: OPTRE_SRS99C_Scope
 	picture="\x\12thMEU\addons\Custom_Weapons\data\SightPreview.paa";
 	model = "\x\12thMEU\addons\Custom_Weapons\data\PrototypeScope.p3d";
 };
+
+class optic_DMS {
+        class ItemInfo;
+    };
+	class twelfth_G82_sight : optic_DMS {
+		model = "x\12thMEU\addons\custom_weapons\G82\G82_Scope.p3d";
+		author = "Rex";
+		scope = 2;
+		scopeArsenal = 2;
+		DisplayName = "[12th] G82 Optic";
+		baseWeapon = "G82_sight";
+		class ItemInfo : ItemInfo
+		{	
+		class OpticsModes
+			{
+				class EVOSD
+				{
+					opticsID = 1;
+					useModelOptics = 1;
+					opticsPPEffects[] = {"OpticsCHAbera1","OpticsBlur1"};
+					opticsZoomMin = 0.083333336;
+					opticsZoomMax = 0.25;
+					opticsZoomInit = 0.25;
+					discreteDistance[] = {100,};
+					discreteDistanceInitIndex = 1;
+					distanceZoomMin = 100;
+					distanceZoomMax = 1200;
+					discreteFOV[] = {0.25,0.125,0.083333336};
+					discreteInitIndex = 0;
+					modelOptics[] = {"\A3\Weapons_F_EPA\acc\reticle_marksman_F","\A3\Weapons_F_EPA\acc\reticle_marksman_z_F"};
+					memoryPointCamera = "opticView";
+					visionMode[] = {};
+					opticsFlare = 1;
+					opticsDisablePeripherialVision = 1;
+					cameraDir = "";
+				};
+			};
+		};
+	};

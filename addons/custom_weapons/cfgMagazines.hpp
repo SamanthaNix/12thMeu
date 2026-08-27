@@ -36,7 +36,7 @@ class CfgMagazines
 		magazineGroup[]	= {"Liquid_mag_group"}; /// all magazines in the same group may be used in weapon that has the group defined as compatible
 	};
 	class Commando_20Rnd_65_Mag;
-	class G82_35Rnd_Mag : Commando_20Rnd_65_Mag {
+	class twelfth_G82_35Rnd_Mag : Commando_20Rnd_65_Mag {
 		mass = 12;
 		scope = 2;
 		displayName = "35Rnd 6.5 Creedmoor Magazine";
@@ -45,7 +45,7 @@ class CfgMagazines
 		count = 35;
 	};
 
-	class G82_35Rnd_Mag_T : Commando_20Rnd_65_Mag {
+	class twelfth_G82_35Rnd_Mag_T : Commando_20Rnd_65_Mag {
 		mass = 12;
 		scope = 2;
 		displayName = "35Rnd 6.5 Creedmoor Magazine Tracer";
