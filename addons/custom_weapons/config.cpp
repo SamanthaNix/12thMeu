@@ -197,6 +197,8 @@ class CfgWeapons
 		magazineWell[] = { "G82mag" };
 		magazines[] = {"G82_35Rnd_Mag", "G82_35Rnd_Mag_T"};
 		ace_overheating_barrelMass = 5;
+		picture="\x\12thMEU\addons\custom_weapons\G82\data\g82_preview.paa";
+		handAnim[] = {"OFP2_ManSkeleton","\x\12thMEU\addons\custom_weapons\G82\data\G82.rtm"};
 		class WeaponSlotsInfo : WeaponSlotsInfo {
 			class CowsSlot : CowsSlot
           {
