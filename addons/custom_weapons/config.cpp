@@ -244,6 +244,14 @@ class CfgMovesMaleSdr: CfgMovesBasic {
 			rightHandIKCurve[] = {0};
 			leftHandIKCurve[] = {0};
 		};
+		class G82GunHoldAnim: StandBase {
+			file="\x\12thMEU\addons\custom_weapons\G82\data\G82.rtm";
+			looped=1;
+			speed=1;
+			mask = "bodyFullReal";
+			rightHandIKCurve[] = {0};
+			leftHandIKCurve[] = {0};
+		};
 	};
 };
 
