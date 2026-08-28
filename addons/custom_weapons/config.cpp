@@ -186,6 +186,7 @@ class CfgWeapons
 	};
 	class OPTRE_Commando;
 	class WeaponSlotsInfo;
+	class UGL_F;
 	class twelfth_G82: OPTRE_Commando {
 		model="x\12thMEU\addons\custom_weapons\G82\G82.p3d";
 		author = "Rex";
@@ -197,6 +198,7 @@ class CfgWeapons
 		magazineWell[] = { "G82mag" };
 		magazines[] = {"G82_35Rnd_Mag", "G82_35Rnd_Mag_T"};
 		ace_overheating_barrelMass = 5;
+		muzzles[] = {"this", "Test_GL_F"};
 		picture="\x\12thMEU\addons\custom_weapons\G82\data\g82_preview.paa";
 		handAnim[] = {"OFP2_ManSkeleton","\x\12thMEU\addons\custom_weapons\G82\data\G82.rtm"};
 		class WeaponSlotsInfo : WeaponSlotsInfo {
@@ -210,7 +212,20 @@ class CfgWeapons
 				item = "twelfth_G82_sight";
 				slot = "CowsSlot";
 			};
-		}; 
+		};
+
+		class Test_GL_F: UGL_F /// Some grenade launcher to have some more fun
+		{
+			displayName = "G82 Grenade Launcher";
+			descriptionShort = "G82-GL";
+			useModelOptics = false;
+			useExternalOptic = false; /// Doesn't use optics from the attachment, has it's own
+			magazines[] = {"1Rnd_HE_Grenade_shell"};
+			cameraDir = "OP_look";
+			discreteDistance[] = {100, 200, 300, 400};
+			discreteDistanceCameraPoint[] = {"OP_eye", "OP_eye2", "OP_eye3", "OP_eye4"}; /// the angle of gun changes with zeroing
+			discreteDistanceInitIndex = 1; /// 200 is the default zero
+		};
 	}; 
 
 	class PrototypeLaser_01_F: PrototypeLaser_01_Base_F
