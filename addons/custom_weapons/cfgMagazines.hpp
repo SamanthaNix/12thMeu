@@ -54,4 +54,19 @@ class CfgMagazines
 		count = 35;
 		tracersEvery = 3;
 	};
+	class 7rnd_408_Mag;
+	class 408CT_6Rnd_Mag :7rnd_408_Mag {
+		scope = 2;
+		mass = 12;
+		count = 6;
+		DisplayName = "6Rnd .408 Chey Tac";
+		displayNameShort = "6Rnd .408 CT";
+		descriptionShort = "6 Round Chey Tac";
+	};
+	class 408CT_6Rnd_Mag_T :408CT_6Rnd_Mag {
+		tracersEvery =1;
+		DisplayName = "6Rnd .408 Chey Tac Tracer";
+		displayNameShort = "6Rnd .408 CT-T";
+		descriptionShort = "6 Round Chey Tac Tracer";
+	};
 };

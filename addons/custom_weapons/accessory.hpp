@@ -58,40 +58,49 @@ class PrototypeOpticsV2: OPTRE_SRS99C_Scope
 };
 
 class optic_DMS {
-        class ItemInfo;
-    };
-	class twelfth_G82_sight : optic_DMS {
-		model = "x\12thMEU\addons\custom_weapons\G82\G82_Scope.p3d";
-		author = "Rex";
-		scope = 2;
-		scopeArsenal = 2;
-		DisplayName = "[12th] G82 Optic";
-		baseWeapon = "G82_sight";
-		class ItemInfo : ItemInfo
-		{	
-		class OpticsModes
+	class ItemInfo;
+};
+class twelfth_G82_sight : optic_DMS {
+	model = "x\12thMEU\addons\custom_weapons\G82\G82_Scope.p3d";
+	author = "Rex";
+	scope = 2;
+	scopeArsenal = 2;
+	DisplayName = "[12th] G82 Optic";
+	baseWeapon = "twelfth_G82_sight";
+	class ItemInfo : ItemInfo
+	{	
+	class OpticsModes
+		{
+			class EVOSD
 			{
-				class EVOSD
-				{
-					opticsID = 1;
-					useModelOptics = 1;
-					opticsPPEffects[] = {"OpticsCHAbera1","OpticsBlur1"};
-					opticsZoomMin = 0.083333336;
-					opticsZoomMax = 0.25;
-					opticsZoomInit = 0.25;
-					discreteDistance[] = {100,};
-					discreteDistanceInitIndex = 1;
-					distanceZoomMin = 100;
-					distanceZoomMax = 1200;
-					discreteFOV[] = {0.25,0.125,0.083333336};
-					discreteInitIndex = 0;
-					modelOptics[] = {"\A3\Weapons_F_EPA\acc\reticle_marksman_F","\A3\Weapons_F_EPA\acc\reticle_marksman_z_F"};
-					memoryPointCamera = "opticView";
-					visionMode[] = {};
-					opticsFlare = 1;
-					opticsDisablePeripherialVision = 1;
-					cameraDir = "";
-				};
+				opticsID = 1;
+				useModelOptics = 1;
+				opticsPPEffects[] = {"OpticsCHAbera1","OpticsBlur1"};
+				opticsZoomMin = 0.083333336;
+				opticsZoomMax = 0.25;
+				opticsZoomInit = 0.25;
+				discreteDistance[] = {100,};
+				discreteDistanceInitIndex = 1;
+				distanceZoomMin = 100;
+				distanceZoomMax = 1200;
+				discreteFOV[] = {0.25,0.125,0.083333336};
+				discreteInitIndex = 0;
+				modelOptics[] = {"\A3\Weapons_F_EPA\acc\reticle_marksman_F","\A3\Weapons_F_EPA\acc\reticle_marksman_z_F"};
+				memoryPointCamera = "opticView";
+				visionMode[] = {};
+				opticsFlare = 1;
+				opticsDisablePeripherialVision = 1;
+				cameraDir = "";
 			};
 		};
 	};
+};
+class optic_tws;
+class XR704_Scope:optic_tws{
+	model = "x\12thMEU\addons\custom_weapons\XR-704\XR_704_Scope.p3d";
+	author = "Sammy";
+	scope = 2;
+	scopeArsenal = 2;
+	DisplayName = "XR-704 Optic";
+	baseWeapon = "XR704_Scope";
+};

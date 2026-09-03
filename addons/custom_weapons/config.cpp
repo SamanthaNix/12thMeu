@@ -4,13 +4,13 @@
 
 class CfgPatches
 {
-	class PrototypeLaser_F
+	class SMT_Custom_Weapons
 	{
 		units[] = {};
-		weapons[] = {"PrototypeLaser_01_F","PrototypeOptics","twelfth_G82","twelfth_G82_sight"};
+		weapons[] = {"PrototypeLaser_01_F","PrototypeOptics","twelfth_G82","twelfth_G82_sight","srifle_XR704","XR704_Scope"};
 		requiredVersion = 0.1;
 		requiredAddons[] = {"A3_Weapons_F"};
-		magazines[] = {"3Rnd_test_mag","twelfth_G82_35Rnd_Mag", "twelfth_G82_35Rnd_Mag_T"};
+		magazines[] = {"3Rnd_test_mag","twelfth_G82_35Rnd_Mag", "twelfth_G82_35Rnd_Mag_T","408CT_6Rnd_Mag_T","408CT_6Rnd_Mag"};
 		ammo[] = {"StandardLiquidLaserAmmo"};
 	};
 };
@@ -48,6 +48,12 @@ class CfgMagazineWells
 		SMT_Magazines[] =
 		{
 			"twelfth_G82_35Rnd_Mag", "twelfth_G82_35Rnd_Mag_T"
+		};
+	};
+	class XR704mag{
+		SMT_Magazines[]=
+		{
+			"408CT_6Rnd_Mag_T","408CT_6Rnd_Mag"
 		};
 	};
 };
@@ -184,6 +190,24 @@ class CfgWeapons
 		};
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	};
+
+
+	class PrototypeLaser_01_F: PrototypeLaser_01_Base_F
+	{
+		scope = 2;
+		displayName = "[12th] Prototype LLR";
+		descriptionShort = "A high powered, slow firerate weapon meant for cracking medium targets.";
+		model = "\x\12thMEU\addons\Custom_Weapons\data\PrototypeLaser.p3d";
+		UiPicture = "\A3\Weapons_F\Data\UI\icon_gl_CA.paa";
+		weaponInfoType = "RscWeaponZeroing";
+		muzzles[] = {"this"};
+		class WeaponSlotsInfo: WeaponSlotsInfo
+		{
+			mass = 80;
+		};
+	};
+
+
 	class OPTRE_Commando;
 	class WeaponSlotsInfo;
 	class UGL_F;
@@ -228,24 +252,47 @@ class CfgWeapons
 		};
 	}; 
 
-	class PrototypeLaser_01_F: PrototypeLaser_01_Base_F
-	{
+
+
+	
+	class LRR_base_F;
+	class srifle_XR704 : LRR_base_F{
+		model="x\12thMEU\addons\custom_weapons\XR-704\XR_704.p3d";
+		author = "Sammy";
 		scope = 2;
-		displayName = "[12th] Prototype LLR";
-		descriptionShort = "A high powered, slow firerate weapon meant for cracking medium targets.";
-		model = "\x\12thMEU\addons\Custom_Weapons\data\PrototypeLaser.p3d";
-		UiPicture = "\A3\Weapons_F\Data\UI\icon_gl_CA.paa";
-		weaponInfoType = "RscWeaponZeroing";
+		scopeArsenal = 2;
+		displayName = "XR-704";
+		baseWeapon = "srifle_XR704";
+		canShootInWater = 1;
+		magazineWell[] = { "XR704mag" };
+		magazines[] = {"408CT_6Rnd_Mag", "408CT_6Rnd_Mag_T"};
+		ace_overheating_barrelMass = 5;
 		muzzles[] = {"this"};
-		class WeaponSlotsInfo: WeaponSlotsInfo
-		{
-			mass = 80;
+		picture="\x\12thMEU\addons\custom_weapons\XR-704\data\preview.paa";
+		handAnim[] = {"OFP2_ManSkeleton","\x\12thMEU\addons\custom_weapons\XR-704\data\XR-704.rtm"};
+		class WeaponSlotsInfo : WeaponSlotsInfo {
+			class CowsSlot : CowsSlot
+          	{
+            compatibleitems[] += {"XR704_Scope"};
+          	};
+			class UnderBarrelSlot: UnderBarrelSlot 
+			{
+				compatibleItems[] = {"bipod_03_F_blk","bipod_02_F_blk","bipod_01_F_blk","bipod_02_F_hex","bipod_01_F_mtp","bipod_03_F_oil","bipod_01_F_snd","bipod_02_F_tan"};
+			};
+		}; 
+		class LinkedItems {
+			class LinkedItemsCows {
+				item = "XR704_Scope";
+				slot = "CowsSlot";
+			};
 		};
 	};
 
+
+
+
 	/// include accessory from separate file to not clutter this one
 	#include "accessory.hpp"
-	
 };
 class CfgMovesBasic {
 	class default;
@@ -265,6 +312,14 @@ class CfgMovesMaleSdr: CfgMovesBasic {
 		};
 		class G82GunHoldAnim: StandBase {
 			file="\x\12thMEU\addons\custom_weapons\G82\data\G82.rtm";
+			looped=1;
+			speed=1;
+			mask = "bodyFullReal";
+			rightHandIKCurve[] = {0};
+			leftHandIKCurve[] = {0};
+		};
+		class XR704GunHoldAnim: StandBase {
+			file="\x\12thMEU\addons\custom_weapons\XR-704\data\XR-704.rtm";
 			looped=1;
 			speed=1;
 			mask = "bodyFullReal";
