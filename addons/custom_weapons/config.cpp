@@ -70,7 +70,7 @@ class CfgWeapons
 	{
 		editorCategory ="12th_Assets";
 		handAnim[] = {"OFP2_ManSkeleton","\x\12thMEU\addons\custom_weapons\data\animations\llr.rtm"};
-		mass=90;
+		mass=180;
 		/////////////////////ACE STUFF//////////////////////////////
 		ace_overheating_barrelMass = 20;
 		ACE_barrelLength = 800;
@@ -261,12 +261,18 @@ class CfgWeapons
 		author = "Sammy";
 		scope = 2;
 		scopeArsenal = 2;
+		mass=250;
+		/////////////////////ACE STUFF//////////////////////////////
+		ace_overheating_barrelMass = 5;
+		ACE_barrelLength = 800;
+		ACE_barrelTwist = 229;
+        ACE_twistDirection = 1;
+		/////////////////////ACE STUFF//////////////////////////////
 		displayName = "XR-704";
 		baseWeapon = "srifle_XR704";
 		canShootInWater = 1;
 		magazineWell[] = { "XR704mag" };
 		magazines[] = {"408CT_6Rnd_Mag", "408CT_6Rnd_Mag_T"};
-		ace_overheating_barrelMass = 5;
 		muzzles[] = {"this"};
 		picture="\x\12thMEU\addons\custom_weapons\XR-704\data\preview.paa";
 		handAnim[] = {"OFP2_ManSkeleton","\x\12thMEU\addons\custom_weapons\XR-704\data\XR-704.rtm"};

@@ -49,6 +49,7 @@ class PrototypeOptics: ACE_optic_LRPS_2D
 };
 class PrototypeOpticsV2: OPTRE_SRS99C_Scope
 {
+	mass=16;
 	scope = 2;
 	author = "SamanthaNix";
 	displayName = "[12th] Tri-Sight Prototype Optics V2";
