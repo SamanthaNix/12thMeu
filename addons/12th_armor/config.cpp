@@ -119,6 +119,7 @@ class CfgWeapons {
   class TCP_H_boonieHat_Folded_Left_Base;
   class TCP_H_boonieHat_Folded_Right_Base;
   class TCP_H_PatrolCap_Base;
+  class TCP_H_Helmet_ECH55D_Base;
   class twelfth_uni_ng_base_wep: Uniform_Base {
     author="Waylen";
     scope=0;
@@ -408,7 +409,7 @@ class CfgWeapons {
   };
 
   // ODST
-   class twelfth_odst_helmet: TCP_H_Helmet_CH43A_Base {
+   class twelfth_odst_helmet: TCP_H_Helmet_ECH55D_Base {
     scope=2;
     author="Rex";
     scopeArsenal=2;
@@ -416,8 +417,15 @@ class CfgWeapons {
     ace_hearing_protection=1;
     ace_hearing_lowerVolume=0;
 	  model = "\TCP\Characters\BLUFOR\UNSC\Marines\Headgear\helmet_ECH55D\h_helmet_ECH55D_Blue.p3d";
+    TCP_visrClasses[] = {"TCP_H_Helmet_ECH55D_Black_Blue","TCP_H_Helmet_ECH55D_Black_Blue_DP"};
+    hiddenSelections[] = {"camo","camo1","decals"};
+    hiddenSelectionsTextures[] = {
+      "\x\12thMeu\addons\12th_armor\helmets\odst\Medic_CO.paa",
+      "\TCP\Characters\BLUFOR\UNSC\Marines\Headgear\helmet_ECH55D\data\camo\Blue\helmet_ECH55D_Visor_CO.paa",
+      "tcp\characters\BLUFOR\UNSC\ARMY\Vests\M43A\data\camo\White\vest_M43_DecalSheet_CA.paa"};
     class ItemInfo: HeadgearItem {
 	  uniformModel = "\TCP\Characters\BLUFOR\UNSC\Marines\Headgear\helmet_ECH55D\h_helmet_ECH55D_Blue.p3d";
+    hiddenSelections[] = {"camo","camo1","decals"};
       mass=40;
       modelSides[]={6};
       passThrough=0.1;

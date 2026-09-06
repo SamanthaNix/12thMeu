@@ -69,7 +69,9 @@ class CfgWeapons
   class OPTRE_UNSC_M52A_Armor2_MAR;
   class mgsr_poncho_wet_vest;
   class mgsr_poncho_dry_vest;
-  class TCP_V_M43D_ODST_4_Black;
+  class TCP_V_M43D_ODST_4_Base;
+  class TCP_uniformDecals;
+  class TCP_equipmentTypes;
 
   // Ponchos
 
@@ -182,23 +184,44 @@ class CfgWeapons
   };
 
   // ODST
-  class twelfth_odst_vest : TCP_V_M43D_ODST_4_Black {
+  class twelfth_odst_vest : TCP_V_M43D_ODST_4_Base {
     scope = 2;
     scopeArsenal = 2;
     author = "Rex";
     displayName = "[12] ODST";
     ACE_GForceCoef = 0.4;
     model = "\TCP\Characters\BLUFOR\UNSC\Marines\Vests\M43D\M43D_ODST_4.p3d";
+    hiddenSelections[] = {"camo","camo1","camo2","camo3","camo4","decals","collararmored","collarflak","wristugps","wristtacpad"};
+    hiddenSelectionsTextures[] = {
+      "\TCP\characters\BLUFOR\UNSC\Army\Vests\M43A\data\camo\Black\vest_M43A_01_CO.paa",
+    "\x\12thMeu\addons\12th_vests\data\ODST\clean\vest_ShouldersMedic_ODST_CO.paa",
+    "\x\12thMeu\addons\12th_vests\data\ODST\clean\vest_M43D_ODST_CO.paa",
+    "\x\12thMeu\addons\12th_vests\data\ODST\clean\vest_M43A_02_CO.paa",
+    "\TCP\characters\BLUFOR\UNSC\Army\Vests\M43A\data\camo\Black\vest_M43A_03_CO.paa",
+    "\TCP\characters\BLUFOR\UNSC\ARMY\Vests\M43A\data\camo\white\vest_M43_DecalSheet_CA.paa"};
+    class TCP_uniformDecals: TCP_uniformDecals
+	{
+		decalColor = "white"; // the rank decal. white or black
+	};
+    class TCP_equipmentTypes
+	{
+		baseEquipment = "TAG_Uniforms_M43D_Light_4_BK";
+	};
     class ItemInfo: VestItem
     {
-      containerClass="twelfth_vest_supply";                                
+      uniformModel = "\TCP\Characters\BLUFOR\UNSC\Marines\Vests\M43D\M43D_ODST_4.p3d";   
+      hiddenSelections[] = {"camo","camo1","camo2","camo3","camo4","decals","collararmored","collarflak","wristugps","wristtacpad"};    
+      hiddenSelectionsTextures[] = {
+      "\TCP\characters\BLUFOR\UNSC\Army\Vests\M43A\data\camo\Black\vest_M43A_01_CO.paa",
+    "\x\12thMeu\addons\12th_vests\data\ODST\clean\vest_ShouldersMedic_ODST_CO.paa",
+    "\x\12thMeu\addons\12th_vests\data\ODST\clean\vest_M43D_ODST_CO.paa",
+    "\x\12thMeu\addons\12th_vests\data\ODST\clean\vest_M43A_02_CO.paa",
+    "\TCP\characters\BLUFOR\UNSC\Army\Vests\M43A\data\camo\Black\vest_M43A_03_CO.paa",
+    "\TCP\characters\BLUFOR\UNSC\ARMY\Vests\M43A\data\camo\white\vest_M43_DecalSheet_CA.paa"};                     
+      containerClass="twelfth_vest_supply";
       mass = 80;
-      uniformModel = "\TCP\Characters\BLUFOR\UNSC\Marines\Vests\M43D\M43D_ODST_4.p3d";
       VEST_HITPOINT_INFO 
       setMaxLoad=200;
-      hiddenSelectionsTextures[] = {"\TCP\characters\BLUFOR\UNSC\Army\Vests\M43A\data\camo\Black\vest_M43A_01_CO.paa","\TCP\Characters\BLUFOR\UNSC\Marines\Vests\M43D\data\camo\Black\vest_Shoulders_ODST_CO.paa",
-      "\TCP\Characters\BLUFOR\UNSC\Marines\Vests\M43D\data\camo\Black\vest_M43D_ODST_CO.paa","\TCP\characters\BLUFOR\UNSC\Army\Vests\M43A\data\camo\Black\vest_M43A_02_CO.paa",
-      "\TCP\characters\BLUFOR\UNSC\ARMY\Vests\M43A\data\camo\white\vest_M43_DecalSheet_CA.paa"};
     };
   };
 
