@@ -302,6 +302,7 @@ class CfgWeapons
 /////////////////////XR-121/////////////////////
 	class TCP_SMG_M7{
 		class FullAuto;
+		class FullAuto_Close_Optics;
 	};
 	class smg_XR121 : TCP_SMG_M7{
 		model="x\12thMEU\addons\custom_weapons\XR-121\XR_121.p3d";
@@ -332,10 +333,13 @@ class CfgWeapons
 				compatibleItems[] += {/* "XR121_integ_pointer" */};
 			};
 		};
-		modes[] = {"FullAuto","FullAuto_Close_Optics","Single","Single_Close_Optics","FullestAuto",};
+		modes[] = {"FullAuto","FullAuto_Close_Optics","Single","Single_Close_Optics","FullestAuto","FullestAuto_Close_Optics"};
 		class FullestAuto:FullAuto{
 			reloadTime = 0.04;
 			textureType = "fastAuto";
+		};
+		class FullestAuto_Close_Optics:FullAuto_Close_Optics{
+			reloadTime = 0.04;
 		};
 		/* class LinkedItems {
 			class LinkedItemsCows {
