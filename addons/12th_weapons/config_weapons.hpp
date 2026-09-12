@@ -829,6 +829,7 @@ class CfgWeapons
       scopeArsenal = 2;
       displayName = "[12th] M73H";
       baseWeapon = "twelfth_M73H";
+      ace_overheating_closedBolt = 0; 
       magazines[] = {
           "twelfth_100Rnd_95x40_Box", "twelfth_100Rnd_95x40_Box_T",
           "twelfth_br_36Rnd", "twelfth_br_36Rnd_T","twelfth_56Rnd_95x40_Mag","twelfth_56Rnd_95x40_Mag_T","twelfth_br_36Rnd_UW"
@@ -879,6 +880,7 @@ class CfgWeapons
 	    distanceZoomMin=100;
 	    distanceZoomMax=700;
       maxZeroing=700;
+      ace_overheating_closedBolt = 0;
       ace_overheating_allowSwapBarrel = 1;
 
 
@@ -925,6 +927,7 @@ class CfgWeapons
       DEPLOYED_GESTURE_GPMG;
       RELOAD_EH;
       magazines[] = COMMON_LMG_MAGAZINES;
+      ace_overheating_closedBolt = 0;
       modes[] = {"FullAuto", "FullAutoFast"};
       class FullAuto : FullAuto
       {
@@ -972,6 +975,7 @@ class CfgWeapons
       baseWeapon = "twelfth_M247A1";
       DEPLOYED_GESTURE_GPMG;
       RELOAD_EH;
+      ace_overheating_closedBolt = 0;
       modes[] = {"FullAuto", "FullAutoFast"};
       class FullAuto : FullAuto
       {
@@ -1027,6 +1031,7 @@ class CfgWeapons
       baseWeapon = "twelfth_M247A1_Stripped";
       DEPLOYED_GESTURE_GPMG;
       RELOAD_EH;
+      ace_overheating_closedBolt = 0;
       modes[] = {"FullAuto", "FullAutoFast"};
       class FullAuto : FullAuto
       {
@@ -1233,6 +1238,7 @@ class CfgWeapons
     mass = 160;
 		displayName = "[12th] MA6-A Box";
 		baseWeapon = "twelfth_MA6_A_BOX";
+    ace_overheating_closedBolt = 0; 
 		class WeaponSlotsInfo: WeaponSlotsInfo {
 			class MuzzleSlot: MuzzleSlot {
 				linkProxy = "\A3\data_f\proxies\weapon_slots\MUZZLE";
@@ -1258,6 +1264,7 @@ class CfgWeapons
     mass = 160;
 		displayName = "[12th] MA6-A Drum";
 		baseWeapon = "twelfth_MA6_A_DRUM";
+    ace_overheating_closedBolt = 0; 
 		class WeaponSlotsInfo: WeaponSlotsInfo {
 			class MuzzleSlot: MuzzleSlot {
 				linkProxy = "\A3\data_f\proxies\weapon_slots\MUZZLE";
