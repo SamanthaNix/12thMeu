@@ -211,6 +211,8 @@ class CfgWeapons
 	class OPTRE_Commando;
 	class WeaponSlotsInfo;
 	class UGL_F;
+
+//////////////////G82////////////////////
 	class twelfth_G82: OPTRE_Commando {
 		model="x\12thMEU\addons\custom_weapons\G82\G82.p3d";
 		author = "Rex";
@@ -254,7 +256,7 @@ class CfgWeapons
 
 
 
-	
+/////////////////////XR-704/////////////////////
 	class LRR_base_F;
 	class srifle_XR704 : LRR_base_F{
 		model="x\12thMEU\addons\custom_weapons\XR-704\XR_704.p3d";
@@ -285,6 +287,10 @@ class CfgWeapons
 			{
 				compatibleItems[] = {"bipod_03_F_blk","bipod_02_F_blk","bipod_01_F_blk","bipod_02_F_hex","bipod_01_F_mtp","bipod_03_F_oil","bipod_01_F_snd","bipod_02_F_tan"};
 			};
+			class PointerSlot : PointerSlot 
+			{
+				compatibleItems[] = {};
+			};
 		}; 
 		class LinkedItems {
 			class LinkedItemsCows {
@@ -293,8 +299,51 @@ class CfgWeapons
 			};
 		};
 	};
-
-
+/////////////////////XR-121/////////////////////
+	class TCP_SMG_M7{
+		class FullAuto;
+	};
+	class smg_XR121 : TCP_SMG_M7{
+		model="x\12thMEU\addons\custom_weapons\XR-121\XR_121.p3d";
+		author = "Sammy";
+		scope = 2;
+		//Ace stuff
+		
+		ace_overheating_closedBolt=0;
+		scopeArsenal = 2;
+		mass=180;
+		displayName = "XR-121";
+		baseWeapon = "smg_XR121";
+		canShootInWater = 1;
+		muzzles[] = {"this"};
+		picture="\x\12thMEU\addons\custom_weapons\XR-121\data\preview.paa";
+		handAnim[] = {"OFP2_ManSkeleton","\x\12thMEU\addons\custom_weapons\XR-121\data\XR-121.rtm"};
+		class WeaponSlotsInfo : WeaponSlotsInfo {
+			class CowsSlot : CowsSlot
+          	{
+            compatibleitems[] += {/* "XR121_Optics" */};
+          	};
+			class UnderBarrelSlot: UnderBarrelSlot 
+			{
+				compatibleItems[] = {};
+			};
+			class PointerSlot : PointerSlot 
+			{
+				compatibleItems[] += {/* "XR121_integ_pointer" */};
+			};
+		};
+		modes[] = {"FullAuto","FullAuto_Close_Optics","Single","Single_Close_Optics","FullestAuto",};
+		class FullestAuto:FullAuto{
+			reloadTime = 0.04;
+			textureType = "fastAuto";
+		};
+		/* class LinkedItems {
+			class LinkedItemsCows {
+				item = "XR121_integ_pointer";
+				slot = "PointerSlot";
+			};
+		}; */
+	};
 
 
 	/// include accessory from separate file to not clutter this one
@@ -326,6 +375,14 @@ class CfgMovesMaleSdr: CfgMovesBasic {
 		};
 		class XR704GunHoldAnim: StandBase {
 			file="\x\12thMEU\addons\custom_weapons\XR-704\data\XR-704.rtm";
+			looped=1;
+			speed=1;
+			mask = "bodyFullReal";
+			rightHandIKCurve[] = {0};
+			leftHandIKCurve[] = {0};
+		};
+		class XR121GunHoldAnim: StandBase {
+			file="\x\12thMEU\addons\custom_weapons\XR-121\data\XR-121.rtm";
 			looped=1;
 			speed=1;
 			mask = "bodyFullReal";
