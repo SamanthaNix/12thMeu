@@ -5,7 +5,7 @@ class CfgMagazines
 
 	class CA_Magazine;
 
-	class LLRLaserMag: CA_Magazine 
+	class SMT_LLRLaserMag: CA_Magazine 
 	{
 		mass=50;
 		ace_disableRepacking = 1;
@@ -20,7 +20,7 @@ class CfgMagazines
 		descriptionShort = "Magazine for LLR <br />Rounds: 3"; /// on mouse-over in Inventory
 		magazineGroup[]	= {"Liquid_mag_group"}; /// all magazines in the same group may be used in weapon that has the group defined as compatible
 	};
-	class CompressedLaserMag: CA_Magazine 
+	class SMT_CompressedLaserMag: CA_Magazine 
 	{
 		mass=50;
 		ace_disableRepacking = 1;
@@ -35,6 +35,7 @@ class CfgMagazines
 		descriptionShort = "Compressed Mag <br />Rounds: 1"; /// on mouse-over in Inventory
 		magazineGroup[]	= {"Liquid_mag_group"}; /// all magazines in the same group may be used in weapon that has the group defined as compatible
 	};
+	//6.5 Creedmoor
 	class Commando_20Rnd_65_Mag;
 	class twelfth_G82_35Rnd_Mag : Commando_20Rnd_65_Mag {
 		mass = 12;
@@ -44,7 +45,6 @@ class CfgMagazines
 		descriptionShort = "35 Round Magazine";
 		count = 35;
 	};
-
 	class twelfth_G82_35Rnd_Mag_T : Commando_20Rnd_65_Mag {
 		mass = 12;
 		scope = 2;
@@ -54,19 +54,44 @@ class CfgMagazines
 		count = 35;
 		tracersEvery = 3;
 	};
+	//.408 CheyTac
 	class 7rnd_408_Mag;
-	class 408CT_6Rnd_Mag :7rnd_408_Mag {
+	class SMT_408CT_6Rnd_Mag :7rnd_408_Mag {
+		ammo="B_408_CheyTac";
 		scope = 2;
 		mass = 12;
 		count = 6;
 		DisplayName = "6Rnd .408 Chey Tac";
-		displayNameShort = "6Rnd .408 CT";
+		displayNameShort = "";
 		descriptionShort = "6 Round Chey Tac";
 	};
-	class 408CT_6Rnd_Mag_T :408CT_6Rnd_Mag {
+	class SMT_408CT_6Rnd_Mag_T :SMT_408CT_6Rnd_Mag {
 		tracersEvery =1;
 		DisplayName = "6Rnd .408 Chey Tac Tracer";
-		displayNameShort = "6Rnd .408 CT-T";
+		displayNameShort = "Tracer";
 		descriptionShort = "6 Round Chey Tac Tracer";
+	};
+	
+	//6.5x55
+	class 30Rnd_65x39_caseless_black_mag;
+	class SMT_65x55_60rnd_Mag:30Rnd_65x39_caseless_black_mag{
+		ammo= "B_65x55_green";
+		count = 60;
+		displayName= "6.5mm Swedish 60Rnd";
+		initSpeed = 970;
+	};
+	class SMT_65x55_60rnd_T_Mag:SMT_65x55_60rnd_Mag{
+		tracersEvery = 1;
+		displayName= "6.5mm Swedish 60Rnd Tracer";
+		displayNameShort="Tracer";
+	};
+	class SMT_65x55_90rnd_Mag:SMT_65x55_60rnd_Mag{
+		count = 80;
+		displayName= "6.5mm Swedish 80Rnd";
+	};
+	class SMT_65x55_90rnd_T_Mag:SMT_65x55_90rnd_Mag{
+		tracersEvery = 1;
+		displayName= "6.5mm Swedish 80Rnd Tracer";
+		displayNameShort="Tracer";
 	};
 };

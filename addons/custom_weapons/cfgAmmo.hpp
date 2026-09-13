@@ -112,4 +112,29 @@ class CfgAmmo
 		};
 		
 	};
+	//6.5x55mm swedish
+	class B_65x39_Case;
+	class B_65x55_green:B_65x39_Case{
+		hit=11;
+		typicalSpeed=970;
+		ACE_muzzleVelocities[]={970};
+        ACE_barrelLengths[]={440}; 
+		ACE_caliber = 6.71;
+		ACE_bulletLength = 29;
+		ACE_bulletMass = 6.5;
+		ACE_ammoTempMuzzleVelocityShifts[] = {-27.20, -26.44, -23.76, -21.00, -17.54, -13.10, -7.95, -1.62, 6.24, 15.48, 27.75};
+		ACE_ballisticCoefficients[] = {0.403};
+	};
+
+	//.408 Chey Tac
+	class B_408_Ball;
+	class B_408_CheyTac:B_408_Ball{
+		typicalSpeed=1100;
+		ACE_muzzleVelocities[]={1100};
+        ACE_barrelLengths[]={800}; 
+		ACE_caliber = 10.37;
+		ACE_dragModel = 1;
+		ACE_ammoTempMuzzleVelocityShifts[] = {-27.20, -26.44, -23.76, -21.00, -17.54, -13.10, -7.95, -1.62, 6.24, 15.48, 27.75};
+		ACE_ballisticCoefficients[] = {0.949};
+	};
 };

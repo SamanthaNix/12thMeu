@@ -40,8 +40,8 @@ class CfgMagazineWells
 	{
 		SMT_Magazines[] =
 		{
-			"LLRLaserMag",
-			"CompressedLaserMag"
+			"SMT_LLRLaserMag",
+			"SMT_CompressedLaserMag"
 		};
 	};
 	class G82mag {
@@ -53,7 +53,13 @@ class CfgMagazineWells
 	class XR704mag{
 		SMT_Magazines[]=
 		{
-			"408CT_6Rnd_Mag_T","408CT_6Rnd_Mag"
+			"SMT_408CT_6Rnd_Mag_T","SMT_408CT_6Rnd_Mag"
+		};
+	};
+	class XR121_mag{
+		SMT_Magazines[]=
+		{
+			"SMT_65x55_60rnd_Mag","SMT_65x55_60rnd_T_Mag","SMT_65x55_90rnd_Mag","SMT_65x55_90rnd_T_Mag"
 		};
 	};
 };
@@ -267,14 +273,14 @@ class CfgWeapons
 		/////////////////////ACE STUFF//////////////////////////////
 		ace_overheating_barrelMass = 5;
 		ACE_barrelLength = 800;
-		ACE_barrelTwist = 229;
+		ACE_barrelTwist = 330.2;
         ACE_twistDirection = 1;
 		/////////////////////ACE STUFF//////////////////////////////
 		displayName = "XR-704";
 		baseWeapon = "srifle_XR704";
 		canShootInWater = 1;
 		magazineWell[] = { "XR704mag" };
-		magazines[] = {"408CT_6Rnd_Mag", "408CT_6Rnd_Mag_T"};
+		magazines[] = {"SMT_408CT_6Rnd_Mag", "SMT_408CT_6Rnd_Mag_T"};
 		muzzles[] = {"this"};
 		picture="\x\12thMEU\addons\custom_weapons\XR-704\data\preview.paa";
 		handAnim[] = {"OFP2_ManSkeleton","\x\12thMEU\addons\custom_weapons\XR-704\data\XR-704.rtm"};
@@ -308,10 +314,19 @@ class CfgWeapons
 		model="x\12thMEU\addons\custom_weapons\XR-121\XR_121.p3d";
 		author = "Sammy";
 		scope = 2;
-		//Ace stuff
-		
-		ace_overheating_closedBolt=0;
 		scopeArsenal = 2;
+		//Ace stuff
+		ace_overheating_barrelMass = 2;
+		ACE_barrelLength = 440;
+		ACE_barrelTwist = 220;
+        ACE_twistDirection = 1;
+		ace_overheating_closedBolt=0;
+
+		//Magazine
+		magazines[] = {"SMT_65x55_60rnd_T_Mag"};
+		magazineWell[] = { "XR121_mag" };
+
+		
 		mass=180;
 		displayName = "XR-121";
 		baseWeapon = "smg_XR121";
@@ -326,7 +341,7 @@ class CfgWeapons
           	};
 			class UnderBarrelSlot: UnderBarrelSlot 
 			{
-				compatibleItems[] = {};
+				compatibleItems[] = {""};
 			};
 			class PointerSlot : PointerSlot 
 			{
