@@ -290,8 +290,9 @@ class CfgWeapons {
 
   // Helmet_CH43A
   class twelfth_helmCH43A_base: TCP_H_Helmet_CH43A_Base {
-    scope=0;
     author="Sammy";
+    scope=0;
+    scopeCurator=0;
     scopeArsenal=0;
     picture="x\12thMEU\addons\12th_ui\data\logo.paa";
     displayName="[12th] Helmet Base (DON'T USE)";
