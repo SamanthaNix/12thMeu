@@ -332,7 +332,7 @@
 				boundary = "wheel_1_2_bound";
 				suspForceAppPointOffset = "wheel_1_2_axis";
 				tireForceAppPointOffset = "wheel_1_2_axis";
-				maxHandBrakeTorque = 30000;
+				maxHandBrakeTorque = 50000;
 				latStiffY = 180;
 				sprungMass = 3850.0;
 				springStrength = 100000;
@@ -347,7 +347,7 @@
 				boundary = "wheel_2_2_bound";
 				suspForceAppPointOffset = "wheel_2_2_axis";
 				tireForceAppPointOffset = "wheel_2_2_axis";
-				maxHandBrakeTorque = 30000;
+				maxHandBrakeTorque = 50000;
 				latStiffY = 180;
 				sprungMass = 3850.0;
 				springStrength = 100000;

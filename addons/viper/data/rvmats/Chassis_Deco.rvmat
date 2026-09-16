@@ -44,7 +44,7 @@ class Stage3
 };
 class Stage4
 {
-	texture = "x\12thmeu\addons\viper\data\textures\Chassis_Deco_Decoas.paa";
+	texture = "x\12thmeu\addons\viper\data\textures\Chassis_Deco_as.paa";
 	uvSource = "tex";
 	class uvTransform
 	{
@@ -56,7 +56,7 @@ class Stage4
 };
 class Stage5
 {
-	texture = "x\12thmeu\addons\viper\data\textures\Chassis_Deco_Decosmdi.paa";
+	texture = "x\12thmeu\addons\viper\data\textures\Chassis_Deco_smdi.paa";
 	uvSource = "tex";
 	class uvTransform
 	{
