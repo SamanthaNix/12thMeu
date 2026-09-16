@@ -222,7 +222,7 @@
   #define CLASS_GENERIC_3_1(VARIANT,VARIANT2,SCOPEVAL,CAMO,SHIRT,arg1) \
   class twelfth_##VARIANT##_##SHIRT##_##arg1##_##CAMO## : TCP_##VARIANT##_CBUU_##SHIRT##_##arg1##_Base {\
       scope=#SCOPEVAL;\
-      displayName=TWELFTH_UNIFORM_DISPLAYNAME(CAMO);\
+      displayName="[12th] Uniform";\
       ACE_GForceCoef=0.4;\
       class TCP_equipmentTypes: TCP_equipmentTypes {\
         baseEquipment = QOUTE(twelfth_##VARIANT##_##SHIRT##_##arg1##_##CAMO##); \
@@ -270,7 +270,7 @@
   #define CLASS_GENERIC_4_1(VARIANT,VARIANT2,SCOPEVAL,CAMO,SHIRT,arg1,arg2) \
   class twelfth_##VARIANT##_##SHIRT##_##arg1##_##arg2##_##CAMO## : TCP_##VARIANT##_CBUU_##SHIRT##_##arg1##_##arg2##_Base {\
       scope=#SCOPEVAL;\
-      displayName=TWELFTH_UNIFORM_DISPLAYNAME(##CAMO);\
+      displayName="[12th] Uniform";\
       ACE_GForceCoef=0.4;\
       class TCP_equipmentTypes: TCP_equipmentTypes {\
         baseEquipment = QOUTE(twelfth_##VARIANT##_##SHIRT##_##arg1##_##arg2##_##CAMO##); \
@@ -318,7 +318,7 @@
   #define CLASS_GENERIC_5_1(VARIANT,VARIANT2,SCOPEVAL,CAMO,SHIRT,arg1,arg2,arg3) \
   class twelfth_##VARIANT##_##SHIRT##_##arg1##_##arg2##_##arg3##_##CAMO## : TCP_##VARIANT##_CBUU_##SHIRT##_##arg1##_##arg2##_##arg3##_Base {\
       scope=#SCOPEVAL;\
-      displayName=TWELFTH_UNIFORM_DISPLAYNAME(##CAMO);\
+      displayName="[12th] Uniform";\
       ACE_GForceCoef=0.4;\
       class TCP_equipmentTypes: TCP_equipmentTypes {\
         baseEquipment = QOUTE(twelfth_##VARIANT##_##SHIRT##_##arg1##_##arg2##_##arg3##_##CAMO##); \
@@ -366,7 +366,7 @@
   #define CLASS_GENERIC_6_1(VARIANT,VARIANT2,SCOPEVAL,CAMO,SHIRT,arg1,arg2,arg3,arg4) \
   class twelfth_##VARIANT##_##SHIRT##_##arg1##_##arg2##_##arg3##_##arg4##_##CAMO## : TCP_##VARIANT##_CBUU_##SHIRT##_##arg1##_##arg2##_##arg3##_##arg4##_Base {\
       scope=#SCOPEVAL;\
-      displayName=TWELFTH_UNIFORM_DISPLAYNAME(##CAMO);\
+      displayName="[12th] Uniform";\
       ACE_GForceCoef=0.4;\
       class TCP_equipmentTypes: TCP_equipmentTypes {\
         baseEquipment = QOUTE(twelfth_##VARIANT##_##SHIRT##_##arg1##_##arg2##_##arg3##_##arg4##_##CAMO##); \
@@ -400,7 +400,7 @@
   #define CLASS_GENERIC_7_1(VARIANT,VARIANT2,SCOPEVAL,CAMO,SHIRT,arg1,arg2,arg3,arg4,arg5) \
   class twelfth_##VARIANT##_##SHIRT##_##arg1##_##arg2##_##arg3##_##arg4##_##arg5##_##CAMO## : TCP_##VARIANT##_CBUU_##SHIRT##_##arg1##_##arg2##_##arg3##_##arg4##_##arg5##_Base {\
       scope=#SCOPEVAL;\
-      displayName= TWELFTH_UNIFORM_DISPLAYNAME(##CAMO);\
+      displayName= "[12th] Uniform";\
       ACE_GForceCoef=0.4;\
       class TCP_equipmentTypes: TCP_equipmentTypes {\
         baseEquipment = QOUTE(twelfth_##VARIANT##_##SHIRT##_##arg1##_##arg2##_##arg3##_##arg4##_##arg5##_##CAMO##); \
