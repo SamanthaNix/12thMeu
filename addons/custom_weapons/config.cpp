@@ -7,11 +7,11 @@ class CfgPatches
 	class SMT_Custom_Weapons
 	{
 		units[] = {};
-		weapons[] = {"PrototypeLaser_01_F","PrototypeOptics","SMT_G82","SMT_G82_sight","SMT_srifle_XR704","XR704_Scope"};
+		weapons[] = {"SMT_PrototypeLaser_01_F","SMT_PrototypeOptics","SMT_G82","SMT_G82_sight","SMT_srifle_XR704","SMT_XR704_Scope","SMT_XR_Holo","SMT_SMG_XR121"};
 		requiredVersion = 0.1;
 		requiredAddons[] = {"A3_Weapons_F"};
-		magazines[] = {"3Rnd_test_mag","SMT_G82_35Rnd_Mag", "SMT_G82_35Rnd_Mag_T","408CT_6Rnd_Mag_T","408CT_6Rnd_Mag"};
-		ammo[] = {"StandardLiquidLaserAmmo"};
+		magazines[] = {"3Rnd_test_mag","SMT_G82_35Rnd_Mag", "SMT_G82_35Rnd_Mag_T","408CT_6Rnd_Mag_T","408CT_6Rnd_Mag","SMT_65x55_60rnd_Mag","SMT_65x55_60rnd_T_Mag","SMT_65x55_90rnd_Mag","SMT_65x55_90rnd_T_Mag"};
+		ammo[] = {"StandardLiquidLaserAmmo","CompressedLiquidLaserAmmo","B_65x55_green","B_408_CheyTac"};
 	};
 };
 
@@ -47,7 +47,7 @@ class CfgMagazineWells
 	class G82mag {
 		SMT_Magazines[] =
 		{
-			"twelfth_G82_35Rnd_Mag", "twelfth_G82_35Rnd_Mag_T"
+			"SMT_G82_35Rnd_Mag", "SMT_G82_35Rnd_Mag_T"
 		};
 	};
 	class XR704mag{
@@ -198,7 +198,7 @@ class CfgWeapons
 	};
 
 
-	class PrototypeLaser_01_F: PrototypeLaser_01_Base_F
+	class SMT_PrototypeLaser_01_F: PrototypeLaser_01_Base_F
 	{
 		scope = 2;
 		displayName = "[12th] Prototype LLR";
@@ -236,12 +236,12 @@ class CfgWeapons
 		class WeaponSlotsInfo : WeaponSlotsInfo {
 			class CowsSlot : CowsSlot
           {
-            compatibleitems[] = {"twelfth_G82_sight"};
+            compatibleitems[] = {"SMT_G82_sight"};
           };
 		}; 
 		class LinkedItems {
 			class LinkedItemsCows {
-				item = "twelfth_G82_sight";
+				item = "SMT_G82_sight";
 				slot = "CowsSlot";
 			};
 		};
@@ -259,9 +259,6 @@ class CfgWeapons
 			discreteDistanceInitIndex = 1; /// 200 is the default zero
 		};
 	}; 
-
-
-
 /////////////////////XR-704/////////////////////
 	class LRR_base_F;
 	class SMT_srifle_XR704 : LRR_base_F{
@@ -287,7 +284,7 @@ class CfgWeapons
 		class WeaponSlotsInfo : WeaponSlotsInfo {
 			class CowsSlot : CowsSlot
           	{
-            compatibleitems[] += {"XR704_Scope"};
+            compatibleitems[] += {"SMT_XR704_Scope"};
           	};
 			class UnderBarrelSlot: UnderBarrelSlot 
 			{
@@ -300,7 +297,7 @@ class CfgWeapons
 		}; 
 		class LinkedItems {
 			class LinkedItemsCows {
-				item = "XR704_Scope";
+				item = "SMT_XR704_Scope";
 				slot = "CowsSlot";
 			};
 		};
@@ -314,6 +311,12 @@ class CfgWeapons
 		author = "Sammy";
 		scope = 2;
 		scopeArsenal = 2;
+		displayName = "XR-121";
+		baseWeapon = "smg_XR121";
+		canShootInWater = 1;
+		muzzles[] = {"this"};
+		picture="\x\12thMEU\addons\custom_weapons\XR-121\data\preview.paa";
+		mass=180;
 		//Ace stuff
 		ace_overheating_barrelMass = 2;
 		ACE_barrelLength = 440;
@@ -325,18 +328,42 @@ class CfgWeapons
 		magazines[] = {"SMT_65x55_60rnd_T_Mag"};
 		magazineWell[] = { "XR121_mag" };
 
-		
-		mass=180;
-		displayName = "XR-121";
-		baseWeapon = "smg_XR121";
-		canShootInWater = 1;
-		muzzles[] = {"this"};
-		picture="\x\12thMEU\addons\custom_weapons\XR-121\data\preview.paa";
+		//Flashlight
+		class FlashLight
+        {
+            ambient[] = {0.9,0.81,0.7};
+            color[] = {180,160,130};
+            coneFadeCoef = 8;
+            dayLight = 0;
+            direction = "flash";
+            flareMaxDistance = 100;
+            flareSize = 1.4;
+            innerAngle = 5;
+            intensity = 100;
+            outerAngle = 100;
+            position = "flash dir";
+            scale[] = {1,1,1};
+            size = 1;
+            useFlare = 1;
+            volumeShape = "a3\data_f\VolumeLightFlashlight.p3d";
+
+            class Attenuation
+            {
+                constant = 0.5;
+                hardLimitEnd = 40;
+                hardLimitStart = 32;
+                linear = 0.1;
+                quadratic = 0.2;
+                start = 0;
+            };
+        };
+
+
 		handAnim[] = {"OFP2_ManSkeleton","\x\12thMEU\addons\custom_weapons\XR-121\data\XR-121.rtm"};
 		class WeaponSlotsInfo : WeaponSlotsInfo {
 			class CowsSlot : CowsSlot
           	{
-            compatibleitems[] += {"optic_arco_ak_blk_f", "optic_dms", "optic_aco_grn", "optic_aco", "optic_arco_blk_f", "optic_holosight_blk_f", "optic_mrco", "optic_khs_blk", "optic_hamr", "optic_sos", "optic_nightstalker", "optic_erco_blk_f", "optic_yorris", "optic_aco_smg", "optic_aco_grn_smg", "optic_holosight_smg_blk_f", "optic_mrd_black", "ace_optic_arco_2d", "ace_optic_arco_pip", "ace_optic_lrps_pip", "ace_optic_sos_2d", "ace_optic_sos_pip", "ace_optic_mrco_2d", "ace_optic_hamr_2d", "ace_optic_hamr_pip", "OPTRE_M7_Sight", "OPTRE_M12_Optic", "OPTRE_M12_Optic_Red", "OPTRE_M12_Optic_Green", "Optre_Recon_Sight", "Optre_Recon_Sight_Red", "Optre_Recon_Sight_Green", "Optre_Recon_Sight_Desert", "Optre_Recon_Sight_UNSC", "Optre_Recon_Sight_Snow", "OPTRE_BR45_Scope", "OPTRE_BR55HB_Scope", "OPTRE_BR55HB_Scope_Grey", "OPTRE_BMR_Scope", "OPTRE_M392_Scope", "OPTRE_M393_Scope", "OPTRE_M393_ACOG", "OPTRE_M393_EOTECH", "OPTRE_SRM_Sight", "OPTRE_MA5_BUIS","TCP_optic_M11VERO_Blue","TCP_optic_M11VERO","TCP_optic_M27RCO","TCP_optic_M43RCO","TCP_optic_M27RCO_CRS","TCP_optic_M27RCO_CRS_CUP","TCP_optic_M27RCO_CUP","TCP_optic_M5BSLSV_Blue","TCP_optic_M5BSLSV","TCP_optic_M81ERO_Blue","TCP_optic_M81ERO","TCP_optic_M43RCO_CRS","TCP_optic_M43RCO_CRS_CUP","TCP_optic_M43RCO_CUP","twelfth_m43rco","twelfth_m43rco_crs","twelfth_m43rco_crs_cup","twelfth_m43rco_cup"};
+            compatibleitems[] += {"SMT_XR_Holo","optic_arco_ak_blk_f", "optic_dms", "optic_aco_grn", "optic_aco", "optic_arco_blk_f", "optic_holosight_blk_f", "optic_mrco", "optic_khs_blk", "optic_hamr", "optic_sos", "optic_nightstalker", "optic_erco_blk_f", "optic_yorris", "optic_aco_smg", "optic_aco_grn_smg", "optic_holosight_smg_blk_f", "optic_mrd_black", "ace_optic_arco_2d", "ace_optic_arco_pip", "ace_optic_lrps_pip", "ace_optic_sos_2d", "ace_optic_sos_pip", "ace_optic_mrco_2d", "ace_optic_hamr_2d", "ace_optic_hamr_pip", "OPTRE_M7_Sight", "OPTRE_M12_Optic", "OPTRE_M12_Optic_Red", "OPTRE_M12_Optic_Green", "Optre_Recon_Sight", "Optre_Recon_Sight_Red", "Optre_Recon_Sight_Green", "Optre_Recon_Sight_Desert", "Optre_Recon_Sight_UNSC", "Optre_Recon_Sight_Snow", "OPTRE_BR45_Scope", "OPTRE_BR55HB_Scope", "OPTRE_BR55HB_Scope_Grey", "OPTRE_BMR_Scope", "OPTRE_M392_Scope", "OPTRE_M393_Scope", "OPTRE_M393_ACOG", "OPTRE_M393_EOTECH", "OPTRE_SRM_Sight", "OPTRE_MA5_BUIS","TCP_optic_M11VERO_Blue","TCP_optic_M11VERO","TCP_optic_M27RCO","TCP_optic_M43RCO","TCP_optic_M27RCO_CRS","TCP_optic_M27RCO_CRS_CUP","TCP_optic_M27RCO_CUP","TCP_optic_M5BSLSV_Blue","TCP_optic_M5BSLSV","TCP_optic_M81ERO_Blue","TCP_optic_M81ERO","TCP_optic_M43RCO_CRS","TCP_optic_M43RCO_CRS_CUP","TCP_optic_M43RCO_CUP","twelfth_m43rco","twelfth_m43rco_crs","twelfth_m43rco_crs_cup","twelfth_m43rco_cup"};
           	};
 			class UnderBarrelSlot: UnderBarrelSlot 
 			{
@@ -350,10 +377,10 @@ class CfgWeapons
 		modes[] = {"Single","FullAuto","fullauto_medium","single_medium_optics1","single_far_optics2","ACE_Burst_far","FullestAuto","FullestAuto_Close_Optics"};
 		class FullAuto:FullAuto{
 			showtoplayer=1;
-			reloadTime = 0.0666667;
+			reloadTime = 0.08;
 		};
 		class fullauto_medium:fullauto_medium{
-			reloadTime = 0.0666667;
+			reloadTime = 0.08;
 		};
 		class FullestAuto:FullAuto{
 			showtoplayer=1;
@@ -363,12 +390,6 @@ class CfgWeapons
 		class FullestAuto_Close_Optics:fullauto_medium{
 			reloadTime = 0.04;
 		};
-		/* class LinkedItems {
-			class LinkedItemsCows {
-				item = "XR121_integ_pointer";
-				slot = "PointerSlot";
-			};
-		}; */
 	};
 
 
@@ -418,3 +439,22 @@ class CfgMovesMaleSdr: CfgMovesBasic {
 	};
 };
 
+/* class CfgVehicles {
+    class Man;
+    class CAManBase: Man {
+        class ACE_SelfActions {
+			class ACE_Equipment {
+				class greenOptic {
+					displayName = "Change optic colour to Green";
+					exceptions[] = {};
+					statement = "_this setObjectTexture ["Optics", #(rgb,1,1,3)color(0,1,0,1)];";
+				};
+				class RedOptic {
+					displayName = "Change optic colour to Red";
+					exceptions[] = {};
+					statement = "_this setObjectTexture ["Optics", #(rgb,1,1,1)color(1,0,0,1)];";
+				};
+			};
+		};
+    };
+}; */

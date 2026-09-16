@@ -5,11 +5,11 @@ class InventoryItem_Base_F;
 class InventoryOpticsItem_Base_F;
 class OPTRE_SRS99C_Scope;
 
-class PrototypeOptics: ACE_optic_LRPS_2D
+class SMT_PrototypeOptics: ACE_optic_LRPS_2D
 {
 	scope = 2;
 	author = "SamanthaNix";
-	displayName = "[12th] Tri-Sight Prototype Optics";
+	displayName = "Tri-Sight Prototype Optics";
 	descriptionShort = "Tri-sight developed in conjunction with the prototype Laser";
 	picture="\x\12thMEU\addons\Custom_Weapons\data\SightPreview.paa";
 	model = "\x\12thMEU\addons\Custom_Weapons\data\PrototypeScope.p3d";
@@ -47,27 +47,25 @@ class PrototypeOptics: ACE_optic_LRPS_2D
 	};
 	intertia = 0.1; */
 };
-class PrototypeOpticsV2: OPTRE_SRS99C_Scope
+class SMT_PrototypeOpticsV2: OPTRE_SRS99C_Scope
 {
 	mass=16;
 	scope = 2;
 	author = "SamanthaNix";
-	displayName = "[12th] Tri-Sight Prototype Optics V2";
+	displayName = "Tri-Sight Prototype Optics V2";
 	descriptionShort = "Tri-sight developed in conjunction with the prototype Laser";
 	picture="\x\12thMEU\addons\Custom_Weapons\data\SightPreview.paa";
 	model = "\x\12thMEU\addons\Custom_Weapons\data\PrototypeScope.p3d";
 };
-
-class optic_DMS {
-	class ItemInfo;
-};
-class twelfth_G82_sight : optic_DMS {
+class ItemInfo;
+class optic_DMS;
+class SMT_G82_sight : optic_DMS {
 	model = "x\12thMEU\addons\custom_weapons\G82\G82_Scope.p3d";
 	author = "Rex";
 	scope = 2;
 	scopeArsenal = 2;
-	DisplayName = "[12th] G82 Optic";
-	baseWeapon = "twelfth_G82_sight";
+	DisplayName = "G82 Optic";
+	baseWeapon = "SMT_G82_sight";
 	class ItemInfo : ItemInfo
 	{	
 	class OpticsModes
@@ -97,11 +95,24 @@ class twelfth_G82_sight : optic_DMS {
 	};
 };
 class optic_tws;
-class XR704_Scope:optic_tws{
+class SMT_XR704_Scope:optic_tws{
 	model = "x\12thMEU\addons\custom_weapons\XR-704\XR_704_Scope.p3d";
 	author = "Sammy";
 	scope = 2;
 	scopeArsenal = 2;
 	DisplayName = "XR-704 Optic";
 	baseWeapon = "XR704_Scope";
+};
+class optic_Aco;
+class SMT_XR_Holo:optic_Aco{
+	model = "x\12thMEU\addons\custom_weapons\XR-121\XR_Holo.p3d";
+	author = "Sammy";
+	scope = 2;
+	scopeArsenal = 2;
+	DisplayName = "XR - Holographic";
+	baseWeapon = "XR_Holo";
+	hiddenSelections[]= {"camo1"};
+    hiddenSelectionsTextures[] = {
+	"#(rgb,1,1,1)color(1,0,0,1)"
+    };
 };
