@@ -113,6 +113,6 @@ class SMT_XR_Holo:optic_Aco{
 	baseWeapon = "XR_Holo";
 	hiddenSelections[]= {"camo1"};
     hiddenSelectionsTextures[] = {
-	"#(rgb,1,1,1)color(0,1,0.08235294,1)"
+	"#(rgb,1,1,1)color(1,0,0,1)"
     };
 };
