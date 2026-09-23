@@ -38,7 +38,7 @@ class CfgPatches
                   "twelfth_M319N", "twelfth_MA5C", "twelfth_MA5CGL", "twelfth_MA5K", 
                   "twelfth_MAAWS_base","twelfth_MAAWS_olive","twelfth_MAAWS_sand",
                   "twelfth_M41_SSR_laserfix","twelfth_M41_SSR_G_laserfix",
-                  "twelfth_MA6_K","twelfth_MA6","twelfth_MA6_D","twelfth_MA6_A_BOX","twelfth_MA6_A_DRUM","twelfth_M6C2","twelfth_M6G2","twelfth_MA6_AL",
+                  "twelfth_MA6_K","twelfth_MA6","twelfth_MA6_green","twelfth_MA6_D","twelfth_MA6_A_BOX","twelfth_MA6_A_DRUM","twelfth_M6C2","twelfth_M6G2","twelfth_MA6_AL",
                   "twelfth_W_GBU_prototype_250_Launcher","twelfth_W_GBU_prototype_500_Launcher",
                   "avm224_W_M224_mortar_proxy","NDS_W_M224_mortar",
                   "twelfth_universal_sabre_launcher", // launcher for SABRE supporting all the whack ass fucking missiles

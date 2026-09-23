@@ -1149,6 +1149,11 @@ class CfgWeapons
 		canShootInWater = 1;
 		magazines[] = COMMON_MA5C_MAGAZINES;
 		handAnim[] = {"OFP2_ManSkeleton","x\12thMEU\addons\12th_weapons\data\MA6\animations\MA6.rtm"};
+    hiddenSelections[] = {"camo1"};
+    hiddenSelectionsTextures[]=// List of textures, in the same order as the hiddenSelections definition
+    {
+      "x\12thMEU\addons\12th_weapons\data\MA6\MA6_co.paa",
+    };
 		class WeaponSlotsInfo: WeaponSlotsInfo {
 			class MuzzleSlot: MuzzleSlot {
 				linkProxy = "\A3\data_f\proxies\weapon_slots\MUZZLE";
@@ -1167,6 +1172,18 @@ class CfgWeapons
 				compatibleitems[] = COMMON_LIGHT_BIPOD;
 			};
 		};
+	};
+
+	class twelfth_MA6_green: twelfth_MA6 {
+		model="x\12thMEU\addons\12th_weapons\data\MA6\MA6.p3d";
+		author = "Sammy";
+    baseWeapon = "twelfth_MA6_green";
+		displayName = "[12th] MA6 Assault Rifle (Green)";
+		hiddenSelections[] = {"camo1"};
+    hiddenSelectionsTextures[]=// List of textures, in the same order as the hiddenSelections definition
+    {
+      "x\12thMEU\addons\12th_weapons\data\MA6\green\MA6_co.paa",
+    };
 	};
 
 	//Carbine
