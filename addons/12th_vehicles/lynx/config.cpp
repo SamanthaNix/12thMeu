@@ -35,7 +35,7 @@ class CfgVehicles {
       QP(lynx\default\cannon_co.paa)
     };
     class textureSources {
-      class default {
+      class Default {
         displayName="Default";
         author="Wolfe";
         textures[] = {

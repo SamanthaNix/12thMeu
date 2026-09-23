@@ -3,7 +3,7 @@
 //Fixed with the help of Crowdedlight
 
 
-class DefaultEventhandlers;
+class DefaultEventHandlers;
 class CfgPatches {
   class vehicle_Dingo {
     units[] = {

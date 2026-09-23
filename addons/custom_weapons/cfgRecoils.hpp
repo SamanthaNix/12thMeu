@@ -3,7 +3,7 @@
 #define LynxXcoef (0.003)
 #define LynxYcoef (0.008)
 
-class cfgRecoils
+class CfgRecoils
 {
 	#include "cfgRecoilsLegacy.hpp"
 

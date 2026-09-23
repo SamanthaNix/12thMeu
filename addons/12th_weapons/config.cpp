@@ -38,14 +38,14 @@ class CfgPatches
                   "twelfth_M319N", "twelfth_MA5C", "twelfth_MA5CGL", "twelfth_MA5K", 
                   "twelfth_MAAWS_base","twelfth_MAAWS_olive","twelfth_MAAWS_sand",
                   "twelfth_M41_SSR_laserfix","twelfth_M41_SSR_G_laserfix",
-                  "twelfth_MA6_K","twelfth_MA6","twelfth_MA6_D","twelfth_MA6_A_BOX","twelfth_MA6_A_DRUM","twelfth_M6C2","twelfth_M6C","twelfth_M6G2","twelfth_MA6_AL",
+                  "twelfth_MA6_K","twelfth_MA6","twelfth_MA6_green","twelfth_MA6_D","twelfth_MA6_A_BOX","twelfth_MA6_A_DRUM","twelfth_M6C2","twelfth_M6G2","twelfth_MA6_AL",
                   "twelfth_W_GBU_prototype_250_Launcher","twelfth_W_GBU_prototype_500_Launcher",
                   "avm224_W_M224_mortar_proxy","NDS_W_M224_mortar",
                   "twelfth_universal_sabre_launcher", // launcher for SABRE supporting all the whack ass fucking missiles
                   "twelfth_ace_hellfire_launcher","twelfth_ace_missile_aim120_aim120Launcher",
                   "twelfth_ace_maverick_D_Launcher","twelfth_ace_maverick_G_Launcher","twelfth_ace_maverick_L_Launcher_Plane",
                   "twelfth_weapon_HARMLauncher",
-                  "twelfth_ace_hellfire_launcher", "twelfth_ace_hellfire_launcher_L","twelfth_ace_hellfire_launcher_N",
+                  "twelfth_ace_hellfire_launcher_L","twelfth_ace_hellfire_launcher_N",
                   "twelfth_OPTRE_missiles_Scorpion","twelfth_OPTRE_missiles_Jackknife"
                  }; // Ensure any newly created weapon class is listed above.
     ammo[] = {"twelfth_20g_bb", "twelfth_95x40_UW", "twelfth_5x23mm_UW", "twelfth_40mmG_HEAT",
@@ -91,7 +91,7 @@ class CfgPatches
 };
 
 class CfgMovesBasic {
-	class default;
+	class Default;
 };
 class CfgMovesMaleSdr: CfgMovesBasic {
 	skeletonName = "OFP2_ManSkeleton";

@@ -397,7 +397,7 @@ class CfgWeapons
 	#include "accessory.hpp"
 };
 class CfgMovesBasic {
-	class default;
+	class Default;
 };
 class CfgMovesMaleSdr: CfgMovesBasic {
 	skeletonName = "OFP2_ManSkeleton";

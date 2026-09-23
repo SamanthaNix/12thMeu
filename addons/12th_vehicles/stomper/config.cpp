@@ -76,7 +76,7 @@ class CfgVehicles {
 
     // textureSources define alternate texture sets for the vehicle
     class textureSources {
-      class default {
+      class Default {
         displayName = "Default";
         author = "Waylen";
         textures[] = {
@@ -135,7 +135,7 @@ class CfgVehicles {
     };
 
     class textureSources {
-      class default {
+      class Default {
         displayName = "Default";
         author = "Waylen";
         textures[] = {

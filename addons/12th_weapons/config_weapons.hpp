@@ -510,7 +510,7 @@ class CfgWeapons
     TCP_weaponDisplayColor[] = {0.152,0.547,0.930,1};
     TCP_weaponDisplayTexture = "TCP\Weapons\Rifles\MA5B\data\ui\weaponDisplay_CA.paa";
 
-    class Eventhandlers
+    class EventHandlers
     {
         fired = "[""RscDisplayTCPCounterMA5K"", _this] call TCP_fnc_weaponDisplayCounterFired;";
         reloaded = "[""RscDisplayTCPCounterMA5K"", _this] call TCP_fnc_weaponDisplayCounterReloaded;";
@@ -601,7 +601,7 @@ class CfgWeapons
         TCP_weaponDisplayColor[] = {0.309,0.625,0.836,1};
         TCP_weaponDisplayTexture = "\TCP\Weapons_Ins\Rifles\BR55\data\ui\weaponDisplay_CA.paa";
 
-        class Eventhandlers
+        class EventHandlers
         {
             fired = "[""RscDisplayTCPCounterBR55"", _this] call TCP_fnc_weaponDisplayCounterFired;";
             reloaded = "[""RscDisplayTCPCounterBR55"", _this] call TCP_fnc_weaponDisplayCounterReloaded;";
@@ -688,7 +688,7 @@ class CfgWeapons
         TCP_weaponDisplayFont = "SquareFont";
         TCP_weaponDisplayColor[] = {0.309,0.625,0.836,1};
         TCP_weaponDisplayTexture = "\TCP\Weapons_Ins\LongRangeRifles\BR55HB\data\ui\weaponDisplay_CA.paa";
-        class Eventhandlers
+        class EventHandlers
         {
             fired = "[""RscDisplayTCPCounterBR55HB"", _this] call TCP_fnc_weaponDisplayCounterFired;";
             reloaded = "[""RscDisplayTCPCounterBR55HB"", _this] call TCP_fnc_weaponDisplayCounterReloaded;";
@@ -749,7 +749,7 @@ class CfgWeapons
         TCP_weaponDisplayColor[] = {0.309,0.625,0.836,1};
         TCP_weaponDisplayTexture = "\TCP\Weapons\LongRangeRifles\M392\data\ui\weaponDisplay_CA.paa";
 
-        class Eventhandlers
+        class EventHandlers
         {
             fired = "[""RscDisplayTCPCounterM392"", _this] call TCP_fnc_weaponDisplayCounterFired;";
             reloaded = "[""RscDisplayTCPCounterM392"", _this] call TCP_fnc_weaponDisplayCounterReloaded;";
@@ -1149,6 +1149,11 @@ class CfgWeapons
 		canShootInWater = 1;
 		magazines[] = COMMON_MA5C_MAGAZINES;
 		handAnim[] = {"OFP2_ManSkeleton","x\12thMEU\addons\12th_weapons\data\MA6\animations\MA6.rtm"};
+    hiddenSelections[] = {"camo1"};
+    hiddenSelectionsTextures[]=// List of textures, in the same order as the hiddenSelections definition
+    {
+      "x\12thMEU\addons\12th_weapons\data\MA6\MA6_co.paa",
+    };
 		class WeaponSlotsInfo: WeaponSlotsInfo {
 			class MuzzleSlot: MuzzleSlot {
 				linkProxy = "\A3\data_f\proxies\weapon_slots\MUZZLE";
@@ -1167,6 +1172,18 @@ class CfgWeapons
 				compatibleitems[] = COMMON_LIGHT_BIPOD;
 			};
 		};
+	};
+
+	class twelfth_MA6_green: twelfth_MA6 {
+		model="x\12thMEU\addons\12th_weapons\data\MA6\MA6.p3d";
+		author = "Sammy";
+    baseWeapon = "twelfth_MA6_green";
+		displayName = "[12th] MA6 Assault Rifle (Green)";
+		hiddenSelections[] = {"camo1"};
+    hiddenSelectionsTextures[]=// List of textures, in the same order as the hiddenSelections definition
+    {
+      "x\12thMEU\addons\12th_weapons\data\MA6\green\MA6_co.paa",
+    };
 	};
 
 	//Carbine
