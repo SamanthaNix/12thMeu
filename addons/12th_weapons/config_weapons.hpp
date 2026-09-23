@@ -510,7 +510,7 @@ class CfgWeapons
     TCP_weaponDisplayColor[] = {0.152,0.547,0.930,1};
     TCP_weaponDisplayTexture = "TCP\Weapons\Rifles\MA5B\data\ui\weaponDisplay_CA.paa";
 
-    class Eventhandlers
+    class EventHandlers
     {
         fired = "[""RscDisplayTCPCounterMA5K"", _this] call TCP_fnc_weaponDisplayCounterFired;";
         reloaded = "[""RscDisplayTCPCounterMA5K"", _this] call TCP_fnc_weaponDisplayCounterReloaded;";
@@ -601,7 +601,7 @@ class CfgWeapons
         TCP_weaponDisplayColor[] = {0.309,0.625,0.836,1};
         TCP_weaponDisplayTexture = "\TCP\Weapons_Ins\Rifles\BR55\data\ui\weaponDisplay_CA.paa";
 
-        class Eventhandlers
+        class EventHandlers
         {
             fired = "[""RscDisplayTCPCounterBR55"", _this] call TCP_fnc_weaponDisplayCounterFired;";
             reloaded = "[""RscDisplayTCPCounterBR55"", _this] call TCP_fnc_weaponDisplayCounterReloaded;";
@@ -688,7 +688,7 @@ class CfgWeapons
         TCP_weaponDisplayFont = "SquareFont";
         TCP_weaponDisplayColor[] = {0.309,0.625,0.836,1};
         TCP_weaponDisplayTexture = "\TCP\Weapons_Ins\LongRangeRifles\BR55HB\data\ui\weaponDisplay_CA.paa";
-        class Eventhandlers
+        class EventHandlers
         {
             fired = "[""RscDisplayTCPCounterBR55HB"", _this] call TCP_fnc_weaponDisplayCounterFired;";
             reloaded = "[""RscDisplayTCPCounterBR55HB"", _this] call TCP_fnc_weaponDisplayCounterReloaded;";
@@ -749,7 +749,7 @@ class CfgWeapons
         TCP_weaponDisplayColor[] = {0.309,0.625,0.836,1};
         TCP_weaponDisplayTexture = "\TCP\Weapons\LongRangeRifles\M392\data\ui\weaponDisplay_CA.paa";
 
-        class Eventhandlers
+        class EventHandlers
         {
             fired = "[""RscDisplayTCPCounterM392"", _this] call TCP_fnc_weaponDisplayCounterFired;";
             reloaded = "[""RscDisplayTCPCounterM392"", _this] call TCP_fnc_weaponDisplayCounterReloaded;";

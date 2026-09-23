@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 #include "config_macros.hpp"
 
-class DefaultEventhandlers;
+class DefaultEventHandlers;
 class CfgPatches {
   class vehicle_Viper {
     units[] = {

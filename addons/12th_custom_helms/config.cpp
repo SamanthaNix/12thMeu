@@ -133,7 +133,6 @@ class CfgWeapons {
     - H_HelmetB: Standard ArmA 3 base helmet
     - HeadgearItem: For item-specific config (weight, armor, etc.)
   */
-  class H_HelmetB;
   class ItemInfo;
   class HeadgearItem;
   class twelfth_helmCH43A_base;

@@ -193,12 +193,12 @@ class twelfth_95x40_AP : OPTRE_B_95x40_Ball {
 
   class FlareBase;
   class F_HuntIR: FlareBase {
-    class Eventhandlers;
+    class EventHandlers;
   };
   class F_HuntIR_mortar : F_HuntIR {
     author = "Hen gizzard and Turnip wizard";
     timeToLive = 15;
-    class Eventhandlers {
+    class EventHandlers {
       fired = "[gunner (_this#0), _this#1, _this#2, _this#3, _this#4, _this#5, _this#6] call ACE_huntir_fnc_handleFired;";
     };
   };
