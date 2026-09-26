@@ -975,6 +975,7 @@ class CfgWeapons
       baseWeapon = "twelfth_M247A1";
       DEPLOYED_GESTURE_GPMG;
       RELOAD_EH;
+      magazine[] = {"twelfth_400Rnd_338_Box","twelfth_200Rnd_338_Box"};
       ace_overheating_closedBolt = 0;
       modes[] = {"FullAuto", "FullAutoFast"};
       class FullAuto : FullAuto
@@ -1031,6 +1032,7 @@ class CfgWeapons
       baseWeapon = "twelfth_M247A1_Stripped";
       DEPLOYED_GESTURE_GPMG;
       RELOAD_EH;
+      magazine[] = {"twelfth_400Rnd_338_Box","twelfth_200Rnd_338_Box"};
       ace_overheating_closedBolt = 0;
       modes[] = {"FullAuto", "FullAutoFast"};
       class FullAuto : FullAuto

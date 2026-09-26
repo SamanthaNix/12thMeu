@@ -543,6 +543,8 @@ class CfgMagazines
   ammo = "B_338_NM_Ball";
   count = 200;
   ACE_isBelt = 1;
+  tracersEvery = 3;
+  lastRoundsTracer = 25;
  };
 
  class twelfth_400Rnd_338_Box : OPTRE_400Rnd_762x51_M118_M247A1_Box {
@@ -551,5 +553,7 @@ class CfgMagazines
   ammo = "B_338_NM_Ball";
   count = 400;
   ACE_isBelt = 1;
+  tracersEvery = 3;
+  lastRoundsTracer = 25;
  };
 };
