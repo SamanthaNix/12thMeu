@@ -3,8 +3,6 @@
 
 
 #include "config_macros.hpp"
-#include "config_wardrobe.hpp"
-#include "\z\ace\addons\wardrobe\script_macros_wardrobe.hpp"
 
 /*
   ==============================================================================
@@ -46,8 +44,7 @@ class CfgPatches {
       "OPTRE_UNSC_Units",
       "cba_main",
       "ace_main",
-      "TCP_characters",
-      "ace_wardrobe"
+      "TCP_characters"
     };
   };
 };
