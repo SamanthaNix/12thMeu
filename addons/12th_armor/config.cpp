@@ -3,6 +3,8 @@
 
 
 #include "config_macros.hpp"
+#include "config_wardrobe.hpp"
+#include "\z\ace\addons\wardrobe\script_macros_wardrobe.hpp"
 
 /*
   ==============================================================================
@@ -44,7 +46,8 @@ class CfgPatches {
       "OPTRE_UNSC_Units",
       "cba_main",
       "ace_main",
-      "TCP_characters"
+      "TCP_characters",
+      "ace_wardrobe"
     };
   };
 };
@@ -546,10 +549,11 @@ class XtdGearModels {
       };
       class closed {
         alwaysSelectable = 1;
+        changeingame = 1;
         label="Face";
         values[]={"yes","no"};
-        class no  {label="Open";};
-        class yes  {label="Closed";};
+        class no  {label="Opened"; actionLabel = "Open Helmet";};
+        class yes  {label="Closed"; actionLabel = "Close Helmet";};
       };
       class element {
         alwaysSelectable = 1;
@@ -626,10 +630,11 @@ class XtdGearModels {
       };
       class type {
         alwaysSelectable = 1;
+        changeingame = 1;
         label="Hood type";
         values[]={"Hood","SniperHood"};
-        class Hood  {label="Recon";};
-        class SniperHood  {label="Sniper";};
+        class Hood  {label="Recon"; actionLabel = "Remove Ghillie";};
+        class SniperHood  {label="Sniper"; actionLabel = "Equip Ghillie";};
       };
     };
     //Recon Hoods Down
@@ -670,21 +675,23 @@ class XtdGearModels {
       };
       class sleeve {
         alwaysSelectable = 1;
+        changeingame = 1;
         label="Sleeve Type";
         values[]={"Tucked","Full","QuarterRoll","HalfRoll","SlimSleeve","Untucked"};
-        class Tucked  {label="Tucked";};
-        class Full  {label="Full";};
-        class QuarterRoll {label="Quarter Roll";};
-        class HalfRoll {label="Half Roll";};
-        class SlimSleeve {label="Slim Sleeve";};
-        class Untucked  {label="Untucked";};
+        class Tucked  {label="Tucked"; actionLabel = "Tuck Shirt";};
+        class Full  {label="Full"; actionLabel = "Unroll Full Sleeve";};
+        class QuarterRoll {label="Quarter Roll"; actionLabel = "Roll Quarter Sleeve";};
+        class HalfRoll {label="Half Roll"; actionLabel = "Roll Half Sleeve";};
+        class SlimSleeve {label="Slim Sleeve"; actionLabel = " Unroll Slim Sleeve";};
+        class Untucked  {label="Untucked"; actionLabel = "Untuck Shirt";};
       };
       class glove {
         alwaysSelectable = 1;
+        changeingame = 1;
         label="Gloves";
         values[]={"yes","no"};
-        class yes  {label="With Gloves";};
-        class no {label="No Gloves";};
+        class yes  {label="With Gloves"; actionLabel = "Wear Gloves";};
+        class no {label="No Gloves"; actionLabel = "Take off Gloves";};
       };
       class shirt {
         alwaysSelectable = 1;
@@ -696,24 +703,27 @@ class XtdGearModels {
       };
       class blouse {
         alwaysSelectable=1;
+        changeingame = 1;
         label="Blouse Type";
         values[]={"blouse","noblouse"};
-        class blouse {label="Blouse";};
-        class noblouse {label="No Blouse";};
+        class blouse {label="Blouse"; actionLabel = "Blouse Pants";};
+        class noblouse {label="No Blouse"; actionLabel = "Unblouse Pants";};
       };
       class zip {
         alwaysSelectable=1;
+        changeingame=1;
         label="Zipper Type";
         values[]={"zipped","unzipped"};
-        class zipped {label="Zipped Up";};
-        class unzipped {label="Unzipped";};
+        class zipped {label="Zipped Up"; actionLabel = "Zip Shirt";};
+        class unzipped {label="Unzipped"; actionLabel = "Unzip Shirt";};
       };
       class kneepad {
         alwaysSelectable=1;
+        changeingame=1;
         label="Kneepad Type";
         values[]={"nokneepads","kneepads"};
-        class nokneepads {label="No kneepads";};
-        class kneepads {label="Kneepads";};
+        class nokneepads {label="No kneepads"; actionLabel = "Put on Kneepads";};
+        class kneepads {label="Kneepads"; actionLabel = "Take off Kneepads";};
       };
     };
     
@@ -731,31 +741,35 @@ class XtdGearModels {
       };
       class tuck {
         alwaysSelectable = 1;
+        changeingame = 1;
         label="Tucking";
         values[]={"tucked", "untucked"};
-        class Tucked {label="Tucked";};
-        class Untucked {label="Untucked";};
+        class tucked {label="Tucked"; actionLabel = "Tuck Shirt";};
+        class untucked {label="Untucked"; actionLabel = "Untuck Shirt";};
       };
       class glove {
         alwaysSelectable = 1;
+        changeingame = 1;
         label="Gloves";
         values[]={"yes","no"};
-        class yes  {label="With Gloves";};
-        class no {label="No Gloves";};
+        class yes  {label="With Gloves"; actionLabel = "Wear Gloves";};
+        class no {label="No Gloves";  actionLabel = "Take off Gloves";};
       };
       class kneepad {
         alwaysSelectable=1;
+        changeingame = 1;
         label="Kneepad Type";
         values[]={"nokneepads","kneepads"};
-        class nokneepads {label="No kneepads";};
-        class kneepads {label="Kneepads";};
+        class nokneepads {label="No kneepads"; actionLabel = "Take off Kneepads";};
+        class kneepads {label="Kneepads"; actionLabel = "Wear Kneepads";};
       };
       class blouse {
         alwaysSelectable=1;
+        changeingame = 1;
         label="Blouse Type";
         values[]={"blouse","noblouse"};
-        class blouse {label="Blouse";};
-        class noblouse {label="No blouse";};
+        class blouse {label="Blouse"; actionLabel = "Blouse Pants";};
+        class noblouse {label="No blouse"; actionLabel = "Unblouse Pants";};
       };
     };
 
@@ -765,6 +779,7 @@ class XtdGearModels {
       options[] = {"camo", "fold"};
       class camo {
         alwaysSelectable = 1;
+        changeingame = 0;
         label="Camouflage";
         values[]={"std", "desert", "snow", "opfor"};
         class std {label="Forest";}; 
@@ -774,11 +789,12 @@ class XtdGearModels {
       };
       class fold {
         alwaysSelectable = 1;
+        changeingame = 1;
         values[]={"na", "Folded_Left", "Folded_Right", "Folded"};
-        class na {label="No fold";};
-        class Folded_Left {label="Left";};
-        class Folded_Right {label="Right";};
-        class Folded {label="Both";};
+        class na {label="No fold"; actionLabel = "Unfold Boonie";};
+        class Folded_Left {label="Left"; actionLabel = "Fold Left Side";};
+        class Folded_Right {label="Right"; actionLabel = "Fold Right Side";};
+        class Folded {label="Both"; actionLabel = "Fold Both Sides";};
       };
     };
   };
@@ -866,5 +882,6 @@ class XtdGearInfos {
     RECONHOODS_DOWN_GI(winter)
     RECONHOODS_DOWN_GI(desert)
     RECONHOODS_DOWN_GI(black)
+
   };
 };

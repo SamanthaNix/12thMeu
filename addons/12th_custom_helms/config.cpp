@@ -255,8 +255,11 @@ class XtdGearModels {
       };
       class closed {
         alwaysSelectable=1;
+        changeingame = 1;
         label="Closed";
         values[]={"Yes", "No"};
+        class No  {label="Opened"; actionLabel = "Open Helmet";};
+        class Yes  {label="Closed"; actionLabel = "Close Helmet";};
       };
       class member {
         alwaysSelectable=1;
