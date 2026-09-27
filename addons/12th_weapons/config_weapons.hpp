@@ -71,6 +71,7 @@ class CfgWeapons
   class TCP_optic_M43RCO;
   class TCP_OpticsMode_Base_Irons;
   class TCP_LMG_M731;
+  class optic_LRPS;
 
   //TCP Class definitions
   //Pistols
@@ -975,6 +976,7 @@ class CfgWeapons
       baseWeapon = "twelfth_M247A1";
       DEPLOYED_GESTURE_GPMG;
       RELOAD_EH;
+      magazine[] = {"twelfth_400Rnd_338_Box","twelfth_200Rnd_338_Box"};
       ace_overheating_closedBolt = 0;
       modes[] = {"FullAuto", "FullAutoFast"};
       class FullAuto : FullAuto
@@ -1031,6 +1033,7 @@ class CfgWeapons
       baseWeapon = "twelfth_M247A1_Stripped";
       DEPLOYED_GESTURE_GPMG;
       RELOAD_EH;
+      magazine[] = {"twelfth_400Rnd_338_Box","twelfth_200Rnd_338_Box"};
       ace_overheating_closedBolt = 0;
       modes[] = {"FullAuto", "FullAutoFast"};
       class FullAuto : FullAuto
@@ -1449,6 +1452,98 @@ class CfgWeapons
       "twelfth_pylonrack_aim120x1", "twelfth_pylonrack_aim120x2",
       "twelfth_pylonrack_aim132x1", "twelfth_pylonrack_aim132x2"
     };
+  };
+
+  class twelfth_buris : optic_DMS {
+    author = "rex";
+    displayName = "[12th] Buris XTR 2";
+    class ItemInfo: InventoryOpticsItem_Base_F
+		{
+			mass = 12;
+			opticType = 2;
+			optics = 1;
+			modelOptics = "\A3\Weapons_f\acc\reticle_marksman_F";
+			class OpticsModes
+			{
+				class Snip
+				{
+					opticsID = 1;
+					useModelOptics = 1;
+					opticsPPEffects[] = {"OpticsCHAbera2","OpticsBlur3"};
+					opticsZoomMin = 0.0625;
+					opticsZoomMax = 0.125;
+					opticsZoomInit = 0.125;
+					discreteDistance[] = {100,200,300,400,500,600,700,800,900,1000,1100,1200};
+					discreteDistanceInitIndex = 1;
+					distanceZoomMin = 300;
+					distanceZoomMax = 1200;
+					discretefov[] = {0.125,0.0625};
+					discreteInitIndex = 0;
+					memoryPointCamera = "opticView";
+					modelOptics[] = {"\A3\Weapons_F_EPA\acc\reticle_marksman_F","\A3\Weapons_F_EPA\acc\reticle_marksman_z_F"};
+					visionMode[] = {};
+					opticsFlare = 1;
+					opticsDisablePeripherialVision = 1;
+					cameraDir = "";
+				};
+				class Iron: Snip
+				{
+					opticsID = 2;
+					useModelOptics = 0;
+					opticsPPEffects[] = {"",""};
+					opticsFlare = 0;
+					opticsDisablePeripherialVision = 0;
+					opticsZoomMin = 0.25;
+					opticsZoomMax = 1.25;
+					opticsZoomInit = 0.75;
+					memoryPointCamera = "eye";
+					visionMode[] = {};
+					discretefov[] = {};
+					distanceZoomMin = 200;
+					distanceZoomMax = 200;
+					discreteDistance[] = {200};
+					discreteDistanceInitIndex = 0;
+				};
+			};
+		};
+  };
+
+  class twelfth_nightforce : optic_LRPS {
+    author = "Rex";
+    displayName = "[12th] Nightforce NXS";
+    class ItemInfo: InventoryOpticsItem_Base_F
+		{
+			mass = 16;
+			opticType = 2;
+			weaponInfoType = "RscWeaponRangeZeroingFOV";
+			optics = 1;
+			modelOptics = "\A3\Weapons_F\acc\reticle_sniper_F";
+			class OpticsModes
+			{
+				class Snip
+				{
+					opticsID = 1;
+					opticsDisplayName = "WFOV";
+					useModelOptics = 1;
+					opticsPPEffects[] = {"OpticsCHAbera1","OpticsBlur1"};
+					opticsZoomMin = 0.01;
+					opticsZoomMax = 0.042;
+					opticsZoomInit = 0.042;
+					discreteDistance[] = {300,400,500,600,700,800,900,1000,1100,1200,1300,1400,1500,1600,1700,1800,1900,2000,2100,2200,2300,2400};
+					discreteDistanceInitIndex = 2;
+					distanceZoomMin = 300;
+					distanceZoomMax = 2400;
+					discretefov[] = {0.042,0.01};
+					discreteInitIndex = 0;
+					memoryPointCamera = "opticView";
+					modelOptics[] = {"\A3\Weapons_F\acc\reticle_lrps_F","\A3\Weapons_F\acc\reticle_lrps_z_F"};
+					visionMode[] = {};
+					opticsFlare = 1;
+					opticsDisablePeripherialVision = 1;
+					cameraDir = "";
+				};
+			};
+		};
   };
   
   class ace_missile_aim120_aim120Launcher; // AIM-120D
