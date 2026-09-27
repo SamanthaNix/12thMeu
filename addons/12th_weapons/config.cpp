@@ -24,6 +24,7 @@
 #include "config_magazineGroups.hpp"
 #include "config_weapons.hpp"
 #include "model.cfg"
+#include "XtdGear.hpp"
 class CfgPatches
 {
   class twelfth_weapons

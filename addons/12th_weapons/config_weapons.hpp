@@ -1147,7 +1147,8 @@ class CfgWeapons
 		author = "Sammy";
 		scope = 2;
 		scopeArsenal = 2;
-		displayName = "[12th] MA6 Assault Rifle";
+		displayName = "[12th] MA-6 Assault Rifle";
+    picture="x\12thMEU\addons\12th_weapons\data\MA6\Ma6-preview.paa";
 		baseWeapon = "twelfth_MA6";
 		canShootInWater = 1;
 		magazines[] = COMMON_MA5C_MAGAZINES;
@@ -1178,10 +1179,9 @@ class CfgWeapons
 	};
 
 	class twelfth_MA6_green: twelfth_MA6 {
-		model="x\12thMEU\addons\12th_weapons\data\MA6\MA6.p3d";
 		author = "Sammy";
     baseWeapon = "twelfth_MA6_green";
-		displayName = "[12th] MA6 Assault Rifle (Green)";
+		displayName = "[12th] MA-6 Assault Rifle (Green)";
 		hiddenSelections[] = {"camo1"};
     hiddenSelectionsTextures[]=// List of textures, in the same order as the hiddenSelections definition
     {
@@ -1195,7 +1195,8 @@ class CfgWeapons
 		author = "Sammy";
 		scope = 2;
 		scopeArsenal = 2;
-		displayName = "[12th] MA6-K Carbine";
+		displayName = "[12th] MA-6K Carbine";
+    picture="x\12thMEU\addons\12th_weapons\data\MA6_K\Ma6-k-preview.paa";
 		baseWeapon = "twelfth_MA6_K";
 		canShootInWater = 1;
 		magazines[] = COMMON_MA5C_MAGAZINES;
@@ -1219,6 +1220,16 @@ class CfgWeapons
 			};
 		};
 	};
+  class twelfth_MA6_K_Green: twelfth_MA6_K {
+		author = "Sammy";
+		displayName = "[12th] MA-6K Carbine (Green)";
+		baseWeapon = "twelfth_MA6_K_green";
+    hiddenSelections[] = {"camo1"};
+    hiddenSelectionsTextures[]=// List of textures, in the same order as the hiddenSelections definition
+    {
+      "x\12thMEU\addons\12th_weapons\data\MA6_k\green\MA6_k_co.paa",
+    };
+	};
 
 	//DM Rifle
 	class twelfth_MA6_D: twelfth_M392 {
@@ -1226,7 +1237,7 @@ class CfgWeapons
 		author = "Sammy";
 		scope = 2;
 		scopeArsenal = 2;
-		displayName = "[12th] MA6-D Marksman Rifle";
+		displayName = "[12th] MA-6D Marksman Rifle";
 		baseWeapon = "twelfth_MA6_D";
 		canShootInWater = 1;
 		magazines[] = COMMON_MA5C_MAGAZINES;
@@ -1256,7 +1267,7 @@ class CfgWeapons
 		model="x\12thMEU\addons\12th_weapons\data\MA6_A\MA6_A_BOX.p3d";
 		author = "Sammy";
     mass = 160;
-		displayName = "[12th] MA6-A Box";
+		displayName = "[12th] MA-6A Box";
 		baseWeapon = "twelfth_MA6_A_BOX";
     ace_overheating_closedBolt = 0; 
 		class WeaponSlotsInfo: WeaponSlotsInfo {
@@ -1282,7 +1293,7 @@ class CfgWeapons
 		model="x\12thMEU\addons\12th_weapons\data\MA6_A\MA6_A_DRUM.p3d";
 		author = "Sammy";
     mass = 160;
-		displayName = "[12th] MA6-A Drum";
+		displayName = "[12th] MA-6A Drum";
 		baseWeapon = "twelfth_MA6_A_DRUM";
     ace_overheating_closedBolt = 0; 
 		class WeaponSlotsInfo: WeaponSlotsInfo {
@@ -1311,7 +1322,7 @@ class CfgWeapons
 		author = "Rex";
 		scope = 2;
 		scopeArsenal = 2;
-		displayName = "[12th] MA6-B IAR";
+		displayName = "[12th] MA-6B IAR";
 		baseWeapon = "twelfth_MA6_B";
     hiddenSelections[] = {"camo"};
     hiddenSelectionsTextures[] = {"addons\12th_weapons\data\MA6_B\MA6_B_CO.paa"};
@@ -1344,7 +1355,7 @@ class CfgWeapons
 		mass = 60;
 		scope = 2;
 		scopeArsenal = 2;
-		displayName = "[12th] MA6-B H-IAR";
+		displayName = "[12th] MA-6AL H-IAR";
 		baseWeapon = "twelfth_MA6_AL";
     texture[] = {"addons\12th_weapons\data\MA6_B\MA6_B_CO.paa"};
 		canShootInWater = 1;
@@ -1376,13 +1387,13 @@ class CfgWeapons
   */
 	class MA6_K_SmartLink: ACE_optic_Hamr_2D{
 		author = "Sammy";
-		displayName = "[12th] MA6-K Smartlink";
+		displayName = "[12th] MA-6K Smartlink";
 		descriptionShort = "MA6-K Smartlink";
 		model = "x\12thMEU\addons\12th_weapons\data\MA6_Smartlink\MA6_K_SmartLink.p3d";
 	};
 	class MA6_SmartLink: optic_DMS{
 		author = "Sammy";
-		displayName = "[12th] MA6 Smartlink";
+		displayName = "[12th] MA-6 Smartlink";
 		descriptionShort = "MA6 Smartlink";
 		model = "x\12thMEU\addons\12th_weapons\data\MA6_Smartlink\MA6_SmartLink.p3d";
 	};
