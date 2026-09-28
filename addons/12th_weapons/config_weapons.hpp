@@ -1189,6 +1189,7 @@ class CfgWeapons
     };
 	};
 
+
 	//Carbine
 	class twelfth_MA6_K: twelfth_MA37K {
 		model="x\12thMEU\addons\12th_weapons\data\MA6_K\MA6_K.p3d";
@@ -1200,7 +1201,18 @@ class CfgWeapons
 		baseWeapon = "twelfth_MA6_K";
 		canShootInWater = 1;
 		magazines[] = COMMON_MA5C_MAGAZINES;
-		handAnim[] = {"OFP2_ManSkeleton","x\12thMEU\addons\12th_weapons\data\MA6_K\animations\MA6_K.rtm"};
+    /* class AnimationSources{
+      class UGL_SELECT {
+        initPhase = 0;
+        animPeriod = 0;
+      };
+    }; */
+    hiddenSelections[] = {"camo1"};
+    hiddenSelectionsTextures[]=// List of textures, in the same order as the hiddenSelections definition
+    {
+      "x\12thMEU\addons\12th_weapons\data\MA6_K\MA6_K_CO.paa"
+    };
+		handAnim[] = {"OFP2_ManSkeleton","x\12thMEU\addons\12th_weapons\data\MA6\animations\MA6.rtm"};
 		class WeaponSlotsInfo: WeaponSlotsInfo {
 			class MuzzleSlot: MuzzleSlot {
 				linkProxy = "\A3\data_f\proxies\weapon_slots\MUZZLE";
@@ -1221,15 +1233,54 @@ class CfgWeapons
 		};
 	};
   class twelfth_MA6_K_Green: twelfth_MA6_K {
-		author = "Sammy";
 		displayName = "[12th] MA-6K Carbine (Green)";
 		baseWeapon = "twelfth_MA6_K_green";
     hiddenSelections[] = {"camo1"};
     hiddenSelectionsTextures[]=// List of textures, in the same order as the hiddenSelections definition
     {
-      "x\12thMEU\addons\12th_weapons\data\MA6_k\green\MA6_k_co.paa",
+      "x\12thMEU\addons\12th_weapons\data\MA6_k\green\MA6_k_co.paa"
     };
 	};
+
+  //UGL
+  class twelfth_MA6_K_UGL: twelfth_MA6_K {
+    model="x\12thMEU\addons\12th_weapons\data\MA6_K\MA6_K_UGL.p3d";
+		author = "Sammy";
+    baseWeapon = "twelfth_MA6_K_UGL";
+		displayName = "[12th] MA-6K Carbine (GL)";
+    handAnim[] = {"OFP2_ManSkeleton","x\12thMEU\addons\12th_weapons\data\MA6_UGL\Ma_6_UGL.rtm"};
+    muzzles[] = {"this", "MA6_UGL"};
+    /* class AnimationSources{
+      class UGL_SELECT {
+        initPhase = 1;
+        animPeriod = 0;
+      };
+    }; */
+    class WeaponSlotsInfo:WeaponSlotsInfo{
+      class UnderBarrelSlot{};
+    };
+    class MA6_UGL: UGL_F /// Some grenade launcher to have some more fun
+		{
+			displayName = "MA-6 Grenade Launcher";
+			descriptionShort = "MA-6-GL";
+			useModelOptics = "false";
+			useExternalOptic = "false"; /// Doesn't use optics from the attachment, has it's own
+			magazines[] = {"1Rnd_HE_Grenade_shell"};
+			cameraDir = "OP_look";
+			discreteDistance[] = {100, 200, 300, 400};
+			discreteDistanceCameraPoint[] = {"OP_eye", "OP_eye2", "OP_eye3", "OP_eye4"}; /// the angle of gun changes with zeroing
+			discreteDistanceInitIndex = 1; /// 200 is the default zero
+		};
+	};
+  class twelfth_MA6_K_UGL_Green:twelfth_MA6_K_UGL{
+		displayName = "[12th] MA-6K Carbine (GL) (Green)";
+		baseWeapon = "twelfth_MA6_K_UGL_green";
+    hiddenSelections[] = {"camo1"};
+    hiddenSelectionsTextures[]=// List of textures, in the same order as the hiddenSelections definition
+    {
+      "x\12thMEU\addons\12th_weapons\data\MA6_k\green\MA6_k_co.paa"
+    };
+  };
 
 	//DM Rifle
 	class twelfth_MA6_D: twelfth_M392 {
