@@ -57,6 +57,20 @@ class XtdGearInfos {
       camo = "green";
       grenade = "no";
     };
+    class twelfth_MA6_UGL{
+      model = "twelfth_MA_6";
+      gen = "new";
+      type = "MA_6";
+      camo = "neutral";
+      grenade = "yes";
+    };
+    class twelfth_MA6_UGL_green{
+      model = "twelfth_MA_6";
+      gen = "new";
+      type = "MA_6";
+      camo = "green";
+      grenade = "yes";
+    };
     //MA-6K
     class twelfth_MA6_K{
       model = "twelfth_MA_6";

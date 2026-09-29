@@ -107,16 +107,16 @@ class CfgMovesMaleSdr: CfgMovesBasic {
 			rightHandIKCurve[] = {0};
 			leftHandIKCurve[] = {0};
 		};
-		class MA6KAnimation: StandBase {
-			file="x\12thMEU\addons\12th_weapons\data\MA6_K\animations\MA6_K.rtm";
+    class MA6_UGL_Animation: StandBase {
+			file="x\12thMEU\addons\12th_weapons\data\MA6_UGL\Ma_6_UGL.rtm";
 			looped=1;
 			speed=1;
 			mask = "bodyFullReal";
 			rightHandIKCurve[] = {0};
 			leftHandIKCurve[] = {0};
 		};
-    class MA6_UGL_Animation: StandBase {
-			file="x\12thMEU\addons\12th_weapons\data\MA6_UGL\Ma_6_UGL.rtm";
+    class MA6_UGL_Aim_Animation: StandBase {
+			file="x\12thMEU\addons\12th_weapons\data\MA6_UGL\Ma_6_UGL_UB.rtm";
 			looped=1;
 			speed=1;
 			mask = "bodyFullReal";

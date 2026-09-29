@@ -1178,18 +1178,54 @@ class CfgWeapons
 		};
 	};
 
-	class twelfth_MA6_green: twelfth_MA6 {
+	class twelfth_MA6_Green: twelfth_MA6 {
 		author = "Sammy";
     baseWeapon = "twelfth_MA6_green";
 		displayName = "[12th] MA-6 Assault Rifle (Green)";
 		hiddenSelections[] = {"camo1"};
     hiddenSelectionsTextures[]=// List of textures, in the same order as the hiddenSelections definition
     {
-      "x\12thMEU\addons\12th_weapons\data\MA6\green\MA6_co.paa",
+      "x\12thMEU\addons\12th_weapons\data\MA6\green\MA6_co.paa"
     };
 	};
-
-
+  //UGL
+  class twelfth_MA6_UGL:twelfth_MA6{
+    baseWeapon = "twelfth_MA6_UGL";
+		displayName = "[12th] MA-6 Assault Rifle (GL)";
+    model="x\12thMEU\addons\12th_weapons\data\MA6\MA6_UGL.p3d";
+    handAnim[] = {"OFP2_ManSkeleton","x\12thMEU\addons\12th_weapons\data\MA6_UGL\Ma_6_UGL.rtm"};
+    muzzles[] = {"this", "MA6_UGL"};
+    /* class AnimationSources{
+      class UGL_SELECT {
+        initPhase = 1;
+        animPeriod = 0;
+      };
+    }; */
+    class WeaponSlotsInfo:WeaponSlotsInfo{
+      class UnderBarrelSlot{};
+    };
+    class MA6_UGL: UGL_F /// Some grenade launcher to have some more fun
+		{
+			displayName = "MA-6 Grenade Launcher";
+			descriptionShort = "MA-6-GL";
+			useModelOptics = "false";
+			useExternalOptic = "false"; /// Doesn't use optics from the attachment, has it's own
+			magazines[] = {"1Rnd_HE_Grenade_shell"};
+			cameraDir = "OP_look";
+			discreteDistance[] = {100, 200, 300, 400};
+			discreteDistanceCameraPoint[] = {"OP_eye", "OP_eye2", "OP_eye3", "OP_eye4"}; /// the angle of gun changes with zeroing
+			discreteDistanceInitIndex = 1; /// 200 is the default zero
+		};
+  };
+  class twelfth_MA6_UGL_Green:twelfth_MA6_UGL{
+    displayName = "[12th] MA-6 Assault Rifle (GL) (Green)";
+		baseWeapon = "twelfth_MA6_UGL_green";
+    hiddenSelections[] = {"camo1"};
+    hiddenSelectionsTextures[]=// List of textures, in the same order as the hiddenSelections definition
+    {
+      "x\12thMEU\addons\12th_weapons\data\MA6\green\MA6_co.paa"
+    };
+  };
 	//Carbine
 	class twelfth_MA6_K: twelfth_MA37K {
 		model="x\12thMEU\addons\12th_weapons\data\MA6_K\MA6_K.p3d";
