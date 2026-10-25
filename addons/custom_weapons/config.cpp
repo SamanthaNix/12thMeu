@@ -219,25 +219,29 @@ class CfgWeapons
 	class UGL_F;
 
 //////////////////G82////////////////////
-	class SMT_G82: OPTRE_Commando {
+	class TCP_srifle_vk78;
+	class SMT_G82: TCP_srifle_vk78 {
 		model="x\12thMEU\addons\custom_weapons\G82\G82.p3d";
 		author = "Rex";
 		scope = 2;
 		scopeArsenal = 2;
+		mass= 95;
 		displayName = "G82";
 		baseWeapon = "SMT_G82";
 		canShootInWater = 1;
 		magazineWell[] = { "G82mag" };
-		magazines[] = {"G82_35Rnd_Mag", "G82_35Rnd_Mag_T"};
+		magazines[] = {"SMT_G82_35Rnd_Mag", "SMT_G82_35Rnd_Mag_T"};
 		ace_overheating_barrelMass = 5;
 		muzzles[] = {"this", "Test_GL_F"};
 		picture="\x\12thMEU\addons\custom_weapons\G82\data\g82_preview.paa";
 		handAnim[] = {"OFP2_ManSkeleton","\x\12thMEU\addons\custom_weapons\G82\data\G82.rtm"};
-		class WeaponSlotsInfo : WeaponSlotsInfo {
+		class WeaponSlotsInfo : WeaponSlotsInfo 
+		{
+			mass= 95;
 			class CowsSlot : CowsSlot
-          {
-            compatibleitems[] = {"SMT_G82_sight"};
-          };
+          	{
+            	compatibleItems[] = {"SMT_G82_sight"};
+          	};
 		}; 
 		class LinkedItems {
 			class LinkedItemsCows {

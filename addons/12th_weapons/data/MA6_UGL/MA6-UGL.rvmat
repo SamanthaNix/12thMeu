@@ -48,7 +48,7 @@ class Stage3
 };
 class Stage4
 {
-	texture = "x\12thMEU\addons\12th_weapons\data\MA6_UGL\MA6_UGL_AS.paa";
+	texture = "x\12thMEU\addons\12th_weapons\data\MA6_UGL\MA6-UGL_AS.paa";
 	uvSource = "tex";
 	class uvTransform
 	{

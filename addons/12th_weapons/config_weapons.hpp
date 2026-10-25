@@ -1188,6 +1188,17 @@ class CfgWeapons
       "x\12thMEU\addons\12th_weapons\data\MA6\green\MA6_co.paa"
     };
 	};
+  class twelfth_MA6_Desert: twelfth_MA6 {
+		model="x\12thMEU\addons\12th_weapons\data\MA6\MA6.p3d";
+		author = "Sammy";
+    	baseWeapon = "twelfth_MA6_Desert";
+		displayName = "[12th] MA-6 (Desert)";
+		hiddenSelections[] = {"camo1"};
+		hiddenSelectionsTextures[]=// List of textures, in the same order as the hiddenSelections definition
+		{
+		"x\12thMEU\addons\12th_weapons\data\MA6\desert\MA6_co.paa",
+		};
+	};
   //UGL
   class twelfth_MA6_UGL:twelfth_MA6{
     baseWeapon = "twelfth_MA6_UGL";
@@ -1226,6 +1237,15 @@ class CfgWeapons
       "x\12thMEU\addons\12th_weapons\data\MA6\green\MA6_co.paa"
     };
   };
+  class twelfth_MA6_UGL_Desert:twelfth_MA6_UGL{
+		displayName = "[12th] MA-6 Assault Rifle (GL) (Desertn)";
+			baseWeapon = "twelfth_MA6_UGL_Desert";
+		hiddenSelections[] = {"camo1"};
+		hiddenSelectionsTextures[]=// List of textures, in the same order as the hiddenSelections definition
+		{
+		"x\12thMEU\addons\12th_weapons\data\MA6\desert\MA6_co.paa"
+		};
+	};
 	//Carbine
 	class twelfth_MA6_K: twelfth_MA37K {
 		model="x\12thMEU\addons\12th_weapons\data\MA6_K\MA6_K.p3d";
@@ -1277,6 +1297,16 @@ class CfgWeapons
       "x\12thMEU\addons\12th_weapons\data\MA6_k\green\MA6_k_co.paa"
     };
 	};
+  class twelfth_MA6_K_Desert: twelfth_MA6_K {
+		author = "Sammy";
+		displayName = "[12th] MA-6K (Desert)";
+		baseWeapon = "twelfth_MA6_K_Desert";
+		hiddenSelections[] = {"camo1"};
+		hiddenSelectionsTextures[]=// List of textures, in the same order as the hiddenSelections definition
+		{
+		"x\12thMEU\addons\12th_weapons\data\MA6_k\desert\MA6_k_co.paa",
+		};
+	};
 
   //UGL
   class twelfth_MA6_K_UGL: twelfth_MA6_K {
@@ -1317,6 +1347,15 @@ class CfgWeapons
       "x\12thMEU\addons\12th_weapons\data\MA6_k\green\MA6_k_co.paa"
     };
   };
+  class twelfth_MA6_K_UGL_Desert:twelfth_MA6_K_UGL{
+		displayName = "[12th] MA-6K (GL) (Desert)";
+		baseWeapon = "twelfth_MA6_K_UGL_Desert";
+		hiddenSelections[] = {"camo1"};
+		hiddenSelectionsTextures[]=// List of textures, in the same order as the hiddenSelections definition
+		{
+		"x\12thMEU\addons\12th_weapons\data\MA6_k\Desert\MA6_k_co.paa"
+		};
+	};
 
 	//DM Rifle
 	class twelfth_MA6_D: twelfth_M392 {
@@ -1326,6 +1365,11 @@ class CfgWeapons
 		scopeArsenal = 2;
 		displayName = "[12th] MA-6D Marksman Rifle";
 		baseWeapon = "twelfth_MA6_D";
+    hiddenSelections[] = {"camo1"};
+		hiddenSelectionsTextures[]=// List of textures, in the same order as the hiddenSelections definition
+		{
+		"x\12thMEU\addons\12th_weapons\data\MA6_D\MA6_D_co.paa",
+		};
 		canShootInWater = 1;
 		magazines[] = COMMON_MA5C_MAGAZINES;
 		handAnim[] = {"OFP2_ManSkeleton","x\12thMEU\addons\12th_weapons\data\MA6\animations\MA6.rtm"};
@@ -1348,7 +1392,26 @@ class CfgWeapons
 			};
 		};
 	};
-
+	class twelfth_MA6_D_Desert: twelfth_MA6_D {
+		author = "Sammy";
+		displayName = "[12th] MA-6D (Desert)";
+		baseWeapon = "twelfth_MA6_D_Desert";
+		hiddenSelections[] = {"camo1"};
+		hiddenSelectionsTextures[]=// List of textures, in the same order as the hiddenSelections definition
+		{
+		"x\12thMEU\addons\12th_weapons\data\MA6_D\desert\MA6_D_co.paa",
+		};
+	};
+	class twelfth_MA6_D_Green: twelfth_MA6_D {
+		author = "Sammy";
+		displayName = "[12th] MA-6D (Green)";
+		baseWeapon = "twelfth_MA6_D_Green";
+		hiddenSelections[] = {"camo1"};
+		hiddenSelectionsTextures[]=// List of textures, in the same order as the hiddenSelections definition
+		{
+		"x\12thMEU\addons\12th_weapons\data\MA6_D\green\MA6_D_co.paa",
+		};
+	};
 	// AR Rifle
 	class twelfth_MA6_A_BOX: twelfth_M73H{
 		model="x\12thMEU\addons\12th_weapons\data\MA6_A\MA6_A_BOX.p3d";
@@ -1444,7 +1507,7 @@ class CfgWeapons
 		scopeArsenal = 2;
 		displayName = "[12th] MA-6AL H-IAR";
 		baseWeapon = "twelfth_MA6_AL";
-    texture[] = {"addons\12th_weapons\data\MA6_B\MA6_B_CO.paa"};
+    hiddenSelectionsTextures[] = {"addons\12th_weapons\data\MA6_B\MA6_B_CO.paa"};
 		canShootInWater = 1;
 		magazines[] = {"twelfth_56Rnd_95x40_Mag", "twelfth_56Rnd_95x40_Mag_T", "twelfth_br_36Rnd", "twelfth_br_36Rnd_T","twelfth_br_36Rnd_UW" };
 		handAnim[] = {"OFP2_ManSkeleton","x\12thMEU\addons\12th_weapons\data\MA6\animations\MA6.rtm"};

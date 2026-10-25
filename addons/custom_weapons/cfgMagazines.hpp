@@ -37,7 +37,7 @@ class CfgMagazines
 	};
 	//6.5 Creedmoor
 	class Commando_20Rnd_65_Mag;
-	class twelfth_G82_35Rnd_Mag : Commando_20Rnd_65_Mag {
+	class SMT_G82_35Rnd_Mag : Commando_20Rnd_65_Mag {
 		mass = 12;
 		scope = 2;
 		displayName = "35Rnd 6.5 Creedmoor Magazine";
@@ -45,7 +45,7 @@ class CfgMagazines
 		descriptionShort = "35 Round Magazine";
 		count = 35;
 	};
-	class twelfth_G82_35Rnd_Mag_T : Commando_20Rnd_65_Mag {
+	class SMT_G82_35Rnd_Mag_T : Commando_20Rnd_65_Mag {
 		mass = 12;
 		scope = 2;
 		displayName = "35Rnd 6.5 Creedmoor Magazine Tracer";

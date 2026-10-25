@@ -41,6 +41,7 @@ class CfgPatches {
       "twelfth_helmCH43A_std_Bert",
       "twelfth_helmCH43A_std_Bobby",
       "twelfth_helmCH43A_std_Bunge",
+      "twelfth_helmCH43A_std_Butcher",
       "twelfth_helmCH43A_std_Clarke",
       "twelfth_helmCH43A_std_Coady",
       "twelfth_helmCH43A_std_Deacon",
@@ -81,6 +82,7 @@ class CfgPatches {
       "twelfth_helmECH43A_std_Bert_clsd",
       "twelfth_helmECH43A_std_Bobby_clsd",
       "twelfth_helmECH43A_std_Bunge_clsd",
+      "twelfth_helmECH43A_std_Butcher_clsd",
       "twelfth_helmECH43A_std_Clarke_clsd",
       "twelfth_helmECH43A_std_Coady_clsd",
       "twelfth_helmECH43A_std_Deacon_clsd",
@@ -161,6 +163,7 @@ class CfgWeapons {
   CUSTOM_HELM_S_AV(Bert)
   CUSTOM_HELM_S_AV(Bobby)
   CUSTOM_HELM_S_AV(Bunge)
+  CUSTOM_HELM_S_AV(Butcher)
   CUSTOM_HELM_S_AV(Clarke)
   CUSTOM_HELM_S_AV(Coady)
   CUSTOM_HELM_S_AV(Deacon)
@@ -271,6 +274,7 @@ class XtdGearModels {
           "Bobby",
           "Broad",
           "Bunge",
+          "Butcher",
           "Clarke",
           "Coady",
           "Deacon",
@@ -349,6 +353,7 @@ class XtdGearInfos {
     CH_HELM_S_GI(Bobby)
     CH_HELM_S_GI(Broad)
     CH_HELM_S_GI(Bunge)
+    CH_HELM_S_GI(Butcher)
     CH_HELM_S_GI(Clarke)
     CH_HELM_S_GI(Coady)
     CH_HELM_S_GI(Deacon)

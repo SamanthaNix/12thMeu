@@ -32,9 +32,10 @@ class XtdGearModels {
         alwaysSelectable = 1;
         changeingame = 1;
         label="Weapon Camo";
-        values[]={"neutral","green"};
+        values[]={"neutral","green","desert"};
         class neutral {label="Default";actionLabel = "Change to default"; };
         class green {label="Green";actionLabel = "Change to green"; };
+        class desert {label="Desert";actionLabel = "Change to desert"; };
       };
     };
   };
@@ -57,6 +58,13 @@ class XtdGearInfos {
       camo = "green";
       grenade = "no";
     };
+    class twelfth_MA6_desert{
+      model = "twelfth_MA_6";
+      gen = "new";
+      type = "MA_6";
+      camo = "desert";
+      grenade = "no";
+    };
     class twelfth_MA6_UGL{
       model = "twelfth_MA_6";
       gen = "new";
@@ -69,6 +77,13 @@ class XtdGearInfos {
       gen = "new";
       type = "MA_6";
       camo = "green";
+      grenade = "yes";
+    };
+    class twelfth_MA6_UGL_desert{
+      model = "twelfth_MA_6";
+      gen = "new";
+      type = "MA_6";
+      camo = "desert";
       grenade = "yes";
     };
     //MA-6K
@@ -86,6 +101,13 @@ class XtdGearInfos {
       camo = "green";
       grenade = "no";
     };
+    class twelfth_MA6_K_Desert{
+      model = "twelfth_MA_6";
+      gen = "new";
+      type = "MA_6K";
+      camo = "desert";
+      grenade = "no";
+    };
     class twelfth_MA6_K_UGL{
       model = "twelfth_MA_6";
       gen = "new";
@@ -100,12 +122,33 @@ class XtdGearInfos {
       camo = "green";
       grenade = "yes";
     };
+    class twelfth_MA6_K_UGL_Desert{
+      model = "twelfth_MA_6";
+      gen = "new";
+      type = "MA_6K";
+      camo = "desert";
+      grenade = "yes";
+    };
     //MA-6D
     class twelfth_MA6_D{
       model = "twelfth_MA_6";
-      gen = "old";
+      gen = "new";
       type = "MA_6D";
       camo = "neutral";
+      grenade = "no";
+    };
+    class twelfth_MA6_D_Green{
+      model = "twelfth_MA_6";
+      gen = "new";
+      type = "MA_6D";
+      camo = "green";
+      grenade = "no";
+    };
+    class twelfth_MA6_D_Desert{
+      model = "twelfth_MA_6";
+      gen = "new";
+      type = "MA_6D";
+      camo = "desert";
       grenade = "no";
     };
     //MA-6A
