@@ -336,6 +336,49 @@ class CfgVehicles {
       class _xx_Laserbatteries { name = "Laserbatteries"; count = 2; };
     };
   };
+   // ---------------------------------------------------------------------------
+  //  Vic Supply Pod
+  // ---------------------------------------------------------------------------
+  class twelfth_supply_pod_vammo : twelfth_supply_pod_empty
+	{
+		scope = 2;
+		scopeCurator = 2;
+		displayName = "[12th] Supply Pod [Rearm]";
+    hiddenSelectionsTextures[] = {"\x\12thMEU\addons\12th_supply_pods\data\pod_co_blank.paa"};
+		ace_rearm_defaultSupply = 1000;
+	};
+	class twelfth_supply_pod_vrepair : twelfth_supply_pod_empty
+	{
+		scope = 2;
+		scopeCurator = 2;
+		displayName = "[12th] Supply Pod [Repair]";
+		 hiddenSelectionsTextures[] = {"\x\12thMEU\addons\12th_supply_pods\data\pod_co_blank.paa"};
+		ace_repair_canRepair = 1;
+		ace_cargo_space = 20;
+		ace_cargo_hasCargo = 1;
+		class TransportItems
+		{
+			class _xx_ToolKit { name = "ToolKit"; count = 2; };
+		};
+		class ace_cargo
+		{
+			class cargo
+			{
+				class ACE_Tyres { type = "ACE_Wheel"; amount = 8; };
+				class ACE_Tracks { type = "ACE_Track"; amount = 4; };
+			};
+		};
+	};
+	class twelfth_supply_pod_vrefuel : twelfth_supply_pod_empty
+	{
+		scope = 2;
+		scopeCurator = 2;
+		ace_refuel_fuelCargo = 600;
+		displayName = "[12th] Supply Pod [Refuel]";
+		 hiddenSelectionsTextures[] = {"\x\12thMEU\addons\12th_supply_pods\data\pod_co_blank.paa"};
+	};
+
+  
 
   /*
     Optional: If you define more pods (like DMR, or other specialized containers),
