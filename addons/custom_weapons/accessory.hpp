@@ -57,14 +57,17 @@ class SMT_PrototypeOpticsV2: OPTRE_SRS99C_Scope
 	picture="\x\12thMEU\addons\Custom_Weapons\data\SightPreview.paa";
 	model = "\x\12thMEU\addons\Custom_Weapons\data\PrototypeScope.p3d";
 };
-class ItemInfo;
-class optic_DMS;
+
+class optic_DMS{
+	class ItemInfo;
+};
 class SMT_G82_sight : optic_DMS {
 	model = "x\12thMEU\addons\custom_weapons\G82\G82_Scope.p3d";
 	author = "Rex";
 	scope = 2;
 	scopeArsenal = 2;
 	DisplayName = "G82 Optic";
+	baseWeapon = "G82_sight";
 	class ItemInfo : ItemInfo
 	{	
 	class OpticsModes
