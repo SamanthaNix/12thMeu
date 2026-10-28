@@ -7,7 +7,7 @@ class CfgPatches
 	class SMT_Custom_Weapons
 	{
 		units[] = {};
-		weapons[] = {"SMT_PrototypeLaser_01_F","SMT_PrototypeOptics","SMT_G82","SMT_G82_sight","SMT_srifle_XR704","SMT_XR704_Scope","SMT_XR_Holo","SMT_SMG_XR121"};
+		weapons[] = {"SMT_PrototypeLaser_01_F","SMT_PrototypeOptics","SMT_PrototypeOpticsV2","SMT_G82","SMT_G82_sight","SMT_srifle_XR704","SMT_XR704_Scope","SMT_XR_Holo","SMT_SMG_XR121"};
 		requiredVersion = 0.1;
 		requiredAddons[] = {"A3_Weapons_F"};
 		magazines[] = {"3Rnd_test_mag","SMT_G82_35Rnd_Mag", "SMT_G82_35Rnd_Mag_T","408CT_6Rnd_Mag_T","408CT_6Rnd_Mag","SMT_65x55_60rnd_Mag","SMT_65x55_60rnd_T_Mag","SMT_65x55_90rnd_Mag","SMT_65x55_90rnd_T_Mag"};
@@ -109,7 +109,7 @@ class CfgWeapons
 			{
 				displayName = "$STR_A3_CowsSlot0";
 				linkProxy = "\A3\data_f\proxies\weapon_slots\TOP";
-				compatibleItems[] = {"PrototypeOptics","PrototypeOpticsV2"};
+				compatibleItems[] = {"SMT_PrototypeOptics","SMT_PrototypeOpticsV2"};
 				iconPosition[] = {0.5,0.35};
 				iconScale = 0.2;
 			};

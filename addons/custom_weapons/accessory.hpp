@@ -65,7 +65,6 @@ class SMT_G82_sight : optic_DMS {
 	scope = 2;
 	scopeArsenal = 2;
 	DisplayName = "G82 Optic";
-	baseWeapon = "SMT_G82_sight";
 	class ItemInfo : ItemInfo
 	{	
 	class OpticsModes
