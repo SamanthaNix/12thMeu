@@ -37,6 +37,7 @@ class CfgPatches {
   class twelfth_custom_helms {
     units[] = {};
     weapons[] = {
+      "twelfth_helmCH43A_std_Armstrong",
       "twelfth_helmCH43A_std_Bateman",
       "twelfth_helmCH43A_std_Bert",
       "twelfth_helmCH43A_std_Bobby",
@@ -78,6 +79,7 @@ class CfgPatches {
       "twelfth_helmCH43A_std_Taji",
       "twelfth_helmCH43A_std_Thomas",
       "twelfth_helmCH43A_std_Wilson",
+      "twelfth_helmECH43A_std_Armstrong_clsd",
       "twelfth_helmECH43A_std_Bateman_clsd",
       "twelfth_helmECH43A_std_Bert_clsd",
       "twelfth_helmECH43A_std_Bobby_clsd",
@@ -159,6 +161,7 @@ class CfgWeapons {
   */
 
   // -- Standard Helmets --
+  CUSTOM_HELM_S_AV(Armstrong)
   CUSTOM_HELM_S_AV(Bateman)
   CUSTOM_HELM_S_AV(Bert)
   CUSTOM_HELM_S_AV(Bobby)
@@ -268,6 +271,7 @@ class XtdGearModels {
         alwaysSelectable=1;
         label="Member";
         values[]={
+          "Armstrong",
           "Bateman",
           "Bert",
           "Bob",
@@ -347,6 +351,7 @@ class XtdGearInfos {
       (visor = "Yes") and NV (visor = "No") for each name in "member".
     */
   class CfgWeapons {
+    CH_HELM_S_GI(Armstrong)
     CH_HELM_S_GI(Bateman)
     CH_HELM_S_GI(Bert)
     CH_HELM_S_GI(Bob)
