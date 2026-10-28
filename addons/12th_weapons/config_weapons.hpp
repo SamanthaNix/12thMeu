@@ -72,6 +72,9 @@ class CfgWeapons
   class TCP_OpticsMode_Base_Irons;
   class TCP_LMG_M731;
   class optic_LRPS;
+  class TCP_hgun_Pistol_MK50;
+  class TCP_hgun_Pistol_MK50_Black;
+  class TCP_hgun_Pistol_MK50_Tan;
 
   //TCP Class definitions
   //Pistols
@@ -322,6 +325,27 @@ class CfgWeapons
     displayName = "[12th] M6C";
     baseWeapon = "twelfth_M6C";
     magazines[] = COMMON_M6_MAGAZINES;
+  };
+  class twelfth_MK50 : TCP_hgun_Pistol_MK50 {
+    scope = 2;
+    scopeArsenal = 2;
+    author = "Rex";
+    displayName = "[12th] MK50 Olive";
+    baseWeapon = "twelfth_MK50";
+  };
+  class twelfth_MK50_b : TCP_hgun_Pistol_MK50_Black {
+    scope = 2;
+    scopeArsenal = 2;
+    author = "Rex";
+    displayName = "[12th] MK50 Black";
+    baseWeapon = "twelfth_MK50_b";
+  };
+  class twelfth_MK50_t : TCP_hgun_Pistol_MK50_Tan {
+    scope = 2;
+    scopeArsenal = 2;
+    author = "Rex";
+    displayName = "[12th] MK50 Tan";
+    baseWeapon = "twelfth_MK50_t";
   };
 
   class twelfth_M7_Test : OPTRE_M7
@@ -976,7 +1000,7 @@ class CfgWeapons
       baseWeapon = "twelfth_M247A1";
       DEPLOYED_GESTURE_GPMG;
       RELOAD_EH;
-      magazine[] = {"twelfth_400Rnd_338_Box","twelfth_200Rnd_338_Box"};
+      magazine[] = {};
       ace_overheating_closedBolt = 0;
       modes[] = {"FullAuto", "FullAutoFast"};
       class FullAuto : FullAuto
@@ -1033,7 +1057,7 @@ class CfgWeapons
       baseWeapon = "twelfth_M247A1_Stripped";
       DEPLOYED_GESTURE_GPMG;
       RELOAD_EH;
-      magazine[] = {"twelfth_400Rnd_338_Box","twelfth_200Rnd_338_Box"};
+      magazine[] = {};
       ace_overheating_closedBolt = 0;
       modes[] = {"FullAuto", "FullAutoFast"};
       class FullAuto : FullAuto
@@ -1081,6 +1105,66 @@ class CfgWeapons
 			};
 		};
     };
+
+    class twelfth_M247A1_Stripped_nm : OPTRE_M247A1_Stripped
+    {
+      author = "Sammy";
+      scope = 2;
+      scopeArsenal = 2;
+      displayName = "[12th] M247A1-L GPMG .338 Norma";
+      baseWeapon = "twelfth_M247A1_Stripped_nm";
+      DEPLOYED_GESTURE_GPMG;
+      RELOAD_EH;
+      magazine[] = {"twelfth_400Rnd_338_Box","twelfth_200Rnd_338_Box"};
+      magazineWell[] = {"M247A1_mags"};
+      ace_overheating_closedBolt = 0;
+      modes[] = {"FullAuto", "FullAutoFast"};
+      class FullAuto : FullAuto
+      {
+        dispersion = 0.00116;
+        minRange = 0;
+        minRangeProbab = 0.9;
+        midRange = 15;
+        midRangeProbab = 0.7;
+        maxRange = 30;
+        maxRangeProbab = 0.1;
+        aiRateOfFire = 1e-06;
+        reloadTime = 0.09;
+      };
+      class FullAutoFast : FullAuto
+      {
+        reloadTime = 0.07;
+        textureType = "fastAuto";
+      };
+      class WeaponSlotsInfo : WeaponSlotsInfo
+      {
+        class MuzzleSlot : MuzzleSlot
+        {
+          compatibleitems[] = {"OPTRE_MA5Suppressor","TCP_muzzle_snds_762_01", "OPTRE_M247a1_Flashhider"};
+        };
+        class CowsSlot : CowsSlot
+        {
+          compatibleItems[] = COMMON_SIGHTS;
+        };
+        class PointerSlot : PointerSlot
+        {
+          compatibleitems[] = {COMMON_RAIL_ATTACHMENTS};
+        };
+        class UnderBarrelSlot : UnderBarrelSlot
+        {
+          compatibleitems[] = COMMON_HEAVY_BIPOD;
+        };
+      };
+	  class LinkedItems
+		{
+			class LinkedItemsMuzzle
+			{
+				item = "OPTRE_M247a1_Flashhider";
+				slot = "MuzzleSlot";
+			};
+		};
+    };
+
 
     class twelfth_M250 : OPTRE_M250 
     {

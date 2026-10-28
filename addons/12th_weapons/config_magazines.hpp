@@ -28,6 +28,12 @@ class CfgMagazineWells
       "twelfth_HEAT_95"
     };
   };
+  class M247A1_mags {
+    twelth_m247_nm[] = 
+    {
+      "twelfth_400Rnd_338_Box","twelfth_200Rnd_338_Box"
+    };
+  };
 };
 
 
