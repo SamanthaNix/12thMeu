@@ -32,7 +32,10 @@ class CfgPatches {
       "twelfth_supply_pod_rifle",
       "twelfth_supply_pod_mg",
       "twelfth_supply_pod_eq",
-      "twelfth_supply_pod_mines"
+      "twelfth_supply_pod_mines",
+      "twelfth_supply_pod_vrefuel",
+      "twelfth_supply_pod_vammo",
+      "twelfth_supply_pod_vrepair"
     };
     weapons[] = {};
     requiredVersion = 0.1;
@@ -441,6 +444,9 @@ class CfgVehicles {
           class n29 { name = "[12th] Equipment Supply Pod"; value = "twelfth_supply_pod_eq"; };
           class n30 { name = "[12th] Mine Supply Pod"; value = "twelfth_supply_pod_mines"; };
           class n31 { name = "[12th] Empty Supply Pod"; value = "twelfth_supply_pod_empty";};
+          class n32 { name = "[12th] Rearm Supply Pod"; value = "twelfth_supply_pod_vammo";};
+          class n33 { name = "[12th] Repair Supply Pod"; value = "twelfth_supply_pod_vrepair";};
+          class n34 { name = "[12th] Refuel Supply Pod"; value = "twelfth_supply_pod_vrefuel";};
         };
       };
     };
