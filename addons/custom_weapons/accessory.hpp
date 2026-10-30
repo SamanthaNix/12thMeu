@@ -70,7 +70,7 @@ class SMT_G82_sight : optic_DMS {
 	baseWeapon = "G82_sight";
 	class ItemInfo : ItemInfo
 	{	
-	class OpticsModes
+		class OpticsModes
 		{
 			class EVOSD
 			{
