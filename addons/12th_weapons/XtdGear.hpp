@@ -152,11 +152,25 @@ class XtdGearInfos {
       grenade = "no";
     };
     //MA-6A
-    class twelfth_MA6_A_BOX{
+    class twelfth_MA6_A{
       model = "twelfth_MA_6";
-      gen = "old";
+      gen = "new";
       type = "MA_6A";
       camo = "neutral";
+      grenade = "no";
+    };
+    class twelfth_MA6_A_Green{
+      model = "twelfth_MA_6";
+      gen = "new";
+      type = "MA_6A";
+      camo = "green";
+      grenade = "no";
+    };
+    class twelfth_MA6_A_Desert{
+      model = "twelfth_MA_6";
+      gen = "new";
+      type = "MA_6A";
+      camo = "desert";
       grenade = "no";
     };
     //MA-6B

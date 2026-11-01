@@ -113,5 +113,13 @@ class CfgMovesMaleSdr: CfgMovesBasic {
 			rightHandIKCurve[] = {0};
 			leftHandIKCurve[] = {0};
 		};
+    class MA6_A_Animation: StandBase {
+			file="x\12thMEU\addons\12th_weapons\data\MA6_A\animations\MA6.rtm";
+			looped=1;
+			speed=1;
+			mask = "bodyFullReal";
+			rightHandIKCurve[] = {0};
+			leftHandIKCurve[] = {0};
+		};
 	};
 };
