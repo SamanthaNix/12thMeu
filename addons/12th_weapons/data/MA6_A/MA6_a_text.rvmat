@@ -12,7 +12,7 @@ PixelShaderID = "Super";
 VertexShaderID = "Super";
 class Stage1
 {
-	texture = "x\12thMEU\addons\12th_weapons\data\MA6_a\MA-6A-ext_NOHQ.paa";
+	texture = "\x\12thmeu\addons\12th_weapons\data\MA6_A\MA-6A-Text_nohq.paa";
 	uvSource = "tex";
 	class uvTransform
 	{
@@ -48,7 +48,7 @@ class Stage3
 };
 class Stage4
 {
-	texture = "x\12thMEU\addons\12th_weapons\data\MA6_a\MA-6A-text_AS.paa";
+	texture = "x\12thmeu\addons\12th_weapons\data\MA6_A\MA-6A_text_as.paa";
 	uvSource = "tex";
 	class uvTransform
 	{
