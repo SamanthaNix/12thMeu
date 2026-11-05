@@ -1275,7 +1275,7 @@ class CfgWeapons
   class twelfth_MA6_Desert: twelfth_MA6 {
 		model="x\12thMEU\addons\12th_weapons\data\MA6\MA6.p3d";
 		author = "Sammy";
-    	baseWeapon = "twelfth_MA6_Desert";
+    baseWeapon = "twelfth_MA6_Desert";
 		displayName = "[12th] MA-6 (Desert)";
 		hiddenSelections[] = {"camo1"};
 		hiddenSelectionsTextures[]=// List of textures, in the same order as the hiddenSelections definition
@@ -1449,6 +1449,7 @@ class CfgWeapons
 		scopeArsenal = 2;
 		displayName = "[12th] MA-6D Marksman Rifle";
 		baseWeapon = "twelfth_MA6_D";
+    picture="x\12thMEU\addons\12th_weapons\data\MA6_d\Ma6-d-preview.paa";
     hiddenSelections[] = {"camo1"};
 		hiddenSelectionsTextures[]=// List of textures, in the same order as the hiddenSelections definition
 		{
@@ -1503,6 +1504,7 @@ class CfgWeapons
     mass = 160;
 		displayName = "[12th] MA-6A";
 		baseWeapon = "twelfth_MA_6A";
+    picture="\x\12thmeu\addons\12th_weapons\data\MA6_A\MA-6A_preview.paa";
     ace_overheating_closedBolt = 0;
     handAnim[] = {"OFP2_ManSkeleton","x\12thMEU\addons\12th_weapons\data\MA6_A\animations\MA6.rtm"};
     hiddenSelections[] = {"camo1"};
