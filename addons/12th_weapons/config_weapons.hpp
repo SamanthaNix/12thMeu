@@ -1234,6 +1234,7 @@ class CfgWeapons
 		displayName = "[12th] MA-6 Assault Rifle";
     picture="x\12thMEU\addons\12th_weapons\data\MA6\Ma6-preview.paa";
 		baseWeapon = "twelfth_MA6";
+    ace_arsenal_uniqueBase = "twelfth_MA6";
 		canShootInWater = 1;
 		magazines[] = COMMON_MA5C_MAGAZINES;
 		handAnim[] = {"OFP2_ManSkeleton","x\12thMEU\addons\12th_weapons\data\MA6\animations\MA6.rtm"};
@@ -1267,6 +1268,7 @@ class CfgWeapons
     baseWeapon = "twelfth_MA6_green";
 		displayName = "[12th] MA-6 Assault Rifle (Green)";
 		hiddenSelections[] = {"camo1"};
+    ace_arsenal_uniqueBase = "twelfth_MA6";
     hiddenSelectionsTextures[]=// List of textures, in the same order as the hiddenSelections definition
     {
       "x\12thMEU\addons\12th_weapons\data\MA6\green\MA6_co.paa"
@@ -1278,6 +1280,7 @@ class CfgWeapons
     baseWeapon = "twelfth_MA6_Desert";
 		displayName = "[12th] MA-6 (Desert)";
 		hiddenSelections[] = {"camo1"};
+    ace_arsenal_uniqueBase = "twelfth_MA6";
 		hiddenSelectionsTextures[]=// List of textures, in the same order as the hiddenSelections definition
 		{
 		"x\12thMEU\addons\12th_weapons\data\MA6\desert\MA6_co.paa",
@@ -1287,6 +1290,7 @@ class CfgWeapons
   class twelfth_MA6_UGL:twelfth_MA6{
     baseWeapon = "twelfth_MA6_UGL";
 		displayName = "[12th] MA-6 Assault Rifle (GL)";
+    ace_arsenal_uniqueBase = "twelfth_MA6_UGL";
     model="x\12thMEU\addons\12th_weapons\data\MA6\MA6_UGL.p3d";
     handAnim[] = {"OFP2_ManSkeleton","x\12thMEU\addons\12th_weapons\data\MA6_UGL\Ma_6_UGL.rtm"};
     muzzles[] = {"this", "MA6_UGL"};
@@ -1316,6 +1320,7 @@ class CfgWeapons
     displayName = "[12th] MA-6 Assault Rifle (GL) (Green)";
 		baseWeapon = "twelfth_MA6_UGL_green";
     hiddenSelections[] = {"camo1"};
+    ace_arsenal_uniqueBase = "twelfth_MA6_UGL";
     hiddenSelectionsTextures[]=// List of textures, in the same order as the hiddenSelections definition
     {
       "x\12thMEU\addons\12th_weapons\data\MA6\green\MA6_co.paa"
@@ -1323,8 +1328,9 @@ class CfgWeapons
   };
   class twelfth_MA6_UGL_Desert:twelfth_MA6_UGL{
 		displayName = "[12th] MA-6 Assault Rifle (GL) (Desertn)";
-			baseWeapon = "twelfth_MA6_UGL_Desert";
+    baseWeapon = "twelfth_MA6_UGL_Desert";
 		hiddenSelections[] = {"camo1"};
+    ace_arsenal_uniqueBase = "twelfth_MA6_UGL";
 		hiddenSelectionsTextures[]=// List of textures, in the same order as the hiddenSelections definition
 		{
 		"x\12thMEU\addons\12th_weapons\data\MA6\desert\MA6_co.paa"
@@ -1337,6 +1343,7 @@ class CfgWeapons
 		scope = 2;
 		scopeArsenal = 2;
 		displayName = "[12th] MA-6K Carbine";
+    ace_arsenal_uniqueBase = "twelfth_MA6_K";
     picture="x\12thMEU\addons\12th_weapons\data\MA6_K\Ma6-k-preview.paa";
 		baseWeapon = "twelfth_MA6_K";
 		canShootInWater = 1;
@@ -1376,6 +1383,7 @@ class CfgWeapons
 		displayName = "[12th] MA-6K Carbine (Green)";
 		baseWeapon = "twelfth_MA6_K_green";
     hiddenSelections[] = {"camo1"};
+    ace_arsenal_uniqueBase = "twelfth_MA6_K";
     hiddenSelectionsTextures[]=// List of textures, in the same order as the hiddenSelections definition
     {
       "x\12thMEU\addons\12th_weapons\data\MA6_k\green\MA6_k_co.paa"
@@ -1386,6 +1394,7 @@ class CfgWeapons
 		displayName = "[12th] MA-6K (Desert)";
 		baseWeapon = "twelfth_MA6_K_Desert";
 		hiddenSelections[] = {"camo1"};
+    ace_arsenal_uniqueBase = "twelfth_MA6_K";
 		hiddenSelectionsTextures[]=// List of textures, in the same order as the hiddenSelections definition
 		{
 		"x\12thMEU\addons\12th_weapons\data\MA6_k\desert\MA6_k_co.paa",
@@ -1398,6 +1407,7 @@ class CfgWeapons
 		author = "Sammy";
     baseWeapon = "twelfth_MA6_K_UGL";
 		displayName = "[12th] MA-6K Carbine (GL)";
+    ace_arsenal_uniqueBase = "twelfth_MA6_K_UGL";
     handAnim[] = {"OFP2_ManSkeleton","x\12thMEU\addons\12th_weapons\data\MA6_UGL\Ma_6_UGL.rtm"};
     muzzles[] = {"this", "MA6_UGL"};
     /* class AnimationSources{
@@ -1426,6 +1436,7 @@ class CfgWeapons
 		displayName = "[12th] MA-6K Carbine (GL) (Green)";
 		baseWeapon = "twelfth_MA6_K_UGL_green";
     hiddenSelections[] = {"camo1"};
+    ace_arsenal_uniqueBase = "twelfth_MA6_K_UGL";
     hiddenSelectionsTextures[]=// List of textures, in the same order as the hiddenSelections definition
     {
       "x\12thMEU\addons\12th_weapons\data\MA6_k\green\MA6_k_co.paa"
@@ -1435,6 +1446,7 @@ class CfgWeapons
 		displayName = "[12th] MA-6K (GL) (Desert)";
 		baseWeapon = "twelfth_MA6_K_UGL_Desert";
 		hiddenSelections[] = {"camo1"};
+    ace_arsenal_uniqueBase = "twelfth_MA6_K_UGL";
 		hiddenSelectionsTextures[]=// List of textures, in the same order as the hiddenSelections definition
 		{
 		"x\12thMEU\addons\12th_weapons\data\MA6_k\Desert\MA6_k_co.paa"
@@ -1449,6 +1461,7 @@ class CfgWeapons
 		scopeArsenal = 2;
 		displayName = "[12th] MA-6D Marksman Rifle";
 		baseWeapon = "twelfth_MA6_D";
+    ace_arsenal_uniqueBase = "twelfth_MA6_D";
     picture="x\12thMEU\addons\12th_weapons\data\MA6_d\Ma6-d-preview.paa";
     hiddenSelections[] = {"camo1"};
 		hiddenSelectionsTextures[]=// List of textures, in the same order as the hiddenSelections definition
@@ -1482,6 +1495,7 @@ class CfgWeapons
 		displayName = "[12th] MA-6D (Desert)";
 		baseWeapon = "twelfth_MA6_D_Desert";
 		hiddenSelections[] = {"camo1"};
+    ace_arsenal_uniqueBase = "twelfth_MA6_D";
 		hiddenSelectionsTextures[]=// List of textures, in the same order as the hiddenSelections definition
 		{
 		"x\12thMEU\addons\12th_weapons\data\MA6_D\desert\MA6_D_co.paa",
@@ -1492,6 +1506,7 @@ class CfgWeapons
 		displayName = "[12th] MA-6D (Green)";
 		baseWeapon = "twelfth_MA6_D_Green";
 		hiddenSelections[] = {"camo1"};
+    ace_arsenal_uniqueBase = "twelfth_MA6_D";
 		hiddenSelectionsTextures[]=// List of textures, in the same order as the hiddenSelections definition
 		{
 		"x\12thMEU\addons\12th_weapons\data\MA6_D\green\MA6_D_co.paa",
@@ -1504,6 +1519,7 @@ class CfgWeapons
     mass = 160;
 		displayName = "[12th] MA-6A";
 		baseWeapon = "twelfth_MA_6A";
+    ace_arsenal_uniqueBase = "twelfth_MA6_A";
     picture="\x\12thmeu\addons\12th_weapons\data\MA6_A\MA-6A_preview.paa";
     ace_overheating_closedBolt = 0;
     handAnim[] = {"OFP2_ManSkeleton","x\12thMEU\addons\12th_weapons\data\MA6_A\animations\MA6.rtm"};
@@ -1536,6 +1552,7 @@ class CfgWeapons
 		displayName = "[12th] MA-6A (Desert)";
 		baseWeapon = "twelfth_MA6_A_Desert";
 		hiddenSelections[] = {"camo1"};
+    ace_arsenal_uniqueBase = "twelfth_MA6_A";
 		hiddenSelectionsTextures[]=// List of textures, in the same order as the hiddenSelections definition
 		{
 		"\x\12thmeu\addons\12th_weapons\data\MA6_A\desert\MA-6A_co.paa",
@@ -1546,6 +1563,7 @@ class CfgWeapons
 		displayName = "[12th] MA-6A (Green)";
 		baseWeapon = "twelfth_MA6_A_Green";
 		hiddenSelections[] = {"camo1"};
+    ace_arsenal_uniqueBase = "twelfth_MA6_A";
 		hiddenSelectionsTextures[]=// List of textures, in the same order as the hiddenSelections definition
 		{
 		"\x\12thmeu\addons\12th_weapons\data\MA6_A\green\MA-6A_co.paa",

@@ -52,6 +52,8 @@ class CfgPatches {
       "twelfth_helmCH43A_std_Felix",
       "twelfth_helmCH43A_std_Geoff",
       "twelfth_helmCH43A_std_Germain",
+      "twelfth_helmCH43A_std_Grant",
+      "twelfth_helmCH43A_std_Gregson",
       "twelfth_helmCH43A_std_Hathaway",
       "twelfth_helmCH43A_std_Hensworth",
       "twelfth_helmCH43A_std_Jekyll",
@@ -94,6 +96,8 @@ class CfgPatches {
       "twelfth_helmECH43A_std_Felix_clsd",
       "twelfth_helmECH43A_std_Geoff_clsd",
       "twelfth_helmECH43A_std_Germain_clsd",
+      "twelfth_helmCH43A_std_Grant_clsd",
+      "twelfth_helmCH43A_std_Gregson_clsd",
       "twelfth_helmECH43A_std_Hathaway_clsd",
       "twelfth_helmECH43A_std_Hensworth_clsd",
       "twelfth_helmECH43A_std_Jekyll_clsd",
@@ -178,6 +182,7 @@ class CfgWeapons {
   CUSTOM_HELM_S_AV(Geoff)
   CUSTOM_HELM_S_AV(Germain)
   CUSTOM_HELM_S_AV(Grant)
+  CUSTOM_HELM_S_AV(Gregson)
   CUSTOM_HELM_S_AV(Hathaway)
   CUSTOM_HELM_S_AV(Hensworth)
   CUSTOM_HELM_S_AV(Jekyll)
@@ -294,6 +299,7 @@ class XtdGearModels {
           "Geoff",
           "Germain",
           "Grant",
+          "Gregson",
           "Hathaway",
           "Hensworth",
           "Jekyll",
@@ -375,6 +381,7 @@ class XtdGearInfos {
     CH_HELM_S_GI(Geoff)
     CH_HELM_S_GI(Germain)
     CH_HELM_S_GI(Grant)
+    CH_HELM_S_GI(Gregson)
     CH_HELM_S_GI(Hathaway)
     CH_HELM_S_GI(Hensworth)
     CH_HELM_S_GI(Jekyll)
