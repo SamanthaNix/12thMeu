@@ -101,6 +101,25 @@ class CfgVehicles {
     class TransportMagazines {};  // No magazines by default.
     class TransportItems {};  // No items by default.
   };
+    class twelfth_backpack_invis_LR : B_AssaultPack_Base {
+    author = "Sammy";
+    scope = 2;
+    scopeArsenal = 2;
+    picture = "";  // No picture defined.
+    displayName = "[12th] (LR) Invisible Backpack";
+    model = "x\12thMEU\addons\12th_backpacks\backpack\null.p3d";  // Invisible model.
+    hiddenSelectionsTextures[] = {"", "", "", ""};  // No textures.
+    maximumLoad = BP_MAXLOAD;  // Load capacity macro.
+    mass = BP_MASS;  // Backpack mass macro.
+    class TransportMagazines {};  // No magazines by default.
+    class TransportItems {};  // No items by default.
+    tf_dialog = "rt1523g_radio_dialog";
+    tf_dialogUpdate = "call TFAR_fnc_updateLRDialogToChannel;";
+    tf_encryptionCode = "tf_west_radio_code";
+    tf_hasLRradio = 1;
+    tf_range = 25000;
+    tf_subtype = "digital_lr";
+  };
 
   class twelfth_M3_MAAWS_backpack: M3_Backpack_Mcm_B {
     author = "Waylen / Sammy";
