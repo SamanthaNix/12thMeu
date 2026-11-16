@@ -94,6 +94,15 @@ class CfgVehicles {
           QP(stomper\default\turret_co.paa)
 			};
 		};
+    class twelfth_stomper_tex_reckless {
+        displayName = "Reckless";
+        author = "Rex";
+        textures[] = {
+          QP(stomper\default\Reckless\ext_co.paa),
+          QP(stomper\default\int_co.paa),
+          QP(stomper\default\turret_co.paa)
+			};
+		};
 	};
 
     STOMPER_SP_INFO(0,Empty)
@@ -153,6 +162,15 @@ class CfgVehicles {
           QP(stomper\default\turret_co.paa)
         };
       };
+      class twelfth_stomper_tex_reckless {
+        displayName = "Reckless";
+        author = "Rex";
+        textures[] = {
+          QP(stomper\default\Reckless\ext_co.paa),
+          QP(stomper\default\int_co.paa),
+          QP(stomper\default\turret_co.paa)
+			};
+		};
     };
 
     STOMPER_SP_INFO(0,RCWS)
