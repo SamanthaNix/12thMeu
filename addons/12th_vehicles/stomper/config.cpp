@@ -57,6 +57,7 @@ class CfgVehicles {
     scopeCurator = 2;        // Visible to Zeus
     displayName = "[12th] Stomper UGV"; 
     author = "Waylen";
+    ace_cargo_space = 6;
 
     // Factions & Categories let you place the vehicle in the editor under your unit’s tabs
     faction = "twelfth_MEU";            
@@ -124,6 +125,7 @@ class CfgVehicles {
     scopeCurator = 2;
     displayName = "[12th] Stomper RCWS";
     author = "Waylen";
+    ace_cargo_space = 6;
 
     // Adjust these to place it properly in your mod’s faction listing
     vehicleClass = "OPTRE_UNSC_Vehicle_class";

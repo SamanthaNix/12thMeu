@@ -74,21 +74,23 @@ class TransportItems{   \
 
 #define WPNSINV \
 class TransportMagazines { \
-    class _xx_OPTRE_400Rnd_762x51_M118_M247A1_BOX { magazine = "OPTRE_400Rnd_762x51_M118_M247A1_BOX"; count = 10; }; \
-    class _xx_avm224_M_6Rnd_60mm_HE_0_csw { magazine = "avm224_M_6Rnd_60mm_HE_0_csw"; count = 5; }; \
-    class _xx_avm224_M_6Rnd_60mm_HE_csw { magazine = "avm224_M_6Rnd_60mm_HE_csw"; count = 20; }; \
+    class _xx_OPTRE_400Rnd_762x51_M118_M247A1_BOX { magazine = "OPTRE_400Rnd_762x51_M118_M247A1_BOX"; count = 4; }; \
+    class _xx_avm224_M_6Rnd_60mm_HE_0_csw { magazine = "avm224_M_6Rnd_60mm_HE_0_csw"; count = 15; }; \
+    class _xx_avm224_M_6Rnd_60mm_HE_csw { magazine = "avm224_M_6Rnd_60mm_HE_csw"; count = 35; }; \
     class _xx_twelfth_M_1Rnd_60mm_HUNTIR_csw { magazine = "twelfth_M_1Rnd_60mm_HUNTIR_csw"; count = 5; }; \
-    class _xx_twelfth_M41_IR { magazine = "twelfth_M41_IR"; count = 4; }; \
-    class _xx_OPTRE_M41_Twin_HEAT_SACLOS { magazine = "OPTRE_M41_Twin_HEAT_SACLOS"; count = 6; }; \
+    class _xx_twelfth_M41_IR { magazine = "twelfth_M41_IR"; count = 6; }; \
+    class _xx_OPTRE_M41_Twin_HEAT_SACLOS { magazine = "OPTRE_M41_Twin_HEAT_SACLOS"; count = 3; }; \
+    class _xx_OPTRE_M41_Twin_HEAT_SALH { magazine = "OPTRE_M41_Twin_HEAT_SALH"; count = 2; }; \
+    class _xx_NDS_M_6Rnd_60mm_SMOKE {magazine = "NDS_M_6Rnd_60mm_SMOKE"; count = 20; }; \
 }; \
 class TransportItems{ \
-    class _xx_ACE_SpareBarrel { name = "ACE_SpareBarrel"; count = 3; }; \
-    class _xx_ACE_WaterBottle { name = "ACE_WaterBottle"; count = 10; }; \
-    class _xx_optic_DMS { name = "optic_DMS"; count = 1; }; \
+    class _xx_ACE_SpareBarrel { name = "ACE_SpareBarrel"; count = 2; }; \
+    class _xx_ACE_WaterBottle { name = "ACE_WaterBottle"; count = 4; }; \
 }; \
 class TransportWeapons { \
-    class _xx_twelfth_M247A1 { weapon = "twelfth_M247A1"; count = 1; }; \
-    class _xx_twelfth_MG_Tripod_Carry { weapon = "twelfth_MG_Tripod_Carry"; count = 1; }; \
-    class _xx_avm224_W_M224_mortar_carry { weapon = "avm224_W_M224_mortar_carry"; count = 1; }; \
-    class _xx_twelfth_M41_SSR_laserfix { weapon = "twelfth_M41_SSR_laserfix"; count = 1; }; \
-};
+    class _xx_avm224_W_M224_mortar_carry { weapon = "avm224_W_M224_mortar_carry"; count = 2; }; \
+};\
+class TransportVehicles {\
+class _xx_OPTRE_M37_HMG_Bag_Weapon_Single { weapon = "OPTRE_M37_HMG_Bag_Weapon_Single"; count = 1; }; \
+};\
+
