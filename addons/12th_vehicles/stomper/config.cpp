@@ -60,8 +60,6 @@ class CfgVehicles {
     author = "Waylen";
     ace_cargo_space = 6;
     acceleration = 20;
-    maxSpeed = 60;
-		armor = 100;
 
     // Factions & Categories let you place the vehicle in the editor under your unit’s tabs
     faction = "twelfth_MEU";            
@@ -147,8 +145,6 @@ class CfgVehicles {
     author = "Waylen";
     ace_cargo_space = 6;
     acceleration = 20;
-    maxSpeed = 60;
-		armor = 100;
 
     // Adjust these to place it properly in your mod’s faction listing
     vehicleClass = "OPTRE_UNSC_Vehicle_class";
