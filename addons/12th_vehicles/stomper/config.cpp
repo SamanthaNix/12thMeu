@@ -58,6 +58,10 @@ class CfgVehicles {
     scopeCurator = 2;        // Visible to Zeus
     displayName = "[12th] Stomper UGV"; 
     author = "Waylen";
+    ace_cargo_space = 6;
+    acceleration = 20;
+    maxSpeed = 60;
+		armor = 100;
 
     // Factions & Categories let you place the vehicle in the editor under your unit’s tabs
     faction = "twelfth_MEU";            
@@ -91,6 +95,15 @@ class CfgVehicles {
         author = "Rex";
         textures[] = {
           QP(stomper\default\ViVi\ext_co.paa),
+          QP(stomper\default\int_co.paa),
+          QP(stomper\default\turret_co.paa)
+			};
+		};
+    class twelfth_stomper_tex_reckless {
+        displayName = "Reckless";
+        author = "Rex";
+        textures[] = {
+          QP(stomper\default\Reckless\ext_co.paa),
           QP(stomper\default\int_co.paa),
           QP(stomper\default\turret_co.paa)
 			};
@@ -132,6 +145,10 @@ class CfgVehicles {
     scopeCurator = 2;
     displayName = "[12th] Stomper RCWS";
     author = "Waylen";
+    ace_cargo_space = 6;
+    acceleration = 20;
+    maxSpeed = 60;
+		armor = 100;
 
     // Adjust these to place it properly in your mod’s faction listing
     vehicleClass = "OPTRE_UNSC_Vehicle_class";
@@ -170,6 +187,15 @@ class CfgVehicles {
           QP(stomper\default\turret_co.paa)
         };
       };
+      class twelfth_stomper_tex_reckless {
+        displayName = "Reckless";
+        author = "Rex";
+        textures[] = {
+          QP(stomper\default\Reckless\ext_co.paa),
+          QP(stomper\default\int_co.paa),
+          QP(stomper\default\turret_co.paa)
+			};
+		};
     };
 
     STOMPER_SP_INFO(0,RCWS)

@@ -39,6 +39,7 @@ class CfgPatches {
     weapons[] = {
       "twelfth_helmCH43A_std_Armstrong",
       "twelfth_helmCH43A_std_Bateman",
+      "twelfth_helmCH43A_std_Baxter",
       "twelfth_helmCH43A_std_Bert",
       "twelfth_helmCH43A_std_Bobby",
       "twelfth_helmCH43A_std_Bunge",
@@ -167,6 +168,7 @@ class CfgWeapons {
   // -- Standard Helmets --
   CUSTOM_HELM_S_AV(Armstrong)
   CUSTOM_HELM_S_AV(Bateman)
+  CUSTOM_HELM_S_AV(Baxter)
   CUSTOM_HELM_S_AV(Bert)
   CUSTOM_HELM_S_AV(Bobby)
   CUSTOM_HELM_S_AV(Bunge)
@@ -278,6 +280,7 @@ class XtdGearModels {
         values[]={
           "Armstrong",
           "Bateman",
+          "Baxter",
           "Bert",
           "Bob",
           "Bobby",
@@ -359,6 +362,7 @@ class XtdGearInfos {
   class CfgWeapons {
     CH_HELM_S_GI(Armstrong)
     CH_HELM_S_GI(Bateman)
+    CH_HELM_S_GI(Baxter)
     CH_HELM_S_GI(Bert)
     CH_HELM_S_GI(Bob)
     CH_HELM_S_GI(Bobby)

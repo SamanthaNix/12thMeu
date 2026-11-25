@@ -539,14 +539,14 @@ class CfgMagazines
   count = 2;
  };
 
- class B_338_NM_Ball;
+ class OPTRE_B_338_AP;
  class OPTRE_200Rnd_762x51_M118_M247A1_Box;
  class OPTRE_400Rnd_762x51_M118_M247A1_Box;
 
  class twelfth_200Rnd_338_Box : OPTRE_200Rnd_762x51_M118_M247A1_Box {
   displayName = "200 Round .338 Norma Box";
   displayNameShort = "200Rnd 338 Box";
-  ammo = "B_338_NM_Ball";
+  ammo = "OPTRE_B_338_AP";
   count = 200;
   ACE_isBelt = 1;
   tracersEvery = 3;
@@ -556,7 +556,7 @@ class CfgMagazines
  class twelfth_400Rnd_338_Box : OPTRE_400Rnd_762x51_M118_M247A1_Box {
   displayName = "400 Round .338 Norma Box";
   displayNameShort = "400Rnd 338 Box";
-  ammo = "B_338_NM_Ball";
+  ammo = "OPTRE_B_338_AP";
   count = 400;
   ACE_isBelt = 1;
   tracersEvery = 3;
