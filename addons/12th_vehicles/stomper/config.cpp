@@ -41,9 +41,10 @@ class CfgVehicles {
     We need to forward-declare the base classes that we inherit from.
     B_UGV_01_F and B_UGV_01_rcws_F are vanilla Arma 3 classes for the Stomper UGV.
   */
+  class HitPoints;
+  class HitBody;
   class B_UGV_01_F;
   class B_UGV_01_rcws_F;
-
   // ---------------------------------------------------------------------------
   //  [12th] Stomper UGV (unarmed variant)
   // ---------------------------------------------------------------------------
@@ -100,6 +101,22 @@ class CfgVehicles {
     WPNSINV
 
     maximumLoad = 2500;
+
+    //Stomper adjustments
+    maxSpeed= 70;
+    class complexGearbox
+		{
+			GearboxRatios[] = {"R1",-3,"N",0,"D1",4.182,"D2",3.182,"D3",2.15,"D4",1.4};
+			TransmissionRatios[] = {"High",5.539}; // Optional: defines transmission ratios (for example, High and Low range as commonly found in offroad vehicles)
+			gearBoxMode        = "auto"; //gearbox can be of type: full-auto (only requires 'W' or 'S'), auto (requires shift between drive and reverse), semi-auto, manual
+			moveOffGear        = 1; // defines what gear an automatic or semi-automatic gearbox will move off from stationary in. 1 by default.
+			driveString        = "D"; // string to display in the HUD for forward gears.
+			neutralString      = "N"; // string to display in the HUD for neutral gear.
+			reverseString      = "R"; // string to display in the HUD for reverse gears.
+
+
+		};
+    armor = 80;
   };
   
 
@@ -133,7 +150,7 @@ class CfgVehicles {
       QP(stomper\default\int_co.paa),
       QP(stomper\default\turret_co.paa)
     };
-
+    
     class textureSources {
       class Default {
         displayName = "Default";
@@ -159,6 +176,22 @@ class CfgVehicles {
     WPNSINV
 
     maximumLoad = 2500;
+
+    //Stomper adjustments
+    maxSpeed= 70;
+    class complexGearbox
+		{
+			GearboxRatios[] = {"R1",-3,"N",0,"D1",4.182,"D2",3.182,"D3",2.15,"D4",1.4};
+			TransmissionRatios[] = {"High",5.539}; // Optional: defines transmission ratios (for example, High and Low range as commonly found in offroad vehicles)
+			gearBoxMode        = "auto"; //gearbox can be of type: full-auto (only requires 'W' or 'S'), auto (requires shift between drive and reverse), semi-auto, manual
+			moveOffGear        = 1; // defines what gear an automatic or semi-automatic gearbox will move off from stationary in. 1 by default.
+			driveString        = "D"; // string to display in the HUD for forward gears.
+			neutralString      = "N"; // string to display in the HUD for neutral gear.
+			reverseString      = "R"; // string to display in the HUD for reverse gears.
+
+
+		};
+    armor = 80;
   };
   
 
