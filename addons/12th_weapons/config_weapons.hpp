@@ -1309,7 +1309,7 @@ class CfgWeapons
 			descriptionShort = "MA-6-GL";
 			useModelOptics = "false";
 			useExternalOptic = "false"; /// Doesn't use optics from the attachment, has it's own
-			magazines[] = {"1Rnd_HE_Grenade_shell"};
+			magazines[] += {"1Rnd_HE_Grenade_shell","M319_HEDP_Grenade_Shell","M319_HE_Grenade_Shell","M319_HEAT_Grenade_Shell"};
 			cameraDir = "OP_look";
 			discreteDistance[] = {100, 200, 300, 400};
 			discreteDistanceCameraPoint[] = {"OP_eye", "OP_eye2", "OP_eye3", "OP_eye4"}; /// the angle of gun changes with zeroing
@@ -1425,7 +1425,7 @@ class CfgWeapons
 			descriptionShort = "MA-6-GL";
 			useModelOptics = "false";
 			useExternalOptic = "false"; /// Doesn't use optics from the attachment, has it's own
-			magazines[] = {"1Rnd_HE_Grenade_shell"};
+			magazines[] += {"1Rnd_HE_Grenade_shell","M319_HEDP_Grenade_Shell","M319_HE_Grenade_Shell","M319_HEAT_Grenade_Shell"};
 			cameraDir = "OP_look";
 			discreteDistance[] = {100, 200, 300, 400};
 			discreteDistanceCameraPoint[] = {"OP_eye", "OP_eye2", "OP_eye3", "OP_eye4"}; /// the angle of gun changes with zeroing
